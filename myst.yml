@@ -1,6 +1,7 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
+  github: https://github.com/ua-asf/nisar-docs
   bibliography:
     - nisar-docs.bib
   numbering:
