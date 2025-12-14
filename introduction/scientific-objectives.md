@@ -1,4 +1,4 @@
-# NISAR scientific objectives
+# NISAR Scientific Objectives
 
 The [NISAR Mission Science Users' Handbook](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NISAR_FINAL_9-6-19.pdf) (2019) defined the key scientific objectives as follows:
 
