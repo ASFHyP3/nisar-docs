@@ -23,7 +23,9 @@ Source for the public documentation of the NASA-ISRO Synthetic Aperture Radar (N
       <summary>screenshot</summary>
       <img alt="screenshot of enabling GitHub Pages" src="assets/readme_enable_pages.png" />
       </details>
-   1. Create a `BASE_URL` variable for GitHub Actions with a value of `/nisar-docs` (including the leading `/`)
+   1. Create two variables for GitHub Actions variables:
+      1. `BASE_URL` with a value of `/nisar-docs` (including the leading `/`)
+      2. `DOMAIN` with a value of `https://{github_user_id}.github.io`
       <details>
       <summary>screenshot</summary>
       <img alt="screenshot of creating BASE_URL variable" src="assets/readme_base_url_variable.png" />
