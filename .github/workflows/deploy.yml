@@ -10,6 +10,9 @@ env:
   # E.g., if your site lives at `https://mydomain.org/myproject`, set `BASE_URL=/myproject`.
   # If, instead, your site lives at the root of the domain, at `https://mydomain.org`, set `BASE_URL=''`.
   BASE_URL: ${{ vars.BASE_URL }}
+  # `DOMAIN` is a workaround for https://github.com/jupyter-book/myst-theme/issues/669:
+  # - robots.txt,sitemap.xml as well as some other files use "localhost:3000" url
+  DOMAIN: ${{ vars.DOMAIN }}
 
 permissions:
   contents: read
@@ -38,10 +41,13 @@ jobs:
         with:
           environment-file: environment.yml
 
-      - run: myst build --html
+      - run: |
+          myst build --html
+          sed -i -e "s|http://localhost:3000|$DOMAIN$BASE_URL|g" $(grep -RIl "http://localhost:3000" ./_build)
 
       - uses: actions/upload-pages-artifact@v4
         with:
           path: './_build/html'
 
-      - uses: actions/deploy-pages@v4
+      - id: deployment
+        uses: actions/deploy-pages@v4
