@@ -2,13 +2,13 @@
 
 This page summarizes the data products available from the NISAR mission.
 
-## Level 3
+## Geophysical Products (Level 3)
 
 Level 3 products represent geophysical parameters derived from radar-specific parameters and geocoded to a geographic grid.
 
 - The [Soil Moisture (SME2)](level-3/sme2.md) product contains soil moisture estimates derived from NISAR data using three different algorithms at agricultural field-scale (200m) posting. Soil moisture information can be used for reservoir management, early warning of droughts, irrigation scheduling, and crop yield forecasting.
 
-## Level 2
+## Geocoded Products (Level 2)
 
 Level 2 products are derived radar-specific parameters resampled and geocoded to a geographic grid. They can be directly overlaid on a map and combined with other data in geographic coordinates.
 
@@ -17,7 +17,7 @@ Level 2 products are derived radar-specific parameters resampled and geocoded to
 - The [Geocoded Polarimetric Covariance Matrix (GCOV)](level-2/gcov.md) product provides radiometrically terrain corrected SAR backscatter data to primarily support the NISAR ecosystem requirements of biomass estimation, soil moisture estimation, disturbance detection, inundation mapping, and crop area delineation.
 - The [Geocoded Unwrapped Interferogram (GUNW)](level-2/gunw.md) product represents the unwrapped, multi-looked differential interferogram generated from two RSLCs in geographic coordinates. The GUNW product primarily supports the solid earth requirement of ground surface displacement measurements.
 
-## Level 1
+## Range-Doppler Products (Level 1)
 
 Level 1 products are processed instrument data, focused to full resolution complex images, time referenced and annotated with ancillary information, including radiometric and relevant geometric calibration coefficients and georeferencing parameters (i.e. platform ephemeris) computed and appended, in natural radar coordinates. They cannot be directly overlaid on a map.
 
@@ -26,7 +26,7 @@ Level 1 products are processed instrument data, focused to full resolution compl
 - The [Range-Doppler Pixel Offsets (ROFF)](level-1/roff.md) product represents a collection of dense pixel offsets layers obtained from applying speckle tracking to a pair of coarsely coregistered RSLCs in range-Doppler coordinates. The ROFF product is primarily meant for cryosphere applications.
 - The [Range-Doppler Unwrapped Interferogram (RUNW)](level-1/runw.md) product represents the unwrapped, multi-looked differential interferogram generated from two RSLCs in range-Doppler coordinates. The RUNW product primarily supports the solid earth requirement of ground surface displacement measurements.
 
-## Level 0
+## Unfocused Raw Products (Level 0)
 
 Level 0 products are unprocessed instrument data. They require specialized software to interpret and are generally not recommended for use by science applications.
 
