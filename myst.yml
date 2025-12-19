@@ -82,5 +82,6 @@ site:
   template: book-theme
   options:
     logo_text: 'NISAR Data User Guide'
+    analytics_google: G-F5XFWH0KYR
   parts:
     primary_sidebar_footer: ''
