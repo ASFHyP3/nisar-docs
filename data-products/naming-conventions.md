@@ -7,7 +7,7 @@ There are three different patterns used for naming NISAR data products, dependin
 
 ## Raw Data Products
 
-This naming convention is only used for L0B products. 
+This naming convention is only used for Level 0B (L0 RRSD) products. 
 
 -----
 
