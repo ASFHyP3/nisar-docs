@@ -157,4 +157,4 @@ The table below summarizes the characteristics of NISAR data products.
     </tr>
 </table>
 :::
-$^*$ depending on range bandwith
+$^*$ depending on range bandwidth
