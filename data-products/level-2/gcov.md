@@ -121,8 +121,8 @@ REL
 
 P
 : 1 character for the _Orbit Direction_ (direction of movement of the satellite at the time of imaging)
-    - **A** for Ascending
-    - **D** for Descending
+    - **A**: Ascending
+    - **D**: Descending
 
 FRM
 : 3 characters for the track _FRaMe_ number
@@ -154,8 +154,8 @@ POLE
 
 S
 : 1 character for the _Source_ of data for the product
-    - **A** = Acquired source of the observation, single mode
-    - **M** = Mixed source of observations, mixed mode
+    - **A**: Acquired source of the observation, single mode
+    - **M**: Mixed source of observations, mixed mode
 
 StartDateTime
 : 15 chars for Radar _Start Date/Time_ of the data processed as zero Doppler 
@@ -173,19 +173,19 @@ CRID
 
 A
 : 1 character for the Product _Accuracy_ or Fidelity of the Orbit Ephemeris and Radar Pointing:
-    - **P** = Precise
-    - **M** = Medium
-    - **N** = Near Real-Time
-    - **F** = Forecast
+    - **P**: Precise
+    - **M**: Medium
+    - **N**: Near Real-Time
+    - **F**: Forecast
 
 C
 : 1 character indicating _Coverage_ of the frame
-    - **F** = Full
-    - **P** = Partial
+    - **F**: Full
+    - **P**: Partial
 
 LOC
 : 1 character to represent the _Location_ of the Science Data System
-    - **J** = JPL
+    - **J**: JPL
 
 CTR
 : 3 characters for product _CounTeR_
