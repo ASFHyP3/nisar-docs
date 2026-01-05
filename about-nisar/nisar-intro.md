@@ -34,7 +34,7 @@ The NISAR Mission Science Users' Handbook [@nisarMissionHandbook2025] defines th
 
 ### NISAR Mission Science Users' Handbook
 
-The NASA-ISRO SAR (NISAR) Mission Science Users' Handbook [@nisarMissionHandbook2025] is a very valuable resource. It is a PDF publication that can be downloaded or referenced online.
+The [NASA-ISRO SAR (NISAR) Mission Science Users' Handbook](https://doi.org/10.48577/jpl.UD4HV3) [@nisarMissionHandbook2025] is a very valuable resource. It is a PDF publication that can be downloaded or referenced online.
 
 The second edition of this handbook, published in 2025, has superseded the previous edition, published in 2019, and should be used instead of the older publication.
 
@@ -44,7 +44,7 @@ The second edition of this handbook, published in 2025, has superseded the previ
 :target: @nisarMissionHandbook2025
 ```
 
-[NASA-ISRO SAR (NISAR) Mission Science Users' Handbook](@nisarMissionHandbook2025)
+[NASA-ISRO SAR (NISAR) Mission Science Users' Handbook](https://doi.org/10.48577/jpl.UD4HV3)
 
 ### Jet Propulsion Laboratory
 
