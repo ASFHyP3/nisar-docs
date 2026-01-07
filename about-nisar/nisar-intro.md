@@ -6,6 +6,8 @@
 
 NISAR is a joint Earth-observing mission between the [National Aeronautics and Space Administration (NASA)](https://www.nasa.gov/) and the [Indian Space Research Organization (ISRO)](https://www.isro.gov.in/), with the goal to make global measurements of the causes and consequences of land surface changes using advanced radar imaging. Access to NISAR mission data is free and open.
 
+<!-- TODO: add basic content about the SAR sensor (L-band, etc.) -->
+
 The mission concept and the resulting partnership were in response to the [National Academy of Science's 2007 Decadal Survey](https://doi.org/10.17226/11820) [@decadalSurvey2007] of Earth observational priorities for the next decade. 
 
 One of the top priorities identified in this survey was to gain data and insight in three Earth science domains:
@@ -123,6 +125,8 @@ NISAR is equipped to acquire data in two slightly different frequencies. @tbl:ar
 ### Polarization
 
 The polarization refers to the direction that an electromagnetic wave travels. This can be horizontal, vertical, or circular. Circular polarizations, where the wave is rotating in a constant plane to the left or right, are much less commonly used for SAR sensors than linear (horizontal or vertical) polarizations. 
+
+<!-- Add figure or link to polarization section in hyp3-docs -->
 
 The antennas of a SAR system can be configured to transmit and receive electromagnetic waves using various combinations of these polarizations. The polarimetric properties of the observed surface can reveal the structure, orientation and environmental conditions of the surface elements.
 
