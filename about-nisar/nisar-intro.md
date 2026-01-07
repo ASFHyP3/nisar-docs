@@ -38,12 +38,9 @@ Published by [JPL](#jet-propulsion-laboratory), this valuable resource is a PDF 
 
 Note that all references to the NISAR Mission Science Users' Handbook on this site link to the second edition, which was published in 2025. This edition supersedes the previous edition, published in 2019, and we advise users to reference this second edition instead of the older publication.
 
-[*NASA-ISRO SAR (NISAR) Mission Science Users' Handbook*](https://doi.org/10.48577/jpl.UD4HV3)
 <a href="https://doi.org/10.48577/jpl.UD4HV3">
-<img id="nisar-handbook-cover" src="../assets/nisar-handbook-v2-cover.png" alt="NASA-ISRO SAR (NISAR) Mission Science Users' Handbook Image">
+<img id="nisar-handbook-cover" src="../assets/nisar-handbook-v2-cover.png" alt="NASA-ISRO SAR (NISAR) Mission Science Users' Handbook Image" width="50%">
 </a>
-
-
 
 ### Jet Propulsion Laboratory
 
