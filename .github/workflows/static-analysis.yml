@@ -1,8 +1,7 @@
 name: Static analysis
 
-on:
-  push:
-  pull_request:
+# Including pull_request is necessary for the workflow to show up under Checks for PRs from forks into upstream.
+on: [push, pull_request]
 
 jobs:
   call-secrets-analysis-workflow:
