@@ -7,6 +7,7 @@ on:
 
 jobs:
   call-bump-version-workflow:
+    if: ${{ ! github.event.repository.fork }}
     # TODO:
     # For first-time setup, create a v0.0.0 tag as shown here:
     # https://github.com/ASFHyP3/actions#reusable-bump-versionyml
