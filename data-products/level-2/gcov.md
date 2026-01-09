@@ -6,6 +6,7 @@ short_title: GCOV
 {button}`Product Specification <https://nisar.asf.earthdatacloud.nasa.gov/NISAR-SAMPLE-DATA/DOCS/NISAR_D-102274_RevE_NASA_SDS_Product_Specification_L2_GCOV_Nov8_2024_w-sigs.pdf>`
 {button}`Find Data <https://search.asf.alaska.edu/#/?dataset=NISAR&sciProducts=GCOV>`
 
+(gcov-product-overview)=
 ## Product Overview
 
 Geocoded Polarimetric Covariance (GCOV) products provide calibrated backscatter measurements corrected for both radiometric and terrain distortions, presented as gamma-0 power values. For users familiar with other corrected SAR amplitude products, these data can be used like Normalized Radar Backscatter (NRB) or Radiometrically Terrain Corrected (RTC) products.

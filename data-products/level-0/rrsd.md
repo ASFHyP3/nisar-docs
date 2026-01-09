@@ -6,6 +6,7 @@ short_title: RRSD
 {button}`Product Specification <https://nisar.asf.earthdatacloud.nasa.gov/NISAR-SAMPLE-DATA/DOCS/NISAR_D-102267_RevE_NASA_SDS_Product_Specification_L0B_RRSD_CRSD_Nov8_2024_w-sigs.pdf>`
 {button}`Find Data <https://search.asf.alaska.edu/#/?dataset=NISAR&sciProducts=L0B>`
 
+(rrsd-product-overview)=
 ## Product Overview
 
 L0B RRSD is the Level 0 product available to the science disciplines from the DAAC. The RRSD product comprises time-sorted unpacked recordings of raw radar echo pulses and related radar instrument telemetry. It is comparable to the Level-0 raw data products delivered by SAR sensors worldwide (e.g., L1.0 by ESA and JAXA). The RRSD data is focused to a Radar Single Look Complex ([RSLC](#rslc-product-overview)) product before use in higher-level processing.
