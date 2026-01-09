@@ -19,13 +19,15 @@ Map-based web interfaces make it easy to explore data available for a particular
 
 ### Vertex
 
-[Vertex](https://search.asf.alaska.edu/#/) was developed by ASF to facilitate search and discovery specifically for SAR datasets. 
+[Vertex](https://search.asf.alaska.edu/#/) was developed by ASF to facilitate search and discovery specifically for SAR datasets. To search for NISAR datasets specifically, select `NISAR` from the **Dataset** menu. Click the **Filters** button to expose additional parameters that can be used to narrow your search.
 
 <a href="https://search.asf.alaska.edu/#/?dataset=NISAR">
 <img id="vertex-nisar-screenshot" src="../assets/vertex-nisar-screenshot.png" alt="Searching for NISAR data on ASF's Vertex Data Search site">
 </a>
 
 Because search parameters of interest for SAR differ from other types of Earth observation data, it can be helpful to use a platform that is tailored to the parameters and characteristics of SAR data. This is particularly useful for those who are less familiar with SAR data products and may need more guidance to find the appropriate dataset for their use case. 
+
+Refer to the [Vertex User Manual](https://docs.asf.alaska.edu/vertex/manual/) for more guidance on search capabilities. 
 
 --
 <!-- TODO: uncomment this line (and 2-dash separator above) once the Vertex page is populated -->
