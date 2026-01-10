@@ -4,7 +4,7 @@ There are many potential usage patterns for NISAR data, from SAR scientists down
 
 ## Accessing NISAR Data
 
-NISAR data can be accessed from cloud storage, either by downloading or working with cloud computing approaches. There are map-based user interfaces and programmatic solutions for finding and accessing NISAR data. Refer to the [Accessing NISAR Data](../accessing-nisar/access-overview#access-overview) section for more information.
+NISAR data can be accessed from cloud storage, either by downloading or using cloud computing approaches to work with the data directly in the cloud. There are map-based user interfaces and programmatic solutions for finding and accessing NISAR data. Refer to the [Accessing NISAR Data](../accessing-nisar/access-overview#access-overview) section for more information.
 
 ## Processing Software
 
@@ -18,4 +18,6 @@ The availability of NISAR [Level 2 (Geocoded)](../data-products/products-overvie
 
 The [HDF5 data format](../data-products/data-format#hdf5) of the NISAR products may be unfamiliar to some users, but there are workflows for adding NISAR layers to GIS projects and performing analysis leveraging existing raster analysis tools. Refer to ASF's [NISAR in GIS](https://www.earthdata.nasa.gov/learn/gis/storymaps/nisar-gis) StoryMap tutorial to learn how to work with NISAR data in ArcGIS Pro, and the [QGIS Visualization/Exploration Tutorials](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data#QGISVE) section of the [Work with NISAR Sample Data](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data) tutorial for guidance on using NISAR data in QGIS.
 
+## Programmatic Approaches
 
+Users who want to develop programmatic workflows to access, analyze, and visualize NISAR data can use a range of existing open-source software packages. Functions from packages designed specifically to work with SAR data can be combined with other packages with more general tools for working with raster and array data to accomplish a range of analyses and visualizations. Refer to the [Tutorials](../tutorials/tutorials-overview#tutorials-overview) section for more information and available workflows. 
