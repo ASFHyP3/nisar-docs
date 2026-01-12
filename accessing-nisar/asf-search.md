@@ -6,7 +6,7 @@ To quickly begin exploring NISAR data, search by setting the `dataset` parameter
 ```
 results = asf_search.search(dataset='NISAR', processingLevel='GCOV')
 ``` 
-A list of accepted constants is available [here](https://github.com/asfadmin/Discovery-asf_search/blob/master/asf_search/constants/PRODUCT_TYPE.py). 
+A list of accepted `processingLevel` constants is available [here](https://github.com/asfadmin/Discovery-asf_search/blob/master/asf_search/constants/PRODUCT_TYPE.py). 
 
 See the [Searching page of the Data Search Manual](https://docs.asf.alaska.edu/asf_search/searching/)
- for details on available search filters and their possible values.
+ for more details on available search filters and their possible values.
