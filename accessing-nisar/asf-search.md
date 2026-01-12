@@ -2,7 +2,7 @@
 
 [ASF's `asf_search` Python package](https://pypi.org/project/asf-search/) enables quick and customizable programmatic access to NISAR data. For more information on getting started, visit [ASF's Data Search Manual](https://docs.asf.alaska.edu/asf_search/basics/).
 
-To quickly begin exploring NISAR data, search by setting the `dataset` parameter to `NISAR` and the `processingLevel` parameter to the four-letter acronym corresponding to your desired product. For example, to search for NISAR GCOV products, use the following command:
+To quickly begin exploring NISAR data, search by setting the `dataset` parameter to `'NISAR'` and the `processingLevel` parameter to the four-letter acronym corresponding to your desired product. For example, to search for NISAR GCOV products, use the following command:
 ```
 results = asf_search.search(dataset='NISAR', processingLevel='GCOV')
 ``` 
