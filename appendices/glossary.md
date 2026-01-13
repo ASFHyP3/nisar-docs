@@ -3,7 +3,8 @@
 :::{glossary}
 
 Full-polarimetric covariance matrix
-: The polarimetric covariance matrix $[G_3]$ is then radiometric terrain corrected and geocoded using an area-based projection algorithm, producing the GCOV matrix. Calculated by
+: The polarimetric covariance matrix $[G_3]$ is then radiometric terrain corrected and geocoded using an area-based projection algorithm, producing the GCOV matrix. 
+: Calculated by
     :::{math}
     :enumerated: false
     [G_{3}] =
