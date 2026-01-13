@@ -1,3 +1,6 @@
+---
+short_title: Earthaccess Python Package
+---
 # Finding NISAR Data with Earthaccess
 
 (earthdata-package)=
