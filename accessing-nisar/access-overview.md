@@ -61,9 +61,9 @@ As with the web-based user interfaces, ASF provides programmatic access patterns
 
 The [asf_search Python package](https://pypi.org/project/asf-search/) allows users to search and download products for all of ASF's data collections. It also provides support for compiling lists of SAR acquisitions that are suitable for interferometric time series analysis and other SAR-specific functionality.
 
-The [ASF Data Search Manual](https://docs.asf.alaska.edu/asf_search/basics/) provides guidance on using the asf_search Python package.
+The [ASF Data Search Manual](https://docs.asf.alaska.edu/asf_search/basics/) provides guidance on using the asf_search Python package in general.
 
-[Learn more about using asf_search with NISAR datasets!](#asf-search-page)
+To learn more about searching for NISAR datasets specifically, including code snippets, refer to the [ASF Search Python Package](#asf-search-package) page on this site. 
 
 ### Earthaccess Python Package
 
