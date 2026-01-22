@@ -15,7 +15,7 @@ NISAR mission data was processed to generate products from Level-1 to Level-3. T
 
 The NISAR project is still in the early phases of calibration, so these products are not yet fully calibrated, and contain artifacts, as described in @sample-product-limitations. The products will be improved in [future product releases](#data-release-timeline), but these sample products allow users to become familiar with NISAR data products and develop methods for working with the data and metadata.
 
-<!-- #TODO: Uncomment once we have content to link to: For more information about this data release, refer to the [Release Post on Earthdata](add link when available) -->
+For more information about this data release, refer to the [NISAR Sample Products Release Note]().
 
 ## Product Availability
 
