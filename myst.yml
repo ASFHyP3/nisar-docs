@@ -11,6 +11,10 @@ project:
   toc:
     - file: index.md
     - file: about-nisar/nisar-intro.md
+    - title: Data Availability
+      children:
+#      - file: data-availability/observation-scenario.md
+      - file: data-availability/sample-data.md
     - title: Data Products
       children:
         - file: data-products/products-overview.md
