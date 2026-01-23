@@ -130,7 +130,7 @@ When you search for NISAR data products in [Vertex](https://search.asf.alaska.ed
 :alt: Screenshot showing how to copy an S3 URL from Vertex search results
 :align: center
 
-Select an item from the search results, and click on the copy link icon next to the desired file listed in the right panel (you may need to adjust your screen size to see the third panel). Select S3 URL to copy the path to your clipboard.
+Select an item from the search results, and click on the *copy link icon* next to the desired file listed in the right panel (you may need to adjust your screen size to see the third panel). Select *S3 URL* to copy the path to your clipboard.
 ```
 
 (s3-limitations)=
