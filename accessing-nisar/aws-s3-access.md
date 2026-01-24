@@ -150,12 +150,12 @@ When you search for NISAR data products in [Vertex](https://search.asf.alaska.ed
 S3 URL links are available for files listed in Vertex search results for NISAR products.
 ```
 
-To copy an S3 URL in Vertex:
+To copy S3 URLs from Vertex:
 
 1. [Search for the desired NISAR datasets in Vertex](https://search.asf.alaska.edu/#/?maxResults=1000&dataset=NISAR)
 1. Select an item in the left panel of the search results
    * The files available for that item are listed in the right panel
-   * you may need to adjust your browser window size to see the third panel
+   * You may need to adjust your browser window size to see the third panel
 1. In the right panel, click on the **link icon** next to the desired file
 1. Select **S3 URL** from the drop-down menu to copy the path to your clipboard
 
