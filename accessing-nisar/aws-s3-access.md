@@ -89,9 +89,21 @@ Copying data directly from the NISAR S3 bucket to another S3 bucket is not suppo
 
 ## Prefix Structure
 
+NISAR data is all hosted in the `sds-n-cumulus-prod-nisar-products` S3 bucket. Each product type has a prefix, then each available product of that product type has an individual product prefix nested inside the product type prefix. 
+
 @tbl:s3-prefix-list-products lists the prefix for each of the NISAR data product types, and @tbl:s3-prefix-list-supporting lists the prefix for each of the NISAR supporting data types.
 
-:::{table} NISAR data product S3 prefix list
+To access a product, the S3 path must contain the bucket name, the product type prefix, and the individual product prefix, followed by the full filename (including the extension), as illustrated here:
+
+`s3://sds-n-cumulus-prod-nisar-products/`<wbr>`PRODUCT_TYPE_PREFIX/`<wbr>`PRODUCT_NAME_PREFIX/`<wbr>`PRODUCT_NAME.ext`
+
+Here is an example of the S3 path for one of the available GCOV products: 
+
+`s3://sds-n-cumulus-prod-nisar-products/`<wbr>`NISAR_L2_GCOV_BETA_V1/`<wbr>`NISAR_L2_PR_GCOV_`<wbr>`005_172_A_008_2005_DHDH_A_`<wbr>`20251122T024618_20251122T024652_`<wbr>`X05007_N_F_J_001/`<wbr>`NISAR_L2_PR_GCOV_`<wbr>`005_172_A_008_2005_DHDH_A_`<wbr>`20251122T024618_20251122T024652_`<wbr>`X05007_N_F_J_001.h5`
+
+### Prefix Tables
+
+:::{table} NISAR Data Product S3 Prefix List
 :label: tbl:s3-prefix-list-products
 
 | Product | S3 Prefix              |
@@ -108,7 +120,7 @@ Copying data directly from the NISAR S3 bucket to another S3 bucket is not suppo
 
 :::
 
-:::{table} NISAR supporting data S3 prefix list
+:::{table} NISAR Supporting Data S3 Prefix List
 :label: tbl:s3-prefix-list-supporting
 
 | Product | S3 Prefix |
