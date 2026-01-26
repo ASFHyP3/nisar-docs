@@ -166,6 +166,7 @@ The NISAR mission will produce Urgent Response (UR) products when natural disast
 
 :::
 
+(finding-s3-paths)=
 ## Finding S3 Paths
 
 As more data becomes available, you may want to use wildcard searches with the `aws s3 ls` command to find specific products of interest. The product filenames contain a lot of information that can be used to restrict your search, such as track and/or frame numbers, acquisition dates, processing version, beam mode, polarization, and orbit direction. 
