@@ -87,6 +87,6 @@ The [earthaccess Python package](https://earthaccess.readthedocs.io/en/stable/) 
 
 Because all NISAR data is hosted in EDC, which leverages AWS infrastructure, users can access the data directly in S3 using the AWS CLI or other supported methods. 
 
-[Learn more about Direct AWS S3 Access!](#direct-s3-access-overview)
+[Learn more about Direct AWS S3 Access!](#aws-s3-access-overview)
 
 <style>section {page-break-before: avoid}</style>
