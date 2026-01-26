@@ -182,7 +182,7 @@ To copy S3 URLs from Earthdata Search:
 1. Select the **AWS S3 Access** tab
 1. Click the filename to copy the S3 URL to your clipboard
 
-(s3-acess-limitations)=
+(s3-access-limitations)=
 ## S3 Access Limitations
 
 Please note that direct S3 access for NISAR data is subject to these limitations:
