@@ -108,7 +108,7 @@ There are three S3 buckets associated with the NISAR mission:
 
 Products are stored with the same prefix structure in all three NISAR S3 buckets. Each product type has a prefix, then each available product of that product type has an individual product prefix nested inside the product type prefix. 
 
-To access a product, the S3 path must contain the NISAR [bucket name](#nisar-s3-buckets), the product type prefix, and the individual product prefix, followed by the full filename (including the extension):  
+To access a product, the S3 path must contain the NISAR [bucket name](#nisar-s3-buckets), the product type prefix, and the individual product prefix, followed by the full filename (including the extension), as illustrated here:  
 `s3://sds-n-cumulus-prod-nisar-BUCKET/`<wbr>`PRODUCT_TYPE_PREFIX/`<wbr>`PRODUCT_NAME_PREFIX/`<wbr>`PRODUCT_NAME.ext`
 
 @tbl:s3-prefix-list-products lists the prefix for each of the NISAR data product types, and @tbl:s3-prefix-list-supporting lists the prefix for each of the NISAR supporting data types.
