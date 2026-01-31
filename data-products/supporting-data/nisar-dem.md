@@ -10,10 +10,10 @@ The [Modified Copernicus Digital Elevation Model used by the NISAR Mission](http
 
 ## DEM for NISAR Overview
 
-The DEM used for NISAR product generation is derived from the [Copernicus DEM 30-m COP-DEM_GLO-30-DGED/2023_1](https://doi.org/10.5270/ESA-c5d3d65). Elevation values are re-referenced vertically from the EGM2008 geoid model to the WGS84 ellipsoid model, and areas over the ocean are filled, resulting in a DEM with complete global coverage. 
+The DEM used for NISAR product generation is derived from the [Copernicus DEM 30-m COP-DEM_GLO-30-DGED/2023_1](https://doi.org/10.5270/ESA-c5d3d65). Elevation values are re-referenced vertically from the EGM2008 geoid model to the WGS84 ellipsoid model, and areas over the ocean are filled. This results in a DEM suitable for use in SAR processing workflows, with complete global coverage. 
 
 :::{warning}Modified for SAR Applications
-Because this DEM has been re-referenced from a geoid model to an ellipsoid model, which is necessary for SAR processing, the elevation values will differ from the source DEM. It is generally not suitable for non-SAR applications, which typically require geoid-based elevations. 
+Because this DEM has been re-referenced from a geoid model to an ellipsoid model, which is necessary for SAR processing, the elevation values will differ from the source DEM.
 
 ```{figure} ../../assets/ellipsoid-geoid.png
 :label: ellipsoid-geoid
@@ -23,6 +23,8 @@ Because this DEM has been re-referenced from a geoid model to an ellipsoid model
 
 The elevation values in most DEMs are calculated relative to a geoid model, and require a conversion before being used in SAR processing workflows. This figure from @ellipsoid_diagram illustrates the relationship between measurements based on geoid and ellipsoid models.
 ```
+
+This DEM is not suitable for use in applications that require geoid-based heights. For these applications, the original [Copernicus WorldDEM-30 (GLO-30)](https://doi.org/10.5270/ESA-c5d3d65) dataset should be used instead.
 :::
 
 This dataset allows SAR scientists to generate their own higher-level products from NISAR data using the same input DEM as the mission-generated products. 
