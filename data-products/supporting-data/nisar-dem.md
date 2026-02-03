@@ -154,6 +154,7 @@ Examples comparing Earthdata titles to actual filenames:
 
 The actual DEM data is contained in tiled assemblages of Cloud Optimized GeoTIFF (COG) files, but the NISAR_DEM collection also includes [VRT](#vrt-reference-files) files. VRTs are virtual files that reference the tiled DEM COGs, allowing them to be visualized as a mosaic. <!-- #TODO: Add reference to the product spec -->
 
+(tiled-dem-cog-files)=
 ### Tiled DEM COG Files
 
 The DEM height values are contained in the COG files. The files are tiled to provide complete coverage for each of the [projection-based datasets](#dem-datasets) included in the DEM collection. The tiling scheme differs based on the projection, as indicated in @tbl:nisar-dem-characteristics.
@@ -179,9 +180,10 @@ The VRT files are more useful when interacting with the DEM files directly in th
 
 ## Finding DEM Files
 
-The DEM for NISAR files can be found in Earthdata Search by searching for "NISAR_DEM": [Find Data in Earthdata Search](https://search.earthdata.nasa.gov/search?q=NISAR_DEM)
+The DEM for NISAR files can be found in Earthdata Search by searching for "NISAR_DEM".  
+[Find Data in Earthdata Search](https://search.earthdata.nasa.gov/search?q=NISAR_DEM)
 
-All three DEM datasets (with their tiled GeoTIFFs and associated VRT files) are included in one [NISAR_DEM](https://www.earthdata.nasa.gov/data/catalog/asf-nisar-dem-1) collection. They are accessible through [Earthdata Search](https://search.earthdata.nasa.gov/search?q=NISAR_DEM), but not currently discoverable in Vertex. The projection is included in the title for each DEM file in Earthdata Search, making it easy to restrict searches to a single projection.
+All three DEM datasets (with their [tiled GeoTIFFs](#tiled-dem-cog-files) and associated [VRT files](#vrt-reference-files)) are included in one [NISAR_DEM](https://www.earthdata.nasa.gov/data/catalog/asf-nisar-dem-1) collection. They are accessible through [Earthdata Search](https://search.earthdata.nasa.gov/search?q=NISAR_DEM), but not currently discoverable in Vertex. The projection is included in the title for each DEM file in Earthdata Search, making it easy to restrict searches to a single projection.
 
 Each DEM filename gives an indication of its geographic location, which you can use to locate the tiles you need, but it is easiest to use Earthdata Search to find the necessary tiles for a specific geographic area of interest. To incorporate subsetting into a programmatic workflow, it is useful to leverage @vrt-subsetting.
 
