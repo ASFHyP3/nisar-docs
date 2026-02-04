@@ -47,7 +47,7 @@ Refer to the [Vertex User Manual](https://docs.asf.alaska.edu/vertex/manual/) fo
 [Earthdata Search](https://search.earthdata.nasa.gov/) allows users to search for all of NASA's Earth observation datasets in one place. 
 
 <a href="https://search.earthdata.nasa.gov/">
-<img id="earthdata-search-screenshot" src="../assets/earthdata-search-screenshot.png" alt="Image of the Earthdata Search web interface">
+<img id="earthdata-search-page" src="../assets/earthdata-search-page.png" alt="Image of the Earthdata Search web interface">
 </a>
 
 --
