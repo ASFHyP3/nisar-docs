@@ -79,7 +79,7 @@ Filter Earthdata Search results to refine the number of granules to your desired
 ```
 
 ### 4. Download data
-Individual granules can be downloaded directly on Earthdata search. Simply click on the download icon next to the desired granule to download locally. If you are looking to use S3 access, visit [the S3 access page](#s3-paths-earthdata-search). 
+Individual granules can be downloaded directly via the Earthdata search results. Simply click on the download icon next to the desired granule to download locally. If you are access data using the AWS CLI, visit [the S3 access page](#s3-paths-earthdata-search). 
 To learn more about downloading multiple files at once, visit the [NASA Earthdata Cloud Cookbook](https://nasa-openscapes.github.io/earthdata-cloud-cookbook/how-tos/find-data/earthdata_search.html). 
 
 ```{figure} ../assets/earthdata-search-download-GCOV.png
