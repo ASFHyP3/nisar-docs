@@ -81,8 +81,8 @@ Search using a date range with the "Temporal" search filter.
 ```
 
 ### 4. Download data
-* Individual granules can be downloaded directly through the results. 
-* To learn more about downloading multiple files at once, visit the [NASA Earthdata Cloud Cookbook](https://nasa-openscapes.github.io/earthdata-cloud-cookbook/how-tos/find-data/earthdata_search.html). 
+Individual granules can be downloaded directly on Earthdata search. Simply click on the download icon next to the desired granule to download locally. If you are looking to use S3 access, visit [the S3 access page](#s3-paths-earthdata-search). 
+To learn more about downloading multiple files at once, visit the [NASA Earthdata Cloud Cookbook](https://nasa-openscapes.github.io/earthdata-cloud-cookbook/how-tos/find-data/earthdata_search.html). 
 
 ```{figure} ../assets/earthdata-search-download-GCOV.png
 :label: earthdata-search-download-GCOV
