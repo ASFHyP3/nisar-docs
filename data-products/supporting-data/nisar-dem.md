@@ -138,7 +138,7 @@ In [Earthdata Search](https://search.earthdata.nasa.gov/search?q=NISAR_DEM), eac
 
 While these unique titles are helpful for finding specific DEM files during the search process, the actual filenames of the downloaded files only partially match these titles. This is particularly important to know when working with the polar stereographic datasets, as the filenames used for the north and south polar datasets are identical. 
 
-Examples comparing Earthdata Search titles to actual filenames: 
+Examples comparing Earthdata titles to actual filenames: 
 
 - WGS84
   - Earthdata title: `v1-2-EPSG4326-N20-N20_E160-DEM_N23_00_E162_00_C01-tif`
