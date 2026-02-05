@@ -46,7 +46,7 @@ To search for all NISAR data products, use the filter options on the left-hand p
 :alt: Screenshot showing the platform and processing level filters in Earthdata Search selected to be NISAR and Level 2 and Level 3, respectively. 
 :align: center
 
-Setting the platform filter to NISAR and the processing level to 2 and 3 will filter to show analysis-ready NISAR data products.
+Setting the platform filter to NISAR and the processing level to 2 and 3 will show analysis-ready NISAR data products.
 ```
 
 ### 2. Filter for desired products
@@ -63,6 +63,7 @@ Search by drawing a region of interest or entering coordinates using the "Spatia
 ```
 
 To search for products during a specific date range, use the `Temporal Search` button. This filter searches for products between a start and end date, with the option to find products that occur on an annual basis by checking the "Use a recurring date range" button. 
+
 ```{figure} ../assets/earthdata-search-temporal-search.png
 :label: earthdata-search-temporal-search
 :alt: Screenshot showing the temporal search of GCOV products. 
