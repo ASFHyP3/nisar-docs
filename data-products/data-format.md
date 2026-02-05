@@ -42,13 +42,13 @@ Storing this information with the data helps ensure that datasets can be underst
 
 ## Datatypes
 
-An HDF5 datatype describes the kind of data that is being stored. A datatype explains both how to interpret a dataset and how it is stored. Datatypes fall into three categories: **{abbr}`atomic datatypes(Basic building blocks)`**, **{abbr}`composite datatypes(Combinations of atomic types)`**, and **{abbr}`named datatypes(Ways of storing and sharing datatypes)`**.
+An HDF5 datatype describes the kind of data that is being stored. A datatype explains both how to interpret a dataset and how it is stored. Datatypes fall into three categories: **{abbr}`atomic datatypes(Basic building blocks)`**, **{abbr}`composite datatypes(Combinations of other datatypes)`**, and **{abbr}`named datatypes(Ways of storing and sharing datatypes)`**.
 
 A summary of some important datatypes is given below. For more details on HDF5 datatypes and their uses, see the official [HDF5 Datatypes](https://support.hdfgroup.org/documentation/hdf5/latest/_h5_t__u_g.html) documentation.
 
 ### Atomic Datatypes
 
-**{abbr}`Atomic datatypes(Basic building blocks)`** are typically the simplest datatypes. They serve as building blocks for more complex datatypes. Common atomic datatypes include:
+**Atomic datatypes** are typically the simplest datatypes. They serve as building blocks for more complex datatypes. Common atomic datatypes include:
 - Time
 - Bitfield
 - String
@@ -57,14 +57,14 @@ A summary of some important datatypes is given below. For more details on HDF5 d
 - Integer
 - Float
 
-**{abbr}`Derived datatypes(Customized versions of atomic datatypes)`** are customized atomic types, commonly used for N-bit integers, floating-point formats, and other nonstandard data representations. They enable efficient and precise storage when data do not conform to standard numeric formats. Derived datatypes are useful because they:
+**Derived datatypes** are customized atomic datatypes, commonly used for N-bit integers, floating-point formats, and other nonstandard data representations. They enable efficient and precise storage when data do not conform to standard numeric formats. Derived datatypes are useful because they:
 - Allow custom storage with specific bit lengths
 - Support values that do not follow standard integer or floating-point formats
 - Preserve the original format in which the data were recorded
 
 ### Composite Datatypes
 
-Some important **{abbr}`composite datatypes(Combinations of atomic types)`** are described below:
+**Composite datatypes** are combinations of other datatypes. Some important composite datatypes are described below.
 
 **Array datatypes** represent multidimensional arrays with a fixed shape.
 
@@ -84,7 +84,7 @@ Some important **{abbr}`composite datatypes(Combinations of atomic types)`** are
 
 ### Named Datatypes
 
-**{abbr}`Named datatypes(Ways of storing and sharing datatypes)`** are stored as objects within an HDF5 file. Any datatype (atomic, derived, or composite) can be named or referenced throughout the file.
+**Named datatypes** are stored as objects within an HDF5 file. Any datatype (atomic, derived, or composite) can be named or referenced throughout the file.
 Naming allows datatypes to be:
 - Shared across datasets and attributes
 - Reused simply and consistently
