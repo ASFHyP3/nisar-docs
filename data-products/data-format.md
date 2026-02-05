@@ -1,19 +1,18 @@
 # Data Format: HDF5
 
-## TODO: integrate old content
-
-All NISAR standard products are in the [Hierarchical Data Format version 5 (HDF5)](https://www.hdfgroup.org/solutions/hdf5/). HDF5 is a general-purpose file format and programming library for storing scientific data. The flexible format allows establishing structure to data and metadata.
-
-While the files are stored in HDF5 format, the internal structure of the NISAR products is compliant with the [Climate and Forecast (CF) metadata convention](https://cfconventions.org/) of the Network Common Data Form (netCDF) format. This can cause problems when using some HDF5 drivers to read the data. While ArcGIS Pro introduced support for reading NISAR HDF5 files with version 3.4.0, there is not yet a NISAR-compliant HDF5 reader for GDAL.
-
-Those who use GDAL to read files for use in QGIS or programmatic workflows can  replace the ‘.h5’ NISAR product extension to ‘.nc’. This allows GDAL to recognize the spatial coordinate system and project the file appropriately. Refer to [ASF’s documentation on workarounds](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data) for accessing NISAR HDF5 files.
-
 (hdf5)=
 ## What is HDF5?
-NISAR GCOV products are delivered in HDF5, or Hierarchical Data Format version 5. HDF5 is a file format designed to store, organize, and access large scientific datasets. GCOV uses HDF5 to systematically organize radar data and metadata in a way that is both efficient and easy to read, share, and analyze.
+
+All NISAR standard products are in [Hierarchical Data Format version 5 (HDF5)](https://www.hdfgroup.org/solutions/hdf5/). HDF5 is a programming library and file format designed to store, organize, and access large scientific datasets. NISAR uses HDF5 to systematically organize radar data and metadata in a way that is both efficient and easy to read, share, and analyze.
+
+:::{caution}Accessing NISAR HDF5 files
+While the files are stored in HDF5 format, the internal structure of the NISAR products is compliant with the [Climate and Forecast (CF) metadata convention](https://cfconventions.org/) of the Network Common Data Form (netCDF) format. This can cause problems when using some HDF5 drivers to read the data. While ArcGIS Pro introduced support for reading NISAR HDF5 files with version 3.4.0, there is not yet a NISAR-compliant HDF5 reader for GDAL.
+
+Those who use GDAL to read files for use in QGIS or programmatic workflows can replace the `.h5` NISAR product extension with `.nc`. This allows GDAL to recognize the spatial coordinate system and project the file appropriately. Refer to [ASF’s documentation on workarounds](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data) for accessing NISAR HDF5 files.
+:::
 
 HDF was originally developed by the University of Illinois' National Center for Supercomputing Applications (NCSA) to support data sharing within the scientific community. HDF5 represents a significant redesign compared to earlier versions of HDF, with a more flexible and powerful internal structure. For additional details, users can consult the official HDF documentation at
-<https://support.hdfgroup.org/documentation/index.html>.
+<https://support.hdfgroup.org/documentation/>.
 
 At a high level, an HDF5 file functions as a container that organizes data into a hierarchy of objects, such as **{abbr}`groups(A folder within an HDF5 file)`**, **{abbr}`datasets(The actual data values stored in an HDF5 file)`**, and **{abbr}`datatypes(The type and format of data)`**. In general, radar layers are organized into two groups: **{abbr}`frequencyA(Lower portion of the radar bandwidth)`**/ and (potentially) **{abbr}`frequencyB(Higher portion of the radar signal)`**/. Note that nothing stored at the root `/`.
 
