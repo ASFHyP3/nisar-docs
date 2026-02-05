@@ -51,7 +51,7 @@ Refer to the [Vertex User Manual](https://docs.asf.alaska.edu/vertex/manual/) fo
 </a>
 
 
-[Learn more about using Earthdata Search to access NISAR data!](earthdata-search#earthdata-search)
+[Learn more about using Earthdata Search to access NISAR data!](earthdata-search#earthdata-search-overview)
 
 ## Programmatic Access
 

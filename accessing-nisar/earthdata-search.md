@@ -94,7 +94,7 @@ Individual granules can be downloaded directly from the Earthdata Search results
 :alt: Screenshot showing how to select and download a single GCOV granule.  
 :align: center
 
-Log in with EDL credentials by clicking the "Log In" button (#1) on the upper right-hand side of the screen. Once ready to download, click the download icon (#2), toggle to "Download Files", and click the download icon next to the filename to download your desired granule directly. 
+Log in with EDL credentials by clicking the "Log In" button (#1) on the upper right-hand side of the screen. Once logged in, click the download icon (#2), toggle to "Download Files", and click the download icon next to the filename to download your desired granule directly. 
 ```
 
 For guidance on downloading multiple files in bulk, refer to the [NASA Earthdata Cloud Cookbook](https://nasa-openscapes.github.io/earthdata-cloud-cookbook/how-tos/find-data/earthdata_search.html). 
