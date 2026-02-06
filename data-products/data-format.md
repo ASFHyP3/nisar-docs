@@ -18,7 +18,7 @@ At a high level, an HDF5 file functions as a container that organizes data into 
 
 ## Groups
 
-An HDF5 **{abbr}`group(A folder within an HDF5 file)`** is a folder within an HDF5 file. Groups can hold datasets, datatypes, and other groups (subfolders). In essence, groups act like directories on computers. In a NISAR product, datasets are organized through nesting. For example, in a NISAR GCOV product, a dataset may be stored at a path such as:
+An HDF5 **group** is a folder within an HDF5 file. Groups can hold datasets, datatypes, and other groups (subfolders). In essence, groups act like directories on computers. In a NISAR product, datasets are organized through nesting. For example, in a NISAR GCOV product, a dataset may be stored at a path such as:
 
 ```
 /science/LSAR/GCOV/grids/frequencyA/HH
