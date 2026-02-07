@@ -13,4 +13,70 @@ short_title: Vertex Data Search
 
 To search for NISAR datasets specifically, select `NISAR` from the **Dataset** menu. Click the **Filters** button to expose additional parameters that can be used to narrow your search.
 
+```{figure} ../assets/vertex-dataset-selection.png
+:label: vertex-dataset-selection
+:alt: Image depicting the option to select "NISAR" from the "Datset" options. 
+:align: center
+
+Click on the "Dataset" button and select "NISAR" to search for NISAR products. 
+```
+
+```{figure} ../assets/vertex-geographic-search.png
+:label: vertex-geographic-search
+:alt: Screenshot of Vertex highlighting the "Geographic Search" option to draw a region of interest to search for products. 
+:align: center
+
+Using the "Geographic Search" type, toggle into drawing mode to draw a region of interest to search for NISAR products. 
+```
+
+```{figure} ../assets/vertex-date-filters.png
+:label: vertex-date-filters
+:alt: Screenshot displaying the date filters option.
+:align: center
+
+The option to filter by date pops up after clicking on "Filters"
+```
+
 Because search parameters of interest for SAR differ from other types of Earth observation data, it can be helpful to use a platform that is tailored to the parameters and characteristics of SAR data. This is particularly useful for those who are less familiar with SAR data products and may need more guidance to find the appropriate dataset for their use case. 
+
+:::{table} Product Filters for NISAR Products
+:label: tbl:vertex-product-filters
+
+| Product Filter        | Description                                                                   |
+|-----------------------|-------------------------------------------------------------------------------|
+| Science Product       | Specific product type, grouped by product level. Multiple selections allowed. |
+| Product Configuration | Specific processing pipelines. Multiple selections allowed.                   |
+
+:::
+
+:::{table} Observational Filters for NISAR Products
+:label: tbl:vertex-observational-filters
+
+| Observational Filter   | Description                                             |
+|------------------------|---------------------------------------------------------|
+| Main Band Polarization | Frequency A polarizations. Multiple selections allowed. |
+| Side Band Polarization | Frequency B polarizations. Multiple selections allowed. |
+| Direction              | Orbit direction (ascending, descending).                |
+| Instrument             | Currently, only L-Band SAR available.                   |
+| Frame Coverage         | Full or Partial frame coverage.                         |
+| Range Bandwidth        | Range bandwidth in MHz. Multiple selections allowed.    |
+| Joint Observation Only | Toggle on for simultaneous L- and S-Band acquisitions.  |
+
+:::
+
+
+```{figure} ../assets/vertex-add-to-downloads.png
+:label: vertex-add-to-downloads
+:alt: Screenshot highlight the download button next to desired product and the "Downloads" icon that will dispaly file options. 
+:align: center
+
+Add files from desired granules to the Downloads cart by clicking the shopping cart button to add scene files to downloads.
+```
+
+```{figure} ../assets/vertex-download-files.png
+:label: vertex-download-files
+:alt: Screenshot of the list of products for a single GCOV product. 
+:align: center
+
+All product files associated with a GCOV product. The HDF5 file is the most useable file and can be downloaded directly by clicking the download icon, circled in red.  
+```
