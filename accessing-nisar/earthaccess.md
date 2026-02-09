@@ -85,7 +85,7 @@ auth = earthaccess.login()
 file_objects = earthaccess.open(results)
 ```
 
-opens and the first file object can be passed to tools like [`xarray`](https://docs.xarray.dev/en/stable/) using the [h5netcdf](https://h5netcdf.org/index.html) reader.
+opens file objects for each data link in `results`. A file object can be passed to tools like [`xarray`](https://docs.xarray.dev/en/stable/) using the [h5netcdf](https://h5netcdf.org/index.html) reader:
 ```python
 import xarray as xr
 
@@ -97,11 +97,11 @@ ds = xr.open_datatree(
 )
 ```
 
-using `earthaccess.open` is the easiest way to start streaming NISAR data, and it will attempt to smartly pick the right protocol and defaults to provide good performance across all NASA data. However, you may be able to fine-tune steaming performance for your NISAR product(s) and access patterns. The next two example show you how to use a specific protocol and set `fsspec` options.
+`earthaccess.open` will use sensible defaults to provide good performance across all NASA data. You can override these default to fine-tune steaming performance for your access pattern. The next two examples show how to use a specific protocol and set `fsspec` options.
 
 ### Example: Stream via HTTPS
 
-This end-to-end example gets searches for a single NISAR GCOV product, retrieves the HTTPS access URL, sets custom `fsspec` configuration, and opens the GCOV granule with `xarray` using the `h5netcdf` engine.
+This end-to-end example searches for a single NISAR GCOV product, retrieves its HTTPS access URL, sets a custom `fsspec` configuration, and opens it with `xarray` using the `h5netcdf` engine.
 
 ```python
 import earthaccess
@@ -132,10 +132,10 @@ ds = xr.open_datatree(
 
 ### Example: Stream via S3
 
-This end-to-end example gets searches for a single NISAR GCOV product, retrieves the S3 access URI, sets custom `fsspec` configuration, and opens the GCOV granule with `xarray` using the `h5netcdf` engine. Behind the scenes, `earthaccess` will request temporary AWS credentials for you, which is described on the [AWS S3 Access page](aws-s3-access). 
+This end-to-end example searches for a single NISAR GCOV product, retrieves its S3 access URI, sets a custom `fsspec` configuration, and opens it with `xarray` using the `h5netcdf` engine. Behind the scenes, `earthaccess` will request temporary AWS credentials for you, which is described in @aws-s3-access-overview.
 
 :::{warning}Must be in AWS `us-west-2`
-Direct AWS S3 access is only available for resources (e.g., EC2) in the AWS `us-west-2` region.
+Direct AWS S3 access is only available for resources (e.g., EC2) in the AWS `us-west-2` region. See @s3-access-limitations for more details.
 :::
 
 
