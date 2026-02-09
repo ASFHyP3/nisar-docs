@@ -66,11 +66,11 @@ A summary of some important datatypes is given below. For more details on HDF5 d
 
 **Composite datatypes** are combinations of other datatypes. Some important composite datatypes are described below.
 
-**Array datatypes** represent multidimensional arrays with a fixed shape.
+**Array datatypes** represent fixed-size, multi-dimensional arrays of a specified base datatype, where the array shape is defined as part of the datatype.
 
-- *NISAR example:* a fixed-size array used to store a per-pixel covariance matrix in a GCOV product, where each pixel always contains the same number of polarization or frequency components.
+- *NISAR example:* an array datatype used within a metadata or structured record to store a fixed-size collection of values (e.g., a constant-dimension vector or matrix associated with an acquisition or product record).
 
-**Variable-length datatypes** represent variable-length, one-dimensional arrays of elements.
+**Variable-length datatypes** represent one-dimensional arrays of a specified base datatype, where the number of values may vary between elements.
 
 - *NISAR example:* a variable-length array used to store lists of contributing looks, burst indices, or quality flags, where the number of entries may vary between pixels.
 
