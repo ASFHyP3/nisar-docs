@@ -70,7 +70,7 @@ A summary of some important datatypes is given below. For more details on HDF5 d
 
 - *NISAR example:* an array datatype used within a metadata or structured record to store a fixed-size collection of values (e.g., a constant-dimension vector or matrix associated with an acquisition or product record).
 
-**Variable-length datatypes** represent one-dimensional arrays of a specified base datatype, where the number of values may vary between elements.
+**Variable-length datatypes** represent one-dimensional arrays of a specified base datatype, with a variable number of items.
 
 - *NISAR example:* a variable-length array used to store lists of contributing looks, burst indices, or quality flags, where the number of entries may vary between pixels.
 
