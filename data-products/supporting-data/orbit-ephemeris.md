@@ -59,4 +59,20 @@ ValidityEndTime
 
 For example, a file named `NISAR_ANC_J_PR_POE_20260107T213450_20251224T205942_20251226T025942.xml` is a Precise Orbit Ephemeris product created on Jan 7, 2026 that contains orbit state vectors from Dec 24, 2025 20:59:42 through Dec 26, 2025 02:59:42 in UTC time.
 
-## Finding Orbit Ephemeris Files
+## Finding and Downloading Orbit Ephemeris Files
+
+You can find and download NISAR OE products using the `NISAR_OE` short name in [Earthdata Search](#earthdata-search-overview) or via the [Earthaccess Python package](#earthaccess-package).
+
+You can also find and download NISAR OE products via [Direct AWS S3 Access](#aws-s3-access-overview). OE files are organized in a separate prefix for each product type, as shown in @tbl:nisar-orbit-ephemeris-s3-locations:
+
+:::{table} S3 Locations by Product Type
+:label: tbl:nisar-orbit-ephemeris-s3-locations
+
+| Product Type           | S3 location                                   |
+|------------------------|-----------------------------------------------|
+| Forecast (FOE)         | `s3://sds-n-cumulus-prod-nisar-products/FOE/` |
+| Near real-time (NOE)   | `s3://sds-n-cumulus-prod-nisar-products/NOE/` |
+| Medium precision (MOE) | `s3://sds-n-cumulus-prod-nisar-products/MOE/` |
+| Precise (POE)          | `s3://sds-n-cumulus-prod-nisar-products/POE/` |
+
+:::
