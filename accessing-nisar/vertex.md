@@ -11,8 +11,8 @@ short_title: Vertex Data Search
 ## Using Vertex to Access NISAR Data
 
 ### 1. Search for NISAR data
-Navigate to [Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) to search for NISAR datasets specifically. If not already selected, make sure to select `NISAR` from the **Dataset** menu. 
-* SET GEOGRPAHIC SEARCH AND NISAR 
+Navigate to [Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) to search for NISAR datasets specifically. If not already selected, make sure to set the **Search Type** to `Geographic Search` and select `NISAR` from the **Dataset** menu. 
+
 
 ```{figure} ../assets/vertex-dataset-selection.png
 :label: vertex-dataset-selection
