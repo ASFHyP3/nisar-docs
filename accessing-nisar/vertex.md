@@ -93,7 +93,7 @@ Data are free and available to download through Vertex. Once the desired scene i
 :alt: Screenshot highlight the download button next to desired product and the "Downloads" icon that will dispaly file options. 
 :align: center
 
-Add files from desired granules to the Downloads cart by clicking the shopping cart button to add scene files to downloads.
+Add files from desired granules to the Downloads cart by clicking the shopping cart button.
 ```
 
 The Download queue will have eight files added per selected scene. For majority of users, only the `hdf5` file is necessary to download. Click the download icon next to the HDF5 file name to save to your local workspace. 
