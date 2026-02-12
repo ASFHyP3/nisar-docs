@@ -70,6 +70,7 @@ project:
         - file: appendices/acronyms.md
         - file: appendices/glossary.md
   abbreviations:
+    ASF: Alaska Satellite Facility
     AWS: Amazon Web Services
     DAAC: Distributed Active Archive Center
     DEM: Digital Elevation Model

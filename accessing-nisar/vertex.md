@@ -2,7 +2,7 @@
 short_title: Vertex Data Search
 ---
 
-# Finding NISAR Data with Vertex Data Search
+# Finding NISAR Data with Vertex
 
 (vertex-overview)=
 ## Vertex Data Search
@@ -12,6 +12,7 @@ short_title: Vertex Data Search
 
 ### 1. Search for NISAR data
 Navigate to [Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) to search for NISAR datasets specifically. If not already selected, make sure to select `NISAR` from the **Dataset** menu. 
+* SET GEOGRPAHIC SEARCH AND NISAR 
 
 ```{figure} ../assets/vertex-dataset-selection.png
 :label: vertex-dataset-selection
@@ -46,7 +47,7 @@ The option to filter by date pops up after clicking on "Filters"
 NISAR-specific filters are available to more precisely search for NISAR data products. 
 
 ```{figure} ../assets/vertex-nisar-filters.png
-:label: vertex-date-filters
+:label: vertex-nisar-filters
 :alt: Screenshot displaying the NISAR-specific filters in Vertex. 
 :align: center
 
@@ -96,7 +97,7 @@ Data are free and available to download through Vertex. Once the desired scene i
 Add files from desired granules to the Downloads cart by clicking the shopping cart button.
 ```
 
-The Download queue will have eight files added per selected scene. For majority of users, only the `hdf5` file is necessary to download. Click the download icon next to the HDF5 file name to save to your local workspace. 
+The Download queue will have eight files added per selected scene. For the majority of users, only the `hdf5` file is necessary to download. Click the download icon next to the HDF5 file name to save locally. 
 
 ```{figure} ../assets/vertex-download-files.png
 :label: vertex-download-files
