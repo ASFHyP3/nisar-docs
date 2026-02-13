@@ -42,7 +42,7 @@ To search for products in a specific range, open the **Filters** panel and speci
 The option to filter by date pops up after clicking on "Filters"
 ```
 
-NISAR-specific filters are available to more precisely search for NISAR data products. The [Vertex Getting Started User Guide](https://docs.asf.alaska.edu/vertex/manual/#product-filters) also documents all the filters and options.
+NISAR-specific filters are available to more precisely search for NISAR data products. Refer to the [Vertex Getting Started User Guide](https://docs.asf.alaska.edu/vertex/manual/#product-filters) for a comprehensive list of filters and search options. 
 
 ```{figure} ../assets/vertex-nisar-filters.png
 :label: vertex-nisar-filters
@@ -52,7 +52,7 @@ NISAR-specific filters are available to more precisely search for NISAR data pro
 NISAR-specific filters in Vertex.
 ```
 
-Product filter options are listed in @tbl:vertex-product-filters. Science Products are organized by product level, and multiple selections are allowed. For a complete list of NISAR products, including detailed descriptions and specifications, refer to @data-products-overview.
+**Product Filter** options are listed in @tbl:vertex-product-filters. Science Products are organized by product level, and multiple selections are allowed. For a complete list of NISAR products, including detailed descriptions and specifications, refer to @data-products-overview.
 
 :::{table} Product Filters for NISAR Products
 :label: tbl:vertex-product-filters
@@ -81,13 +81,13 @@ The **Observational Filter** options allow users to refine search results down b
 
 :::
 
-Users can also search by Track and Frame. Note that Track is NISAR's convention for Path. To explore NISAR track frames, visit the [ArcGIS Online Map for NISAR track frames](https://www.arcgis.com/home/item.html?id=6d153395a11a4b6a9a81e4e1adaaa0cf). 
+Users can also search by **Track and Frame**. Note that Track is NISAR's convention for what is referred to as "Path" for Sentinel-1 products. To explore NISAR track frames, visit the [ArcGIS Online Map for NISAR track frames](https://www.arcgis.com/home/item.html?id=6d153395a11a4b6a9a81e4e1adaaa0cf). 
 
 ### 3. Download data
 
-Data are free and available to download through Vertex. Once the desired scene is selected, a list of files will appear on the right-hand side of the screen or below the scene details, depending on how wide the browser screen is. For the majority of users, only the `HDF5` file is necessary to download. To learn more about HDF5 files, see @data-format. 
+Data are free and available to download through Vertex. Once the desired scene is selected, a list of files will appear on the right-hand side of the screen or below the scene details, depending on how wide the browser screen is. For the majority of users, only the `HDF5` file is necessary to download. To learn more about HDF5 files, see @hdf5. 
 
-Click the download icon next to the HDF5 file name to save locally. If not yet logged in with an EDL account, a pop up window will prompt you for you credentials. 
+Click the download icon next to the HDF5 file name to save locally. If not yet logged in with an EDL account, a pop-up window will prompt for credentials before download. For more information about EDL accounts, see @earthdata-login. 
 
 ```{figure} ../assets/vertex-download-files.png
 :label: vertex-download-files

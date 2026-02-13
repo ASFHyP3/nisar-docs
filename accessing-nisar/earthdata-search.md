@@ -84,6 +84,8 @@ Filter using the Granule ID filter set to `*_QP*` to find all quad-pol products.
 
 ### 3. Download data
 
+Log in to Earthdata Search using EDL credentials. To learn more about EDL, see @earthdata-login.
+
 Individual granules can be downloaded directly from the Earthdata Search results. Select the download icon associated with the desired granule to save the file locally.
 
 ```{figure} ../assets/earthdata-search-download-GCOV.png
