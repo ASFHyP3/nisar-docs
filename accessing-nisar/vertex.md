@@ -81,7 +81,7 @@ The **Observational Filter** options allow users to refine search results down b
 
 :::
 
-Users can also search by **Track and Frame**. Note that Track is NISAR's convention for what is referred to as "Path" for Sentinel-1 products. To explore NISAR track frames, visit the [ArcGIS Online Map for NISAR track frames](https://www.arcgis.com/home/item.html?id=6d153395a11a4b6a9a81e4e1adaaa0cf). 
+Users can also search by **Track and Frame**. Note that "Track" is NISAR's convention for what is referred to as "Path" for Sentinel-1 products. Searching for a specific track and frame will return scenes that occur consistently over a specific area. To explore NISAR track frames, visit the [ArcGIS Online Map for NISAR track frames](https://www.arcgis.com/home/item.html?id=6d153395a11a4b6a9a81e4e1adaaa0cf). 
 
 ### 3. Download data
 
