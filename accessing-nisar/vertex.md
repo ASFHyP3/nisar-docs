@@ -30,6 +30,7 @@ To search for specific geographic region, click on the left-most "Area of Intere
 :alt: Screenshot of Vertex highlighting the "Geographic Search" option to draw a region of interest to search for products. 
 :align: center
 
+Select a shape and draw an area of interest for a geographic search. 
 ```
 
 To search for products in a specific date range, open the **Filters** panel and specify a start and end date to define the search range. 
@@ -64,7 +65,7 @@ NISAR-specific filters in Vertex.
 
 :::
 
-The **Observational Filter** options allow users to refine search results down by polarization, direction, instrument, frame coverage, and/or range bandwidth, as described in @tbl:vertex-observational-filters. For information about NISAR bands, frequencies, and polarization, see @nisar-instrumentation. Note that only L-band data are available through Vertex. S-band data are available through [ISRO's Bhoonidhi](https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html).
+The **Observational Filter** options allow users to refine search results by polarization, direction, instrument, frame coverage, and/or range bandwidth, as described in @tbl:vertex-observational-filters. For information about NISAR bands, frequencies, and polarization, see @nisar-instrumentation. Note that only L-band data are available through Vertex. S-band data are available through [ISRO's Bhoonidhi](https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html).
 
 :::{table} Observational Filters for NISAR Products
 :label: tbl:vertex-observational-filters
@@ -81,11 +82,11 @@ The **Observational Filter** options allow users to refine search results down b
 
 :::
 
-Users can also search by **Track and Frame**. Note that "Track" is NISAR's convention for what is referred to as "Path" for Sentinel-1 products. Searching for a specific track and frame will return scenes that occur consistently over a specific area. To explore NISAR track frames, visit the [ArcGIS Online Map for NISAR track frames](https://www.arcgis.com/home/item.html?id=6d153395a11a4b6a9a81e4e1adaaa0cf). 
+Users can also search by **Track and Frame**. Note that "Track" is NISAR's convention for what is referred to as "Path" for Sentinel-1 products. Searching for a specific track and frame will return scenes that occur consistently over a specific area. The NISAR track-frame map for available NISAR data is available on the [NISAR Mission website](https://science.nasa.gov/mission/nisar/data/). 
 
 ### 3. Download data
 
-Data are free and available to download through Vertex. Once the desired scene is selected, a list of files will appear on the right-hand side of the screen or below the scene details, depending on how wide the browser screen is. For the majority of users, only the `HDF5` file is necessary to download. To learn more about HDF5 files, see @hdf5. 
+Data are free and available to download through Vertex. Once the desired scene is selected, a list of files will appear on the right-hand side of the screen or below the scene details, depending on how wide the browser screen is. The HDF5 file, listed first, contains the science data and imagery. To learn more about HDF5 files, see @hdf5. 
 
 Click the download icon next to the HDF5 file name to save locally. If not yet logged in with an EDL account, a pop-up window will prompt for credentials before download. For more information about EDL accounts, see @earthdata-login. 
 
@@ -94,5 +95,5 @@ Click the download icon next to the HDF5 file name to save locally. If not yet l
 :alt: Screenshot of the list of products for a single GCOV product. 
 :align: center
 
-All product files associated with a GCOV product. The HDF5 file is the most useable file and can be downloaded directly by clicking the download icon, circled in red.  
+All product files associated with a GCOV product. The HDF5 file, listed first, contains the science data and imagery, and can be downloaded directly by clicking the download icon, circled in red.  
 ```
