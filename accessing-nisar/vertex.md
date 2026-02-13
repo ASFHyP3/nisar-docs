@@ -32,7 +32,7 @@ To search for specific geographic region, click on the left-most "Area of Intere
 
 ```
 
-To search for products in a specific range, open the **Filters** panel and specify a start and end date to define the search range. 
+To search for products in a specific date range, open the **Filters** panel and specify a start and end date to define the search range. 
 
 ```{figure} ../assets/vertex-date-filters.png
 :label: vertex-date-filters
