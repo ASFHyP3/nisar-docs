@@ -11,8 +11,7 @@ short_title: Vertex Data Search
 ## Using Vertex to Access NISAR Data
 
 ### 1. Search for NISAR data
-Navigate to [Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) to search for NISAR datasets specifically. If not already selected, make sure to set the **Search Type** to `Geographic Search` and select `NISAR` from the **Dataset** menu. 
-
+Navigate to [Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) and set the **Search Type** to `Geographic Search` and select `NISAR` from the **Dataset** menu. Press **Search** to explore search results. 
 
 ```{figure} ../assets/vertex-dataset-selection.png
 :label: vertex-dataset-selection
@@ -22,7 +21,9 @@ Navigate to [Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=P
 Click on the "Dataset" button and select "NISAR" to search for NISAR products. 
 ```
 
-Toggle on drawing mode to draw a region of interest to search for products that lie within that area. The left-most "Area of Interest" button offers selection between a point, line, polygon, box, circle, or by uploading a geospatial file. 
+### 2. Filter for desired products
+
+To search for specific geographic region, click on the left-most "Area of Interest" button to select to draw a point, line, polygon, box, circle, or by uploading a geospatial file. Toggle on drawing mode to draw a region of interest to search for products that lie within that area. Then press **Search** to update the search for the new region of interest.
 
 ```{figure} ../assets/vertex-geographic-search.png
 :label: vertex-geographic-search
@@ -30,9 +31,8 @@ Toggle on drawing mode to draw a region of interest to search for products that 
 :align: center
 
 ```
-Click the **Filters** button to expose additional parameters that can be used to narrow your search. 
 
-The **Filters** panel enables date-based filtering. Specify a start and end date to define the search range. 
+To search for products in a specific range, open the **Filters** panel and specify a start and end date to define the search range. 
 
 ```{figure} ../assets/vertex-date-filters.png
 :label: vertex-date-filters
@@ -42,9 +42,7 @@ The **Filters** panel enables date-based filtering. Specify a start and end date
 The option to filter by date pops up after clicking on "Filters"
 ```
 
-### 2. Refine results with NISAR-specific filters
-
-NISAR-specific filters are available to more precisely search for NISAR data products. 
+NISAR-specific filters are available to more precisely search for NISAR data products. The [Vertex Getting Started User Guide](https://docs.asf.alaska.edu/vertex/manual/#product-filters) also documents all the filters and options.
 
 ```{figure} ../assets/vertex-nisar-filters.png
 :label: vertex-nisar-filters
@@ -87,17 +85,9 @@ Users can also search by Track and Frame. Note that Track is NISAR's convention 
 
 ### 3. Download data
 
-Data are free and available to download through Vertex. Once the desired scene is selected, click on the shopping cart icon in the scene listed. This will add the scene to your Downloads, which is the shopping cart icon on the top right hand of the screen. 
+Data are free and available to download through Vertex. Once the desired scene is selected, a list of files will appear on the right-hand side of the screen or below the scene details, depending on how wide the browser screen is. For the majority of users, only the `HDF5` file is necessary to download. To learn more about HDF5 files, see @data-format. 
 
-```{figure} ../assets/vertex-add-to-downloads.png
-:label: vertex-add-to-downloads
-:alt: Screenshot highlight the download button next to desired product and the "Downloads" icon that will dispaly file options. 
-:align: center
-
-Add files from desired granules to the Downloads cart by clicking the shopping cart button.
-```
-
-The Download queue will have eight files added per selected scene. For the majority of users, only the `hdf5` file is necessary to download. Click the download icon next to the HDF5 file name to save locally. 
+Click the download icon next to the HDF5 file name to save locally. If not yet logged in with an EDL account, a pop up window will prompt you for you credentials. 
 
 ```{figure} ../assets/vertex-download-files.png
 :label: vertex-download-files
