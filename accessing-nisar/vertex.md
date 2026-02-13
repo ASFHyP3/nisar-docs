@@ -23,14 +23,14 @@ Click on the "Dataset" button and select "NISAR" to search for NISAR products.
 
 ### 2. Filter for desired products
 
-To search for specific geographic region, click on the left-most **Area of Interest** button to select to draw a point, line, polygon, box, circle, or by uploading a geospatial file. Toggle on drawing mode to draw a region of interest to search for products that lie within that area. Then press **Search** to update the search for the new region of interest.
+To search for a specific geographic region, click on the left-most **Area of Interest** button to choose to draw a point, line, polygon, box, circle, or upload to a geospatial file. Toggle on drawing mode to draw a region of interest, then press **Search** to update the search for the new region of interest.
 
 ```{figure} ../assets/vertex-geographic-search.png
 :label: vertex-geographic-search
 :alt: Screenshot of Vertex highlighting the "Geographic Search" option to draw a region of interest to search for products. 
 :align: center
 
-Select a shape and draw an area of interest for a geographic search. 
+Choose a shape and draw an area of interest for a geographic search. 
 ```
 
 To search for products in a specific date range, open the **Filters** panel and specify a start and end date to define the search range. 
@@ -53,24 +53,24 @@ NISAR-specific filters are available to more precisely search for NISAR data pro
 NISAR-specific filters in Vertex.
 ```
 
-**Product Filter** options are listed in @tbl:vertex-product-filters. Science Products are organized by product level, and multiple selections are allowed. For a complete list of NISAR products, including detailed descriptions and specifications, refer to @data-products-overview.
+**Product Filters** are listed in @tbl:vertex-product-filters. Science Products are organized by product level, and multiple selections are allowed. For a complete list of NISAR products, including detailed descriptions and specifications, refer to @data-products-overview.
 
 :::{table} Product Filters for NISAR Products
 :label: tbl:vertex-product-filters
 
-| Product Filter        | Description                                                                   |
+| Product Filters       | Description                                                                   |
 |-----------------------|-------------------------------------------------------------------------------|
 | Science Product       | Specific product type, grouped by product level. Multiple selections allowed. |
 | Product Configuration | Specific processing pipelines. Multiple selections allowed.                   |
 
 :::
 
-The **Observational Filter** options allow users to refine search results by polarization, direction, instrument, frame coverage, and/or range bandwidth, as described in @tbl:vertex-observational-filters. For information about NISAR bands, frequencies, and polarization, see @nisar-instrumentation. Note that only L-band data are available through Vertex. S-band data are provided through [ISRO's Bhoonidhi](https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html).
+**Observational Filters** allow users to refine search results by polarization, direction, instrument, frame coverage, and/or range bandwidth, as described in @tbl:vertex-observational-filters. For information about NISAR bands, frequencies, and polarization, see @nisar-instrumentation. Note that only L-band data are available through Vertex. S-band data are provided through [ISRO's Bhoonidhi](https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html).
 
 :::{table} Observational Filters for NISAR Products
 :label: tbl:vertex-observational-filters
 
-| Observational Filter   | Description                                             |
+| Observational Filters  | Description                                             |
 |------------------------|---------------------------------------------------------|
 | Main Band Polarization | Frequency A polarizations. Multiple selections allowed. |
 | Side Band Polarization | Frequency B polarizations. Multiple selections allowed. |
