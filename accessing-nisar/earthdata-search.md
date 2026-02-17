@@ -88,7 +88,7 @@ Once you have refined your search, click on the desired collection in the search
 (earthdata-search-spatial-filters)=
 #### Spatial filters
 
-To search for a specific geographic region, use the **Spatial Search** button. You can search with a polygon, rectangle, circle, or point by either by drawing on the map or specifying coordinates.  You can also upload a Shapefile, KML, GeoJSON, or GeoRSS file. 
+To search for a specific geographic region, use the **Spatial** search menu. You can search with a polygon, rectangle, circle, or point by either by drawing on the map or specifying coordinates.  You can also upload a Shapefile, KML, GeoJSON, or GeoRSS file. 
 
 ```{figure} ../assets/earthdata-search-spatial-search.png
 :label: earthdata-search-spatial-search
@@ -101,7 +101,7 @@ Search by drawing a region of interest or entering coordinates using the **Spati
 (earthdata-search-temporal-filters)=
 #### Temporal filters
 
-To search for products in a specific date range, use the **Temporal Search** button. This filter searches for products between the specified start and end date/time.
+To search for products in a specific date range, use the **Temporal** search menu. This filter searches for products between the specified start and end date/time.
 
 ```{figure} ../assets/earthdata-search-temporal-search.png
 :label: earthdata-search-temporal-search
