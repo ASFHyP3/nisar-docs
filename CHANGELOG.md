@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.2.8]
 
 ### Changed
-- Earthdata Search download figure update for readability
+- Expand Earthdata Search guidance page
 
 ## [0.2.7]
 
