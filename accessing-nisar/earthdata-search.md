@@ -9,13 +9,11 @@ short_title: Earthdata Search
 
 Earthdata Search organizes data by product type. Each of these data types is called a "collection". There are more than 10,000 collections available, so you will need to apply filters to return the search results you want. 
 
-## Access NISAR Data Using Earthdata Search
-
-### 1. Find NISAR collections
+## 1. Find NISAR collections
 
 The NISAR mission generates many data product types of varying processing levels, as described in the @data-products-overview. Each one of these product types has its own collection in Earthdata Search. You can search for multiple NISAR collections at once to explore the available data types, or restrict your search to a specific NISAR collection. 
 
-#### Earthdata Search landing page search bar
+### Earthdata Search landing page search bar
 
 Get started searching for NISAR data quickly by using the search bar on the Earthdata Search landing page. 
 
@@ -48,7 +46,7 @@ Search using the search bar.
 
 :::
 
-#### Filter Panel
+### Filter Panel
 
 If you leave the landing page search bar blank, or use a more generic search term, you can leverage the panel of filter options to refine your search for NISAR collections. 
 
@@ -77,7 +75,7 @@ Use one or more of these filter options to list collections of interest:
 
 As you select additional filters, the results will update to display all NISAR product data types that fit the selected criteria.
 
-### 2. Find specific products
+## 2. Find specific products
 
 Individual data products are called “granules” in Earthdata Search. 
 
@@ -86,7 +84,7 @@ Refine your search further to identify granules available in a [particular locat
 Once you have refined your search, click on the desired collection in the search results to explore the specific granules available.
 
 (earthdata-search-spatial-filters)=
-#### Spatial filters
+### Spatial filters
 
 To search for a specific geographic region, use the **Spatial** search menu. You can search with a polygon, rectangle, circle, or point by either by drawing on the map or specifying coordinates.  You can also upload a Shapefile, KML, GeoJSON, or GeoRSS file. 
 
@@ -99,7 +97,7 @@ Search by drawing a region of interest or entering coordinates using the **Spati
 ```
 
 (earthdata-search-temporal-filters)=
-#### Temporal filters
+### Temporal filters
 
 To search for products in a specific date range, use the **Temporal** search menu. This filter searches for products between the specified start and end date/time.
 
@@ -122,7 +120,7 @@ Search for a recurring date range using the **Temporal** search filter.
 ```
 
 (earthdata-search-advanced-filters)=
-#### Advanced Searches
+### Advanced Searches
 
 Use the **Granule ID** filter to perform advanced searches, including wildcard matching and searches for multiple Granule IDs separated by commas. 
 
@@ -139,12 +137,12 @@ For example, searching for `*_QP*` will return quad-pol acquisitions. To review 
 Filter using the Granule ID filter set to `*_QP*` to find all quad-pol products. 
 ```
 
-### 3. Access desired products
+## 3. Access desired products
 
 There are two options for accessing NISAR data from your search results. You can either [download](#download-nisar-data-earthdata-search) it, or use direct [AWS S3 Access](#direct-s3-access-in-earthdata) paths to work with the data directly in the cloud. 
 
 (download-nisar-data-earthdata-search)=
-#### Downloading NISAR Data 
+### Downloading NISAR Data 
 
 Log in to Earthdata Search using your [Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/) account. To learn more about EDL, see @earthdata-login.
 
@@ -161,7 +159,7 @@ Log in with EDL credentials by clicking the **Log In** button (#1) on the upper 
 For guidance on downloading multiple files in bulk, refer to the [NASA Earthdata Cloud Cookbook](https://nasa-openscapes.github.io/earthdata-cloud-cookbook/how-tos/find-data/earthdata_search.html). 
 
 (direct-s3-access-in-earthdata)=
-#### Direct AWS S3 Access
+### Direct AWS S3 Access
 
 Earthdata Search also provides the S3 paths for NISAR data products, allowing users to leverage tools that interact with the data directly in S3 storage. 
 
