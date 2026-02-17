@@ -111,7 +111,7 @@ To search for products in a specific date range, use the **Temporal Search** but
 Search using a date range with the **Temporal** search filter. 
 ```
 
-To search for products for a specific date range on an annual basis, check the **Use a recurring date range** button. You will be prompted for a month/day for the start and stop dates, and can select the range of years to include. 
+To search for products for a specific date range on an annual basis, check the box next to **Use a recurring date range**. You will be prompted for a month/day for the start and stop dates, and can select the range of years to include. 
 
 ```{figure} ../assets/earthdata-search-temporal-recurring.png
 :label: earthdata-search-temporal-recurring
