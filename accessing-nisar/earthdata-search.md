@@ -13,7 +13,7 @@ Earthdata Search organizes data by product type. Each of these data types is cal
 
 The NISAR mission generates many data product types of varying processing levels, as described in the @data-products-overview. Each one of these product types has its own collection in Earthdata Search. You can search for multiple NISAR collections at once to explore the available data types, or restrict your search to a specific NISAR collection. 
 
-### Earthdata Search landing page search bar
+### Earthdata Search Landing Page
 
 Get started searching for NISAR data quickly by using the search bar on the Earthdata Search landing page. 
 
@@ -22,7 +22,7 @@ Get started searching for NISAR data quickly by using the search bar on the Eart
 :alt: Image of the Earthdata Search web interface with the search bar highlighted.
 :align: center
 
-Search using the search bar. 
+Search using the search bar on the Earthdata Search landing Page. 
 ```
 
 - To search for all available NISAR data products, enter `NISAR Beta` into the search bar. 
@@ -94,7 +94,7 @@ Refine your search further to identify granules available in a [particular locat
 Once you have refined your search, click on the desired collection in the search results to explore the specific granules available.
 
 (earthdata-search-spatial-filters)=
-### Spatial filters
+### Spatial Filters
 
 To search for a specific geographic region, use the **Spatial** search menu. You can search with a polygon, rectangle, circle, or point by either by drawing on the map or specifying coordinates.  You can also upload a Shapefile, KML, GeoJSON, or GeoRSS file. 
 
@@ -107,7 +107,7 @@ Search by drawing a region of interest or entering coordinates using the **Spati
 ```
 
 (earthdata-search-temporal-filters)=
-### Temporal filters
+### Temporal Filters
 
 To search for products in a specific date range, use the **Temporal** search menu. This filter searches for products between the specified start and end date/time.
 
