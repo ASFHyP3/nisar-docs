@@ -22,7 +22,7 @@ Get started searching for NISAR data quickly by using the search bar on the [Ear
 :alt: Image of the Earthdata Search web interface with the search bar highlighted.
 :align: center
 
-Search using the search bar on the Earthdata Search landing Page. 
+Search using the search bar on the Earthdata Search landing page. 
 ```
 
 - To search for all available NISAR data products, enter `NISAR Beta` into the search bar. 
