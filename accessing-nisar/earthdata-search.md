@@ -15,7 +15,7 @@ The NISAR mission generates many data product types of varying processing levels
 
 ### Earthdata Search Landing Page
 
-Get started searching for NISAR data quickly by using the search bar on the Earthdata Search landing page. 
+Get started searching for NISAR data quickly by using the search bar on the [Earthdata Search landing page](https://search.earthdata.nasa.gov/). 
 
 ```{figure} ../assets/earthdata-search-search-bar.png
 :label: earthdata-search-search-bar
@@ -26,6 +26,9 @@ Search using the search bar on the Earthdata Search landing Page.
 ```
 
 - To search for all available NISAR data products, enter `NISAR Beta` into the search bar. 
+
+  {button}`Search for NISAR Beta Products <https://search.earthdata.nasa.gov/search?q=nisar%20beta>`
+
 
 - To search for a specific product type, input the corresponding short name from @tbl:earthdata-search-shortname-list into the search bar. 
 
@@ -75,7 +78,7 @@ Use one or more of these filter options to list collections of interest:
     - Entering `NISAR GCOV` returns just the NISAR_L2_GCOV_BETA_V1 collection.
     - Entering `NISAR RSLC` returns not only the NISAR_L1_RSLC_BETA_V1 collection, but also all of the collections that use RSLC products as input during processing.
 - In the **Platforms** section, select `Space-based Platforms`, then `Earth Observation Satellites`, then `NISAR`.
-  - In preparing for the NISAR mission, there were NISAR-like products generated from data collected by other sensors, including Sentinel-1, ALOS PALSAR, and UAVSAR. As such, these platforms may be listed as options to select, even when you enter `NISAR` into the search bar.
+  - In preparing for the NISAR mission, there were NISAR-like products generated from data collected by other sensors, including Sentinel-1, ALOS PALSAR, and UAVSAR. As such, these platforms may be available to select.
 - Use the **Processing Levels** section to select the desired product level. Keep in mind that the Levels used for SAR data are different than the Level descriptions displayed in the filter panel. 
   - [Level 1 datasets](#level-1-range-doppler-products) are in Range-Doppler coordinates
   - [Level 1A datasets](#nisar-ancillary-files) are ancillary data files
@@ -91,7 +94,32 @@ Individual data products are called “granules” in Earthdata Search.
 
 Refine your search further to identify granules available in a [particular location](#earthdata-search-spatial-filters), for a [specified time range](#earthdata-search-temporal-filters), or with [specific characteristics](#earthdata-search-advanced-filters) indicated in the product filename. 
 
-Once you have refined your search, click on the desired collection in the search results to explore the specific granules available.
+Once you have refined your search, click on the desired collection in the search results ([](#earthdata-search-collection-results-a)) to explore the specific granules available for that collection. 
+
+While you can apply the same search filters to multiple collections, you need to click on each collection in turn to see the available granules. Use the Search Results link ([](#earthdata-search-collection-results-b)) to return to the list of collections if you want to select a different collection.
+
+:::{figure}
+:label: earthdata-search-collection-results
+:alt: Series of two screen shots illustrating how to view the granules for multiple collections in Earthdata Search results
+:class: grid grid-cols-2 gap-4
+Explore results for multiple collections.
+
+(earthdata-search-collection-results-a)=
+```{figure} ../assets/earthdata-search-collection-results.png
+:width: 100%
+<div style="text-align: left;">
+After applying search filters to multiple collections, click on one of the collections in the search results to see the available granules.
+</div>
+```
+
+(earthdata-search-collection-results-b)=
+```{figure} ../assets/earthdata-search-collection-return.png
+:width: 100%
+<div style="text-align: left;">
+Click on the <b>Search Results</b> link at the top of the window to return to the search results and select a different collection to view its granules.
+</div>
+```
+:::
 
 (earthdata-search-spatial-filters)=
 ### Spatial Filters
