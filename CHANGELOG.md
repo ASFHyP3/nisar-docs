@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.2.9]
 
 ### Added
-- Download data section to `asf-search` page
+- "Download data" section to `asf-search` page
 
 ## [0.2.8]
 
