@@ -3,8 +3,11 @@ short_title: Earthdata Search
 ---
 # Finding NISAR Data with Earthdata Search
 
+{button}`Search for all NISAR Data Products<https://search.earthdata.nasa.gov/search?q=nisar%20beta>`
+
 (earthdata-search-overview)=
 ## Earthdata Search
+
 [Earthdata Search](https://search.earthdata.nasa.gov/ ) is a web application developed by [NASA'S Earth Science Data and Information System (ESDIS)](https://www.earthdata.nasa.gov/about/esdis) that allows users to search, compare, visualize, and access all of NASA's [Earth Science](https://science.nasa.gov/earth-science/) data. 
 
 Earthdata Search organizes data by product type. Each of these data types is called a "collection". There are more than 10,000 collections available, so you will need to apply filters to return the search results you want. 
@@ -26,9 +29,6 @@ Search using the search bar on the Earthdata Search landing page.
 ```
 
 - To search for all available NISAR data products, enter `NISAR Beta` into the search bar. 
-
-  {button}`Search for NISAR Beta Products <https://search.earthdata.nasa.gov/search?q=nisar%20beta>`
-
 
 - To search for a specific product type, input the corresponding short name from @tbl:earthdata-search-shortname-list into the search bar. 
 
