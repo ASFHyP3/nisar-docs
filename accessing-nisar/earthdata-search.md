@@ -29,7 +29,7 @@ Search using the search bar.
 
 - To search for a specific product type, input the corresponding short name from @tbl:earthdata-search-shortname-list into the search bar. 
 
-:::{table} NISAR Data Product Earthdata Search Short Name List
+:::{table} NISAR Data Product Short Names
 :label: tbl:earthdata-search-shortname-list
 
 | Product | Short Name            |
@@ -43,6 +43,16 @@ Search using the search bar.
 | RIFG    | NISAR_L1_RIFG_BETA_V1 |
 | ROFF    | NISAR_L1_ROFF_BETA_V1 |
 | RSLC    | NISAR_L1_RSLC_BETA_V1 |
+
+:::
+
+:::{table} NISAR Supporting Data Product Short Names
+:label: tbl:earthdata-search-supporting-shortname-list
+
+| Product         | Short Name            |
+|-----------------|-----------------------|
+| DEM for NISAR   | NISAR_DEM             |
+| Orbit Ephemeris | NISAR_OE              |
 
 :::
 
