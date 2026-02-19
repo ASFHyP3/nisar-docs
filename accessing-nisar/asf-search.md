@@ -33,3 +33,17 @@ A list of accepted `processingLevel` constants for data from all missions hosted
 
 Refer to the [Searching page of the ASF Data Search Manual](https://docs.asf.alaska.edu/asf_search/searching/)
  for more details on available search filters and their possible values.
+
+## Download data
+
+Downloading NISAR data requires authentication through [Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/). For more information, see @earthdata-login. 
+
+EDL credentials can be provided to `asf_search` using the `ASFSession` class. After creating an authenticated `ASFSession`, pass the session object to the download function along with the target directory path where the data will be saved:
+```python 
+session = asf.ASFSession().auth_with_creds('username', 'password')
+results.download(path='path/to/data/', session=session) 
+```
+Alternatively, users may [configure a local `.netrc` file](https://nsidc.org/data/user-resources/help-center/creating-netrc-file-earthdata-login) to store their EDL credentials. Once the `.netrc` file is properly set up, downloads can be performed without explicitly passing credentials:
+```python
+results.download(path='path/to/data/')
+```
