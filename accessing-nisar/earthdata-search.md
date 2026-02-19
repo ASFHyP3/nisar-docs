@@ -18,7 +18,7 @@ The NISAR mission generates many data product types of varying processing levels
 
 ### Earthdata Search Landing Page
 
-Get started searching for NISAR data quickly by using the search bar on the [Earthdata Search landing page](https://search.earthdata.nasa.gov/). 
+Get started searching for NISAR data quickly by using the search bar on the [Earthdata Search landing page](https://search.earthdata.nasa.gov/). To search for all available NISAR data products, enter `NISAR Beta` into the search bar. 
 
 ```{figure} ../assets/earthdata-search-search-bar.png
 :label: earthdata-search-search-bar
@@ -28,11 +28,7 @@ Get started searching for NISAR data quickly by using the search bar on the [Ear
 Search using the search bar on the Earthdata Search landing page. 
 ```
 
-- To search for all available NISAR data products, enter `NISAR Beta` into the search bar. 
-
-- To search for a specific product type, input the corresponding short name from @tbl:earthdata-search-shortname-list into the search bar. 
-
-- To search for ancillary datasets such as orbit ephemeris files or the DEM used to process NISAR products, input the corresponding short name from @tbl:earthdata-search-supporting-shortname-list into the search bar.
+To search for a specific product type, input the corresponding short name from @tbl:earthdata-search-shortname-list into the search bar. For ancillary datasets such as orbit ephemeris files, refer to @tbl:earthdata-search-supporting-shortname-list for the short names.
 
 :::{table} NISAR Data Product Short Names
 :label: tbl:earthdata-search-shortname-list
@@ -63,7 +59,9 @@ Search using the search bar on the Earthdata Search landing page.
 
 ### Filter Panel
 
-If you leave the landing page search bar blank, or use a more generic search term, you can leverage the panel of filter options to refine your search for NISAR collections. 
+If you left the search bar blank when launching your search from the landing page, or want to further refine your search for NISAR collections, you can leverage the panel of filter options on the left side of the Earthdata Search map interface. 
+
+Start by typing `NISAR` into the search bar at the top of the filter panel.
 
 ```{figure} ../assets/earthdata-search-nisar-filters.png
 :label: earthdata-search-nisar-filters
@@ -73,32 +71,53 @@ If you leave the landing page search bar blank, or use a more generic search ter
 Typing `NISAR` in the **Search Bar** and setting the **Platforms** filter to `NISAR` and the **Processing Level** to include levels `2` and `3` will show analysis-ready NISAR data products.
 ```
 
-Use one or more of these filter options to list collections of interest:
+You can also enter more specific keywords into the search bar, but they may not narrow your search completely. For example:
+- Entering `NISAR GCOV` returns just the NISAR_L2_GCOV_BETA_V1 collection.
+- Entering `NISAR RSLC` returns not only the NISAR_L1_RSLC_BETA_V1 collection, but other NISAR collections that use RSLC products as input during processing.
 
-- Type `NISAR` into the search bar at the top of the filter panel.
-  - You can also use more specific keywords, but they may not narrow your search completely. For example:
-    - Entering `NISAR GCOV` returns just the NISAR_L2_GCOV_BETA_V1 collection.
-    - Entering `NISAR RSLC` returns not only the NISAR_L1_RSLC_BETA_V1 collection, but also all of the collections that use RSLC products as input during processing.
-- In the **Platforms** section, select `Space-based Platforms`, then `Earth Observation Satellites`, then `NISAR`.
-  - In preparing for the NISAR mission, there were NISAR-like products generated from data collected by other sensors, including Sentinel-1, ALOS PALSAR, and UAVSAR. As such, these platforms may be available to select.
-- Use the **Processing Levels** section to select the desired product level. Keep in mind that the Levels used for SAR data are different than the Level descriptions displayed in the filter panel. 
-  - [Level 1 datasets](#level-1-range-doppler-products) are in Range-Doppler coordinates
-  - [Level 1A datasets](#nisar-ancillary-files) are ancillary data files
-  - [Level 2 datasets](#level-2-geocoded-products) are geocoded to a map projection
-  - [Level 3 datasets](#level-3-geophysical-products) are geophysical products
-- Optionally, you can use the **Organizations** section to select datasets archived by the `Alaska Satellite Facility`.
+Beneath the search bar are many filter options organized by category. The categories most useful for refining NISAR search results are [Platforms](#eds-platforms) and [Processing Levels](#eds-processing-levels).
 
-As you select additional filters, the results will update to display all NISAR product data types that fit the selected criteria.
+(eds-platforms)=
+#### Platforms
+
+In the **Platforms** section of the filter panel, select `Space-based Platforms`, then `Earth Observation Satellites`, then `NISAR`. 
+
+Note the following: 
+
+- If you have not typed `NISAR` into the search bar, NISAR may not be displayed as one of the options in the `Earth Observation Satellites` category. Type `NISAR` into the search bar to make sure that it is displayed in the list of Platforms.
+
+- In preparing for the NISAR mission, there were NISAR-like products generated from data collected by other sensors, including Sentinel-1, ALOS PALSAR, and UAVSAR. These collections may be included in NISAR search results if you do not select only the NISAR sensor from the list of platforms displayed in the panel.
+
+(eds-processing-levels)=
+#### Processing Levels
+
+Use the **Processing Levels** section to select the desired [product level](#data-products-overview). 
+
+Keep in mind that the definitions assigned to the various processing levels are different for SAR data than optical imagery. Refer to @tbl:earthdata-search-processing-levels to compare the product level descriptions listed in the Earthdata Search filter panel to the SAR-specific descriptions.
+
+:::{table} Processing Levels for SAR compared to Earthdata Search level descriptions
+:label: tbl:earthdata-search-processing-levels
+| Level                                      | Earthdata Description                  | SAR Description                       |
+|:-------------------------------------------|:---------------------------------------|:--------------------------------------|
+| [Level 1](#level-1-range-doppler-products) | Radiance                               | Datasets in Range-Doppler coordinates |
+| [Level 1A](#nisar-ancillary-files)         | Radiance                               | Ancillary data files                  |
+| [Level 2](#level-2-geocoded-products)      | Geophys. Variables, Sensor Coordinates | Datasets geocoded to a map projection |
+| [Level 3](#level-3-geophysical-products)   | Gridded Observations                   | Geophysical products                  |
+:::
+
+#### Organizations
+
+You can use the **Organizations** section to select datasets archived by the `Alaska Satellite Facility`.
+
+Setting the Organization filter to `Alaska Satellite Facility` is another way to ensure that `NISAR` is displayed as a platform in the filter panel under `Earth Observation Satellites`. 
 
 ## 2. Find specific products
 
-Individual data products are called “granules” in Earthdata Search. 
+Individual data products are called “granules” in Earthdata Search. Refine your search to identify granules available in a particular location using a [Spatial Filter](#earthdata-search-spatial-filters), or for a specified time range using a [Temporal Filter](#earthdata-search-temporal-filters).
 
-Refine your search further to identify granules available in a [particular location](#earthdata-search-spatial-filters), for a [specified time range](#earthdata-search-temporal-filters), or with [specific characteristics](#earthdata-search-advanced-filters) indicated in the product filename. 
+Search results are presented by collection. Once you've applied your filters, click on the desired collection in the search results ([](#earthdata-search-collection-results-a)) to view the granules available for that collection.
 
-Once you have refined your search, click on the desired collection in the search results ([](#earthdata-search-collection-results-a)) to view the specific granules available for that collection. 
-
-While you can apply the same search filters to multiple collections, you need to click on each collection in turn to see the available granules. Use the Search Results link ([](#earthdata-search-collection-results-b)) to return to the list of collections if you want to select a different collection.
+While you can apply the same search filters to multiple collections, you need to click on each collection in turn to see the available granules. Return to the list of collections using the **Search Results** link ([](#earthdata-search-collection-results-b)) to view available granules for a different collection.
 
 :::{figure}
 :label: earthdata-search-collection-results
@@ -162,12 +181,16 @@ Search for a recurring date range using the **Temporal** search filter.
 (earthdata-search-advanced-filters)=
 ### Advanced Searches
 
-Use the **Granule ID** filter to perform advanced searches, including wildcard matching and searches for multiple Granule IDs separated by commas. 
+Once you click on a collection to see the available granules, you can apply an advanced search to refine the list of displayed granules using the **Granule Search** filter. 
+
+To search for a list of specific products, enter granule ID names separated by commas.
+
+This filter also supports wildcard searches, allowing you to search for specific elements found within the product filename. To review NISAR product naming conventions and elements, see @naming-convention-overview. 
 
 - The question mark (?) wildcard matches a single character at the specified position
 - The asterisk (*) wildcard matches any number of characters at the specified position
 
-For example, searching for `*_QP*` will return quad-pol acquisitions. To review NISAR product naming conventions and elements, see @naming-convention-overview. 
+For example, searching for `*_QP*` in the `NISAR_L2_GCOV_BETA_V1` collection will restrict your search results to only quad-pol acquisitions. 
 
 ```{figure} ../assets/earthdata-search-granule-search.png
 :label: earthdata-search-granule-search
