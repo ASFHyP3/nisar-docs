@@ -136,10 +136,13 @@ ds = xr.open_datatree(
 
 This end-to-end example searches for a single NISAR GCOV product, retrieves its S3 access URI, sets a custom `fsspec` configuration, and opens it with `xarray` using the `h5netcdf` engine. Behind the scenes, `earthaccess` will request temporary AWS credentials for you, which is described in @aws-s3-access-overview.
 
-:::{warning}Must be in AWS `us-west-2`
-Direct AWS S3 access is only available for resources (e.g., EC2) in the AWS `us-west-2` region. See @s3-access-limitations for more details.
+:::{warning}Endpoint must be specified for NISAR
+For the time being, you must specify the `endpoint=` parameter when using functions like `get_s3_filesystem` for NISAR data. Using `daac='ASF'` will result in errors when attempting to access NISAR data. See `earthaccess` issue [#1184](https://github.com/nsidc/earthaccess/issues/1184) for more details.
 :::
 
+:::{warning}Must be in AWS us-west-2 region
+Direct AWS S3 access is only available for resources (e.g., EC2) in the AWS `us-west-2` region. See @s3-access-limitations for more details.
+:::
 
 ```python
 import earthaccess
@@ -159,6 +162,7 @@ fsspec_config = {
     'block_size': 16*1024*1024,  # 16 MB
 }
 
+# The endpoint must be set to the NISAR-specific endpoint
 endpoint = 'https://nisar.asf.earthdatacloud.nasa.gov/s3credentials'
 fs = earthaccess.get_s3_filesystem(endpoint=endpoint)
 ds = xr.open_datatree(
@@ -168,7 +172,3 @@ ds = xr.open_datatree(
    phony_dims="access"
 )
 ```
-
-:::{warning}`endpoint=` must be specified for NISAR
-For the time being, you must specify the `endpoint=` parameter when using functions like `get_s3_filesystem` for NISAR data. Using `daac='ASF'` will result in errors when attempting to access NISAR data. See `earthaccess` issue [#1184](https://github.com/nsidc/earthaccess/issues/1184) for more details.
-:::
