@@ -4,6 +4,8 @@
 (naming-convention-overview)=
 ## Naming Convention Overview
 
+Each NISAR Science Data Product has a specific naming convention to convey key acquistion and product information. For more information, see the expanded documentation on [L-SAR Naming Conventions](https://nisar.asf.earthdatacloud.nasa.gov/NISAR-SAMPLE-DATA/DOCS/NISAR_D-102255C_SDS_L-SAR_File_Naming_Convention-20251019_clean_w_esigs.pdf).
+
 There are three different patterns used for naming NISAR data products, depending on the product type:
 1. [Raw Data Products](#raw-data-products)
 2. [Products Generated from a Single Acquisition](#products-generated-from-a-single-acquisition)
