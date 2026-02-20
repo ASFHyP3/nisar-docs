@@ -76,7 +76,9 @@ files = earthaccess.download(results, local_path='.')
 
 ## Stream NISAR data
 
-`earthaccess` also supports streaming data into memory. NISAR data is hosted in the AWS `us-west-2` region and typically served to users through HTTPS CloudFront URLs, or if you are accessing the data from the same region (e.g., a resource in AWS `us-west-2`), you may also use AWS S3 URIs if you obtain temporary S3 access keys. You can stream data through either HTTPS or S3 protocols, but S3 will be faster and will allow you to use AWS S3-aware tools (e.g., the [AWS CLI](https://aws.amazon.com/cli/), [`boto3`](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html), or [`s3fs`](https://s3fs.readthedocs.io/en/latest/)).
+`earthaccess` also supports streaming data into memory. NISAR data is hosted in the AWS `us-west-2` region and typically served to users through HTTPS CloudFront URLs. If you are accessing the data from a resource in the same region (AWS `us-west-2`), you may also use AWS S3 URIs if you obtain [temporary S3 access keys](#earthaccess-s3-credentials)
+
+You can stream data through either HTTPS or S3 protocols, but S3 will be faster and will allow you to use AWS S3-aware tools, such as the [AWS CLI](https://aws.amazon.com/cli/), [`boto3`](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html), or [`s3fs`](https://s3fs.readthedocs.io/en/latest/).
 
 Similar to downloading, streaming requires logging in with your  [Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/) account. Once logged in, you can use `earthaccess.open` to create _file-like_ objects via [`fsspec`](https://filesystem-spec.readthedocs.io/en/latest/index.html), which can be used like a file path to stream data. For example:
 ```python
@@ -134,10 +136,13 @@ ds = xr.open_datatree(
 
 This end-to-end example searches for a single NISAR GCOV product, retrieves its S3 access URI, sets a custom `fsspec` configuration, and opens it with `xarray` using the `h5netcdf` engine. Behind the scenes, `earthaccess` will request temporary AWS credentials for you, which is described in @aws-s3-access-overview.
 
-:::{warning}Must be in AWS `us-west-2`
-Direct AWS S3 access is only available for resources (e.g., EC2) in the AWS `us-west-2` region. See @s3-access-limitations for more details.
+:::{warning}Endpoint must be specified for NISAR
+For the time being, you must specify the `endpoint=` parameter when using functions like `get_s3_filesystem` for NISAR data. Using `daac='ASF'` will result in errors when attempting to access NISAR data. See `earthaccess` issue [#1184](https://github.com/nsidc/earthaccess/issues/1184) for more details.
 :::
 
+:::{warning}Must be in AWS us-west-2 region
+Direct AWS S3 access is only available for resources (e.g., EC2) in the AWS `us-west-2` region. See @s3-access-limitations for more details.
+:::
 
 ```python
 import earthaccess
@@ -157,6 +162,7 @@ fsspec_config = {
     'block_size': 16*1024*1024,  # 16 MB
 }
 
+# The endpoint must be set to the NISAR-specific endpoint
 endpoint = 'https://nisar.asf.earthdatacloud.nasa.gov/s3credentials'
 fs = earthaccess.get_s3_filesystem(endpoint=endpoint)
 ds = xr.open_datatree(
@@ -166,7 +172,3 @@ ds = xr.open_datatree(
    phony_dims="access"
 )
 ```
-
-:::{warning}`endpoint=` must be specified for NISAR
-For the time being, you must specify the `endpoint=` parameter when using functions like `get_s3_filesystem` for NISAR data. Using `daac='ASF'` will result in errors when attempting to access NISAR data. See `earthaccess` issue [#1184](https://github.com/nsidc/earthaccess/issues/1184) for more details.
-:::

@@ -26,13 +26,14 @@ There are three S3 buckets associated with the NISAR mission:
 Users can leverage direct S3 access from other AWS services, such as EC2 and Lambda, as long as the resources are in the us-west-2 (Oregon) region.
 
 (s3-creds-step-1)=
-### 1. Obtain your temporary AWS Credentials
+### 1. Obtain temporary AWS credentials
 
-You can either visit the NISAR S3 credentials endpoint directly, or use [`earthacess`](https://earthaccess.readthedocs.io/en/stable/) to programmatically retrieve your temporary credentials.
+There are two options for obtaining temporary AWS credentials. You can either [visit the NISAR S3 credentials endpoint](#nisar-s3-credentials-endpoint) directly, or [use the `earthacess` Python package](#earthaccess-s3-credentials) to programmatically retrieve your temporary credentials.
 
-#### 1.a. Visit https://nisar.asf.earthdatacloud.nasa.gov/s3credentials
+(nisar-s3-credentials-endpoint)=
+#### Visit the NISAR S3 credentials endpoint
 
-If prompted, sign in with your [Earthdata Login (EDL) credentials](https://urs.earthdata.nasa.gov/) to retrieve a set of temporary AWS credentials, which will allow you to list and download contents of the S3 bucket. If you are already signed in, the credentials will display immediately.
+Visit https://nisar.asf.earthdatacloud.nasa.gov/s3credentials. If prompted, sign in with your [Earthdata Login (EDL) credentials](https://urs.earthdata.nasa.gov/) to retrieve a set of temporary AWS credentials, which will allow you to list and download contents of the S3 bucket. If you are already signed in, the credentials will display immediately.
 
 The text displayed at the site provides four pieces of information:
 * AWS Access Key ID
@@ -52,7 +53,8 @@ For example:
    
 More details about requesting temporary S3 credentials are [available here](https://nisar.asf.earthdatacloud.nasa.gov/s3credentialsREADME).
 
-#### 1.b. Use the `earthaccess` Python package
+(earthaccess-s3-credentials)=
+#### Use the `earthaccess` Python package
 
 :::{warning}`endpoint=` must be specified for NISAR
 For the time being, you must use the `endpoint=` parameter for NISAR data. Using `daac='ASF'` will result in errors when attempting to access NISAR data. See `earthaccess` issue [#1184](https://github.com/nsidc/earthaccess/issues/1184) for more details.
@@ -77,9 +79,9 @@ which will print, for example:
 }
 ```
 
-For more information about using the `earthaccess` package with NISAR, see the [Earthaccess NISAR guide](earthaccess).
+For more information about using the `earthaccess` package with NISAR, see the [Earthaccess NISAR guide](#earthaccess-package).
 
-### 2. Configure your environment to use the temporary AWS credentials
+### 2. Configure environment to use temporary AWS credentials
 
 You will need to set the environment variables in your terminal. 
 

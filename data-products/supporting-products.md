@@ -1,5 +1,8 @@
 # Supporting Products
 
+(nisar-ancillary-files)=
+## NISAR Ancillary Files
+
 There are a number of ancillary files used as part of the processing that are available for reference. <!-- TODO: clarify where these files are available and how to access them. -->
 
 | Short Name      | Description                                                                                |

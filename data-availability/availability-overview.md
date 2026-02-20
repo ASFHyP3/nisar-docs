@@ -41,10 +41,10 @@ For areas with two acquisition dates listed, a single product is available for e
 There are known limitations in the sample products. Keep these in mind when working with the data.
 
 1. Radiometric banding across the swath. This is due to incomplete calibration, specifically:
-   * Inter-beam channel calibration:  The on-board digital beamforming is controlled by amplitude and phase weights for each of the receive channels.  These weights have not yet been updated based on diagnostic mode analysis.  These adjustments are expected to be very small, with a minor improvement to SNR and phase variability.  As can be seen in this release, the beamforming is working very well even without adjustments. 
+   * Inter-beam channel calibration: The on-board digital beamforming is controlled by amplitude and phase weights for each of the receive channels. These weights have not yet been updated based on diagnostic mode analysis. These adjustments are expected to be very small, with a minor improvement to SNR and phase variability. As can be seen in this release, the beamforming is working very well even without adjustments. 
    * Antenna pattern calibration, which is still being refined.
 
-1. Very low amplitude radiometric ripple aligned with the azimuth direction, only noticeable in some radar dark areas, and at a spatial scale of about 600 m and shorter. We are working ito improve radiometric uniformity at this low level, but SNR may still exhibit some banding at this scale.
+1. Very low amplitude radiometric ripple aligned with the azimuth direction, only noticeable in some radar dark areas, and at a spatial scale of about 600 m and shorter. We are working to improve radiometric uniformity at this low level, but SNR may still exhibit some banding at this scale.
 
 1. Polarimetric channel imbalance. Polarimetric calibration and estimation of channel imbalances in the presence of a highly active ionosphere have not yet been performed. These steps will follow the radiometric corrections described above.
 
@@ -53,7 +53,7 @@ There are known limitations in the sample products. Keep these in mind when work
 1. The Geocoded Unwrapped (GUNW) interferogram product has three known limitations:
    * The wrapped interferogram layer within the GUNW products is incorrectly georeferenced. This limitation does not apply to other layers in the GUNW product.
    * The boundary of the ionospheric phase layer has edge-effect artifacts. These artifacts will be minimized in a future release.
-   * Interferogram generation does not yet use the full “rubbersheeting” algorithm to estimate local image distortions due to deformation. This capability is important for fast-moving areas in global production but is not critical for the present sample products, which exhibit modest deformation.  The algorithm used here for alignment of radar imagery (coregistration) is based on geometrical offsets (derived from imaging geometry of the NISAR acquisitions, orbit, and a digital elevation model) refined with a polynomial fit to the data-driven dense offsets computed from amplitude cross correlation of the radar data.
+   * Interferogram generation does not yet use the full “rubbersheeting” algorithm to estimate local image distortions due to deformation. This capability is important for fast-moving areas in global production but is not critical for the present sample products, which exhibit modest deformation. The algorithm used here for alignment of radar imagery (coregistration) is based on geometrical offsets (derived from imaging geometry of the NISAR acquisitions, orbit, and a digital elevation model) refined with a polynomial fit to the data-driven dense offsets computed from amplitude cross correlation of the radar data.
 
 (data-release-timeline)=
 ## Data Release Timeline
