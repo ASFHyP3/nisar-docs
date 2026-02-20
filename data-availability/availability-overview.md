@@ -60,5 +60,5 @@ There are known limitations in the sample products. Keep these in mind when work
 
 As of February 2026, the _expected_ timeline for additional NISAR product releases is as follows: 
 
-- Release of a larger volume of global data products in February/March 2026
+- Release of a larger volume of global data products in late February or early March 2026
 - Release of fully calibrated and algorithmically improved global products in May/June 2026
