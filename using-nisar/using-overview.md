@@ -8,7 +8,7 @@ There are many potential usage patterns for NISAR data, from SAR scientists down
 
 ## Accessing NISAR Data
 
-NISAR data can be accessed from cloud storage, either by downloading or using cloud computing approaches to work with the data directly in the cloud. There are map-based user interfaces and programmatic solutions for finding and accessing NISAR data. Refer to the [Accessing NISAR Data](#nisar-access-overview) section for more information.
+NISAR data can be accessed from cloud storage, either by downloading or using cloud computing approaches to work with the data directly in the cloud. There are map-based user interfaces and programmatic solutions for finding and accessing NISAR data. Refer to [Accessing NISAR Data](#nisar-access-overview) for more information.
 
 ## Processing Software
 
