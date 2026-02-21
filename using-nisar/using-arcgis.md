@@ -25,6 +25,8 @@ Using the [Add Multidimensional Raster](https://storymaps.arcgis.com/stories/c8f
 Using the Add Multidimensional Raster tool to add NISAR data in ArcGIS Pro.
 ```
 
+To add complex-valued variables, such as wrapped interferograms, to an ArcGIS Pro project, you will need to use the Add Multidimensional Raster tool, and select **Multiband Raster** as the output format in order to access both the amplitude and phase components of the dataset. 
+
 (arcgis-drag-and-drop)=
 ### Drag and Drop
 
@@ -39,6 +41,8 @@ The options to adjust visualizations, use imagery tools, or perform analysis are
 
 Using drag-and-drop functionality to add NISAR data in ArcGIS Pro.
 ```
+
+Note that you will not be able to work with complex-valued variables, such as wrapped interferograms, using the drag-and-drop method. You will need to use the **Add Multidimensional Raster** tool, and select **Multiband Raster** as the layer format in order to access both the amplitude and phase components of the dataset.
 
 (arcgis-visualizing-nisar-data)=
 ## Visualizing NISAR Data
