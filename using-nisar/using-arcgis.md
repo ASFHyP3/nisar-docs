@@ -10,9 +10,9 @@ The [NISAR in GIS](https://www.earthdata.nasa.gov/learn/gis/storymaps/nisar-gis)
 (arcgis-adding-nisar-data)=
 ## Adding NISAR Data
 
-There are multiple options available for adding NISAR data to an ArcGIS Pro project. You can either use the [Add Multidimensional Raster](#add-multidimensional-raster-tool) tool or simply [Drag and Drop](#drag-and-drop) the HDF5 file from the table of contents. Step-by-step guidance for each method can be found in the [NISAR Data in ArcGIS Pro section of the NISAR in GIS](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-4Bfbbu) tutorial. 
+There are multiple options available for adding NISAR data to an ArcGIS Pro project. You can either use the [Add Multidimensional Raster](#arcgis-add-multidimensional-raster-tool) tool or simply [Drag and Drop](#arcgis-drag-and-drop) the HDF5 file from the table of contents. Step-by-step guidance for each method can be found in the [NISAR Data in ArcGIS Pro section of the NISAR in GIS](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-4Bfbbu) tutorial. 
 
-(add-multidimensional-raster-tool)=
+(arcgis-add-multidimensional-raster-tool)=
 ### Add Multidimensional Raster Tool
 
 Using the [Add Multidimensional Raster](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-diybcG) tool will provide more flexibility in how the variables are displayed. Variables can each be added as individual layers or combined into [multivariate](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-JNuqoM) or [multiband](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-I2ow3f) rasters. If you want to work with the variable in its native HDF5 format, this is the best option to use.
@@ -25,7 +25,7 @@ Using the [Add Multidimensional Raster](https://storymaps.arcgis.com/stories/c8f
 Using the Add Multidimensional Raster tool to add NISAR data in ArcGIS Pro.
 ```
 
-(drag-and-drop)=
+(arcgis-drag-and-drop)=
 ### Drag and Drop
 
 You can simply drag and drop the entire file from the **Catalog** pane. This approach is most useful when you want to export individual variables to other data formats before working with them in ArcGIS Pro. 
