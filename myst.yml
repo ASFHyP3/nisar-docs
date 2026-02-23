@@ -6,6 +6,8 @@ project:
     - nisar-docs.bib
   toc:
     - file: index.md
+    - file: 404.md
+      hidden: true
     - file: about-nisar/nisar-intro.md
     - file: data-availability/availability-overview.md
 #      children:
