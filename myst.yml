@@ -6,6 +6,7 @@ project:
     - nisar-docs.bib
   toc:
     - file: index.md
+    - file: foo.md
     - file: about-nisar/nisar-intro.md
     - file: data-availability/availability-overview.md
 #      children:
