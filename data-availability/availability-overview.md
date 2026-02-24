@@ -59,6 +59,6 @@ There are known limitations in the sample products. Keep these in mind when work
 
 As of end of February 2026, the timeline for NISAR product releases is as follows: 
 
-- Initial release of 25 sample data products on January 23
-- Released a larger volume of uncalibrated global data products February 28
+- [Initial release](https://www.earthdata.nasa.gov/news/nisar-sample-data-products-available) of 25 sample data products on January 23
+- [Released a larger volume](#TODO: ADD LINK ) of uncalibrated global data products February 28
 - Release of fully calibrated and algorithmically improved global products in June 2026
