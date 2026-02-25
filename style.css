@@ -3,26 +3,16 @@
  * See: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascade/Specificity
  * */
 .article h1 {
-    /* TODO: use Myst serif families? */
-    font-family: serif;
-    font-size: 3em;
-    font-weight: normal;
+    font-size: 3.5em;
+    border-bottom: 3px solid #b3b3b3;
 }
 .article h2 {
-    font-family: serif;
     font-size: 2.5em;
-    font-weight: normal;
+    border-bottom: 2px solid #b3b3b3;
 }
 .article h3 {
     font-size: 2.25em;
 }
 .article h4 {
     font-size: 1.5em;
-}
-/* TODO: different color for light/dark mode? */
-.article h1 {
-    border-bottom: 2px solid #b3b3b3;
-}
-.article h2 {
-    border-bottom: 1px solid #b3b3b3;
 }
