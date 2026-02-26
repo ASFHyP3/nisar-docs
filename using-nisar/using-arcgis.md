@@ -22,7 +22,7 @@ Using the [Add Multidimensional Raster](https://storymaps.arcgis.com/stories/c8f
 :alt: Screenshot highlighting the Add Multidimensional Raster tool in ArcGIS Pro
 :align: left
 
-Using the Add Multidimensional Raster tool to add NISAR data in ArcGIS Pro.
+Click the Add Data menu and select Add Multidimensional Raster to add NISAR data in ArcGIS Pro.
 ```
 
 To add complex-valued variables, such as wrapped interferograms, to an ArcGIS Pro project, you will need to use the Add Multidimensional Raster tool, and select **Multiband Raster** as the output format in order to access both the amplitude and phase components of the dataset. 
