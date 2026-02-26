@@ -1,0 +1,18 @@
+/* Note: Without including the .article selector, the specificity isn't high enough
+ * to overcome the default Myst CSS for heading elements.
+ * See: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascade/Specificity
+ * */
+.article h1 {
+    font-size: 2.5em;
+    border-bottom: 2px solid #b3b3b3;
+}
+.article h2 {
+    font-size: 2em;
+}
+.article h3 {
+    font-size: 1.5em;
+}
+.article h4 {
+    font-size: 1.25em;
+    font-style: italic;
+}

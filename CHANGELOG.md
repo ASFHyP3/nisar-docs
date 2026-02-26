@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Updated data availability to include February 27, 2026 data release
+- Make headings more obvious via custom CSS.
 
 ## [0.2.11]
 

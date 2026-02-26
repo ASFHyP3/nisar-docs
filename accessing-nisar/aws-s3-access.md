@@ -31,7 +31,7 @@ Users can leverage direct S3 access from other AWS services, such as EC2 and Lam
 There are two options for obtaining temporary AWS credentials. You can either [visit the NISAR S3 credentials endpoint](#nisar-s3-credentials-endpoint) directly, or [use the `earthacess` Python package](#earthaccess-s3-credentials) to programmatically retrieve your temporary credentials.
 
 (nisar-s3-credentials-endpoint)=
-#### Visit the NISAR S3 credentials endpoint
+#### Option 1: Visit the NISAR S3 credentials endpoint
 
 Visit https://nisar.asf.earthdatacloud.nasa.gov/s3credentials. If prompted, sign in with your [Earthdata Login (EDL) credentials](https://urs.earthdata.nasa.gov/) to retrieve a set of temporary AWS credentials, which will allow you to list and download contents of the S3 bucket. If you are already signed in, the credentials will display immediately.
 
@@ -54,7 +54,7 @@ For example:
 More details about requesting temporary S3 credentials are [available here](https://nisar.asf.earthdatacloud.nasa.gov/s3credentialsREADME).
 
 (earthaccess-s3-credentials)=
-#### Use the `earthaccess` Python package
+#### Option 2: Use the `earthaccess` Python package
 
 :::{warning}`endpoint=` must be specified for NISAR
 For the time being, you must use the `endpoint=` parameter for NISAR data. Using `daac='ASF'` will result in errors when attempting to access NISAR data. See `earthaccess` issue [#1184](https://github.com/nsidc/earthaccess/issues/1184) for more details.
