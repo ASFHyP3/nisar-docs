@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated data availability to include February 27, 2026 data release
 - Make headings more obvious via custom CSS.
 
+### Fixed
+- Limit Google Analytics to production website.
+
 ## [0.2.11]
 
 ### Added
