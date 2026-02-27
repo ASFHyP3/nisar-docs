@@ -39,7 +39,9 @@ Figure DD.  Parallel streaks in along-track direction in very low backscatter ar
 
 In the Quad-polarimetric (QP) products, the noiseEquivalentBackscatter layer for the HH polarimetric channel is currently populated with zeros. The noiseEquivalentBackscatter layers for the HV and VV polarimetric channels are populated with correct (uncalibrated) values.
 
-### Ionospheric Signatures
+### Intereferometric Products
+
+#### Ionospheric Signatures
 
 Some interferograms and range/Doppler offset products can exhibit very strong ionospheric signatures, such as decorrelation streaks and high-rate fringes because we are near the solar maximum of the solar cycle. A separate ionospheric estimate layer is provided for correction.  
 
@@ -52,27 +54,27 @@ Fig X
 
 - The boundary of the ionospheric phase layer has edge-effect artifacts. These artifacts originate from misaligned valid sample subswath masks in the input RSLC products and will be resolved in a future release. See Fig X
 
-### Validity Mask Alignment
+#### Validity Mask Alignment
 
 The subswath mask indicating the valid region of the fully focused imagery is not fully aligned. This mask layer is provided to mask out unreliable data. Artifacts on the edges of many L2 geocoded products (GSLC, GUNW and GCOV) are therefore exposed.
 
-### Local Artifacts
+#### Local Artifacts
 - Ionospheric phase layers may show localized artifacts due to Radio Frequency Interference (RFI), and decorrelation due to water bodies, vegetation, snow coverage or other factors. The algorithm refinement to mitigate or better mask such localized decorrelating regions and minimizing artifacts in the ionospheric phase is under development. 
 
-### Local interferometric signals under-represented
+#### Local interferometric signals under-represented
 
 Interferograms with very strong deformation signals or ionospheric activity may contain artifacts because interferograms over solid earth regions do not yet use the full “rubbersheeting” algorithm to estimate local image distortions due to large, local, image pixel movements. The algorithm used here for alignment of radar imagery (coregistration) is based on geometrical offsets (derived from imaging geometry of the NISAR acquisitions, orbit, and a digital elevation model) refined with a polynomial fit to the data-driven dense offsets computed from amplitude cross correlation of the radar data. 
 
-### Interferogram Coregistration in Cryosphere Regions
+#### Interferogram Coregistration in Cryosphere Regions
 
 Interferogram generation over cryosphere regions uses a rubbersheeting algorithm in which the coregistration is based on geometrical offsets refined with dense offsets computed from amplitude cross correlation. The ionosphere can introduce errors of a few pixels in the azimuth direction, which can yield an additional phase distortion beyond the direct effect of ionosphere on the phase. Ways are being investigated to mitigate this effect.  
 
-### Banding in Interferograms
+#### Banding in Interferograms
 Individual ionospheric phase screens contain banded phase artifacts oriented along the range direction due to mismatched ionosphere filtering.  This banding is magnified in interferogram stacks. Figure X is a stack of ionosphere-corrected interferograms.  Color scale is in radians.  Further low-pass filtering of the provided ionospheric layer can mitigate this effect.
 
 Fig X
 
-### Ionosphere Phase Estimation
+#### Ionosphere Phase Estimation
 
 Ionosphere Phase Estimation can be affected by the masking of the transmit gaps in freqA and freqB, if gaps and noise around these gaps are not masked well in one of two frequencies, it will cause unwrapping errors and distort the ionospheric phase screens.
 
