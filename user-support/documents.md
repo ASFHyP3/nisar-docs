@@ -1,5 +1,12 @@
 # White Papers and Documents
 
+- [The NASA-ISRO SAR Mission: A summary](https://doi.org/10.1109/MGRS.2025.3578258) [@nisar_summary]
+
+## Mission-Specific Documents
+- [NASA-ISRO SAR (NISAR) Mission Science Users' Handbook, Second Edition](https://doi.org/10.48577/jpl.UD4HV3) [@nisarMissionHandbook2025]
+- [NISAR Utilization Plan (9/4/2018)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NISAR_Utilization_Plan.pdf)  
+- [NISAR Mission Calibration and Validation Plan (5/14/2018)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NISAR_Mission_CalVal_Plan_20180810.pdf)  
+
 ## Application White Papers
 - [Mountain Glaciers and Snow Hydrology (4/15/2023)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/SnowHydrology_Final.pdf)  
 - [Earthquake\! Tracking Location and Impact from Space (9/2/2022)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/Earthquake%20NISAR_WhitePaper_final.pdf)
@@ -26,12 +33,7 @@
 - [Drought and Groundwater Withdrawal (2/26/2017)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NISAR_Applications_Drought_and_Groundwater_Withdrawal1.pdf)  
 - [Oil, Gas, and Water Underground Reservoirs (2/26/2017)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NISAR_Applications_Underground_Reservoirs_OilGasWater.pdf)  
 - [Levees and Dams (2/26/2017)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NISAR_Applications_Levees_and_Dams1.pdf)  
-- [Subsidence (2/26/2017)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NISAR_Applications_Subsidence.pdf)  
-
-## Mission-Specific Documents
-- [NASA-ISRO SAR (NISAR) Mission Science Users' Handbook, Second Edition](@nisarMissionHandbook2025)  
-- [NISAR Utilization Plan (9/4/2018)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NISAR_Utilization_Plan.pdf)  
-- [NISAR Mission Calibration and Validation Plan (5/14/2018)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NISAR_Mission_CalVal_Plan_20180810.pdf)  
+- [Subsidence (2/26/2017)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NISAR_Applications_Subsidence.pdf)
 
 ## Science White Papers
 - [NISAR Brochure (11/10/2021)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/images/nisar_brochure.png)  
