@@ -17,6 +17,10 @@ There are multiple options available for adding NISAR data to an ArcGIS Pro proj
 
 Using the [Add Multidimensional Raster](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-diybcG) tool will provide more flexibility in how the variables are displayed. Variables can each be added as individual layers or combined into [multivariate](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-JNuqoM) or [multiband](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-I2ow3f) rasters. If you want to work with the variable in its native HDF5 format, this is the best option to use.
 
+#### 1. Select **Multidimensional Data** from the Add Data menu
+
+Click on the bottom half of the **Add Data** button to open the menu, then select **Multidimensional Data** to open the **Add Multidimensional Data** dialog box. 
+
 ```{figure} ../assets/add-multidimensional-raster-tool.png
 :name: add-multidimensional-raster-tool-screenshot
 :alt: Screenshot highlighting the Add Multidimensional Raster tool in ArcGIS Pro
@@ -25,7 +29,22 @@ Using the [Add Multidimensional Raster](https://storymaps.arcgis.com/stories/c8f
 Click the **Add Data** menu and select **Multidimensional Data** to add NISAR data in ArcGIS Pro.
 ```
 
-To add complex-valued variables, such as wrapped interferograms, to an ArcGIS Pro project, you will need to use the Add Multidimensional Raster tool, and select **Multiband Raster** as the output format in order to access both the amplitude and phase components of the dataset. 
+#### 2. Select Desired Variables
+
+- Navigate to a NISAR file and select it to view the available variables. 
+- Check the box next to the variables you want to add to the map. 
+- Leave the **Output Configuration** set to `Multidimensional Raster` to add each variable as its own layer in the map.
+- Click OK to add the variables.
+- 
+```{figure} ../assets/add-multidimensional-raster-tool.png
+:name: add-multidimensional-raster-tool-screenshot
+:alt: Screenshot highlighting the Add Multidimensional Raster tool in ArcGIS Pro
+:align: left
+
+Select desired variables from a NISAR file to add them as individual layers to the map.
+```
+
+The `Multidimensional Raster` output configuration is the best choice for adding most variables to the map as individual layers. However, to add complex-valued variables, such as wrapped interferograms, you will need to select `Multiband Raster` as the output format in order to access both the amplitude and phase components of the dataset. 
 
 (arcgis-drag-and-drop)=
 ### Drag and Drop
