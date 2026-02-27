@@ -42,8 +42,7 @@ jobs:
           environment-file: environment.yml
 
       - run: |
-          #if [ ${{ github.repository }} = ua-asf/nisar-docs ]; then
-          if [ ${{ github.repository }} = jtherrmann/nisar-docs ]; then
+          if [ ${{ github.repository }} = ua-asf/nisar-docs ]; then
             echo 'Uncommenting Google Analytics tag'
             sed -i 's/# analytics_google:/analytics_google:/' myst.yml
           fi
