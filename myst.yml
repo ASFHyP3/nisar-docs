@@ -102,6 +102,7 @@ site:
     style: ./style.css
     favicon: favicon.ico
     logo_text: 'NISAR Data User Guide'
-    analytics_google: G-F5XFWH0KYR
+    # Do not remove this line:
+    # analytics_google: G-F5XFWH0KYR
   parts:
     primary_sidebar_footer: ''
