@@ -66,7 +66,7 @@ In the Quad-polarimetric (QP) products, the noiseEquivalentBackscatter layer for
 
 Some interferograms and range/Doppler offset products can exhibit very strong ionospheric signatures, such as decorrelation streaks and high-rate fringes because we are near the solar maximum of the solar cycle. A separate ionospheric estimate layer is provided for correction.  
 
-This layer compensates ionospheric phase quite well in low to mid latitudes where ionospheric effects are moderate, but residual ionospheric signatures may remain, particularly in descending tracks (evening) and at all times in higher latitudes, where ionospheric effects can be more pronounced. 
+This layer compensates ionospheric phase quite well in low to mid-latitudes where ionospheric effects are moderate, but residual ionospheric signatures may remain, particularly in descending tracks (evening) and at all times in higher latitudes, where ionospheric effects can be more pronounced. 
 
 ```{figure} ../assets/lim_pix_offset_estimate.png
 :label: pix-offset-estimate-image
