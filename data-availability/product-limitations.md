@@ -45,6 +45,7 @@ Illustration of radiometric banding and misalignment of the data mask for co- an
 :label: rslc-streaks-cross-image
 :alt: Parallel streaks in cross-track direction  in very low backscatter areas (here shown in RSLC HV Frequency A)
 :align: center
+:width: 75%
 
 Parallel streaks in cross-track direction  in very low backscatter areas (here shown in RSLC HV Frequency A). 
 ```
@@ -53,6 +54,7 @@ Parallel streaks in cross-track direction  in very low backscatter areas (here s
 :label: gcov-streaks-along-image
 :alt: Parallel streaks in along-track direction in very low backscatter areas (here shown in GCOV HH Frequency B)
 :align: center
+:width: 75%
 
 Parallel streaks in along-track direction in very low backscatter areas (here shown in GCOV HH Frequency B). 
 ```
@@ -160,6 +162,7 @@ Individual ionospheric phase screens contain banded phase artifacts oriented alo
 :label: ionosphere-corr-image
 :alt: Image of a stack of ionosphere-corrected interferograms displaying banded phase artifacts
 :align: center
+:width: 75%
 
 Stack of ionosphere-corrected interferograms displaying banded phase artifacts. Color scale is in radians. 
 ```
