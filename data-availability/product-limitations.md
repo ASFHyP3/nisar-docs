@@ -99,7 +99,7 @@ Misalignment of the subswath validity mask causes edge effects in many of the L2
 
 #### Ionospheric Phase Artifacts
 
-- Ionospheric phase layers may show localized artifacts due to Radio Frequency Interference (RFI), and decorrelation due to water bodies, vegetation, snow coverage or other factors. The algorithm refinement to mitigate or better mask such localized decorrelating regions and minimizing artifacts in the ionospheric phase is under development. 
+Ionospheric phase layers may show localized artifacts due to Radio Frequency Interference (RFI), and decorrelation due to water bodies, vegetation, snow coverage or other factors. The algorithm refinement to mitigate or better mask such localized decorrelating regions and minimizing artifacts in the ionospheric phase is under development. 
 
 ```{figure} ../assets/lim_rfi_decorr.png
 :label: rfi-decorrelation-image
@@ -110,7 +110,9 @@ Illustration of localized artifacts in the ionospheric phase screen, which can b
 ```
 #### Lack of _Rubbersheeting_ Algorithm
 
-- Interferograms with very strong deformation signals or ionospheric activity may contain artifacts because interferograms over solid earth regions do not yet use the full “rubbersheeting” algorithm to estimate local image distortions due to large, local, image pixel movements (@deformation-artifact-image). The algorithm used here for alignment of radar imagery (coregistration) is based on geometrical offsets (derived from imaging geometry of the NISAR acquisitions, orbit, and a digital elevation model) refined with a polynomial fit to the data-driven dense offsets computed from amplitude cross correlation of the radar data. 
+Interferograms with very strong deformation signals or ionospheric activity may contain artifacts because interferograms over solid earth regions do not yet use the full “rubbersheeting” algorithm to estimate local image distortions due to large, local, image pixel movements (@deformation-artifact-image). 
+
+The algorithm used here for alignment of radar imagery (coregistration) is based on geometrical offsets (derived from imaging geometry of the NISAR acquisitions, orbit, and a digital elevation model) refined with a polynomial fit to the data-driven dense offsets computed from amplitude cross correlation of the radar data. 
 
 ```{figure} ../assets/lim_deformation_artifact.png
 :label: deformation-artifact-image
