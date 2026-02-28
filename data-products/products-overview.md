@@ -12,7 +12,7 @@ One of the most exciting aspects of the NISAR mission is that it generates a num
 For SAR scientists and those who want to generate products to their own specifications, the [Level 0 (Raw)](#level-0-unfocused-raw-products) data and [Level 1 (Range-Doppler)](#level-1-range-doppler-products) products are also available.
 
 :::{important}NISAR Data Product Availability
-A collection of NISAR uncalibrated data products is now available to the public! 
+A collection of NISAR pre-calibration data products is now available to the public!
 
 [Learn more about this dataset and the expected timeline for additional product releases](#nisar-sample-data-feb).
 :::
