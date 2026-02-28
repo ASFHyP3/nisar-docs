@@ -7,6 +7,7 @@ The NISAR project is still in the calibration and validation phase, and therefor
 
 Nonetheless, the data are expected to be of sufficient quality that most users will benefit from an early look at the products. Fully calibrated and algorithmically improved global products are anticipated for release in the June 2026 timeframe.
 
+(pre-calibration-product-limitations)=
 ## Pre-Calibration Product Limitations
 
 ### Validity Mask Offset
