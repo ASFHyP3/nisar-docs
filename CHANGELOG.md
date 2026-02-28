@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.2.12]
 
 ### Added
-- Dedicated page for sample data product limitations
+- Dedicated page for pre-calibration data product limitations
 
 ### Changed
 - Updated data availability to include February 27, 2026 pre-calibration data release
