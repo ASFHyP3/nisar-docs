@@ -35,7 +35,7 @@ There is radiometric banding across the swath. This is due to incomplete calibra
 :alt: Illustration of radiometric banding and misalignment of the data mask for co- and cross-polarized NISAR data
 :align: center
 
-Illustration of radiometric banding and misalignment of the data mask for co- and cross-polarized NISAR data. NISAR uses a “split spectrum” transmit waveform, creating two distinct radar bands for each observation. `Frequency A` is the main band, and typically has 20 MHz, 40 MHz or 77 MHz bandwidths centered at the lower end of the available spectrum. `Frequency B` has 5 MHz bandwidth at the upper end of the spectrum. Frequency B data is used for this illustration, as the banding is more prominent than in Frequency A data.
+Illustration of radiometric banding and misalignment of the data mask for co- and cross-polarized NISAR data. NISAR uses a “split spectrum” transmit waveform, creating two distinct radar bands for each observation. `Frequency A` is the main band, and typically has 20 MHz, 40 MHz or 77 MHz bandwidths centered at the lower end of the available spectrum. `Frequency B` has 5 MHz bandwidth at the upper end of the spectrum. `Frequency B` data is used for this illustration, as the banding is more prominent than in `Frequency A` data.
 ```
 
 - There may be parallel streaks in the cross-track direction (@rslc-streaks-cross-image) and/or in the along-track direction (@gcov-streaks-along-image) visible in very low backscatter areas (i.e. lakes, sandy desert areas, etc.) in enhanced visualizations, especially visible in HV polarization.
