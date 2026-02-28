@@ -20,6 +20,7 @@ The mask that describes the fully-focused valid data region in all products is m
 :label: validity-mask-offset-image
 :alt: Illustration of the validity mask offset
 :align: center
+:width: 75%
 
 Illustration of the validity mask offset.
 ```
@@ -56,17 +57,33 @@ Parallel streaks in cross-track direction  in very low backscatter areas (here s
 Parallel streaks in along-track direction in very low backscatter areas (here shown in GCOV HH Frequency B). 
 ```
 
-### Quad-pol Product Noise Layers
+### Radio Frequency Interference (RFI)
 
-In the Quad-polarimetric (QP) products, the noiseEquivalentBackscatter layer for the HH polarimetric channel is currently populated with zeros. The noiseEquivalentBackscatter layers for the HV and VV polarimetric channels are populated with correct (uncalibrated) values.
+Backscatter data and interferograms can be affected by RFI. RFI signatures typically appear as bright blobs in polarimetric backscatter imagery and high decorrelation in the coherence and interferograms, or sharp bands oriented along the range direction, as seen in @rfi-image.   
+
+```{figure} ../assets/lim_rfi.jpg
+:label: rfi-image
+:alt: Examples of RFI over different regions. 
+:align: center
+
+Examples of Radio Frequency Interference (RFI) over different regions.  These types of interference become more evident in regions of low radar reflectivity, especially for cross-polarized (e.g. HV) returns.
+```
+
+### Changes in Radar Acquisition Modes
+
+Changes in the radar acquisition mode within a frame will lead to multiple partial frame image products for the same frame.
+
+### Noise Floor
+
+The noise floor for 77 MHz data appears higher than expected.  This issue is still being investigated, but is probably related to the calibration tone settings and how they impact quantization. 
 
 ### Intereferometric Products
 
-#### Ionospheric Signatures
+#### Ionospheric Correction Layer
 
 Some interferograms and range/Doppler offset products can exhibit very strong ionospheric signatures, such as decorrelation streaks and high-rate fringes because we are near the solar maximum of the solar cycle. A separate ionospheric estimate layer is provided for correction.  
 
-This layer compensates ionospheric phase quite well in low to mid-latitudes where ionospheric effects are moderate, but residual ionospheric signatures may remain, particularly in descending tracks (evening) and at all times in higher latitudes, where ionospheric effects can be more pronounced. 
+- This layer compensates ionospheric phase quite well in low to mid-latitudes where ionospheric effects are moderate, but residual ionospheric signatures may remain, particularly in descending tracks (evening) and at all times in higher latitudes, where ionospheric effects can be more pronounced. 
 
 ```{figure} ../assets/lim_pix_offset_estimate.png
 :label: pix-offset-estimate-image
@@ -76,8 +93,6 @@ This layer compensates ionospheric phase quite well in low to mid-latitudes wher
 Along-track pixel offset estimates (top), the interferometric correlation (middle) and the interferometric phase (bottom) near Crary Ice Rise in Antarctica. 
 ```
 
-- ROFF products for the ice sheets have severe, uncorrected ionospheric distortions in the azimuth offsets of up to a few pixels. In addition, the search radius used for offset tracking was too small to capture some fast motion (greater than a few thousand meters per year). The search radius will be expanded to capture the full range of motion in past and future acquisitions.
-
 - The boundary of the ionospheric phase layer has edge-effect artifacts, as illustrated in @misaligned-mask-image. These artifacts originate from misaligned valid sample subswath masks in the input RSLC products and will be resolved in a future release.
 
 ```{figure} ../assets/lim_misaligned_mask.png
@@ -86,6 +101,26 @@ Along-track pixel offset estimates (top), the interferometric correlation (middl
 :align: center
 
 Edge-effect artifacts at the boundary of the ionospheric phase layer.
+```
+
+- Ionospheric phase layers may show localized artifacts due to Radio Frequency Interference (RFI), and decorrelation due to water bodies, vegetation, snow coverage or other factors. The algorithm refinement to mitigate or better mask such localized decorrelating regions and minimizing artifacts in the ionospheric phase is under development. 
+
+```{figure} ../assets/lim_rfi_decorr.png
+:label: rfi-decorrelation-image
+:alt: Illustration of localized artifacts in the ionospheric phase screen
+:align: center
+
+Illustration of localized artifacts in the ionospheric phase screen, which can be caused by RFI or decorrelation.
+```
+
+- Ionosphere Phase Estimation can be affected by the masking of the transmit gaps in Frequency A and Frequency B. If gaps and noise around these gaps are not masked well in one of two frequencies, it will cause unwrapping errors and distort the ionospheric phase screens.
+
+```{figure} ../assets/lim_ionosphere_screen.png
+:label: ionosphere-screen-image
+:alt: Illustration of phase unwrapping errors caused by the transmit gaps
+:align: center
+
+Phase unwrapping errors caused by the transmit gaps.
 ```
 
 #### Validity Mask Alignment
@@ -100,18 +135,7 @@ The subswath mask indicating the valid region of the fully focused imagery is no
 Misalignment of the subswath validity mask causes edge effects in many of the L2 geocoded products.
 ```
 
-#### Ionospheric Phase Artifacts
-
-Ionospheric phase layers may show localized artifacts due to Radio Frequency Interference (RFI), and decorrelation due to water bodies, vegetation, snow coverage or other factors. The algorithm refinement to mitigate or better mask such localized decorrelating regions and minimizing artifacts in the ionospheric phase is under development. 
-
-```{figure} ../assets/lim_rfi_decorr.png
-:label: rfi-decorrelation-image
-:alt: Illustration of localized artifacts in the ionospheric phase screen
-:align: center
-
-Illustration of localized artifacts in the ionospheric phase screen, which can be caused by RFI or decorrelation.
-```
-#### Lack of _Rubbersheeting_ Algorithm
+#### Incomplete _Rubbersheeting_ Algorithm
 
 Interferograms with very strong deformation signals or ionospheric activity may contain artifacts because interferograms over solid earth regions do not yet use the full “rubbersheeting” algorithm to estimate local image distortions due to large, local, image pixel movements (@deformation-artifact-image). 
 
@@ -140,41 +164,22 @@ Individual ionospheric phase screens contain banded phase artifacts oriented alo
 Stack of ionosphere-corrected interferograms displaying banded phase artifacts. Color scale is in radians. 
 ```
 
-#### Ionosphere Phase Estimation
+### ROFF Products
+[Range Doppler Pixel Offsets (ROFF)](#roff-product-overview) products for the ice sheets have severe, uncorrected ionospheric distortions in the azimuth offsets of up to a few pixels. In addition, the search radius used for offset tracking was too small to capture some fast motion (greater than a few thousand meters per year). The search radius will be expanded to capture the full range of motion in past and future acquisitions.
 
-Ionosphere Phase Estimation can be affected by the masking of the transmit gaps in Frequency A and Frequency B. If gaps and noise around these gaps are not masked well in one of two frequencies, it will cause unwrapping errors and distort the ionospheric phase screens.
+### Soil Moisture (SME2)
 
-```{figure} ../assets/lim_ionosphere_screen.png
-:label: ionosphere-screen-image
-:alt: Illustration of phase unwrapping errors caused by the transmit gaps
-:align: center
+- The soil moisture retrievals are using uncalibrated lower level products, and therefore are not representative of the expected quality. Calibration continues on both the lower level products and the SME2 product itself. With large parts of the northern hemisphere frozen in the range of dates included in this release, calibration activities will continue well into the year.
+- It is recommended that investigators focus on the baseline soil moisture product (the `/science/LSAR/SME2/grids/soilMoisture` variable in the SME2 HDF5 files)
+- Surface and retrieval flags included in the products have not been fully implemented, resulting in null values in the baseline layer.
 
-Phase unwrapping errors caused by the transmit gaps.
-```
+### Quad-Pol Product Noise Layers
 
-### Changes in Radar Acquisition Modes
-
-Changes in the radar acquisition mode within a frame will lead to multiple partial frame image products for the same frame.
-
-### Noise Floor
-
-The noise floor for 77 MHz data appears higher than expected.  This issue is still being investigated, but is probably related to the calibration tone settings and how they impact quantization. 
-
-### Radio Frequency Interference (RFI)
-
-Backscatter data and interferograms can be affected by RFI. RFI signatures typically appear as bright blobs in polarimetric backscatter imagery and high decorrelation in the coherence and interferograms, or sharp bands oriented along the range direction, as seen in @rfi-image.   
-
-```{figure} ../assets/lim_rfi.jpg
-:label: rfi-image
-:alt: Examples of RFI over different regions. 
-:align: center
-
-Examples of Radio Frequency Interference (RFI) over different regions.  These types of interference become more evident in regions of low radar reflectivity, especially for cross-polarized (e.g. HV) returns.
-```
+In the Quad-Polarimetric (QP) products, the noiseEquivalentBackscatter layer for the HH polarimetric channel is currently populated with zeros. The noiseEquivalentBackscatter layers for the HV and VV polarimetric channels are populated with correct (uncalibrated) values.
 
 ### Browse Image Geolocation
 
-While each of the granules are well-geolocated (to within 5 m), the quick-look browse products can be mis-located up to many kilometers due to projection limitations in the kml browse products. As of this time, the 5 m geolocation errors may become apparent in some of the high resolution (40 MHz and above) and radiometrically terrain corrected GCOV images. @geolocation-offset-image shows pixel misregistration. 
+While each of the granules are well-geolocated (to within 5 m), the quick-look browse products can be mislocated up to many kilometers due to projection limitations in the kml browse products. As of this time, the 5 m geolocation errors may become apparent in some of the high resolution (40 MHz and above) and radiometrically terrain corrected GCOV images. @geolocation-offset-image shows pixel misregistration. 
 
 ```{figure} ../assets/lim_geolocation_offset.png
 :label: geolocation-offset-image
@@ -183,9 +188,3 @@ While each of the granules are well-geolocated (to within 5 m), the quick-look b
 
 A small geolocation offset in the descending image (top) from the DEM results in an error in the radiometric terrain correction. Meanwhile, in the ascending image (bottom), the radiometric terrain correction is correctly aligned with the DEM and the topographic variability is no longer evident.
 ```
-
-### Soil Moisture (SME2)
-
-- The soil moisture retrievals are using uncalibrated lower level products, and therefore are not representative of the expected quality. Calibration continues on both the lower level products and the SME2 product itself. With large parts of the northern hemisphere frozen in the range of dates included in this release, calibration activities will continue well into the year.
-- It is recommended that investigators focus on the baseline soil moisture product (dataset: /science/LSAR/SME2/grids/soilMoisture)
-- Surface and retrieval flags included in the products have not been fully implemented, resulting in null values in the baseline layer.
