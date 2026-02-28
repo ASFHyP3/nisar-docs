@@ -26,16 +26,14 @@ Illustration of the validity mask offset.
 There is radiometric banding across the swath. This is due to incomplete calibration, specifically:
 
 - The effect of the cross-track antenna pattern for both co- and cross-polarized channels has not been completely removed. This will appear as bright and dark bands in the along-track dimension that can become most apparent in regions of uniform radar cross-section, such as tropical forests. This is illustrated in @radiometric-banding-image.
-- 
+
 ```{figure} ../assets/lim_radiometric_banding.jpg
 :label: radiometric-banding-image
 :alt: Illustration of radiometric banding and misalignment of the data mask for co- and cross-polarized NISAR data
 :align: center
 
-Illustration of radiometric banding and misalignment of the data mask for co- and cross-polarized NISAR data. 
+Illustration of radiometric banding and misalignment of the data mask for co- and cross-polarized NISAR data. NISAR uses a “split spectrum” transmit waveform, creating two distinct radar bands for each observation. `Frequency A` is the main band, and typically has 20 MHz, 40 MHz or 77 MHz bandwidths centered at the lower end of the available spectrum. `Frequency B` has 5 MHz bandwidth at the upper end of the spectrum. Frequency B data is used for this illustration, as the banding is more prominent than in Frequency A data.
 ```
-
-NISAR uses a “split spectrum” transmit waveform, creating two distinct radar bands for each observation. `Frequency A` is the main band, and typically has 20 MHz, 40 MHz or 77 MHz bandwidths centered at the lower end of the available spectrum. `Frequency B` has 5 MHz bandwidth at the upper end of the spectrum. @radiometric-banding-image uses Frequency B as an illustration, as the banding is more prominent than in Frequency A data.
 
 - There may be parallel streaks in the cross-track direction (@rslc-streaks-cross-image) and/or in the along-track direction (@gcov-streaks-along-image) visible in very low backscatter areas (i.e. lakes, sandy desert areas, etc.) in enhanced visualizations, especially visible in HV polarization.
 
@@ -77,7 +75,7 @@ Along-track pixel offset estimates (top), the interferometric correlation (middl
 
 - ROFF products for the ice sheets have severe, uncorrected ionospheric distortions in the azimuth offsets of up to a few pixels. In addition, the search radius used for offset tracking was too small to capture some fast motion (> a few thousand m/yr). The search radius will be expanded to capture the full range of motion in past and future acquisitions.
 
-- The boundary of the ionospheric phase layer has edge-effect artifacts, as illustrated in @lim-misaligned-mask-image. These artifacts originate from misaligned valid sample subswath masks in the input RSLC products and will be resolved in a future release.
+- The boundary of the ionospheric phase layer has edge-effect artifacts, as illustrated in @misaligned-mask-image. These artifacts originate from misaligned valid sample subswath masks in the input RSLC products and will be resolved in a future release.
 
 ```{figure} ../assets/lim_misaligned_mask.png
 :label: misaligned-mask-image
