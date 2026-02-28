@@ -88,7 +88,7 @@ Along-track pixel offset estimates (top), the interferometric correlation (middl
 - The boundary of the ionospheric phase layer has edge-effect artifacts, as illustrated in @lim-misaligned-mask-image. These artifacts originate from misaligned valid sample subswath masks in the input RSLC products and will be resolved in a future release.
 
 ```{figure} ../assets/lim_misaligned_mask.png
-:label: lim-misaligned-mask-image
+:label: misaligned-mask-image
 :alt: Illustration of edge-effect artifacts at the boundary of the ionospheric phase layer
 :align: center
 
@@ -113,11 +113,17 @@ Interferogram generation over cryosphere regions uses a rubbersheeting algorithm
 #### Banding in Interferograms
 Individual ionospheric phase screens contain banded phase artifacts oriented along the range direction due to mismatched ionosphere filtering.  This banding is magnified in interferogram stacks. Figure X is a stack of ionosphere-corrected interferograms.  Color scale is in radians.  Further low-pass filtering of the provided ionospheric layer can mitigate this effect.
 
-Fig X
-
 #### Ionosphere Phase Estimation
 
 Ionosphere Phase Estimation can be affected by the masking of the transmit gaps in freqA and freqB, if gaps and noise around these gaps are not masked well in one of two frequencies, it will cause unwrapping errors and distort the ionospheric phase screens.
+
+```{figure} ../assets/lim_ionosphere_screen.png
+:label: ionosphere-screen-image
+:alt: Illustration of phase unwrapping errors caused by the transmit gaps
+:align: center
+
+Phase unwrapping errors caused by the transmit gaps.
+```
 
 ### Changes in Radar Acquisition Modes
 
@@ -129,10 +135,10 @@ The noise floor for 77 MHz data appears higher than expected.  This issue is sti
 
 ### Radio Frequency Interference (RFI)
 
-Backscatter data and interferograms can be affected by RFI. RFI signatures typically appear as bright blobs in polarimetric backscatter imagery and high decorrelation in the coherence and interferograms, or sharp bands oriented along the range direction, as seen in @rfi.   
+Backscatter data and interferograms can be affected by RFI. RFI signatures typically appear as bright blobs in polarimetric backscatter imagery and high decorrelation in the coherence and interferograms, or sharp bands oriented along the range direction, as seen in @rfi-image.   
 
 ```{figure} ../assets/lim_rfi.jpg
-:label: rfi
+:label: rfi-image
 :alt: Examples of RFI over different regions. 
 :align: center
 
@@ -141,10 +147,10 @@ Examples of Radio Frequency Interference (RFI) over different regions.  These ty
 
 ### Browse Image Geolocation
 
-While each of the granules are well-geolocated (to within 5 m), the quick-look browse products can be mis-located up to many kilometers due to projection limitations in the kml browse products. As of this time, the 5 m geolocation errors may become apparent in some of the high resolution (40 MHz and above) and radiometrically terrain corrected GCOV images. @geolocation-offset shows pixel misregistration. 
+While each of the granules are well-geolocated (to within 5 m), the quick-look browse products can be mis-located up to many kilometers due to projection limitations in the kml browse products. As of this time, the 5 m geolocation errors may become apparent in some of the high resolution (40 MHz and above) and radiometrically terrain corrected GCOV images. @geolocation-offset-image shows pixel misregistration. 
 
 ```{figure} ../assets/lim_geolocation_offset.png
-:label: geolocation-offset
+:label: geolocation-offset-image
 :alt: A small geolocation offset is apparent in the descending image but not the ascending image due to the ascending image being correctly aligned with the DEM. 
 :align: center
 
