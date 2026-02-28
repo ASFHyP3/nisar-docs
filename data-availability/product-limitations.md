@@ -28,7 +28,7 @@ Illustration of the validity mask offset.
 
 There is radiometric banding across the swath. This is due to incomplete calibration, specifically:
 
-- The effect of the cross-track antenna pattern for both co- and cross-polarized channels has not been completely removed. This will appear as bright and dark bands in the along-track dimension that can become most apparent in regions of uniform radar cross-section, such as tropical forests. This is illustrated in @radiometric-banding-image.
+- The effect of the cross-track antenna pattern for both co- and cross-polarized channels has not been completely removed. This will appear as bright and dark bands in the along-track dimension that can become most apparent in regions of uniform radar cross-section, such as tropical forests (@radiometric-banding-image).
 
 ```{figure} ../assets/lim_radiometric_banding.jpg
 :label: radiometric-banding-image
