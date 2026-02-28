@@ -139,7 +139,7 @@ Stack of ionosphere-corrected interferograms displaying banded phase artifacts. 
 
 #### Ionosphere Phase Estimation
 
-Ionosphere Phase Estimation can be affected by the masking of the transmit gaps in freqA and freqB, if gaps and noise around these gaps are not masked well in one of two frequencies, it will cause unwrapping errors and distort the ionospheric phase screens.
+Ionosphere Phase Estimation can be affected by the masking of the transmit gaps in Frequency A and Frequency B. If gaps and noise around these gaps are not masked well in one of two frequencies, it will cause unwrapping errors and distort the ionospheric phase screens.
 
 ```{figure} ../assets/lim_ionosphere_screen.png
 :label: ionosphere-screen-image
