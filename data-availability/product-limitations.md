@@ -129,15 +129,27 @@ The noise floor for 77 MHz data appears higher than expected.  This issue is sti
 
 ### Radio Frequency Interference (RFI)
 
-- Backscatter data and interferograms can be affected by RFI. RFI signatures typically appear as bright blobs in polarimetric backscatter imagery and high decorrelation in the coherence and interferograms, or sharp bands oriented along the range direction.   
+Backscatter data and interferograms can be affected by RFI. RFI signatures typically appear as bright blobs in polarimetric backscatter imagery and high decorrelation in the coherence and interferograms, or sharp bands oriented along the range direction, as seen in @rfi.   
 
-Figure CC.  Examples of Radio Frequency Interference (RFI) over different regions.  These types of interference become more evident in regions of low radar reflectivity, especially for cross-polarized (e.g. HV) returns.
+```{figure} ../assets/lim_rfi.jpg
+:label: rfi
+:alt: Examples of RFI over different regions. 
+:align: center
+
+Examples of Radio Frequency Interference (RFI) over different regions.  These types of interference become more evident in regions of low radar reflectivity, especially for cross-polarized (e.g. HV) returns.
+```
 
 ### Browse Image Geolocation
 
-While each of the granules are well-geolocated (to within 5 m), the quick-look browse products can be mis-located up to many kilometers due to projection limitations in the kml browse products. As of this time, the 5 m geolocation errors may become apparent in some of the high resolution (40 MHz and above) and radiometrically terrain corrected GCOV images. Figure XX shows pixel misregistration
+While each of the granules are well-geolocated (to within 5 m), the quick-look browse products can be mis-located up to many kilometers due to projection limitations in the kml browse products. As of this time, the 5 m geolocation errors may become apparent in some of the high resolution (40 MHz and above) and radiometrically terrain corrected GCOV images. @geolocation-offset shows pixel misregistration. 
 
-Figure XX.  A small geolocation offset in the descending image from the DEM results in an error in the radiometric terrain correction. Meanwhile, in the ascending image, the radiometric terrain correction is correctly aligned with the DEM and the topographic variability is no longer evident.
+```{figure} ../assets/lim_geolocation_offset.png
+:label: geolocation-offset
+:alt: A small geolocation offset is apparent in the descending image but not the ascending image due to the ascending image being correctly aligned with the DEM. 
+:align: center
+
+A small geolocation offset in the descending image (top) from the DEM results in an error in the radiometric terrain correction. Meanwhile, in the ascending image (bottom), the radiometric terrain correction is correctly aligned with the DEM and the topographic variability is no longer evident.
+```
 
 ### Soil Moisture (SME2)
 

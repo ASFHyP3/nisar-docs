@@ -7,7 +7,7 @@ short_title: Available Data
 NISAR launched July 30, 2025, and has been successfully collecting data through its Commissioning phase and into the Science phase. The calibration-validation process is underway, and a selection of pre-calibration data generated from NISAR acquisitions is available to the public.
 
 (nisar-sample-data-feb)=
-## NISAR Pre-calibrated Data: February 2026
+## NISAR Pre-calibration Data: February 2026
 
 {button}`Find NISAR Data <https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR&resultsLoaded=true>`
 
