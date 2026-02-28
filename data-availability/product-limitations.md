@@ -19,16 +19,49 @@ Nonetheless, the data are expected to be of sufficient quality that most users w
 
 ### Validity Mask Offset
 
-The mask that describes the fully-focused valid data region in all products is misaligned with the data. For example, as illustrated below for the Range/Doppler single look complex image, on the left side of the image, the subswath mask correctly captures the invalid region (black band) whereas on the right side, the invalid region is not correctly captured. This propagates to higher-level products.
+The mask that describes the fully-focused valid data region in all products is misaligned with the data. For example, as illustrated in @validity-mask-offset-image for the Range/Doppler single look complex image, on the left side of the image, the subswath mask correctly captures the invalid region (black band) whereas on the right side, the invalid region is not correctly captured. This propagates to higher-level products.
+
+```{figure} ../assets/lim_rslc_mask.png
+:label: validity-mask-offset-image
+:alt: Illustration of the validity mask offset
+:align: center
+
+Illustration of the validity mask offset.
+```
 
 ### Radiometric Banding
 
 There is radiometric banding across the swath. This is due to incomplete calibration, specifically:
-- The effect of the cross-track antenna pattern for both co- and cross-polarized channels has not been completely removed. This will appear as bright and dark bands in the along-track dimension that can become most apparent in regions of uniform radar cross-section, such as tropical forests. This is shown in Figure BB.
-- There may be parallel streaks in the cross-track direction (see figure CC)  and/or in the along-track direction (see figure DD) visible in very low backscatter areas (i.e. lakes, sandy desert areas, etc.) in enhanced visualizations, especially visible in HV polarization.
-- 
 
-Figure BB.  Illustration of radiometric banding and misalignment of the data mask for co- and cross-polarized NISAR data. NISAR uses a “split spectrum” transmit waveform, creating two distinct radar bands for each observation.  “Frequency A” is the main band, and typically has 20 MHz, 40 MHz or 77 MHz bandwidths centered at the lower end of the available spectrum.  “Frequency B” has 5 MHz bandwidth at the upper end of the spectrum.  The figure illustrates Frequency B as the banding is more prominent than in Frequency A data.
+- The effect of the cross-track antenna pattern for both co- and cross-polarized channels has not been completely removed. This will appear as bright and dark bands in the along-track dimension that can become most apparent in regions of uniform radar cross-section, such as tropical forests. This is illustrated in @
+- 
+```{figure} ../assets/lim_radiometric_banding.jpg
+:label: radiometric-banding-image
+:alt: Illustration of radiometric banding and misalignment of the data mask for co- and cross-polarized NISAR data
+:align: center
+
+Illustration of radiometric banding and misalignment of the data mask for co- and cross-polarized NISAR data. 
+```
+
+NISAR uses a “split spectrum” transmit waveform, creating two distinct radar bands for each observation. `Frequency A` is the main band, and typically has 20 MHz, 40 MHz or 77 MHz bandwidths centered at the lower end of the available spectrum. `Frequency B` has 5 MHz bandwidth at the upper end of the spectrum. @radiometric-banding-image uses Frequency B as an illustration, as the banding is more prominent than in Frequency A data.
+
+- There may be parallel streaks in the cross-track direction (@rslc-streaks-cross-image) and/or in the along-track direction (@gcov-streaks-along-image) visible in very low backscatter areas (i.e. lakes, sandy desert areas, etc.) in enhanced visualizations, especially visible in HV polarization.
+
+```{figure} ../assets/lim_rslc_streaks_cross.png
+:label: rslc-streaks-cross-image
+:alt: Parallel streaks in cross-track direction  in very low backscatter areas (here shown in RSLC HV Frequency A)
+:align: center
+
+Parallel streaks in cross-track direction  in very low backscatter areas (here shown in RSLC HV Frequency A). 
+```
+
+```{figure} ../assets/lim_gcov_streaks_along.png
+:label: gcov-streaks-along-image
+:alt: Parallel streaks in along-track direction in very low backscatter areas (here shown in GCOV HH Frequency B)
+:align: center
+
+Parallel streaks in along-track direction in very low backscatter areas (here shown in GCOV HH Frequency B). 
+```
 
 
 Figure CC.  Parallel streaks in cross-track direction  in very low backscatter areas (here shown in RSLC HV Frequency A).
