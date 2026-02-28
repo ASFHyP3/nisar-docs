@@ -63,11 +63,6 @@ Parallel streaks in cross-track direction  in very low backscatter areas (here s
 Parallel streaks in along-track direction in very low backscatter areas (here shown in GCOV HH Frequency B). 
 ```
 
-
-Figure CC.  Parallel streaks in cross-track direction  in very low backscatter areas (here shown in RSLC HV Frequency A).
-
-Figure DD.  Parallel streaks in along-track direction in very low backscatter areas (here shown in GCOV HH Frequency B).
-
 ### Quad-pol Product Noise Layers
 
 In the Quad-polarimetric (QP) products, the noiseEquivalentBackscatter layer for the HH polarimetric channel is currently populated with zeros. The noiseEquivalentBackscatter layers for the HV and VV polarimetric channels are populated with correct (uncalibrated) values.
