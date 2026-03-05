@@ -18,11 +18,11 @@ The mask that describes the fully-focused valid data region in all products is m
 
 ```{figure} ../assets/lim_rslc_mask.png
 :label: validity-mask-offset-image
-:alt: Illustration of the validity mask offset
+:alt: Illustration of the valid data mask offset
 :align: center
 :width: 75%
 
-Illustration of the validity mask offset.
+Illustration of the valid data mask offset.
 ```
 
 ### Radiometric Banding
@@ -131,10 +131,10 @@ The subswath mask indicating the valid region of the fully focused imagery is no
 
 ```{figure} ../assets/lim_edge_artifact.png
 :label: edge-artifact-image
-:alt: Illustration of the edge effects caused by misalignment of the subswath validity mask
+:alt: Illustration of the edge effects caused by misalignment of the subswath valid data mask
 :align: center
 
-Misalignment of the subswath validity mask causes edge effects in many of the L2 geocoded products.
+Misalignment of the subswath valid data mask causes edge effects in many of the L2 geocoded products.
 ```
 
 #### _Rubbersheeting_ Algorithm
