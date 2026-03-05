@@ -2,19 +2,18 @@
 short_title: QGIS
 ---
 # Using NISAR Data in QGIS
-call out nisar products that are suitable for GIS analysis (L2-L3)
 
-The [Work with NISAR Sample Data] tutorials demonstrate how to use NISAR data in QGIS 
+NISAR products Level 2-3 are suitable for GIS analysis. Working with NISAR in [QGIS](https://qgis.org/), a free and open-source GIS. 
+
+The [Work with NISAR Sample Data](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data) tutorials provide a quick overview to work with NISAR data in QGIS. 
 
 ## Preparing NISAR Data for QGIS
 
-Support for the NISAR file format was added to ArcGIS Pro at version 3.4 (November 2024). Those using version 3.4.0 or newer are able to use NISAR products as they would any other HDF5 file. When using older versions of ArcGIS Pro, refer to this documentation for guidance.
-QGIS does not support .h5 files 
-rename the file by replacing the `.h5` extension with `.nc`. To work with `h5` data in QGIS, there is a [QGIS NASA Earthdata plugin](https://github.com/opengeos/qgis-nasa-earthdata-plugin)
+QGIS does not natively support `.h5` files. To add NISAR data in QGIS, rename the file by changing the `.h5` extension to `.nc`. Alternatively, to work directly with `.h5` data, install the [QGIS NASA Earthdata plugin](https://github.com/opengeos/qgis-nasa-earthdata-plugin). 
 
 (qgis-adding-nisar-data)=
 ## Adding NISAR Data
-how to load these into QGIS, including selecting data layers
+Add in data to QGIS using the **Open Data Source Manger** button or shortcut. Select the **Raster** data type and add the desired file to the project. 
 
 ```{figure} ../assets/qgis-add-data.png
 :name: qgis-add-data
@@ -23,7 +22,7 @@ how to load these into QGIS, including selecting data layers
 
 Click on **Open Data Source Manger** and select the Raster data type to add NISAR data to QGIS. 
 ```
-
+After clicking the **Add** button, another window will pop up with all the groups within the NISAR data file that can be be added as individual layers. All groups are selected for addition as a default, but individual groups can be selected to avoid adding too much data to your project. For more information about the HDF Files and NISAR data groups, see @hdf5.  
 ```{figure} ../assets/qgis-select-layers.png
 :name: qgis-select-layers
 :alt: Screenshot highlighting the list of layers that pop up after adding NISAR data in QGIS
