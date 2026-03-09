@@ -4,13 +4,40 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.2.11]
+## [0.3.1]
 
 ### Added
 - Guidance page for working with NISAR data in ArcGIS Pro
 
 ### Changed
 - Added NISAR summary article to documents page and rearranged order
+
+## [0.3.0]
+
+### Changed
+- Changed references to product limitations to product known issues, and redirect https://nisar-docs.asf.alaska.edu/product-limitations/ to https://nisar-docs.asf.alaska.edu/product-known-issues/
+
+## [0.2.13]
+
+### Fixed
+- Updated all links to the `earthaccess` GitHub Repository due to the [decision](https://earthaccess.readthedocs.io/en/latest/governance/decisions/929-move-repository/) to move from NSIDC's GitHub Org to the new `earthaccess-dev` GitHub org.
+
+## [0.2.12]
+
+### Added
+- Dedicated page for pre-calibration data product limitations
+
+### Changed
+- Updated data availability to include February 27, 2026 pre-calibration data release
+- Make headings more obvious via custom CSS
+
+### Fixed
+- Limit Google Analytics to production website
+
+## [0.2.11]
+
+### Added
+- Custom `404` page. Fixes https://github.com/ua-asf/nisar-docs/issues/49
 
 ## [0.2.10]
 

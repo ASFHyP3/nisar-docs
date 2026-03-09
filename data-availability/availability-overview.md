@@ -4,61 +4,46 @@ short_title: Available Data
 
 # Available NISAR Data
 
-NISAR launched July 30, 2025, and has been successfully collecting data through its Commissioning phase and into the Science phase. The calibration-validation process is underway, and a small collection of sample data generated from NISAR acquisitions is now available to the public.
+NISAR launched July 30, 2025, and has been successfully collecting data through its Commissioning phase and into the Science phase. The calibration-validation process is underway, and a selection of pre-calibration data generated from NISAR acquisitions is available to the public.
 
-(nisar-sample-data-jan)=
-## NISAR Sample Data: January 2026
+(nisar-sample-data-feb)=
+## NISAR Pre-Calibration Data: February 2026
 
-{button}`Find NISAR Sample Data <https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR&resultsLoaded=true>`
+{button}`Find NISAR Data <https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR&resultsLoaded=true>`
 
-NISAR mission data was processed to generate products from Level-1 to Level-3. These datasets are available for a range of geographic locations, and give users a first look at products generated from NISAR acquisitions. These sample products are a preview for a larger global release of sample products, expected by the end of February 2026. 
+A selection of pre-calibration NISAR Level-1 to Level-3 L-band products are available through the ASF DAAC. This large volume of global data allows users to develop workflows to access the data and metadata for each product type, to become familiar with the characteristics of the L-band products, and to begin working with the data in a substantive way.
 
-The NISAR project is still in the early phases of calibration, so these products are not yet fully calibrated, and contain artifacts, as described in @sample-product-limitations. The products will be improved in [future product releases](#data-release-timeline), but these sample products allow users to become familiar with NISAR data products and develop methods for working with the data and metadata.
-
-For more information about this data release, refer to the [NISAR Sample Products Release Announcement](https://www.earthdata.nasa.gov/news/nisar-sample-data-products-available).
+The user community can prepare for managing NISAR’s large data volumes and refine their processing pipelines in anticipation of full global production and release of calibrated data in the June 2026 timeframe. Users will find a rich and unprecedented collection of polarimetric and interferometric products to explore, with fine resolution, accurate geolocation, and full of bio/geophysical features.
 
 ## Product Availability
 
-The January release of NISAR sample data includes data from five different locations around the world. @tbl:sample-jan-overview-html summarizes the data products available for each location and the polarization of the acquisitions.
+The February 2026 release of NISAR pre-calibration data includes a global dataset, representative of the final product distribution of all NISAR products. All Level-1 to Level-3 L-band product types are available.
 
-For areas with two acquisition dates listed, a single product is available for each of the pair-wise product types (GUNW, RIFG, RUNW, ROFF, GOFF), while product types generated from a single acquisition (RSLC, GSLC, GCOV) have a product available for each acquisition date.
+This release includes data acquired between October 17, 2025 and January 20, 2026. This includes up to 8 acquisitions per track (both ascending and descending). @feb-26-data-release displays the spatial extent of the data included in this release. For a more detailed acquisition map, see the [NISAR Spring 2026 Released Data Plan](https://experience.arcgis.com/experience/0042193b06104889971cd77f505190e0).
 
-:::{table} NISAR Sample Data Product Overview
-:label: tbl:sample-jan-overview-html
+```{figure} ../assets/feb-26-data-release.png
+:label: feb-26-data-release
+:alt: Map of pre-calibration products included in the February 2026 data release.
+:align: center
 
-| Location                    | Product Types                                  | Acquisition Dates            | Polarization       |
-|-----------------------------|------------------------------------------------|------------------------------|--------------------|
-| Antarctica                  | RSLC, GSLC, GCOV, GUNW, RIFG, RUNW, ROFF, GOFF | 2025-10-21, <br />2025-11-02 | HH (Single)        |
-| Horn of Africa              | RSLC, GSLC, GCOV, GUNW                         | 2025-11-22, <br />2025-12-04 | HH+HV (Dual)       |
-| Madhya Pradesh, <br />India | RSLC, GSLC, GCOV                               | 2025-10-17                   | HH+HV (Dual)       |
-| Illinois, <br />USA         | RSLC, GSLC, GCOV                               | 2025-11-03                   | HH+HV+VH+VV (Quad) |
-| Nile Delta, <br />Egypt     | SME2                                           | 2025-12-16                   | N/A                |
-:::
+Spatial distribution of the pre-calibration NISAR data products, highlighted in green, included in the February 2026 data release.
+```
 
+(known-issues)=
+## Known Issues
 (sample-product-limitations)=
-## Sample Product Limitations
 
-There are known limitations in the sample products. Keep these in mind when working with the data.
+A new instrument producing global data products for the first time will necessitate optimization of the products over time. In addition, the NISAR project is still in the calibration and validation phase, and these products are not yet fully calibrated. Nonetheless, the data are expected to be of sufficient quality that most users will benefit from an early look at the products.
 
-1. Radiometric banding across the swath. This is due to incomplete calibration, specifically:
-   * Inter-beam channel calibration: The on-board digital beamforming is controlled by amplitude and phase weights for each of the receive channels. These weights have not yet been updated based on diagnostic mode analysis. These adjustments are expected to be very small, with a minor improvement to SNR and phase variability. As can be seen in this release, the beamforming is working very well even without adjustments. 
-   * Antenna pattern calibration, which is still being refined.
+See @product-known-issues for a list of known issues reported for the current data release.
 
-1. Very low amplitude radiometric ripple aligned with the azimuth direction, only noticeable in some radar dark areas, and at a spatial scale of about 600 m and shorter. We are working to improve radiometric uniformity at this low level, but SNR may still exhibit some banding at this scale.
-
-1. Polarimetric channel imbalance. Polarimetric calibration and estimation of channel imbalances in the presence of a highly active ionosphere have not yet been performed. These steps will follow the radiometric corrections described above.
-
-1. Quad-polarimetric (QP) product noise layers: In the QP products, the noiseEquivalentBackscatter layer for the HH polarimetric channel is incorrectly populated with zeros. The noiseEquivalentBackscatter layers for the HV and VV polarimetric channels are populated with correct (uncalibrated) values.
-
-1. The Geocoded Unwrapped (GUNW) interferogram product has three known limitations:
-   * The wrapped interferogram layer within the GUNW products is incorrectly georeferenced. This limitation does not apply to other layers in the GUNW product.
-   * The boundary of the ionospheric phase layer has edge-effect artifacts. These artifacts will be minimized in a future release.
-   * Interferogram generation does not yet use the full “rubbersheeting” algorithm to estimate local image distortions due to deformation. This capability is important for fast-moving areas in global production but is not critical for the present sample products, which exhibit modest deformation. The algorithm used here for alignment of radar imagery (coregistration) is based on geometrical offsets (derived from imaging geometry of the NISAR acquisitions, orbit, and a digital elevation model) refined with a polynomial fit to the data-driven dense offsets computed from amplitude cross correlation of the radar data.
+Fully calibrated and algorithmically improved global products are anticipated for release in the June 2026 timeframe.
 
 (data-release-timeline)=
 ## Data Release Timeline
 
-As of January 2026, the _expected_ timeline for additional NISAR product releases is as follows: 
+As of end of February 2026, the timeline for NISAR product releases is as follows:
 
-- Release of a larger volume of global data products by the end of February 2026
-- Release of fully calibrated and algorithmically improved global products in May/June 2026
+- **January 23**: [Initial release](https://www.earthdata.nasa.gov/news/nisar-sample-data-products-available) of 25 sample data products
+- **February 27**: [Released a larger volume](https://www.earthdata.nasa.gov/news/nisar-release-over-100000-new-data-product-files) of pre-calibration global data products
+- **June 2026**: Release of fully calibrated and algorithmically improved global products
