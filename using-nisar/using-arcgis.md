@@ -3,9 +3,15 @@ short_title: ArcGIS
 ---
 # Using NISAR Data in ArcGIS
 
-Support for the NISAR file format was added to ArcGIS Pro at version 3.4 (November 2024). Those using version 3.4.0 or newer are able to use NISAR products as they would any other HDF5 file. When using older versions of ArcGIS Pro, [refer to this documentation](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data#ArcEarly) for guidance. 
+Support for the NISAR file format was added to ArcGIS Pro at version 3.4 (November 2024). Those using version 3.4.0 or newer are able to use NISAR products as they would any other HDF5 file in ArcGIS Pro. 
 
-The [NISAR in GIS](https://www.earthdata.nasa.gov/learn/gis/storymaps/nisar-gis) tutorial provides step-by-step guidance for adding NISAR data to an ArcGIS Pro project, visualizing the data, and using standard and SAR-specific imagery and analysis tools, focusing on the [GCOV](gcov-product-overview) and [GUNW](gunw-product-overview) products. The [Spatial Subsetting for NISAR Data](https://storymaps.arcgis.com/stories/cac03522f82f420ab992316bb935a709) tutorial demonstrates workflows for subsetting NISAR products and transforming them to other data formats.
+When using older versions of ArcGIS Pro, [refer to this documentation](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data#ArcEarly) for guidance. 
+
+## NISAR in ArcGIS Tutorials
+
+The [NISAR in GIS](https://www.earthdata.nasa.gov/learn/gis/storymaps/nisar-gis) tutorial provides step-by-step guidance for adding NISAR data to an ArcGIS Pro project, visualizing the data, and using standard and SAR-specific imagery and analysis tools, focusing on the [GCOV](gcov-product-overview) and [GUNW](gunw-product-overview) products. 
+
+The [Spatial Subsetting for NISAR Data](https://storymaps.arcgis.com/stories/cac03522f82f420ab992316bb935a709) tutorial demonstrates workflows for subsetting NISAR products and transforming them to other data formats.
 
 (arcgis-adding-nisar-data)=
 ## Adding NISAR Data
@@ -15,11 +21,16 @@ There are multiple options available for adding NISAR data to an ArcGIS Pro proj
 (arcgis-add-multidimensional-raster-tool)=
 ### Add Multidimensional Raster Tool
 
-Using the [Add Multidimensional Raster](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-diybcG) tool will provide more flexibility in how the variables are displayed. Variables can each be added as individual layers or combined into [multivariate](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-JNuqoM) or [multiband](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-I2ow3f) rasters. If you want to work with the variable in its native HDF5 format, this is the best option to use.
+Using the [Add Multidimensional Raster](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-diybcG) tool provides more flexibility in how the variables are displayed. 
 
-#### 1. Select **Multidimensional Data** from the Add Data menu
+- Variables can each be added as individual layers or combined into [multivariate](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-JNuqoM) or [multiband](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-I2ow3f) rasters. 
+- If you want to work with the variable in its native HDF5 format, this is the best option to use.
 
-Click on the bottom half of the **Add Data** button to open the menu, then select **Multidimensional Data** to open the **Add Multidimensional Data** dialog box. 
+#### 1. Select **Multidimensional Data** from the **Add Data** menu
+
+- Click on the **Map** menu
+- Click on the bottom half of the **Add Data** button to open the menu
+- Select **Multidimensional Data** to open the **Add Multidimensional Data** dialog box
 
 ```{figure} ../assets/add-multidimensional-raster-tool.png
 :name: add-multidimensional-raster-tool-screenshot
@@ -31,14 +42,15 @@ Click the **Add Data** menu and select **Multidimensional Data** to add NISAR da
 
 #### 2. Select Desired Variables
 
-- Navigate to a NISAR file and select it to view the available variables. 
-- Check the box next to the variables you want to add to the map. 
-- Leave the **Output Configuration** set to `Multidimensional Raster` to add each variable as its own layer in the map.
-- Click OK to add the variables.
-- 
-```{figure} ../assets/add-multidimensional-raster-tool.png
-:name: add-multidimensional-raster-tool-screenshot
-:alt: Screenshot highlighting the Add Multidimensional Raster tool in ArcGIS Pro
+- Click the **Browse** icon in the Add Multidimensional Data dialog box
+- Navigate to a NISAR file and select it to view the available variables
+- Check the box next to the variable(s) you want to add to the map
+- Leave the **Output Configuration** set to `Multidimensional Raster` to add each selected variable as its own layer in the map
+- Click **OK** to add the variables
+
+```{figure} ../assets/add-multidimensional-raster-tool-variables.png
+:name: add-multidimensional-raster-tool-variables-screenshot
+:alt: Screenshot illustrating how to select desired variables in an HDF5 file using the Add Multidimensional Raster tool in ArcGIS Pro
 :align: left
 
 Select desired variables from a NISAR file to add them as individual layers to the map.
