@@ -63,14 +63,27 @@ The `Multidimensional Raster` output configuration is the best choice for adding
 
 You can simply drag and drop the entire file from the **Catalog** pane. This approach is most useful when you want to export individual variables to other data formats before working with them in ArcGIS Pro. 
 
-The options to adjust visualizations, use imagery tools, or perform analysis are limited when you add the entire HDF5 file to the map. By default, the first variable in the file is displayed, and any changes to symbology are applied to all variables in the file. The approach does make it easy to use the **Subset** tool in the **Data Management** menu to save the variable as a different file type with a defined spatial extent.
+The ability to adjust visualizations, use imagery tools, or perform analysis is limited when you add the entire HDF5 file to the map. 
+
+:::{note}Drag and Drop not supported for complex-valued variables
+You will not be able to work with complex-valued variables, such as wrapped interferograms, using the drag-and-drop method. You would need to use the **Add Multidimensional Raster** tool, and select **Multiband Raster** as the layer format in order to access both the amplitude and phase components of the dataset.
+:::
+
+#### 1. Drag Desired File from Catalog Pane
+
+- Navigate to a NISAR HDF5 file in the **Catalog** pane
+- Drag the file onto the map area
+- Cancel the **Calculating Statistics** function
+  - It is too time-consuming to run this function on the full HDF file; statistics are calculated when a [variable is extracted](#2-extract-variables)
+
+By default, the first variable in the HDF5 file is displayed, and any changes to symbology are applied to all variables in the file. 
 
 ```{figure} ../assets/arcgis-drag-and-drop.png
 :name: arcgis-drag-and-drop-screenshot
 :alt: Screenshot demonstrating drag-and-drop capabilities in ArcGIS Pro
 :align: left
 
-Using drag-and-drop functionality to add NISAR data in ArcGIS Pro.
+Using drag-and-drop functionality to add NISAR data to an ArcGIS Pro project.
 ```
 
 Note that you will not be able to work with complex-valued variables, such as wrapped interferograms, using the drag-and-drop method. You will need to use the **Add Multidimensional Raster** tool, and select **Multiband Raster** as the layer format in order to access both the amplitude and phase components of the dataset.
