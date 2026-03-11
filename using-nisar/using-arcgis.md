@@ -30,14 +30,14 @@ Using the [Add Multidimensional Raster](https://storymaps.arcgis.com/stories/c8f
 
 - Click on the **Map** menu
 - Click on the bottom half of the **Add Data** button to open the menu
-- Select **Multidimensional Data** to open the **Add Multidimensional Data** dialog box
+- Select **Multidimensional Data** to open the **Add Multidimensional Data** dialog window
 
 ```{figure} ../assets/add-multidimensional-raster-tool.png
 :name: add-multidimensional-raster-tool-screenshot
 :alt: Screenshot highlighting the Add Multidimensional Raster tool in ArcGIS Pro
 :align: left
 
-Click the **Add Data** menu and select **Multidimensional Data** to add NISAR data in ArcGIS Pro.
+Click the **Add Data** menu and select **Multidimensional Data** to open the **Add Multidimensional Data** dialog window ArcGIS Pro.
 ```
 
 #### 2. Select Desired Variables
