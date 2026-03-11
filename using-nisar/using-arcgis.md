@@ -130,9 +130,9 @@ Using the Subset tool to extract variables from an HDF5 file added to ArcGIS Pro
 
 The **Environment** tab of the **Subset Multidimensional Raster** Geoprocessing dialog provides a convenient interface for applying dataset transformations as a variable is being extracted. 
 
-You can output the variable with a different coordinate system, apply spatial subsetting, change the pixel size, or adjust the raster storage characteristics (pyramid behavior, statistic calculation approach, compression, resampling method).
+You can output the variable with a different coordinate system, apply [spatial subsetting](#arcgis-subset-spatial-subsetting), change the pixel size, or adjust the raster storage characteristics (pyramid behavior, statistic calculation approach, compression, resampling method).
 
-(arcgis-spatial-subsetting)=
+(arcgis-subset-spatial-subsetting)=
 #### Spatial Subsetting
 
 To extract a spatial subset of the variable using the subset tool: 
@@ -152,17 +152,84 @@ To extract a spatial subset of the variable using the subset tool:
 Setting the Environment variables in the Subset tool to apply a spatial extent to variables extracted from an HDF5 file added to ArcGIS Pro using the Drag-and-Drop method.
 ```
 
-Once you've adjusted the Environmental settings, return to the Parameters tab to verify that all other settings are correct before clicking the **OK** button to export the variable to a stand-alone raster format.
+Once you've adjusted the settings in the **Environments** tab, return to the **Parameters** tab to verify that all other settings are correct before clicking the **OK** button to export the variable to a stand-alone raster format.
 
 (arcgis-export-raster)=
 ### Export Raster
 
+To export an HDF5 variable added as an individual layer using the @arcgis-add-multidimensional-raster-tool, you can simply use the **Export Raster** function. Access this function using one of these methods: 
 
+- Right-click the layer in the Contents pane, select **Data** from the menu, and click **Export Raster** (@arcgis-export-raster-screenshot)
 
+```{figure} ../assets/arcgis-export-raster.png
+:name: arcgis-export-raster-screenshot
+:alt: Screenshot demonstrating accessing the Export Raster function from the context menu for an item in the Contents pane in ArcGIS Pro
+:align: center
+:width: 90%
 
+Accessing **Export Raster** from the context menu for an item in the Contents pane. 
+```
 
+- Select the layer in the Contents pane, and click the Export Raster button in the **Data** menu (@arcgis-export-raster-button-screenshot)
 
+```{figure} ../assets/arcgis-export-raster-button.png
+:name: arcgis-export-raster-button-screenshot
+:alt: Screenshot demonstrating accessing the Export Raster function from the Data menu in ArcGIS Pro
+:align: center
+:width: 90%
 
+Accessing **Export Raster** from the Data menu for an item in the Contents pane. 
+```
+
+In the Export Raster dialog window: 
+
+1. Set the path and filename for the output raster
+2. Select the raster format to use
+3. If you want to export the variable using the [default settings](#arcgis-export-raster-settings), click the **Export** button
+
+```{figure} ../assets/arcgis-export-raster-dialog.png
+:name: arcgis-export-raster-dialog-screenshot
+:alt: Screenshot illustrating the Export Raster function dialog window 
+
+Set the output file path and file type in the **Export Raster** dialog window. 
+```
+
+(arcgis-export-raster-settings)=
+#### Export Raster Settings
+
+As with the @arcgis-subset-multidim-raster-tool, there are a number of settings that can be adjusted to apply additional data transformations when exporting the variable to a stand-alone raster. 
+
+Some of these settings are accessed directly in the **General** tab, including:
+
+- Coordinate system
+- [Spatial extent](#arcgis-export-spatial-subsetting)
+- Cell size
+- Pixel type
+- Rendering type
+- Compression type/quality
+
+Additional options are available in the **Settings** tab, including: 
+
+- Snap Raster options
+- Resampling options
+- Pyramid options
+- Statistics options
+
+(arcgis-export-spatial-subsetting)=
+#### Spatial Subsetting
+
+The options available for setting a spatial extent are available in the **Clipping Geometry** section of the **General** tab. 
+
+The **Clipping Geometry** drop-down menu provides the option to use the current map extent or the extent of a layer in the map, such as the Area of Interest (AOI) feature illustrated in @arcgis-export-raster-spatial-extent-screenshot. 
+
+You can also click the **Browse** icon to navigate to a saved geospatial file, or manually enter an extent in the **Extent** fields.
+
+```{figure} ../assets/arcgis-export-raster-spatial-extent.png
+:name: arcgis-export-raster-spatial-extent-screenshot
+:alt: Screenshot illustrating setting the raster extent in the Export Raster dialog window
+
+Set the raster extent in the **Export Raster** dialog window. 
+```
 
 
 
