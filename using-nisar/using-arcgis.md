@@ -69,7 +69,7 @@ The ability to adjust visualizations, use imagery tools, or perform analysis is 
 You will not be able to work with complex-valued variables, such as wrapped interferograms, using the drag-and-drop method. You would need to use the **Add Multidimensional Raster** tool, and select **Multiband Raster** as the layer format in order to access both the amplitude and phase components of the dataset.
 :::
 
-#### Add File from Catalog Pane
+#### Add HDF5 File from Catalog Pane
 
 - Navigate to a NISAR HDF5 file in the **Catalog** pane
 - Drag the file onto the map area
