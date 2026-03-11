@@ -98,7 +98,7 @@ Using drag-and-drop functionality to add NISAR data to an ArcGIS Pro project.
 
 There are many reasons for transforming NISAR variables. You may prefer working with a particular raster file format, require a different coordinate system or projection, need to resample the data to match another dataset, or want to subset the dataset spatially to make analysis more manageable. 
 
-There are a number of approaches for transforming NISAR variables in ArcGIS Pro. The [Subset Multidimensional Raster Tool](#arcgis-subset-multidim-raster-tool) and the [Export Raster]() function
+There are a number of approaches for transforming NISAR variables in ArcGIS Pro. The [Subset Multidimensional Raster Tool](#arcgis-subset-multidim-raster-tool) and the [Export Raster](#arcgis-export-raster) function
 
 (arcgis-subset-multidim-raster-tool)=
 ### Subset Multidimensional Raster Tool
@@ -220,7 +220,7 @@ Additional options are available in the **Settings** tab, including:
 
 The options available for setting a spatial extent are available in the **Clipping Geometry** section of the **General** tab. 
 
-The **Clipping Geometry** drop-down menu provides the option to use the current map extent or the extent of a layer in the map, such as the Area of Interest (AOI) feature illustrated in @arcgis-export-raster-spatial-extent-screenshot. 
+The **Clipping Geometry** drop-down menu provides the option to use the current map extent or the extent of a layer in the map. It's convenient to use a feature class containing a single feature (or restricted to a single feature using a definition query) to set the extent, as illustrated by the Area of Interest (AOI) feature class used in @arcgis-export-raster-spatial-extent-screenshot. 
 
 You can also click the **Browse** icon to navigate to a saved geospatial file, or manually enter an extent in the **Extent** fields.
 
@@ -231,7 +231,5 @@ You can also click the **Browse** icon to navigate to a saved geospatial file, o
 Set the raster extent in the **Export Raster** dialog window. 
 ```
 
-
-
-
+Once all the other settings (in both the **General** and **Settings** tabs) are set as desired, click the **Export** button to export the variable to a stand-alone raster with the desired spatial extent.
 
