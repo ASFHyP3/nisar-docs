@@ -95,7 +95,7 @@ Some interferograms and range/Doppler offset products can exhibit very strong io
 Along-track pixel offset estimates (top), the interferometric correlation (middle) and the interferometric phase (bottom) near Crary Ice Rise in Antarctica. 
 ```
 
-- The boundary of the ionospheric phase layer has edge-effect artifacts, as illustrated in @misaligned-mask-image. These artifacts originate from misaligned valid sample subswath masks in the input RSLC products and will be resolved in a future release.
+- The boundary of the ionospheric phase layer has edge-effect artifacts, as illustrated in @misaligned-mask-image. These artifacts originate from misaligned valid sample subswath masks in the input RSLC products.
 
 ```{figure} ../assets/lim_misaligned_mask.png
 :label: misaligned-mask-image
@@ -154,7 +154,7 @@ Illustration of artifacts caused by not using the full rubbersheeting algorithm 
 
 #### Interferogram Coregistration in Cryosphere Regions
 
-Interferogram generation over cryosphere regions uses a rubbersheeting algorithm in which the coregistration is based on geometrical offsets refined with dense offsets computed from amplitude cross correlation. The ionosphere can introduce errors of a few pixels in the azimuth direction, which can yield an additional phase distortion beyond the direct effect of ionosphere on the phase. Ways are being investigated to mitigate this effect.  
+Interferogram generation over cryosphere regions uses a rubbersheeting algorithm in which the coregistration is based on geometrical offsets refined with dense offsets computed from amplitude cross correlation. The ionosphere can introduce errors of a few pixels in the azimuth direction, which can yield an additional phase distortion beyond the direct effect of ionosphere on the phase.
 
 #### Banding in Interferograms
 Individual ionospheric phase screens contain banded phase artifacts oriented along the range direction due to mismatched ionosphere filtering. This banding is magnified in interferogram stacks, as illustrated in @ionosphere-corr-image. Further low-pass filtering of the provided ionospheric layer can mitigate this effect.
