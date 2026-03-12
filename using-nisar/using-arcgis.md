@@ -90,8 +90,11 @@ Using drag-and-drop functionality to add NISAR data to an ArcGIS Pro project.
 (arcgis-visualizing-nisar-data)=
 ## Visualizing NISAR Data
 
+Most NISAR data does not visualize well by default, and symbology adjustments need to be applied to view features of interest. Refer to the NISAR ins GIS StoryMap to learn how to apply symbology adjustments for [GCOV](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-irIq6l) and [GUNW](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-GR2AW1) products. 
 
+### Symbology Settings
 
+Symbology adjustments can be made for NISAR variables as you would any other layer. Right-click the layer and select Symbology to open the Symbology panel. 
 
 (arcgis-transforming-nisar-data)=
 ## Transforming NISAR Data
