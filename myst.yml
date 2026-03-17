@@ -6,9 +6,12 @@ project:
     - nisar-docs.bib
   toc:
     - file: index.md
+    - file: 404.md
+      hidden: true
     - file: about-nisar/nisar-intro.md
     - file: data-availability/availability-overview.md
-#      children:
+      children:
+        - file: data-availability/product-known-issues.md
 #        - file: data-availability/observation-scenario.md
     - file: data-products/products-overview.md
       children:
@@ -89,6 +92,7 @@ project:
     SAR: Synthetic Aperture Radar
     SNR: Signal-to-Noise Ratio
     UTM: Universal Transverse Mercator
+    RFI: Radio Frequency Interference
     RIFG: Range Doppler Wrapped Interferogram
     ROFF: Range Doppler Pixel Offsets
     RRSD: Radar Raw Signal Data
@@ -97,8 +101,10 @@ project:
 site:
   template: book-theme
   options:
+    style: ./style.css
     favicon: favicon.ico
     logo_text: 'NISAR Data User Guide'
-    analytics_google: G-F5XFWH0KYR
+    # Do not remove this line:
+    # analytics_google: G-F5XFWH0KYR
   parts:
     primary_sidebar_footer: ''
