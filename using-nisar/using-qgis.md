@@ -3,9 +3,9 @@ short_title: QGIS
 ---
 # Using NISAR Data in QGIS
 
-NISAR Level 2-3 products are suitable for GIS analysis. Working with NISAR in [QGIS](https://qgis.org/), a free and open-source GIS. For a refresher on Level 2 and Level 3 data products, see @data-products-overview. 
+NISAR Level 2 and Level 3 products are suitable for direct use in GIS-based analysis, such as in [QGIS](https://qgis.org/), a free and open-source GIS. For a refresher on Level 2 and Level 3 NISAR data products, see @data-products-overview. 
 
-The [Work with NISAR Sample Data](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data) tutorials provide a quick overview to work with NISAR data in QGIS. 
+To explore workflows for working with specific NISAR data types in QGIS, see the [Work with NISAR Sample Data](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data) tutorials. 
 
 ## Preparing NISAR Data for QGIS
 
@@ -15,6 +15,14 @@ QGIS does not natively support `.h5` files. To add NISAR data in QGIS, rename th
 would be able to be opened in QGIS. 
 
 Alternatively, to work directly with `.h5` data, install the [QGIS NASA Earthdata plugin](https://github.com/opengeos/qgis-nasa-earthdata-plugin). 
+
+### GSLC Products
+
+QGIS does not natively handle complex numbers. The `gdal_translate` function will allos extraction of the amplitude and phase components into separate real components. Since the amplitude component contains the visual information, that will be the more useful component to view in QGIS. Run the following example to extract the amplitude from a GLSC file: 
+
+`gdal_translate -of GTiff DERIVED_SUBDATASET:AMPLITUDE:NETCDF:/path/to/nisar.nc:/science/LSAR/GSLC/grids/frequencyA/HH amplitude.tif`
+
+Now, `amplitude.tif` will be the file to load into QGIS. 
 
 (qgis-adding-nisar-data)=
 ## Adding NISAR Data
@@ -28,6 +36,7 @@ Add data to QGIS using the **Open Data Source Manger** button or shortcut. Selec
 Click on **Open Data Source Manger** and select the Raster data type to add NISAR data to QGIS. 
 ```
 After clicking the **Add** button, another window will pop up with all the groups within the NISAR data file that can be added as individual layers. All groups are selected for addition as a default, but individual groups can be selected to avoid adding too much data to your project. For more information about the HDF Files and NISAR data groups, see @hdf5.  
+
 ```{figure} ../assets/qgis-select-layers.png
 :name: qgis-select-layers
 :alt: Screenshot highlighting the list of layers that pop up after adding NISAR data in QGIS
@@ -40,14 +49,14 @@ Select the data layers to add in QGIS. All layers are selected as the default.
 ## Visualizing NISAR Data
 After loading data into QGIS, the symbology needs to be adjusted to visualize the data in a meaningful way. 
 
-For GCOV products, the colorbar needs to be adjusted to a smaller range of values in order to highlight the features in the scene. Right-click on the layer in the **Layers** Panel and select **Properties** to adjust the symbology, as shown in @qgis-adjust-colorbar. Note that co-polarized returns are generally higher than cross-polarized returns, so the colorbar minimum and maximums might need to be different for the two different polarizations. Adjusting minimum and maximum values might take a bit of trial and error to highlight interesting features for each scene. 
+For GCOV products, the colorbar needs to be adjusted to a smaller range of values in order to highlight the features in the scene. Right-click on the layer in the **Layers** Panel and select **Properties** to adjust the symbology, as shown in @qgis-adjust-colorbar. Note that co-polarized returns are generally higher than cross-polarized returns, so the colorbar minimum and maximums might need to be different for the two different polarizations. The minimum and maximum values for the colorbar can be stretched by expanding `Min/Max Value Settings`. The `Mean +/- standard deviation` option is good starting point to visualizing GCOV data. 
 
 ```{figure} ../assets/qgis-adjust-colorbar.png
 :name: qgis-adjust-colorbar
 :alt: Screenshot showing the **Symbology** for a NISAR GCOV data layer to highlight the minimum and maximum values of the colorbar
 :align: left
 
-Right-click on the data layer in the **Layers** panel and select "Properties" to open up the Layer Properties window. Select the **Symbology** tab to adjust the Color Gradient minimum and maximum to appropriate values for the data layer. 
+Right-click on the data layer in the **Layers** panel and select "Properties" to open up the Layer Properties window. Select the **Symbology** tab to customize stretch values for the gradient. 
 ```
 
 NISAR data products will have a black and white (aka "Singleband grey") colorbar in QGIS as a default, but can be changed to a number of other color ramp options using the **Layer Properties** window. Right-click on the desired layer, and select **Properties** in the pop-up list. A variety of color ramps are available by changing the **Render Type** to "Singleband pseudocolor", such as the "Rocket" color ramp, as seen in @qgis-color-ramp. 
@@ -99,7 +108,7 @@ Once a layer is ready to be exported, right-click on the layer and select **Expo
 Right-click on a layer and select the **Export** option from the pop-up list. 
 ```
 
-A list of output data types will be available when selecting **Format**. 
+A list of output data types will be available when selecting **Format**. Saving as a GeoTiff should be appropriate for most users. 
 
 ```{figure} ../assets/qgis-export-file.png
 :name: qgis-export-file
