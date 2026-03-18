@@ -5,20 +5,19 @@ short_title: QGIS
 
 NISAR [Level 2 and Level 3 products](#nisar-product-levels) are projected to map coordinates and and suitable for use in [QGIS](https://qgis.org/). There is no minimum version required to work with NISAR data in QGIS, but this document was created using a QGIS version of 3.44.7. 
 
-For a refresher on available Level 2 and Level 3 NISAR data products, see @data-products-overview. To explore workflows for working with each specific NISAR data type in QGIS, see the [Work with NISAR Sample Data](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data) tutorials. 
+For a refresher on available Level 2 and Level 3 NISAR data products, see @data-products-overview. To explore workflows for working with each specific NISAR data type in QGIS, see the [Work with NISAR Sample Data](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data) tutorials.
 
 ## Preparing NISAR Data for QGIS
 
-QGIS does not natively support HDF5 files, but it does support the use of NetCDF files, which are similar to HDF5 files. Loading a `.h5` file into QGIS will likely cause QGIS to crash, so to avoid this, replace the `.h5` file extension with `.nc`. For example, the file 
-`NISAR_L2_PR_GCOV_010_164_A_035_4005_DHDH_A_20260120T134235_20260120T134312_X05010_N_F_J_001.h5` renamed as 
-`NISAR_L2_PR_GCOV_010_164_A_035_4005_DHDH_A_20260120T134235_20260120T134312_X05010_N_F_J_001.nc`
-can be opened in QGIS. Occasionally, data files with an `.nc` extension may crash QGIS, but this can usually be fixed by deleting the `.aux.xml` file created by QGIS in the same directory as the dataset
+QGIS cannot natively read the geolocation data of NISAR HDF5 files. A NISAR `.h5` file loaded directly into QGIS will not display in the correct place on Earth.
 
-Alternatively, to work directly with `.h5` data, install the [QGIS NASA Earthdata plugin](https://github.com/opengeos/qgis-nasa-earthdata-plugin) created specifically for searching, visualizing, and downloading NASA Earthdata products. 
+Replacing the `.h5` (HDF5) file extension with `.nc` (NETCDF) prior to opening the file in QGIS will allow the data to be correctly geolocated. For example, the file `NISAR_L2_PR_GCOV`<wbr>`_010_164_A_035_4005_`<wbr>`DHDH_A_20260120T134235_`<wbr>`20260120T134312_`<wbr>`X05010_N_F_J_001.h5` renamed as `NISAR_L2_PR_GCOV`<wbr>`_010_164_A_035_4005_`<wbr>`DHDH_A_20260120T134235_`<wbr>`20260120T134312_`<wbr>`X05010_N_F_J_001.nc` can be opened in QGIS.
+
+Occasionally, data files with an `.nc` extension may crash QGIS, but this can usually be fixed by deleting the `.aux.xml` file created by QGIS in the same directory as the dataset.
 
 ### Preparing GSLC Products
 
-QGIS does not natively handle complex numbers. The [`gdal_translate` function](https://gdal.org/en/stable/programs/gdal_translate.html) will allow extraction of the amplitude and phase components into separate real components. Since the amplitude component contains the visual information, that will be the more useful component to view in QGIS. Run the following example to extract the amplitude from a GLSC file: 
+QGIS cannot display complex-valued data such as the complex signal returns in NISAR GSLC products. The amplitude and phase components can be extracted into separate real-valued rasters using [gdal_translate](https://gdal.org/en/stable/programs/gdal_translate.html) in conjuction with the [derived subdatasets driver](https://gdal.org/en/stable/drivers/raster/derived.html), which can then be visualized in QGIS. Amplitude data is typically more relevant than phase data for GIS applications. Run the following example to extract the amplitude from a GLSC file:
 
 `gdal_translate -of GTiff DERIVED_SUBDATASET:AMPLITUDE:NETCDF:/path/to/nisar.nc:/science/LSAR/GSLC/grids/frequencyA/HH amplitude.tif`
 
