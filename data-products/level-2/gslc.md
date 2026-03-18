@@ -13,10 +13,14 @@ The GSLC product is a Level 2 product derived from the Level-1 [RSLC](#rslc-prod
 
 The geocoding is performed by inverse mapping of the map coordinates with their topographic heights into the radar coordinate system and interpolating the radar signal at the radar location corresponding to the map coordinate. Phase-preserving complex interpolation projects the data onto a uniformly spaced, north-south/east-west aligned geographic grid.
 
+### Interferometry
+
 The phase of the GSLC product is flattened for the orbit used in the RSLC processing. The phase flattening removes the topographic phase contribution in the GSLC. Consequently, cross-multiplying two GSLC products will result in an interferometric phase flattened interferogram.
 
 (gslc-backscatter)=
 ### Backscatter
+
+Because of the phase flattening applied to the GSLC, the amplitude values are also terrain corrected. No radiometric flattening is applied to normalize the backscatter relative to the area contributing to the returned signal, however. For radiometrically terrain corrected backscatter, refer to the [Geocoded Covariance (GCOV)](#gcov-product-overview) products.
 
 The pixel values in the GSLC product are presented as complex Digital Numbers (DN). To convert these DNs to backscatter values, simply calculate the square of the absolute value of the DN of the desired frequency/polarization data from the GSLC product. The resulting backscatter values are in beta-nought (beta0) radiometry.
 
