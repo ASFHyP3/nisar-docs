@@ -126,7 +126,7 @@ Change the color scheme for the layer. To use a traditional grayscale scheme, cl
 
 When viewing [amplitude data](#gis-amplitude-products), the images tend to appear very dark when using the default symbology. Because most backscatter values are very close to 0, it's helpful to change the stretch settings to focus on the range of the majority of the pixel values. 
 
-A quick way to start is to apply a Standard Deviation stretch using Dynamic Range Adjustment (DRA). 
+One way to quickly render a view of the landscape is to apply a Standard Deviation stretch using Dynamic Range Adjustment (DRA). 
 
 Set the **Stretch type** to `Standard Deviation`. In the Statistics tab, set **Statistics** to `DRA`. You may want adjust the number of standard deviations to see what works best for your particular area. Values between 1 and 2 are often suitable for backscatter. 
 
