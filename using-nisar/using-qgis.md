@@ -50,7 +50,7 @@ Select the data layers to add in QGIS. All layers are selected as the default.
 ## Visualizing NISAR Data
 After loading data into QGIS, the symbology needs to be adjusted to visualize the data in a meaningful way. The colorbar needs to be adjusted to a smaller range of values in order to highlight the features in the scene. Right-click on the layer in the **Layers** Panel and select **Properties** to adjust the symbology, as shown in @qgis-adjust-colorbar. Note that for GCOV products, copol returns are generally higher than cross-polarized returns, so the colorbar minimum and maximums might need to be different for the two different polarizations. 
 
-The minimum and maximum values for the colorbar can be stretched by expanding `Min/Max Value Settings`. The minimum and maximum values can be user-defined, generated using the mean +/- standard deviation, or a cumulative count. 
+The minimum and maximum values for the colorbar can be stretched by expanding `Min/Max Value Settings`. The minimum and maximum values can be user-defined, generated using the mean +/- standard deviation, or a cumulative count, which cuts the 2% highest and lowest values. 
 
 ```{figure} ../assets/qgis-adjust-colorbar.png
 :name: qgis-adjust-colorbar
