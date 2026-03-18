@@ -3,30 +3,31 @@ short_title: QGIS
 ---
 # Using NISAR Data in QGIS
 
-NISAR Level 2 and Level 3 products are suitable for direct use in GIS-based analysis, such as in [QGIS](https://qgis.org/), a free and open-source GIS. For a refresher on Level 2 and Level 3 NISAR data products, see @data-products-overview. 
+NISAR [Level 2 and Level 3 products](#nisar-product-levels) are projected to map coordinates and and suitable for use in [QGIS](https://qgis.org/). There is no minimum version required to work with NISAR data in QGIS, but this document was created using a QGIS version of 3.44.7. 
 
-To explore workflows for working with specific NISAR data types in QGIS, see the [Work with NISAR Sample Data](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data) tutorials. 
+For a refresher on available Level 2 and Level 3 NISAR data products, see @data-products-overview. To explore workflows for working with each specific NISAR data type in QGIS, see the [Work with NISAR Sample Data](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data) tutorials. 
 
 ## Preparing NISAR Data for QGIS
 
-QGIS does not natively support `.h5` files. To add NISAR data in QGIS, rename the file and change the `.h5` extension to `.nc`. For example, the file 
+QGIS does not natively support HDF5 files, but it does support the use of NetCDF files, which are similar to HDF5 files. Loading a `.h5` file into QGIS will likely cause QGIS to crash, so to avoid this, replace the `.h5` file extension with `.nc`. For example, the file 
 `NISAR_L2_PR_GCOV_010_164_A_035_4005_DHDH_A_20260120T134235_20260120T134312_X05010_N_F_J_001.h5` renamed as 
 `NISAR_L2_PR_GCOV_010_164_A_035_4005_DHDH_A_20260120T134235_20260120T134312_X05010_N_F_J_001.nc`
-would be able to be opened in QGIS. 
+can be opened in QGIS. Occasionally, data files with an `.nc` extension may crash QGIS, but this can usually be fixed by deleting the `.aux.xml` file created by QGIS in the same directory as the dataset
 
-Alternatively, to work directly with `.h5` data, install the [QGIS NASA Earthdata plugin](https://github.com/opengeos/qgis-nasa-earthdata-plugin). 
+Alternatively, to work directly with `.h5` data, install the [QGIS NASA Earthdata plugin](https://github.com/opengeos/qgis-nasa-earthdata-plugin) created specifically for searching, visualizing, and downloading NASA Earthdata products. 
 
-### GSLC Products
+### Preparing GSLC Products
 
-QGIS does not natively handle complex numbers. The `gdal_translate` function will allos extraction of the amplitude and phase components into separate real components. Since the amplitude component contains the visual information, that will be the more useful component to view in QGIS. Run the following example to extract the amplitude from a GLSC file: 
+QGIS does not natively handle complex numbers. The [`gdal_translate` function](https://gdal.org/en/stable/programs/gdal_translate.html) will allow extraction of the amplitude and phase components into separate real components. Since the amplitude component contains the visual information, that will be the more useful component to view in QGIS. Run the following example to extract the amplitude from a GLSC file: 
 
 `gdal_translate -of GTiff DERIVED_SUBDATASET:AMPLITUDE:NETCDF:/path/to/nisar.nc:/science/LSAR/GSLC/grids/frequencyA/HH amplitude.tif`
 
-Now, `amplitude.tif` will be the file to load into QGIS. 
+Now, `amplitude.tif` will be the file that can be loaded in QGIS. 
 
 (qgis-adding-nisar-data)=
 ## Adding NISAR Data
-Add data to QGIS using the **Open Data Source Manger** button or shortcut. Select the **Raster** data type and add the desired file to the project. 
+
+Add data to QGIS using either the **Open Data Source Manger** button and selecting the **Raster** data type or by expanding the **Browse** panel, navigating to the location of the NISAR file and dropping the file onto the map. 
 
 ```{figure} ../assets/qgis-add-data.png
 :name: qgis-add-data
@@ -47,9 +48,9 @@ Select the data layers to add in QGIS. All layers are selected as the default.
 
 (qgis-visualizing-nisar-data)=
 ## Visualizing NISAR Data
-After loading data into QGIS, the symbology needs to be adjusted to visualize the data in a meaningful way. 
+After loading data into QGIS, the symbology needs to be adjusted to visualize the data in a meaningful way. The colorbar needs to be adjusted to a smaller range of values in order to highlight the features in the scene. Right-click on the layer in the **Layers** Panel and select **Properties** to adjust the symbology, as shown in @qgis-adjust-colorbar. Note that for GCOV products, copol returns are generally higher than cross-polarized returns, so the colorbar minimum and maximums might need to be different for the two different polarizations. 
 
-For GCOV products, the colorbar needs to be adjusted to a smaller range of values in order to highlight the features in the scene. Right-click on the layer in the **Layers** Panel and select **Properties** to adjust the symbology, as shown in @qgis-adjust-colorbar. Note that co-polarized returns are generally higher than cross-polarized returns, so the colorbar minimum and maximums might need to be different for the two different polarizations. The minimum and maximum values for the colorbar can be stretched by expanding `Min/Max Value Settings`. The `Mean +/- standard deviation` option is good starting point to visualizing GCOV data. 
+The minimum and maximum values for the colorbar can be stretched by expanding `Min/Max Value Settings`. The minimum and maximum values can be user-defined, generated using the mean +/- standard deviation, or a cumulative count. 
 
 ```{figure} ../assets/qgis-adjust-colorbar.png
 :name: qgis-adjust-colorbar
@@ -75,7 +76,7 @@ Right-click on the data layer in the **Layers** panel and select "Properties" to
 (qgis-subsetting-nisar-data)=
 ### Subsetting
 
-Subsetting raster data in QGIS can be done using the **Clip Raster by Extent** tool in QGIS, as highlighted in @qgis-raster-extraction. Navigate to **Raster** on the menu bar, then select **Extraction** to access this tool. 
+Subsetting raster data in QGIS can be done using the **Clip Raster by Extent** tool in QGIS, as highlighted in @qgis-raster-extraction. Navigate to **Raster** on the menu bar, then select **Extraction** from the drop-down list to access this tool. 
 
 ```{figure} ../assets/qgis-raster-extraction.png
 :name: qgis-raster-extraction
@@ -85,7 +86,7 @@ Subsetting raster data in QGIS can be done using the **Clip Raster by Extent** t
 Select **Raster** from the menu bar, then select **Extraction** to open the **Clip Raster by Extent** raster tool. 
 ```
 
-Ensure the correct layer is selected under **Input Layer** before subsetting. Then, either enter the minimum latitude and longitudes of the desired subset or select **Draw on Map Canvas** to draw a custom rectangle directly on the map. Note that you will have to click out of the **Raster Extraction** window to click and drag a region of interest. 
+Ensure the correct layer is highlighted under **Input Layer** before subsetting. Then, either enter the minimum latitude and longitudes of the desired subset or select **Draw on Map Canvas** to draw a custom rectangle directly on the map. Note that you will have to click out of the **Raster Extraction** window to click and drag a region of interest. Return to the **Raster Extraction** window and click **OK** to subset. 
 
 ```{figure} ../assets/qgis-clip-extent.png
 :name: qgis-clip-extent
@@ -98,7 +99,7 @@ The **Clip Raster by Extent** tool has the option to draw a rectangle directly o
 (qgis-converting-nisar-format)=
 ### Converting Format
 
-Once a layer is ready to be exported, right-click on the layer and select **Export** then **Save As...** from the pop-up list. 
+Once a layer is ready to be exported, right-click on the layer in the **Layers** panel and select **Export** from the pop-up menu. Then, select **Save As...** from the pop-up list. 
 
 ```{figure} ../assets/qgis-export.png
 :name: qgis-export
@@ -108,7 +109,7 @@ Once a layer is ready to be exported, right-click on the layer and select **Expo
 Right-click on a layer and select the **Export** option from the pop-up list. 
 ```
 
-A list of output data types will be available when selecting **Format**. Saving as a GeoTiff should be appropriate for most users. 
+A list of output data types will be available when selecting **Format**. Saving the layer as a GeoTiff should be appropriate for most users. Then, input the desired name and location for the output file and press **OK** to save. 
 
 ```{figure} ../assets/qgis-export-file.png
 :name: qgis-export-file
