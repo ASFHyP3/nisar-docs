@@ -3,7 +3,7 @@ short_title: QGIS
 ---
 # Using NISAR Data in QGIS
 
-NISAR [Level 2 and Level 3 products](#nisar-product-levels) are projected to map coordinates and and suitable for use in [QGIS](https://qgis.org/). There is no minimum version required to work with NISAR data in QGIS, but this document was created using a QGIS version of 3.44.7. 
+NISAR [Level 2 and Level 3 products](#nisar-product-levels) are projected to map coordinates and are suitable for use in [QGIS](https://qgis.org/). There is no minimum version required to work with NISAR data in QGIS, but this document was created using a QGIS version of 3.44.7.
 
 For a refresher on available Level 2 and Level 3 NISAR data products, see @data-products-overview. To explore workflows for working with each specific NISAR data type in QGIS, see the [Work with NISAR Sample Data](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data) tutorials.
 
@@ -21,49 +21,49 @@ QGIS cannot display complex-valued data such as the complex signal returns in NI
 
 `gdal_translate -of GTiff DERIVED_SUBDATASET:AMPLITUDE:NETCDF:/path/to/nisar.nc:/science/LSAR/GSLC/grids/frequencyA/HH amplitude.tif`
 
-Now, `amplitude.tif` will be the file that can be loaded in QGIS. 
+Now, `amplitude.tif` will be the file that can be loaded in QGIS.
 
 (qgis-adding-nisar-data)=
 ## Adding NISAR Data
 
-Add data to QGIS using either the **Open Data Source Manger** button and selecting the **Raster** data type or by expanding the **Browse** panel, navigating to the location of the NISAR file and dropping the file onto the map. 
+Add data to QGIS using the **Open Data Source Manger** button and selecting the **Raster** data type. Select your NISAR file using the file explorer and click **Add** as shown in @qgis-add-data.
 
 ```{figure} ../assets/qgis-add-data.png
 :name: qgis-add-data
-:alt: Screenshot highlighting the **Open Data Source Manger** button and the Raster data type to select when adding NISAR data. 
+:alt: Screenshot highlighting the **Open Data Source Manger** button and the Raster data type to select when adding NISAR data.
 :align: left
 
-Click on **Open Data Source Manger** and select the Raster data type to add NISAR data to QGIS. 
+Click on **Open Data Source Manger** and select the Raster data type to add NISAR data to QGIS.
 ```
-After clicking the **Add** button, another window will pop up with all the groups within the NISAR data file that can be added as individual layers. All groups are selected for addition as a default, but individual groups can be selected to avoid adding too much data to your project. For more information about the HDF Files and NISAR data groups, see @hdf5.  
+After clicking the **Add** button, another window will pop up showing the groups within the NISAR data file that can be added as individual layers. All groups are selected for addition as a default, but individual groups can be selected to avoid adding too much data to your project. For more information about the HDF Files and NISAR data groups, see @hdf5.
 
 ```{figure} ../assets/qgis-select-layers.png
 :name: qgis-select-layers
 :alt: Screenshot highlighting the list of layers that pop up after adding NISAR data in QGIS
 :align: left
 
-Select the data layers to add in QGIS. All layers are selected as the default. 
+Select the data layers to add in QGIS. All layers are selected as the default.
 ```
 
 (qgis-visualizing-nisar-data)=
 ## Visualizing NISAR Data
-After loading data into QGIS, the symbology needs to be adjusted to visualize the data in a meaningful way. The colorbar needs to be adjusted to a smaller range of values in order to highlight the features in the scene. Right-click on the layer in the **Layers** Panel and select **Properties** to adjust the symbology, as shown in @qgis-adjust-colorbar. Note that for GCOV products, copol returns are generally higher than cross-polarized returns, so the colorbar minimum and maximums might need to be different for the two different polarizations. 
+After loading data into QGIS, the symbology needs to be adjusted to visualize the data in a meaningful way. The colorbar needs to be adjusted to a smaller range of values in order to highlight the features in the scene. Right-click on the layer in the **Layers** Panel and select **Properties** to adjust the symbology, as shown in @qgis-adjust-colorbar. Note that for GCOV products, co-pol returns are generally higher than cross-pol returns, so the colorbar minimum and maximums might need to be different for the two different polarizations.
 
-The minimum and maximum values for the colorbar can be stretched by expanding `Min/Max Value Settings`. The minimum and maximum values can be user-defined, generated using the mean +/- standard deviation, or a cumulative count, which cuts the 2% highest and lowest values. 
+The minimum and maximum values for the colorbar can be stretched by expanding `Min/Max Value Settings`. The minimum and maximum values can be user-defined, generated using the mean +/- standard deviation, or a cumulative count, which cuts the 2% highest and lowest values.
 
 ```{figure} ../assets/qgis-adjust-colorbar.png
 :name: qgis-adjust-colorbar
 :alt: Screenshot showing the **Symbology** for a NISAR GCOV data layer to highlight the minimum and maximum values of the colorbar
 :align: left
 
-Right-click on the data layer in the **Layers** panel and select "Properties" to open up the Layer Properties window. Select the **Symbology** tab to customize stretch values for the gradient. 
+Right-click on the data layer in the **Layers** panel and select "Properties" to open up the Layer Properties window. Select the **Symbology** tab to customize stretch values for the gradient.
 ```
 
-NISAR data products will have a black and white (aka "Singleband grey") colorbar in QGIS as a default, but can be changed to a number of other color ramp options using the **Layer Properties** window. Right-click on the desired layer, and select **Properties** in the pop-up list. A variety of color ramps are available by changing the **Render Type** to "Singleband pseudocolor", such as the "Rocket" color ramp, as seen in @qgis-color-ramp. 
+NISAR data products will have a black and white (aka "Singleband gray") colorbar in QGIS as a default, but can be changed to a number of other color ramp options using the **Layer Properties** window. Right-click on the desired layer, and select **Properties** in the pop-up list. A variety of color ramps are available by changing the **Render Type** to "Singleband pseudocolor", such as the "Rocket" color ramp, as seen in @qgis-color-ramp.
 
 ```{figure} ../assets/qgis-color-ramp.png
 :name: qgis-color-ramp
-:alt: Screenshot showing the **Symbology** for a NISAR GCOV data layer to highlight the option to adjust the color ramp 
+:alt: Screenshot showing the **Symbology** for a NISAR GCOV data layer to highlight the option to adjust the color ramp
 :align: left
 
 Right-click on the data layer in the **Layers** panel and select "Properties" to open up the Layer Properties window. Select the **Symbology** tab to change the color ramp of the scene
@@ -75,45 +75,45 @@ Right-click on the data layer in the **Layers** panel and select "Properties" to
 (qgis-subsetting-nisar-data)=
 ### Subsetting
 
-Subsetting raster data in QGIS can be done using the **Clip Raster by Extent** tool in QGIS, as highlighted in @qgis-raster-extraction. Navigate to **Raster** on the menu bar, then select **Extraction** from the drop-down list to access this tool. 
+Subsetting raster data in QGIS can be done using the **Clip Raster by Extent** tool in QGIS, as highlighted in @qgis-raster-extraction. Navigate to **Raster** on the menu bar, then select **Extraction** from the drop-down list to access this tool.
 
 ```{figure} ../assets/qgis-raster-extraction.png
 :name: qgis-raster-extraction
-:alt: Screenshot showing how to access the **Clip Raster by Extent** raster tool 
+:alt: Screenshot showing how to access the **Clip Raster by Extent** raster tool
 :align: left
 
-Select **Raster** from the menu bar, then select **Extraction** to open the **Clip Raster by Extent** raster tool. 
+Select **Raster** from the menu bar, then select **Extraction** to open the **Clip Raster by Extent** raster tool.
 ```
 
-Ensure the correct layer is highlighted under **Input Layer** before subsetting. Then, either enter the minimum latitude and longitudes of the desired subset or select **Draw on Map Canvas** to draw a custom rectangle directly on the map. Note that you will have to click out of the **Raster Extraction** window to click and drag a region of interest. Return to the **Raster Extraction** window and click **OK** to subset. 
+Ensure the correct layer is highlighted under **Input layer** before subsetting. Then, either enter the minimum latitude and longitudes of the desired subset or select **Draw on Map Canvas** to draw a custom rectangle directly on the map. Return to the **Raster Extraction** window and click **OK** to subset.
 
 ```{figure} ../assets/qgis-clip-extent.png
 :name: qgis-clip-extent
-:alt: Screenshot showing the **Clip Raster by Extent** raster tool 
+:alt: Screenshot showing the **Clip Raster by Extent** raster tool
 :align: left
 
-The **Clip Raster by Extent** tool has the option to draw a rectangle directly on the map or manually add the minimum latitude and longitudes to clip the data layer. Users can either save directly to a file or produce a temporary layer, which can later be saved. 
+The **Clip Raster by Extent** tool has the option to draw a rectangle directly on the map or manually add the minimum latitude and longitudes to clip the data layer. Users can either save directly to a file or produce a temporary layer, which can later be saved.
 ```
 
 (qgis-converting-nisar-format)=
 ### Converting Format
 
-Once a layer is ready to be exported, right-click on the layer in the **Layers** panel and select **Export** from the pop-up menu. Then, select **Save As...** from the pop-up list. 
+Once a layer is ready to be exported, right-click on the layer in the **Layers** panel and select **Export** from the pop-up menu. Then, select **Save As...** from the pop-up list.
 
 ```{figure} ../assets/qgis-export.png
 :name: qgis-export
 :alt: Screenshot showing the **Export** option for a layer in QGIS
 :align: left
 
-Right-click on a layer and select the **Export** option from the pop-up list. 
+Right-click on a layer and select the **Export** option from the pop-up list.
 ```
 
-A list of output data types will be available when selecting **Format**. Saving the layer as a GeoTiff should be appropriate for most users. Then, input the desired name and location for the output file and press **OK** to save. 
+A list of output data types will be available when selecting **Format**. Saving the layer as a GeoTiff should be appropriate for most users. The map projection also be chosen under **CRS**. Then, input the desired name and location for the output file and press **OK** to save.
 
 ```{figure} ../assets/qgis-export-file.png
 :name: qgis-export-file
 :alt: Screenshot showing the options while exporting a layer to a data file
 :align: left
 
-Select the data format, a location and name for the file, and output projection for the file and press **OK** to save. 
+Select the data format, a location and name for the file, and output projection for the file and press **OK** to save.
 ```
