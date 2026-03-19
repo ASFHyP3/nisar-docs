@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.3.2]
 
 ### Added
+- Guidance page for working with NISAR data in QGIS
 - Guidance page for working with NISAR data in ArcGIS Pro
 - Links to NISAR ATBD GitLab site
 
