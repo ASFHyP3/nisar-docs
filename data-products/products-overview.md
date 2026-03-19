@@ -12,9 +12,9 @@ One of the most exciting aspects of the NISAR mission is that it generates a num
 For SAR scientists and those who want to generate products to their own specifications, the [Level 0 (Raw)](#level-0-unfocused-raw-products) data and [Level 1 (Range-Doppler)](#level-1-range-doppler-products) products are also available.
 
 :::{important}NISAR Data Product Availability
-A small collection of NISAR sample data products is now available to the public! 
+A collection of NISAR pre-calibration data products is now available to the public!
 
-[Learn more about this dataset and the expected timeline for additional product releases](#nisar-sample-data-jan).
+[Learn more about this dataset and the expected timeline for additional product releases](#nisar-sample-data-feb).
 :::
 
 (nisar-product-levels)=
@@ -32,7 +32,7 @@ The NASA processing levels used for SAR have somewhat different meanings than th
 NISAR Data Product Levels based on product specification documentation
 ```
 
-Additional Level 3 and 4 products will be produced by the NISAR science team, but only for specific areas used for calibration and validation activities. Some of these cal/val products may be archived and available to the public. The processing workflows for these higher-level products will be made available as Python notebooks as they are validated, allowing users to generate these scientific products themselves for other locations.
+Additional Level 3 and 4 products will be produced by the NISAR science team, but only for specific areas used for calibration and validation activities. Some of these cal/val products may be archived and available to the public. The algorithms for these higher-level products are available as [Python notebooks](https://gitlab.com/nisar-science-algorithms), allowing users to generate these scientific products themselves for other locations.
 
 <!-- TODO: update links to go to the product overview headings rather than the .md -->
 
