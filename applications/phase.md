@@ -17,4 +17,6 @@ Phase measurements, especially at L-band wavelengths, are sensitive to atmospher
 
 ## Coherence
 
-Coherence indicates the level of correlation between the phase spectra of two SAR acquisitions. Values range from 0 to 1, with 0 being complete decorrelation and 1 being complete correlation. Areas with low correlation, where phase spectra from one acquisition to another have little to no overlap, may not generate reliable InSAR values. Coherence values can be used to determine the quality of a phase difference calculation, but can also serve as an indicator of change, as these differences in phase spectra are generally caused by significant disturbance to the scattering surface. 
+Coherence indicates the level of correlation between the phase spectra of two SAR acquisitions. Values range from 0 to 1, with 0 being complete decorrelation and 1 being complete correlation. Areas with low correlation, where phase spectra from one acquisition to another have little to no overlap, may not generate reliable InSAR values. 
+
+Coherence values can be used to determine the quality of a phase difference calculation, but can also serve as an indicator of change, as these differences in phase spectra are generally caused by significant disturbance to the scattering surface. 
