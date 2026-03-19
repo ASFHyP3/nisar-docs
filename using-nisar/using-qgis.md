@@ -5,7 +5,9 @@ short_title: QGIS
 
 NISAR [Level 2 and Level 3 products](#nisar-product-levels) are projected to map coordinates and are suitable for use in [QGIS](https://qgis.org/). There is no minimum version required to work with NISAR data in QGIS, but this document was created using a QGIS version of 3.44.7.
 
-For a refresher on available Level 2 and Level 3 NISAR data products, see @data-products-overview. To explore workflows for working with each specific NISAR data type in QGIS, see the [Work with NISAR Sample Data](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data) tutorials.
+For a refresher on available Level 2 and Level 3 NISAR data products, see @data-products-overview. To explore workflows for working with each specific NISAR data type in QGIS, see the [Work with NISAR Sample Data](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data) tutorials. 
+
+A video tutorial demonstrating working with NISAR products in QGIS is available in the [NISAR Science Team Town Hall and Data Access Webinar](https://youtu.be/7tJJmNg8qyE?si=IHknko8izfb-SXdK&t=4317) starting at timestamp `1:11:57`. 
 
 ## Preparing NISAR Data for QGIS
 
