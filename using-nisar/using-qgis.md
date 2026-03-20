@@ -19,7 +19,9 @@ Occasionally, data files with an `.nc` extension may crash QGIS, but this can us
 
 ### Preparing GSLC Products
 
-QGIS cannot display complex-valued data such as the complex signal returns in NISAR GSLC products. The amplitude and phase components can be extracted into separate real-valued rasters using [gdal_translate](https://gdal.org/en/stable/programs/gdal_translate.html) in conjuction with the [derived subdatasets driver](https://gdal.org/en/stable/drivers/raster/derived.html), which can then be visualized in QGIS. Amplitude data is typically more relevant than phase data for GIS applications. Run the following example to extract the amplitude from a GLSC file:
+QGIS cannot display complex-valued data such as the signal returns in NISAR [GSLC](#gslc-product-overview) products. The [amplitude](#sar-amplitude) and [phase](#sar-phase) components can be extracted into separate real-valued rasters using [gdal_translate](https://gdal.org/en/stable/programs/gdal_translate.html) in conjunction with the [derived subdatasets driver](https://gdal.org/en/stable/drivers/raster/derived.html), which can then be visualized in QGIS. Amplitude data is typically more relevant than phase data for GIS applications. 
+
+Run the following example to extract the amplitude from a GLSC file:
 
 `gdal_translate -of GTiff DERIVED_SUBDATASET:AMPLITUDE:NETCDF:/path/to/nisar.nc:/science/LSAR/GSLC/grids/frequencyA/HH amplitude.tif`
 
@@ -49,26 +51,38 @@ Select the data layers to add in QGIS. All layers are selected as the default.
 
 (qgis-visualizing-nisar-data)=
 ## Visualizing NISAR Data
-After loading data into QGIS, the symbology needs to be adjusted to visualize the data in a meaningful way. The colorbar needs to be adjusted to a smaller range of values in order to highlight the features in the scene. Right-click on the layer in the **Layers** Panel and select **Properties** to adjust the symbology, as shown in @qgis-adjust-colorbar. Note that for GCOV products, co-pol returns are generally higher than cross-pol returns, so the colorbar minimum and maximums might need to be different for the two different polarizations.
+After loading data into QGIS, the symbology needs to be adjusted to visualize the data in a meaningful way. 
 
-The minimum and maximum values for the colorbar can be stretched by expanding `Min/Max Value Settings`. The minimum and maximum values can be user-defined, generated using the mean +/- standard deviation, or a cumulative count, which cuts the 2% highest and lowest values.
+### Stretch Settings
+
+The stretch settings need to be adjusted to a smaller range of values in order to highlight the features in the scene. Right-click on the layer in the **Layers** Panel and select **Properties** to adjust the symbology, as shown in @qgis-adjust-colorbar. 
+
+The minimum and maximum stretch values can be set by expanding **Min/Max Value Settings**. The minimum and maximum values can be `User-defined` to apply custom values, set by `Cumulative count cut`, which cuts a percentage of the highest and lowest values, set to the `Min / Max` values of the raster, or set to use the `Mean +/- standard deviation`. 
+
+There is no optimal universal approach for defining the minimum and maximum values; consider trying out different stretch settings to determine what works best for a specific image or application. 
 
 ```{figure} ../assets/qgis-adjust-colorbar.png
 :name: qgis-adjust-colorbar
-:alt: Screenshot showing the **Symbology** for a NISAR GCOV data layer to highlight the minimum and maximum values of the colorbar
+:alt: Screenshot showing the **Symbology** for a NISAR GCOV data layer to highlight the minimum and maximum values of the color ramp
 :align: left
 
-Right-click on the data layer in the **Layers** panel and select "Properties" to open up the Layer Properties window. Select the **Symbology** tab to customize stretch values for the gradient.
+Right-click on the data layer in the **Layers** panel and select **Properties** to open up the Layer Properties window. Select the **Symbology** tab to customize stretch values for the gradient. In this example, a mean +/- 2 standard deviation stretch is applied.
 ```
 
-NISAR data products will have a black and white (aka "Singleband gray") colorbar in QGIS as a default, but can be changed to a number of other color ramp options using the **Layer Properties** window. Right-click on the desired layer, and select **Properties** in the pop-up list. A variety of color ramps are available by changing the **Render Type** to "Singleband pseudocolor", such as the "Rocket" color ramp, as seen in @qgis-color-ramp.
+Note that co-polarized (HHHH or VVVV) backscatter returns are generally higher than cross-polarized (HVHV or VHVH) returns. If you are setting the Min/Max values manually, the maximum value might need to be different depending on the polarization of the layer. The minimum value can be set to 0 for all polarizations.
+
+### Color Ramp Settings
+
+NISAR data products will have a black and white (aka `Singleband gray`) color ramp in QGIS as a default, but can be changed to a number of other color ramp options using the **Layer Properties** window. 
+
+Right-click on the desired layer, and select **Properties** in the pop-up list. A variety of color ramps are available by changing the **Render Type** to `Singleband pseudocolor`, such as the `Rocket` color ramp, as seen in @qgis-color-ramp.
 
 ```{figure} ../assets/qgis-color-ramp.png
 :name: qgis-color-ramp
 :alt: Screenshot showing the **Symbology** for a NISAR GCOV data layer to highlight the option to adjust the color ramp
 :align: left
 
-Right-click on the data layer in the **Layers** panel and select "Properties" to open up the Layer Properties window. Select the **Symbology** tab to change the color ramp of the scene
+Right-click on the data layer in the **Layers** panel and select **Properties** to open up the Layer Properties window. Select the **Symbology** tab to change the color ramp of the scene.
 ```
 
 (qgis-transforming-nisar-data)=
@@ -110,7 +124,7 @@ Once a layer is ready to be exported, right-click on the layer in the **Layers**
 Right-click on a layer and select the **Export** option from the pop-up list.
 ```
 
-A list of output data types will be available when selecting **Format**. Saving the layer as a GeoTiff should be appropriate for most users. The map projection also be chosen under **CRS**. Then, input the desired name and location for the output file and press **OK** to save.
+Select the desired output file type using **Format** drop-down menu. Saving the layer as a GeoTIFF should be appropriate for most users. A different projection can also be selected for the output file using the **CRS** menu. Input the desired name and location for the output file and press **OK** to save.
 
 ```{figure} ../assets/qgis-export-file.png
 :name: qgis-export-file

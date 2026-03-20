@@ -32,7 +32,7 @@ The NASA processing levels used for SAR have somewhat different meanings than th
 NISAR Data Product Levels based on product specification documentation
 ```
 
-Additional Level 3 and 4 products will be produced by the NISAR science team, but only for specific areas used for calibration and validation activities. Some of these cal/val products may be archived and available to the public. The processing workflows for these higher-level products will be made available as Python notebooks as they are validated, allowing users to generate these scientific products themselves for other locations.
+Additional Level 3 and 4 products will be produced by the NISAR science team, but only for specific areas used for calibration and validation activities. Some of these cal/val products may be archived and available to the public. The algorithms for these higher-level products are available as [Python notebooks](https://gitlab.com/nisar-science-algorithms), allowing users to generate these scientific products themselves for other locations.
 
 <!-- TODO: update links to go to the product overview headings rather than the .md -->
 
