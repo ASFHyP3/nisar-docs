@@ -41,7 +41,7 @@ The [Soil Moisture (SME2)](#sme2-product-overview) products are the only [Level 
 
 ### File Size and Format
 
-NISAR files are very large, and can take a long time to load into GIS projects. If your area of interest is smaller than the full extent of the product, you may want to consider subsetting the data before using them for analysis workflows. This is particularly important if you choose to work with [GSLC](#gslc-product-overview) products. 
+NISAR files are very large, and it can take a long time to load them into GIS projects. If your area of interest is smaller than the full extent of the product, you may want to consider subsetting the data before using them for analysis workflows. This is particularly important if you choose to work with [GSLC](#gslc-product-overview) products. 
 
 The [HDF5 data format](#hdf5) of the NISAR products may be unfamiliar to some users, but there are workflows for adding NISAR layers to GIS projects and performing analysis leveraging existing raster analysis tools.
 
