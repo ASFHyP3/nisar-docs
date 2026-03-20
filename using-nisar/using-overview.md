@@ -19,7 +19,7 @@ The NISAR Mission is using ISCE3 functionality to generate the products that are
 (using-gis-software)=
 ## GIS Software
 
-The NISAR mission generates a number of [Level 2 and 3 products](#nisar-product-levels), which are projected to map coordinates and are suitable for use in GIS workflows. The @sar-amplitude component of the SAR dataset is particularly well-suited to GIS analysis, as it presents an image of the Earth's surface, though any of the gridded variables in the Level 2 and 3 products can be added to ArcGIS Pro. 
+The NISAR mission generates a number of [Level 2 and 3 products](#nisar-product-levels), which are projected to map coordinates and are suitable for use in GIS workflows. The @sar-amplitude component of the SAR dataset is particularly well-suited to GIS analysis, as it presents an image of the Earth's surface, though any of the gridded variables in the Level 2 and 3 products can be added to ArcGIS Pro or QGIS. 
 
 (gis-amplitude-products)=
 ### Amplitude Products
