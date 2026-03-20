@@ -57,7 +57,7 @@ After loading data into QGIS, the symbology needs to be adjusted to visualize th
 
 The stretch settings need to be adjusted to a smaller range of values in order to highlight the features in the scene. Right-click on the layer in the **Layers** Panel and select **Properties** to adjust the symbology, as shown in @qgis-adjust-colorbar. 
 
-The minimum and maximum stretch values can be set by expanding `Min/Max Value Settings`. The minimum and maximum values can be user-defined, set by cumulative count cut, which cuts a percentage of the highest and lowest values, set to the minimum and maximum values of the rater, generated, or using the mean +/- standard deviation. There is not necessarily one approach for determining the minimum and maximum values, so it may be worth trying out different stretch settings to figure out what displays the raster best. 
+The minimum and maximum stretch values can be set by expanding `Min/Max Value Settings`. The minimum and maximum values can be user-defined, set by cumulative count cut, which cuts a percentage of the highest and lowest values, set to the minimum and maximum values of the raster, or using the mean +/- standard deviation. There is not necessarily one approach for determining the minimum and maximum values, so it may be worth trying out different stretch settings to figure out what displays the raster best. 
 
 ```{figure} ../assets/qgis-adjust-colorbar.png
 :name: qgis-adjust-colorbar
