@@ -31,6 +31,6 @@ The pixel spacing of the GSLC products is always 5 meters in the north direction
 
 While GSLC products can allow users to see features in finer detail than in the corresponding GCOV products, the smaller pixel size (and complex data format) results in products that are _much_ larger than the GCOV files. They are more time-consuming to download, visualize, and analyze than the GCOV products. 
 
-Note also that the cell sizes for GSLC rasters are not always square. While the 40 MHz acquisitions result in 5x5 meter pixels for Frequency A GSLC layers, all the other frequencies will have non-square pixels. 
+Note also that the cell sizes for GSLC rasters are not always square. While 40 MHz acquisitions are processed to output 5x5 meter pixels for Frequency A GSLC layers, all the other frequencies will have non-square pixels. 
 
 
