@@ -31,7 +31,7 @@ If you are new to NISAR data and just want to explore what amplitude data looks 
 (gis-coherence)=
 ### Coherence 
 
-Among the non-amplitude datasets, the Coherence layers from the [Geocoded Unwrapped Interferogram (GUNW)](#gunw-product-overview) products may be of interest to GIS users. @nisar-coherence indicates the correlation of @sar-phase measurements from one acquisition to the next, and can indicate areas that have undergone changes in surface structure. 
+Among the non-amplitude datasets, the Coherence layers from the [Geocoded Unwrapped Interferogram (GUNW)](#gunw-product-overview) products may be of interest to GIS users. @nisar-coherence represents the correlation of [phase](#sar-phase) measurements from one SAR acquisition to the next, which can also indicate areas that have undergone changes in surface structure. 
 
 The pixel values of a @nisar-coherence layer range from 0 to 1. Low coherence values often indicate areas that have undergone disturbance, while high coherence values tend to indicate areas with more stable conditions.
 
