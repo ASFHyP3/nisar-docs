@@ -66,7 +66,7 @@ There is no optimal universal approach for defining the minimum and maximum valu
 :alt: Screenshot showing the **Symbology** for a NISAR GCOV data layer to highlight the minimum and maximum values of the color ramp
 :align: left
 
-Right-click on the data layer in the **Layers** panel and select **Properties** to open up the Layer Properties window. Select the **Symbology** tab to customize stretch values for the gradient. In this example, a mean +/- 2 standard deviation stretch is applied.
+Right-click on the data layer in the **Layers** panel and select **Properties** to open up the Layer Properties window. Select the **Symbology** tab to customize stretch values for the gradient. In this example, a cumulative count cut stretch is applied.
 ```
 
 Note that co-polarized (HHHH or VVVV) backscatter returns are generally higher than cross-polarized (HVHV or VHVH) returns. If you are setting the Min/Max values manually, the maximum value might need to be different depending on the polarization of the layer. The minimum value can be set to 0 for all polarizations.
