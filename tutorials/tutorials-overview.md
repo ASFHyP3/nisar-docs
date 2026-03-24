@@ -11,7 +11,7 @@ For those interested in learning more about potential applications and GIS-based
 
 For those working with the data programmatically, ASF is developing Python cookbooks for a range of workflows and applications. These cookbooks will be made available here as they are released. <!-- TODO: change this wording once content is available -->
 
-The NISAR Science Team has also developed Python notebooks with processing workflows for a number of Level 3 Data Products. These will be made available as the workflows are validated.
+The NISAR Science Team has also developed [Python notebooks](https://gitlab.com/nisar-science-algorithms) with the algorithms for a number of higher-level products. 
 
 <!-- TODO: uncomment this section once there is content -->
 
