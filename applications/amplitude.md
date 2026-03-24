@@ -6,7 +6,7 @@ The amplitude component of a SAR acquisition is the amount of the signal sent ou
 
 Backscatter values are impacted by changes to the physical structure of the earth’s surface, including processes that alter vegetation or built structures. Because of NISAR’s regular acquisition schedule and insensitivity to cloud cover, data is available at regular intervals all over the world. This makes it very valuable for time-series analysis, which can be used to track short- or long-term changes to natural and anthropogenic features. 
 
-The L-band sensor can penetrate through moderately complex vegetation and more deeply into the soil than C-band SAR sensors such as Sentinel-1. This provides insight into the conditions under the canopy, and at deeper levels in the soil column. Having observations using both wavelengths (and, in some areas, S-band data in addition) increases the ability to understand processes driving change on the landscape.
+The L-band sensor can penetrate through moderately complex vegetation and more deeply into the soil than C-band SAR sensors such as Sentinel-1. This provides insight into the conditions under the canopy and at deeper levels in the soil column. Having observations using both wavelengths (and, in some areas, S-band data in addition) increases the ability to understand processes driving change on the landscape.
 
 (nisar-amplitude-datasets)=
 ## Amplitude Datasets
