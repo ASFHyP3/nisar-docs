@@ -106,9 +106,9 @@ fsspec_config = {
     'block_size': 16*1024*1024,  # 16 MB
 }
 
-fs = s3fs.S3FileSystem()
+s3 = s3fs.S3FileSystem(anon=False)
 ds = xr.open_datatree(
-   fs.open(s3_links[0], **fsspec_config),
+   s3.open(s3_links[-2], **fsspec_config),
    engine='h5netcdf',
    decode_timedelta=False,
    phony_dims="access"
