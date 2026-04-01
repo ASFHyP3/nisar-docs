@@ -50,17 +50,18 @@ results.download(path='path/to/data/')
 
 ## Stream data
 
-* stream data into memory
-* typically served to users through HTTPS CloudFront URLs
-* hosted on us-west-2
-* Access from a resource in the same region (us-west-2)
-* Stream data through https or S3 protocols
+NISAR data can also be streamed into memory using `asf_search` when accessed on a resource in the `us-west-2` region.  AWS `us-west-2` NISAR data is typically served to users through HTTPS CloudFront URLs. 
+
+Data streaming can be done using `https` or S3 protocols, both of which are described in the examples below. 
 
 ### Example: Stream via HTTPS
-* similar to downloading data, streaming requires entering your EDL credentials using a Bearer Token
-* This example searches for a single RSLC product. 
-* Retrieves its HTTPS access url, sets a fsspec configuration, and opens with xarray using the h5netcdf engine. 
-* If not already installed, Might need to install h5netcdf and aiohttp to run
+
+Similar to downloading data, streaming requires user obtain an [EDL account](https://urs.earthdata.nasa.gov/). However, rather than passing a `username` and `password`, a EDL login token is required. For step-by-step guidance on generating an EDL token, see the [User Token Management](https://urs.earthdata.nasa.gov/documentation/for_users/user_token) document. After generating the token, it is valid for 60 days. 
+
+This example streams data for a single RSLC product. First, the code snippet uses `asf_search` to retrieve an HTTPS access url, then sets a [`fsspec`](https://filesystem-spec.readthedocs.io/en/latest/) configuration, and then opens the data with [`xarray`](https://docs.xarray.dev/en/stable/) using the `h5netcdf` engine. 
+
+The code below will also require the python packages [`h5netcdf`](https://h5netcdf.org/index.html) and [`aiohttp`](https://docs.aiohttp.org/en/stable/) be installed before running. 
+
 ```python
 import asf_search as asf
 import fsspec
@@ -68,7 +69,7 @@ import xarray as xr
 
 results = asf.search(dataset='NISAR', processingLevel='RSLC', maxResults=1)
 
-token = ... # Requires Earthdata Login Bearer Token :https://urs.earthdata.nasa.gov/documentation/for_users/user_token
+token = ... # Requires Earthdata Login Token :https://urs.earthdata.nasa.gov/documentation/for_users/user_token
 fs = fsspec.filesystem('https', client_kwargs={'headers': {'Authorization': f'Bearer {token}'}, 'trust_env': False})
 
 fsspec_config = {
@@ -88,9 +89,11 @@ print(ds.science.LSAR.identification.isDithered.values)
 
 ### Example: Stream via S3
 
-* Prior to running, get the S3 credentials and export. Ensure you run the code within 60 minutes of obtaining the credentials
-* Ensure s3fs and h5netcdf are installed
-* Ensure the s3 link is a h5 file
+Prior to running, obtain [credentials from the NISAR s3 credentials endpoint](nisar-s3-credentials-endpoint) and [configure your environment to use temporary AWS credentials](export-s3-credentials). These credentials are valid for 60 minutes after generation. 
+
+This example streams data for a single RSLC product. First, we use `asf_search` to retrieve a URL for `h5` file. Then, we use `s3fs` to pass the AWS credentials in our environment to stream the data. 
+
+Ensure that the [`h5netcdf`](https://h5netcdf.org/index.html) python package is installed before running. 
 
 ```python 
 import asf_search as asf
@@ -105,9 +108,9 @@ s3_h5_link = [link for link in s3_links if link.endswith(f'{results[0].propertie
 fsspec_config = {
     'cache_type': 'background',
     'block_size': 16*1024*1024,  # 16 MB
-}
+} 
 
-s3 = s3fs.S3FileSystem(anon=False)
+s3 = s3fs.S3FileSystem()
 ds = xr.open_datatree(
    s3.open(s3_h5_link[0], **fsspec_config),
    engine='h5netcdf',
