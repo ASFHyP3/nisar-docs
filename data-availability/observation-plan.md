@@ -52,7 +52,7 @@ The mnemonic scheme for L-band radar modes is the following:
 | P<sub>_u_</sub>     | Pulse width of upper band                                                                                                                                  |
 | WW                  | Swath width (FS = full swath 240 km, HS = half swath)                                                                                                      |
 | DD                  | Bit depth (B4 = 4 bit quantization, B3 = 3 bit quantization)                                                                                               |
-| FFF                 | Pulse repetition frequency scheme (e.g., F28 is fixed PRF scheme, D01, is a variable PRF scheme)                                                           |
+| FFF                 | Pulse repetition frequency scheme (i.e. F28 is fixed PRF scheme, D01 is a variable PRF scheme)                                                             |
 
 :::
 
@@ -78,7 +78,7 @@ The S-band mnemonic scheme is similar to L-band:
 | P                   | Pulse width  (W = wide, M = medium, N = narrow)                                                                                                            |
 | WW                  | Swath width (FS = full swath 240 km, HS = half swath)                                                                                                      |
 | DD                  | Bit depth (B4 = 4 bit quantization, B3 = 3 bit quantization)                                                                                               |
-| FFF                 | Pulse repetition frequency scheme (e.g., F28 is fixed PRF scheme, D01, is a variable PRF scheme)                                                           |
+| FFF                 | Pulse repetition frequency scheme (i.e. F28 is fixed PRF scheme, D01 is a variable PRF scheme)                                                             |
 
 :::
 
