@@ -94,9 +94,9 @@ The NISAR Reference Observation Plan can be explored interactively using a serie
 - Click on a footprint to learn about the acquisition information for that frame
 - Export geospatial files containing information about selected frames 
 
-There are different applications available, one displaying the currently available set of [pre-calibration data](#feb-2026-obs-plan-app), and the other for the full [reference observation plan](#ref-obs-plan-app) once calibrated data is available. Refer to @availability-overview to view the release timeline for the different collections of data. 
+There are different applications available, displaying either the currently available set of [pre-calibration data](#feb-2026-obs-plan-app), or the full [reference observation plan](#ref-obs-plan-app) once calibrated data is available. Refer to @availability-overview to view the release timeline for the different collections of data. 
 
-Each of these applications also has a companion app optimized for viewing acquisitions over Antarctica. These apps use a south polar stereographic projection to improve the rendering of frame footprints for Antarctic acquisitions.
+For each data extent (pre-calibration data or reference observation plan), there are two different apps. One is suitable for viewing most of the globe, while the other is optimized for viewing acquisitions over Antarctica. The apps optimized for Antarctica use a south polar stereographic projection to improve the rendering of frame footprints.
 
 (feb-2026-obs-plan-app)=
 ### Pre-Calibration Data Apps
