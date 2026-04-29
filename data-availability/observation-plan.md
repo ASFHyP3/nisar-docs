@@ -82,7 +82,7 @@ The S-band mnemonic scheme is similar to L-band:
 
 :::
 
-For joint modes, the PRF scheme (FFF in @tbl:s-band-mnemonic-scheme) is left off the mnemonic because it is the same as for L-band.  
+For joint modes, the PRF scheme (**FFF** in @tbl:s-band-mnemonic-scheme) is left off the mnemonic because it is the same as for L-band.  
 
 (observation-plan-apps)=
 ## Interactive Apps
