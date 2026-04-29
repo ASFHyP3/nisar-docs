@@ -38,7 +38,6 @@ The mnemonic scheme for L-band radar modes is the following:
 
 :::{table} L-band Mode Mnemonic Scheme
 :label: tbl:l-band-mnemonic-scheme
-:widths: auto
 :align: center
 
 | **Attribute**&emsp; | **Meaning**                                                                                                                                                |
@@ -66,7 +65,6 @@ The S-band mnemonic scheme is similar to L-band:
 
 :::{table} S-band Mode Mnemonic Scheme
 :label: tbl:s-band-mnemonic-scheme
-:widths: auto
 :align: center
 
 | **Attribute**&emsp; | **Meaning**                                                                                                                                                |
