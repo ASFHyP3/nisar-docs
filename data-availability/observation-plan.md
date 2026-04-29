@@ -131,6 +131,3 @@ These applications provide an overview of the L-band NISAR acquisitions that wil
 <a href="https://experience.arcgis.com/experience/83942599aec64c1c8ea8a8b913d22539">
 <img id="obs-plan-app-calibrated-antarctic-image" src="../assets/obs-plan-app-calibrated-antarctic.png" alt="Click to open the NISAR Reference Observation Plan app (Antarctic view)" width="75%">
 </a>
-
-
-
