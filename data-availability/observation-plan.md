@@ -60,7 +60,7 @@ The mnemonic scheme for L-band radar modes is the following:
 
 The S-band mnemonic scheme is similar to L-band: 
 
-**S:XX:MM:BBP:WW:DD:FFF**
+**S:XX:MM:BBP:DD:FFF**
 
 @tbl:s-band-mnemonic-scheme describes each component in the S-band mnemonic scheme. 
 
@@ -75,14 +75,11 @@ The S-band mnemonic scheme is similar to L-band:
 | XX                  | Beam-forming mode (DB = beamform; DR = raw channels of the beamformer; NR = no beamforming)                                                                |
 | MM                  | Mode name (QP = quad pol; DH = dual pol HH/HV; SH = single pol HH; QD = HH in lower band, VV in upper band; QQ = HH/HV in lower band, VV/VH in upper band) |
 | BB                  | Bandwidth                                                                                                                                                  |
-| P                   | Pulse width  (W = wide, M = medium, N = narrow)                                                                                                            |
-| WW                  | Swath width (FS = full swath 240 km, HS = half swath)                                                                                                      |
+| P                   | Pulse width  (W = wide, M = medium, N = narrow)                                                                                                            |        
 | DD                  | Bit depth (B4 = 4 bit quantization, B3 = 3 bit quantization)                                                                                               |
 | FFF                 | Pulse repetition frequency scheme (e.g. F28 is fixed PRF scheme, D01 is a variable PRF scheme)                                                             |
 
 :::
-
-For joint modes, the PRF scheme (**FFF** in @tbl:s-band-mnemonic-scheme) is left off the mnemonic because it is the same as for L-band.  
 
 (observation-plan-apps)=
 ## Interactive Apps
