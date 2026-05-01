@@ -23,6 +23,15 @@ NISAR Reference Observation Plan coverage maps for global ascending (a) and desc
 - There are some variations in coverage seasonally (e.g. over the poles as sea ice comes and goes), but largely the acquisition plan is intended to be static geographically to allow generation of consistent time series over the life of the mission. 
 ```
 
+## Observation Plan KMZ Files
+
+KMZ files for the observation plan are available for download from the [NISAR Data Overview](https://science.nasa.gov/mission/nisar/data/) page, including files for:
+
+- The extent of the [currently available pre-calibration data](#nisar-sample-data-feb) 
+- The most recent reference observation plan, indicating the coverage that will be available once [calibrated data](#timeline-calibrated-forward-processing) has been released
+
+<!-- #TODO: update this to remove the pre-calibration content once it's been replaced by the calibrated data. Also remove pre-calibration resources in the apps section -->
+
 (mnemonic-scheme)=
 ## Mnemonic Scheme
 
