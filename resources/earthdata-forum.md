@@ -1,9 +1,4 @@
----
-short_title: Earthdata Forum
----
-
-(earthdata-forum)=
 # Earthdata Forum
 
-```{embed} #earthdata-forum-nisar
+```{embed} #nisar-in-earthdata-forum
 ```
