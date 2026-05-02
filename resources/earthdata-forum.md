@@ -1,4 +1,4 @@
 # Earthdata Forum
 
-```{embed} #nisar-in-earthdata-forum
+```{embed} #earthdata-forum-content
 ```
