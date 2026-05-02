@@ -12,6 +12,8 @@ Users can search for NISAR-related content by [entering ***NISAR*** in the searc
 <img id="nisar-earthdata-forum-image" src="../assets/nisar-earthdata-forum.png" alt="Click to search for NISAR posts in NASA's Earthdata Forum">
 </a>
 
+## Posting on the Forum
+
 When you [post a new question](https://forum.earthdata.nasa.gov/posting.php?mode=post&f=7&), make sure to add filter tags to ensure that the appropriate subject-matter experts are alerted of your post. 
 
 - Click on the **Major Projects** drop-down menu and select `NISAR` from the options. 
