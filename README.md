@@ -43,7 +43,7 @@ Renaming a markdown content page referenced in nisar-docs changes the URL, which
 Myst does not have a builtin page redirect feature, so we implemented our own solution. 
 
 > [!IMPORTANT]
-> These steps may change in the future, per https://github.com/ua-asf/nisar-docs/issues/93.
+> These steps may change in the future, per https://github.com/ua-asf/nisar-docs/issues/93. 
 > This section will be updated if a new approach is implemented.
 
 To add a new page redirect, follow the steps below (for example, to redirect page `/foo` to `/bar`):
