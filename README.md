@@ -36,3 +36,23 @@ Source for the public documentation of the NASA-ISRO Synthetic Aperture Radar (N
 1. Push changes to your fork in GitHub
 1. Make sure your branch is synced and up to date with `ua-asf/nisar-docs:main`
 1. Open a pull request to `ua-asf/nisar-docs:main`
+
+### Page redirects
+
+> [!IMPORTANT]
+> These steps may change in the future, per https://github.com/ua-asf/nisar-docs/issues/93.
+> Please update this section as needed.
+
+You may want to redirect one page to another, e.g. if you rename a page.
+
+Because Myst does not have a builtin page redirect feature, we created our own solution.
+To add a new page redirect, follow the steps below (for example, to redirect page `/foo` to `/bar`):
+
+1. Create a new subdirectory in [`redirects`](./redirects/) with the same name as the old page, e.g. `redirects/foo`.
+1. Copy the `index.html` file from one of the existing subdirectories into your new subdirectory,
+   then edit the file to update all occurrences of the redirect URL.
+   For example, if you copied [`redirects/product-limitations/index.html`](./redirects/product-limitations/index.html)
+   to `redirects/foo/index.html` and your redirect URL is `/bar`, you would replace all `/product-known-issues` with `/bar`.
+1. The redirect feature depends on some custom build steps in the [deploy workflow](./.github/workflows/deploy.yml),
+   so you'll need to push to a fork with GitHub Pages enabled (see [Contributing](#contributing)) to test the new redirect.
+1. After deploying to your fork, confirm that `/foo` redirects to `/bar`.
