@@ -39,7 +39,8 @@ Source for the public documentation of the NASA-ISRO Synthetic Aperture Radar (N
 
 ### Page redirects
 
-Renaming the markdown file for a content page in nisar-docs changes the URL for that content, which can result in broken links.
+Renaming the markdown file for an existing content page in nisar-docs changes the URL for that content,
+which can result in broken links.  
 Myst does not have a builtin page redirect feature, so we implemented our own solution.
 
 > [!IMPORTANT]
