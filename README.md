@@ -51,7 +51,7 @@ To add a new page redirect, follow the steps below (for example, to redirect pag
 1. Create a new subdirectory in [`redirects`](./redirects/) with the same name as the old page, e.g. `redirects/foo`.
 1. Copy the `index.html` file from one of the existing subdirectories into your new subdirectory,
    then edit the file to update all occurrences of the redirect URL.
-   For example, copy [`redirects/product-limitations/index.html`](./redirects/product-limitations/index.html)
+   - For example, copy [`redirects/product-limitations/index.html`](./redirects/product-limitations/index.html)
    to `redirects/foo/index.html`, then replace all references to `/product-known-issues` in the new file with `/bar`.
 1. Because the redirect feature depends on some custom build steps in the [deploy workflow](./.github/workflows/deploy.yml),
    you won't be able to test your new redirect locally.
