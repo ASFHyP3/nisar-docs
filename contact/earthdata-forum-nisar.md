@@ -14,7 +14,7 @@ Users can search for NISAR-related content by [entering ***NISAR*** in the searc
 
 ## Posting on the Forum
 
-To post to the Earthdata Forum, you will need to sign in with your [Earthdata Login](#earthdata-login) credentials.
+To post to the Earthdata Forum, you will need to sign in with your [Earthdata Login](https://www.earthdata.nasa.gov/data/earthdata-login) credentials.
 
 When you [post a new question](https://forum.earthdata.nasa.gov/posting.php?mode=post&f=7&), make sure to add filter tags to ensure that the appropriate subject-matter experts are alerted of your post.
 
