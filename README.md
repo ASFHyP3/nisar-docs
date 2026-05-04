@@ -39,12 +39,14 @@ Source for the public documentation of the NASA-ISRO Synthetic Aperture Radar (N
 
 ### Page redirects
 
+Renaming a markdown content page referenced in nisar-docs changes the URL, which can result in broken links.
+Myst does not have a builtin page redirect feature, but we want to be able to redirect users when they use a now-broken URL.
+We implemented our own solution, and are documenting it here for reference. 
+
 > [!IMPORTANT]
 > These steps may change in the future, per https://github.com/ua-asf/nisar-docs/issues/93.
-> Please update this section as needed.
+> This section will be updated if a new approach is implemented.
 
-You may want to redirect one page to another, e.g. if you rename a page.
-Because Myst does not have a builtin page redirect feature, we created our own solution.
 To add a new page redirect, follow the steps below (for example, to redirect page `/foo` to `/bar`):
 
 1. Create a new subdirectory in [`redirects`](./redirects/) with the same name as the old page, e.g. `redirects/foo`.
