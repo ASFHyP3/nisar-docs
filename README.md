@@ -44,7 +44,6 @@ Source for the public documentation of the NASA-ISRO Synthetic Aperture Radar (N
 > Please update this section as needed.
 
 You may want to redirect one page to another, e.g. if you rename a page.
-
 Because Myst does not have a builtin page redirect feature, we created our own solution.
 To add a new page redirect, follow the steps below (for example, to redirect page `/foo` to `/bar`):
 
