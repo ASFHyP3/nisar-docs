@@ -23,6 +23,19 @@ Navigate to [Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=P
 Click on the "Dataset" button and select "NISAR" to search for NISAR products. 
 ```
 
+(vertex-antarctica)=
+#### Antarctica
+
+NISAR has great coverage over Antarctica. Users interested in this area may find it helpful to use the Antarctic map projection in Vertex, which renders acquisition footprints much better than the default global view.
+
+```{figure} ../assets/vertex-antarctic-map.png
+:label: vertex-antarctic-map-view
+:alt: Image illustrating how to use the Antarctic Map View in Vertex. 
+:align: center
+
+Click on the **Map View** button and select `Antarctic Map View` to set the map to a south polar projection.
+```
+
 ### 2. Filter for desired products
 
 To search for a specific geographic region, click on the left-most **Area of Interest** button to choose to draw a point, line, polygon, box, circle, or to upload a geospatial file. Toggle on drawing mode to draw a region of interest, then press **Search** to update the search for the new region of interest.
@@ -34,6 +47,10 @@ To search for a specific geographic region, click on the left-most **Area of Int
 
 Choose a shape and draw an area of interest for a geographic search. 
 ```
+
+_Take care when drawing an AOI while in the [Antarctic Map View](#vertex-antarctica). Rectangular AOIs drawn over the South Pole can sometimes be translated into an unexpected polygon, resulting in either no results or many more (orders of magnitude) results than expected. If this occurs, try drawing an AOI to one side or the other of the pole._
+
+#### Date Range
 
 To search for products in a specific date range, open the **Filters** panel and specify a start and end date to define the search range. 
 
