@@ -113,7 +113,7 @@ Users can also search by **Track and Frame**. Note that "Track" is also known as
 
 Data are free and available to download through Vertex. Once the desired scene is selected, a list of files will appear on the right-hand side of the screen (or below the scene details on a narrow browser window). The HDF5 file, listed first, contains the science data and imagery. To learn more about HDF5 files, see @hdf5. 
 
-Click the download icon next to the HDF5 file name to save to your computer. You will be prompted to sign in with your [Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/) account if you have not already. For more information about EDL accounts, see @earthdata-login. 
+Click the download icon next to the HDF5 file name to save to your computer. You will be prompted to sign in with your [Earthdata Login (EDL)](https://www.earthdata.nasa.gov/data/earthdata-login) account if you have not already.
 
 ```{figure} ../assets/vertex-download-files.png
 :label: vertex-download-files
