@@ -59,9 +59,10 @@ authors:
     affiliation: Alaska Satellite Facility, Geophysical Institute, University of Alaska Fairbanks, Fairbanks, AK USA
     orcid: https://orcid.org/0000-0002-9348-693X
     alias: jhkennedy
-  - given-names: Jules
+  - given-names: Julia
     family-names: White
     affiliation: Alaska Satellite Facility, Geophysical Institute, University of Alaska Fairbanks, Fairbanks, AK USA
+    orcid: https://orcid.org/0009-0008-5177-3122
     alias: jwhite124
   - given-names: Alex
     family-names: Lewandowski
@@ -71,6 +72,7 @@ authors:
   - given-names: William
     family-names: Horn
     affiliation: Alaska Satellite Facility, Geophysical Institute, University of Alaska Fairbanks, Fairbanks, AK USA
+    orchid: https://orcid.org/0009-0003-8206-5982
     alias: williamh890
   - given-names: Heresh
     family-names: Fattahi
