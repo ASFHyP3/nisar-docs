@@ -2,6 +2,9 @@
 
 Source for the public documentation of the NASA-ISRO Synthetic Aperture Radar (NISAR) mission hosted at https://nisar-docs.asf.alaska.edu.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20075813.svg)](https://doi.org/10.5281/zenodo.20075813)
+
+
 ## Contributing
 
 1. Create a fork of https://github.com/ua-asf/nisar-docs/
