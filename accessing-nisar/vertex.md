@@ -26,15 +26,17 @@ Click on the **Dataset** field and select `NISAR` from the drop-down menu to sea
 (vertex-antarctica)=
 #### Antarctica
 
-NISAR has great coverage over Antarctica. Users interested in this area may find it helpful to use the Antarctic map projection in Vertex, which renders acquisition footprints much better than the default global view.
+NISAR has great coverage over Antarctica. Users interested in this area may find it helpful to use the **Antarctic map projection** in Vertex, which renders acquisition footprints at high latitudes much better than the default global view.
 
 ```{figure} ../assets/vertex-antarctic-map.png
 :label: vertex-antarctic-map-view
 :alt: Image illustrating how to use the Antarctic Map View in Vertex. 
 :align: center
 
-Click on the **Map View** button and select `Antarctic Map View` to set the map to a south polar projection.
+Click the **Antarctic map projection** button in the **Map View** section of the Vertex map toolbar to set the map to a south polar stereographic projection.
 ```
+
+Note that the [**Layers**](https://docs.asf.alaska.edu/vertex/manual/#other-vertex-options) button in the toolbar is not available when using a polar map view, as only one basemap layer is available for each polar view.
 
 ### 2. Filter for desired products
 
