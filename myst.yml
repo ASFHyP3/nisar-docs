@@ -57,6 +57,9 @@ project:
         - file: using-nisar/using-arcgis.md
         - file: using-nisar/using-qgis.md
         - file: using-nisar/data-use-citation-guidance.md
+    - file: tools-services/tools-services-overview.md
+      children:
+        - file: tools-services/roadmap.md
     - file: tutorials/tutorials-overview.md
       children:
         - file: tutorials/storymaps.md
@@ -64,16 +67,16 @@ project:
           children:
           - url: https://asfopensarlab.github.io/NISAR_Cookbook/
             title: NISAR Cookbook
-    - file: applications/applications-overview.md
-      children:
-        - file: applications/amplitude.md
-        - file: applications/phase.md
     - title: Resources
       children:
         - file: tutorials/mission-homepage-tutorials.md
         - file: resources/documents.md
         - file: resources/webinars.md
         - file: resources/earthdata-forum.md
+    - file: applications/applications-overview.md
+      children:
+        - file: applications/amplitude.md
+        - file: applications/phase.md
     - title: Appendices
       children:
         - file: appendices/acronyms.md
@@ -88,8 +91,10 @@ project:
     DEM: Digital Elevation Model
     EDC: Earthdata Cloud
     EDL: Earthdata Login
+    EGIS: Earthdata GIS
     ESDIS: Earth Science Data and Information System
     GCOV: Geocoded Polarimetric Covariance
+    GIBS: Global Imagery Browse Services
     GIS: Geographic Information System
     GNSS: Global Navigation Satellite System
     GOFF: Geocoded Pixel Offsets
