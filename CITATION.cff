@@ -10,7 +10,7 @@ contact:
     website: https://forum.earthdata.nasa.gov/viewforum.php?f=7&keywords=NISAR
   - name: ASF User Services
     email: uso@asf.alaska.edu
-type: software
+type: dataset
 license: CC0-1.0
 url: https://nisar-docs.asf.alaska.edu/
 repository-code: https://github.com/ua-asf/nisar-docs
