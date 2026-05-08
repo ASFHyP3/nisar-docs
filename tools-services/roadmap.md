@@ -33,24 +33,25 @@ We will update this page as efforts are released and new work is undertaken. If 
 :label: tbl:unscheduled-work
 :align: center
 
-| Tool or Service                              | Type                       | Description                                                                   |
-|----------------------------------------------|----------------------------|-------------------------------------------------------------------------------|
-| Variable Subsetting for other NISAR products | [Harmony](#ed-harmony)     | Extract variable(s) from an HDF5 file, and save as Cloud-Optimized GeoTIFF(s) |
-| Spatial Subsetting for other NISAR products  | [Harmony](#ed-harmony)     | Clip full HDF5 file or individual variable COG(s) to specified spatial extent |
-| Additional Worldview visualizations          | [Worldview](#ed-worldview) | Publish additional visualization layers for display in Worldview              |
-
+| Tool or Service                                        | Type                       | Description                                                                   |
+|--------------------------------------------------------|----------------------------|-------------------------------------------------------------------------------|
+| Variable Subsetting for other NISAR Level 2/3 products | [Harmony](#ed-harmony)     | Extract variable(s) from an HDF5 file, and save as Cloud-Optimized GeoTIFF(s) |
+| Spatial Subsetting for other NISAR Level 2/3 products  | [Harmony](#ed-harmony)     | Clip full HDF5 file or individual variable COG(s) to specified spatial extent |
+| Additional Worldview visualizations                    | [Worldview](#ed-worldview) | Publish additional visualization layers for display in Worldview              |
 
 :::
 
 ### Potential Development
 
-@tbl:unfunded-work presents tools and services that would be valuable to the user community, but are not currently eligible for development using DAAC funding.   
+@tbl:unfunded-work presents tools and services that would be valuable to the user community, but are not currently eligible for development using DAAC funding. This work could be undertaken through external grants or contracts. 
 
 :::{table} Unfunded Work
 :label: tbl:unfunded-work
 :align: center
 
-| Tool or Service      | Type                                      | Description                                                                                      |
-|----------------------|-------------------------------------------|--------------------------------------------------------------------------------------------------|
-| Custom GUNW products | [HyP3](https://hyp3-docs.asf.alaska.edu/) | On-demand generation of GUNW products commensurate with mission products using custom date pairs |
-|                      |                                           |                                                                                                  |
+| Tool or Service              | Type                                      | Description                                                                                                                |
+|------------------------------|-------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| Custom GUNW products         | [HyP3](https://hyp3-docs.asf.alaska.edu/) | On-demand generation of GUNW products commensurate with mission products using custom date pairs                           |
+| On Demand Level 3 Algorithms | [HyP3](https://hyp3-docs.asf.alaska.edu/) | On-demand generation of Level 3 products using the [NISAR Science Algorithms](https://gitlab.com/nisar-science-algorithms) |
+
+:::
