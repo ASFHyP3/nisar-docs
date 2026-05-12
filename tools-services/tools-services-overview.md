@@ -49,7 +49,7 @@ ASF is working with Esri and the EGIS team to explore potential methods of servi
 </a>
 
 (ed-hyp3)=
-### HyP3
+### [HyP3](https://www.earthdata.nasa.gov/data/tools/hyp3)
 
 ASF's [Hybrid Pluggable Processing Pipeline (HyP3)](https://hyp3-docs.asf.alaska.edu/) is a cloud-native processing platform designed to efficiently generate analysis-ready data products on demand in response to user requests. Originally designed to apply complex scientific workflows to Sentinel-1 SAR data, the platform can be used for any on-demand processing workflow that benefits from leveraging cloud computing to output higher-level products. 
 
