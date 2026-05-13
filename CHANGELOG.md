@@ -23,6 +23,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Guidance for searching for products in Antarctica
 - More links to [Earthdata Login documentation](https://www.earthdata.nasa.gov/data/earthdata-login)
 
+## [0.4.9] 
+
+### Added
+- Tools and Services section describing development efforts leveraging Earthdata tools and services
+- Roadmap outlining ASF's development efforts in support of Earthdata tools and services
+
 ## [0.4.8]
 
 ### Added
