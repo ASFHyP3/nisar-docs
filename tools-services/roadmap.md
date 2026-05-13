@@ -46,6 +46,3 @@ We will update this page as efforts are released and new work is undertaken. If 
 | On Demand Level 3 Algorithms                           | [HyP3](#ed-hyp3)           | On-demand generation of Level 3 products using the [NISAR Science Algorithms](https://gitlab.com/nisar-science-algorithms), in collaboration with the [NASA Applied Sciences Disasters](https://appliedsciences.nasa.gov/what-we-do/disasters) program through the NISAR Bridge project |
 
 :::
-
-## Community Development
-
