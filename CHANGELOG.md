@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Tools and Services section describing development efforts leveraging Earthdata tools and services
 - Roadmap outlining ASF's development efforts in support of Earthdata tools and services
+- Removed Appendices section and moved content into Resources section
 
 ## [0.4.11]
 
