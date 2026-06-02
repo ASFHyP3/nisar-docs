@@ -38,7 +38,7 @@ A new instrument producing global data products for the first time will necessit
 
 See @product-known-issues for a list of known issues reported for the current data release.
 
-Fully calibrated and algorithmically improved global products are anticipated for release in the June 2026 timeframe.
+Fully calibrated and algorithmically improved global products are expected to be available starting [July 2026](#timeline-calibrated-forward-processing).
 
 (data-release-timeline)=
 ## Data Release Timeline
