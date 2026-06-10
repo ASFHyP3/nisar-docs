@@ -42,7 +42,7 @@ In Vertex, selecting the `Urgent Response` under `Product configuration`
 image vertex-urgent-response-filter
 
 ```{figure} ../assets/vertex-urgent-response-filter.png
-:label: vertex-urgent-response-rilter
+:label: vertex-urgent-response-filter
 :alt: Screenshot of the Urgent Response filter in Vertex selected in the Product Configuration menu. 
 :align: center
 
