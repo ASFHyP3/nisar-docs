@@ -1,8 +1,10 @@
 # NISAR Urgent Response Products
 
-NISAR Urgent Response (UR) products offer expedited processing in response to major events or natural disasters, such as earthquakes, volcanic activity, flooding, or wildfires. Data delivery of UR products will be flagged for rapid downlink and processing to provide low latency data to support urgent response.
+NISAR Urgent Response (UR) products provide expedited processing in response to major events or natural disasters, such as earthquakes, volcanic activity, flooding, or wildfires. Data delivery of UR products will be flagged for rapid downlink and processing to provide low-latency data to support urgent response.
 
-Within 6 hours after acquisition, data should be processed to Level-2 productions. A comparison of UR processing time estimates compared to nominal products is available in @tbl:ur-processing-estimates.
+Urgent Response requests are managed through a Smark Tasking Tool, where automated UR requests are triggered by earthquakes and volcanic events. UR products can also be manually requested by authorized users at US government agencies such as USGS and NOAA. Note that NISAR will not acquire data that would not have otherwise been acquired and that UR designation only prioritizes downlinking and processing for acquisitions already in the NISAR acquisition plan. 
+
+Within 6 hours of acquisition, data should be processed to Level-2 productions. Each product will be available for 30 days. A comparison of UR processing time estimates compared to nominal products is available in @tbl:ur-processing-estimates.
 
 :::{table} Processing time estimate comparisons for Production and Urgent Response products 
 :label: tbl:ur-processing-estimates
@@ -17,11 +19,6 @@ Within 6 hours after acquisition, data should be processed to Level-2 production
 
 :::
 
-UR Processing can occur at the request of approved federal agencies
-Tasking via a smart tasking website can be requested by a set of authorized users at US government agencies, such as USGS and NOAA. 
-Such users can also request expedited processing of NISAR data that with prior scheduling
-The NISAR operations team determines whether the requested acquisition can be acquired without disrupting the Reference Operation Plan (ROP)
-Is there a process for outside people to request UR products
 
 ### Naming Convention
 UR products use the same naming convention as standard @naming-conventions, but the `Product Identifier` parameter will be `UR` and the `Location` will be `J`, since these products are processed at the Jet Propulsion Laboratory.  For example, a RSLC UR product would have the name: 
@@ -57,9 +54,3 @@ Once processed, UR products will be available through @vertex. To filter for UR 
 Search for Urgent Response products in Vertex by selecting Urgent Response in the Product Configuration dropdown menu in the Product Filters section.  
 ```
 
-### Alerts
-You can subscribe to CMR email subscription 
-Once a regular acquisition replaces the UR product, probably something like 30 days 
-
-
-Urgent response products showing up in worldview. When production product comes along, it will replace the UR product
