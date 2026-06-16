@@ -102,6 +102,7 @@ project:
     LUT: Lookup Table
     NISAR: NASA-ISRO Synthetic Aperture Radar
     NRB: Normalized Radar Backscatter
+    PR: Production
     Q1: Jan/Feb/Mar
     Q2: Apr/May/Jun
     Q3: Jul/Aug/Sep
