@@ -8,6 +8,7 @@ NISAR Urgent Response (UR) products provide expedited processing in response to 
 
 UR products use lower-quality orbit ephemeris files for product processing than are used to process standard Production (PR) products, and do not have all atmospheric corrections applied. This may impact data quality, but allows the UR products to be made available much more quickly than PR products. Users should consider whether these tradeoffs are acceptable for their use case. 
 
+(ur-latency)=
 ### Latency
 
 Urgent response [Level 0](#level-0-unfocused-raw-products) (raw) products should be available within 2 hours of acquisition, while [Level 2](#level-2-geocoded-products) (geocoded) products should be available within 6 hours of acquisition. Refer to @tbl:ur-processing-estimates for a comparison of data processing latency between PR and UR products.
