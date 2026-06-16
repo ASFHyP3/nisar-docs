@@ -1,5 +1,10 @@
+---
+short_title: Urgent Response
+---
+
 # NISAR Urgent Response Products
 
+(urgent-response-product-overview)=
 ##  Urgent Response Product Overview
 
 NISAR is a powerful tool for monitoring surface dynamics, but most NISAR products are not made available until 36-72 hours after data acquisition.
@@ -11,7 +16,7 @@ UR products use lower-quality orbit ephemeris files for product processing than 
 (ur-latency)=
 ### Latency
 
-Urgent response [Level 0](#level-0-unfocused-raw-products) (raw) products should be available within 2 hours of acquisition, while [Level 2](#level-2-geocoded-products) (geocoded) products should be available within 6 hours of acquisition. Refer to @tbl:ur-processing-estimates for a comparison of data processing latency between PR and UR products.
+Urgent response [Level 0](#level-0-unfocused-raw-products) (raw) products should be available within 2 hours of acquisition, while [Level 2](#level-2-geocoded-products) (geocoded) products should be available within 6 hours of acquisition. Level 3 products are not generated as part of the UR workflow. Refer to @tbl:ur-processing-estimates for a comparison of data processing latency between PR and UR products.
 
 :::{table} Processing time estimate comparisons for Production (PR) and Urgent Response (UR) products 
 :label: tbl:ur-processing-estimates
@@ -19,10 +24,9 @@ Urgent response [Level 0](#level-0-unfocused-raw-products) (raw) products should
 
 | Product          | PR Best Estimate | UR Best Estimate |
 |------------------|------------------|------------------|
-| L0               | 12 Hours         | 2 Hours          |
-| L1               | 2 Days           | 4 Hours          |
-| L2               | 3 Days           | 6 Hours          |
-| L3 Soil Moisture | 4 Days           | N/A              |
+| L0               | 1-12 hours       | 2 hours          |
+| L1               | 36-72 hours      | 4 hours          |
+| L2               | 36-72 hours      | 6 hours          |
 
 :::
 
