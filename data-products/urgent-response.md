@@ -28,13 +28,13 @@ Urgent response [Level 0](#level-0-unfocused-raw-products) (raw) products should
 
 ### Tasking
 
-NISAR's Smart Tasking Tool triggers UR requests automatically in response to earthquakes and volcanic events.<!-- TODO: add threshold criteria --> UR products can also be manually requested by authorized users at government agencies such as USGS and NOAA. 
+NISAR's Smart Tasking Tool triggers UR requests automatically in response to earthquakes greater than 7.0 magnitude and less than 50 km deep, and volcanic events that trigger volcano observatory notices. UR products can also be manually requested by authorized users at government agencies such as USGS and NOAA. 
 
-Note that the UR designation only prioritizes expedited downlinking and processing for acquisitions already in the NISAR acquisition plan. It is not designed to support requests for acquisitions that deviate from the existing plan.
+Note that the UR designation only prioritizes expedited downlinking and processing for acquisitions already in the [NISAR acquisition plan](#nisar-reference-observation-plan). It is not designed to support requests for acquisitions that deviate from the existing plan.
 
 ### Product Availability
 
-Each UR product will be available for 30 days, regardless of when the replacement PR product becomes available in the archive. 
+UR products will be available for 30 days. After 30 days, the UR products will be removed from the archive, and only the standard PR products for that acquisition will be available. 
 
 ### Naming Convention
 
