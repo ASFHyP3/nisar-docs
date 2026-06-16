@@ -2,7 +2,9 @@
 
 ##  Urgent Response Product Overview
 
-NISAR Urgent Response (UR) products provide expedited processing in response to major events or natural disasters, such as earthquakes, volcanic activity, flooding, or wildfires. Acquisitions designated for UR data delivery will be flagged for rapid downlink and processing to provide low-latency data in support of response efforts.
+NISAR is a powerful tool for monitoring surface dynamics, but most NISAR products are not made available until 36-72 hours after data acquisition.
+
+NISAR Urgent Response (UR) products provide expedited processing in response to major events or natural disasters, such as earthquakes, volcanic activity, flooding, or wildfires. Acquisitions designated for UR data delivery will be flagged for rapid downlink and processing to provide [low-latency](#latency) data in support of response efforts.
 
 UR products use lower-quality orbit ephemeris files for product processing than are used to process standard Production (PR) products, and do not have all atmospheric corrections applied. This may impact data quality, but allows the UR products to be made available much more quickly than PR products. Users should consider whether these tradeoffs are acceptable for their use case. 
 
