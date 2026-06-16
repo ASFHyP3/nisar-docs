@@ -1,38 +1,55 @@
 # NISAR Urgent Response Products
 
 ##  Urgent Response Product Overview
-NISAR Urgent Response (UR) products provide expedited processing in response to major events or natural disasters, such as earthquakes, volcanic activity, flooding, or wildfires. Data delivery of UR products will be flagged for rapid downlink and processing to provide low-latency data to support urgent response.
 
-Within 6 hours of acquisition, data should be processed to Level-2 productions. Each product will be available for 30 days. A comparison of UR processing time estimates compared to nominal products is available in @tbl:ur-processing-estimates.
+NISAR Urgent Response (UR) products provide expedited processing in response to major events or natural disasters, such as earthquakes, volcanic activity, flooding, or wildfires. Acquisitions designated for UR data delivery will be flagged for rapid downlink and processing to provide low-latency data in support of response efforts.
 
-:::{table} Processing time estimate comparisons for Production and Urgent Response products 
+UR products use lower-quality orbit ephemeris files for product processing than are used to process standard Production (PR) products, and do not have all atmospheric corrections applied. This may impact data quality, but allows the UR products to be made available much more quickly than PR products. Users should consider whether these tradeoffs are acceptable for their use case. 
+
+### Latency
+
+Urgent response [Level 0](#level-0-unfocused-raw-products) (raw) products should be available within 2 hours of acquisition, while [Level 2](#level-2-geocoded-products) (geocoded) products should be available within 6 hours of acquisition. Refer to @tbl:ur-processing-estimates for a comparison of data processing latency between PR and UR products.
+
+:::{table} Processing time estimate comparisons for Production (PR) and Urgent Response (UR) products 
 :label: tbl:ur-processing-estimates
 :align: center
 
-| Product          | Production Best Estimate | Urgent Response Best Estimate |
-|------------------|--------------------------|-------------------------------|
-| L0               | 12 Hours                 | 2 Hours                       |
-| L1               | 2 Days                   | 4 Hours                       |
-| L2               | 3 Days                   | 6 Hours                       |
-| L3 Soil Moisture | 4 Days                   | N/A                           |
+| Product          | PR Best Estimate | UR Best Estimate |
+|------------------|------------------|------------------|
+| L0               | 12 Hours         | 2 Hours          |
+| L1               | 2 Days           | 4 Hours          |
+| L2               | 3 Days           | 6 Hours          |
+| L3 Soil Moisture | 4 Days           | N/A              |
 
 :::
 
-UR requests are managed through a Smark Tasking Tool, where automated UR requests are triggered by earthquakes and volcanic events. UR products can also be manually requested by authorized users at US government agencies such as USGS and NOAA. Note that NISAR will not acquire data that would not have otherwise been acquired and that UR designation only prioritizes downlinking and processing for acquisitions already in the NISAR acquisition plan. 
+### Tasking
+
+NISAR's Smart Tasking Tool triggers UR requests automatically in response to earthquakes and volcanic events.<!-- TODO: add threshold criteria --> UR products can also be manually requested by authorized users at government agencies such as USGS and NOAA. 
+
+Note that the UR designation only prioritizes expedited downlinking and processing for acquisitions already in the NISAR acquisition plan. It is not designed to support requests for acquisitions that deviate from the existing plan.
+
+### Product Availability
+
+Each UR product will be available for 30 days, regardless of when the replacement PR product becomes available in the archive. 
 
 ### Naming Convention
-UR products use the same naming convention as standard @naming-conventions, but the `Product Identifier` parameter will be `UR` and the `Location` will be `J`, since these products are processed at the Jet Propulsion Laboratory.  For example, a RSLC UR product would have the name: 
 
-`NISAR_L1_`**UR**`_RSLC_001_005_A_219_4020_SVNA_A_20220104T182346_20220104T183426_P01101_M_F_`**J**`_001.h5`
+UR products use the same [naming conventions](#naming-convention-overview) as standard NISAR products. They can be identified by the **Product Identifier** component, which is `UR` for Urgent Response, instead of `PR` for Production.
+
+For example, an RSLC UR product would have a filename like: 
+
+`NISAR_L1_`**UR**`_RSLC_001_005_A_219_4020_SVNA_A_20220104T182346_20220104T183426_P01101_M_F_J_001.h5`
 
 ### Ancillary Data 
-Expedited processing will include lower quality precision orbit files and have fewer ancillary data layers than standard Production products. UR products are processed using Forcast Orbit Ephemera (FOE), which are preliminary predicted and lowest data quality of the @orbit-ephemeris-datasets. A comparison of ancillary data layers in Production and UR products is described in @tbl:ur-ancillary-data-layers. 
 
-:::{table} Ancillary data layers available for Urgent Response and Production products 
+UR products include lower precision orbit files and have fewer ancillary data layers than PR products. UR products are processed using Forecast Orbit Ephemera (FOE), which are preliminary predicted and lowest data quality of the @orbit-ephemeris-datasets. A comparison of ancillary data layers in Production and UR products is described in @tbl:ur-ancillary-data-layers. 
+
+:::{table} Ancillary data layers available for Production (PR) and Urgent Response (UR) products 
 :label: tbl:ur-ancillary-data-layers
 :align: center
 
-| Data Layer                                                      | Production Products                                                  | Urgent Response Products       |
+| Data Layer                                                      | PR Products                                                          | UR Products                    |
 |-----------------------------------------------------------------|----------------------------------------------------------------------|--------------------------------|
 | Orbit Ephemeris                                                 | Near-Realtime Orbit Ephemeris (NOE) and Medium Orbit Ephemeris (MOE) | Forecast Orbit Ephemeris (FOE) |
 | Radar Pointing                                                  | Near-Realtime Radar Pointing (NRP) and Precise Radar Pointing (PRP)  | Forecast Radar Pointing (FRP)  |
@@ -42,6 +59,7 @@ Expedited processing will include lower quality precision orbit files and have f
 :::
 
 ### Finding UR Products in Vertex
+
 Once processed, UR products will be available through @vertex. To filter for UR products, select the **Urgent Response** filter option under **Product Configuration** in **Product Filters**, as shown in @vertex-urgent-response-filter. 
 
 ```{figure} ../assets/vertex-urgent-response-filter.png
