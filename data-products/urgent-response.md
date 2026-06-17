@@ -42,7 +42,7 @@ UR products use the same [naming conventions](#naming-convention-overview) as st
 
 Example RSLC UR product filename:
 
-NISAR_L1_**UR**_RSLC_001_005_A_219_4020_SVNA_A_20220104T182346_20220104T183426_P01101_M_F_J_001.h5
+_NISAR_L1__***UR***__RSLC_001_005_A_219_4020_SVNA_A_20220104T182346_20220104T183426_P01101_M_F_J_001.h5_
 
 ### Ancillary Data 
 
