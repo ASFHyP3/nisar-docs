@@ -16,7 +16,9 @@ UR products use lower-quality orbit ephemeris files for product processing than 
 (ur-latency)=
 ### Latency
 
-Processing time for UR products varies based on product level, from 2 hours for [Level 0](#level-0-unfocused-raw-products) (raw) products to 6 hours for [Level 2](#level-2-geocoded-products) (geocoded) products. Level 3 products are not generated as part of the UR workflow. Refer to @tbl:ur-processing-estimates for a comparison of data processing latency between PR and UR products.
+Processing time for UR products varies based on product level, from 2 hours for [Level 0](#level-0-unfocused-raw-products) (raw) products to 6 hours for [Level 2](#level-2-geocoded-products) (geocoded) products. Level 3 products are not generated as part of the UR workflow. 
+
+Refer to @tbl:ur-processing-estimates for a comparison of data processing latency between PR and UR products.
 
 :::{table} Processing time estimate comparisons for Production (PR) and Urgent Response (UR) products 
 :label: tbl:ur-processing-estimates
@@ -63,7 +65,7 @@ UR products include lower precision orbit files and have fewer ancillary data la
 
 ## Finding UR Products 
 
-UR products can be found using the same [search and discovery mechanisms](#nisar-access-overview) as PR products. UR products are available for 30 days, after which the UR products are removed from the archive and only the standard PR products for that acquisition will be available. 
+UR products can be found using the same [search and discovery mechanisms](#nisar-access-overview) as PR products. UR products are available for 30 days, after which they are removed from the archive and only the standard PR products for that acquisition will be available. 
 
 (ur-vertex)=
 ### Vertex
