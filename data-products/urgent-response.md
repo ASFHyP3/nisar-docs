@@ -70,13 +70,27 @@ UR products can be found using the same [search and discovery mechanisms](#nisar
 (ur-vertex)=
 ### Vertex
 
-To filter for UR products in [Vertex](#vertex-overview), select `Urgent Response` under the **Product Configuration** filter in the **Product Filters** section, as shown in @vertex-urgent-response-filter. 
+To search for UR products in [Vertex](#vertex-overview), select `Urgent Response` under the **Product Configuration** filter in the **Product Filters** section, as shown in @vertex-urgent-response-filter. 
 
 ```{figure} ../assets/vertex-urgent-response-filter.png
 :label: vertex-urgent-response-filter
 :alt: Screenshot of the Urgent Response filter in Vertex selected in the Product Configuration menu. 
 :align: center
 
-Search for Urgent Response products in Vertex by selecting Urgent Response in the Product Configuration dropdown menu in the Product Filters section.  
+Search for Urgent Response products in Vertex by selecting `Urgent Response` in the **Product Configuration** dropdown menu in the **Product Filters** section.  
 ```
+
+### Earthdata Search
+
+The easiest way to search for UR datasets in [Earthdata Search](#earthdata-search-overview) is to type `nisar_ur` into the search bar. This will return only the NISAR UR collections in your search results. 
+
+```{figure} ../assets/earthdata-search-ur.png
+:label: earthdata-urgent-response-filter
+:alt: Screenshot of the Urgent Response results in Earthdata Search. 
+:align: center
+
+Search for Urgent Response products in Earthdata Search by typing `nisar_ur` into the search bar.
+```
+
+Unlike the PR products, there is one NISAR UR collection for each [product level](#nisar-product-levels), rather than a collection for each product type. As such, different product types may be included in each UR collection.
 
