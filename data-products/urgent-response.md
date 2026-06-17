@@ -36,10 +36,6 @@ NISAR's Smart Tasking Tool triggers UR requests automatically in response to ear
 
 The UR designation only prioritizes expedited downlinking and processing for acquisitions already in the [NISAR acquisition plan](#nisar-reference-observation-plan). It is not designed to support requests for acquisitions that deviate from the existing plan.
 
-### Product Availability
-
-UR products will be available for 30 days. After 30 days, the UR products will be removed from the archive, and only the standard PR products for that acquisition will be available. 
-
 ### Naming Convention
 
 UR products use the same [naming conventions](#naming-convention-overview) as standard NISAR products. They can be identified by the **Product Identifier** component, which is `UR` for Urgent Response instead of `PR` for Production.
@@ -69,7 +65,7 @@ UR products include lower precision orbit files and have fewer ancillary data la
 
 ## Finding UR Products 
 
-UR products can be found using the same [search and discovery mechanisms](#nisar-access-overview) as PR products.
+UR products can be found using the same [search and discovery mechanisms](#nisar-access-overview) as PR products. UR products are available for 30 days, after which the UR products are removed from the archive and only the standard PR products for that acquisition will be available. 
 
 (ur-vertex)=
 ### Vertex
