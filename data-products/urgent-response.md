@@ -7,16 +7,18 @@ short_title: Urgent Response
 (urgent-response-product-overview)=
 ## Urgent Response Product Overview
 
-NISAR is a powerful tool for monitoring surface dynamics, but most NISAR products are not made available until 36-72 hours after data acquisition.
+NISAR is a powerful tool for monitoring surface dynamics, but most standard NISAR products are not made available until 36-72 hours after data acquisition.
 
-NISAR Urgent Response (UR) products provide expedited processing in response to major events or natural disasters, such as earthquakes, volcanic activity, flooding, or wildfires. Acquisitions designated for UR data delivery will be flagged for rapid downlink and processing to provide [lower-latency](#ur-latency) data in support of response efforts.
+NISAR Urgent Response (UR) products provide expedited processing in response to major events or natural disasters, such as earthquakes, volcanic activity, flooding, or wildfires. Acquisitions designated for UR data delivery will be flagged for rapid downlink and expedited processing to provide [lower-latency](#ur-latency) data in support of response efforts.
 
 UR products use lower-quality orbit ephemeris files for product processing than are used to process standard Production (PR) products, and do not have all atmospheric corrections applied. This may impact data quality, but allows the UR products to be made available much more quickly than PR products. Users should consider whether these tradeoffs are acceptable for their use case. 
 
 (ur-latency)=
 ### Latency
 
-Processing time for UR products varies based on product level, from 2 hours for [Level 0](#level-0-unfocused-raw-products) (raw) products to 6 hours for [Level 2](#level-2-geocoded-products) (geocoded) products. Level 3 products are not generated as part of the UR workflow. Refer to @tbl:ur-processing-estimates for a comparison of data processing latency between PR and UR products.
+Processing time for UR products varies based on product level, from 2 hours for [Level 0](#level-0-unfocused-raw-products) (raw) products to 6 hours for [Level 2](#level-2-geocoded-products) (geocoded) products. Level 3 products are not generated as part of the UR workflow. 
+
+Refer to @tbl:ur-processing-estimates for a comparison of data processing latency between PR and UR products.
 
 :::{table} Processing time estimate comparisons for Production (PR) and Urgent Response (UR) products 
 :label: tbl:ur-processing-estimates
@@ -32,9 +34,19 @@ Processing time for UR products varies based on product level, from 2 hours for 
 
 ### Tasking
 
-NISAR's Smart Tasking Tool triggers UR requests automatically in response to earthquakes greater than 7.0 magnitude and less than 50 km deep, and volcanic events that trigger volcano observatory notices. UR products can also be manually requested by authorized users at government agencies such as USGS and NOAA. 
+The NISAR mission system is capable of providing revised scheduling for new acquisitions in response to an event or an event forecast notification, and delivering data on an expedited timeline. This capability will be used when possible, providing that it does not interfere with the base [NISAR observation plan](#nisar-reference-observation-plan).
 
-The UR designation only prioritizes expedited downlinking and processing for acquisitions already in the [NISAR acquisition plan](#nisar-reference-observation-plan). It is not designed to support requests for acquisitions that deviate from the existing plan.
+In most cases, UR products will be generated for acquisitions that are already in the reference observation plan. The acquisitions will simply be prioritized for downlink and flagged for expedited processing. Only in rare circumstances would additional acquisitions be considered.
+
+NISAR's Smart Tasking Tool triggers UR requests automatically in response to:
+
+- Significant earthquakes 
+    - Earthquake with USGS [Prompt Assessment of Global Earthquakes for Response (PAGER)](https://earthquake.usgs.gov/data/pager/background.php) level of Orange or Red
+    - Earthquake is in U.S. or India and has a PAGER level of Yellow
+    - Earthquake is in U.S. or India and is greater than 7.0 magnitude and less than 50 km deep
+- Volcanic events that trigger [USGS Volcano Notifications for Aviation](https://volcanoes.usgs.gov/hans-public/vonas/) levels of Orange or Red
+
+UR products can also be manually requested by authorized users at government agencies such as USGS and NOAA.
 
 ### Naming Convention
 
@@ -63,7 +75,7 @@ UR products include lower precision orbit files and have fewer ancillary data la
 
 ## Finding UR Products 
 
-UR products can be found using the same [search and discovery mechanisms](#nisar-access-overview) as PR products. UR products are available for 30 days, after which the UR products are removed from the archive and only the standard PR products for that acquisition will be available. 
+UR products can be found using the same [search and discovery mechanisms](#nisar-access-overview) as PR products. UR products are available for 30 days, after which they are removed from the archive and only the standard PR products for that acquisition will be available. 
 
 (ur-vertex)=
 ### Vertex
