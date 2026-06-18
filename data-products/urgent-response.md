@@ -36,7 +36,7 @@ Refer to @tbl:ur-processing-estimates for a comparison of data processing latenc
 
 The NISAR mission system is capable of providing revised scheduling for new acquisitions in response to an event or an event forecast notification, and delivering data on an expedited timeline. This capability will be used when possible, providing that it does not interfere with the base [NISAR observation plan](#nisar-reference-observation-plan).
 
-NISAR's Smart Tasking Tool triggers UR requests automatically in response to earthquakes greater than 7.0 magnitude and less than 50 km deep, and volcanic events that trigger volcano observatory notices. UR products can also be manually requested by authorized users at government agencies such as USGS and NOAA.
+NISAR's Smart Tasking Tool triggers UR requests automatically in response to earthquakes greater than 7.0 magnitude and less than 50 km deep, and volcanic events that trigger [USGS Volcano Notifications for Aviation](https://volcanoes.usgs.gov/hans-public/) levels of orange or red. UR products can also be manually requested by authorized users at government agencies such as USGS and NOAA.
 
 In most cases, UR products will be generated for acquisitions that are already in the reference observation plan. The acquisitions will simply be prioritized for downlink and flagged for expedited processing. Only in rare circumstances would additional acquisitions be considered.
 
