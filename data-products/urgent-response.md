@@ -41,7 +41,7 @@ In most cases, UR products will be generated for acquisitions that are already i
 NISAR's Smart Tasking Tool triggers UR requests automatically in response to:
 
 - Significant earthquakes 
-    - Earthquake with USGS [Prompt Assessment of Global Earthquakes for Response (PAGER)](https://earthquake.usgs.gov/data/pager/background.php) level of Red or Orange
+    - Earthquake with USGS [Prompt Assessment of Global Earthquakes for Response (PAGER)](https://earthquake.usgs.gov/data/pager/background.php) level of Orange or Red
     - Earthquake is in U.S. or India and has a PAGER level of Yellow
     - Earthquake is in U.S. or India and is greater than 7.0 magnitude and less than 50 km deep
 - Volcanic events that trigger [USGS Volcano Notifications for Aviation](https://volcanoes.usgs.gov/hans-public/vonas/) levels of Orange or Red
