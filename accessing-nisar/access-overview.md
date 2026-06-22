@@ -12,7 +12,7 @@ NISAR mission data is now available for both L-band and S-band datasets!
 
 [Learn more about the L-band pre-calibration data and the expected timeline for additional product releases](#nisar-sample-data-feb).
 
-[Visit ISRO's Bhoonidhi platform to search for beta S-band data products](https://bhoonidhi.nrsc.gov.in/bhoonidhi/index.html).
+[Visit ISRO's Bhoonidhi platform to search for beta S-band data products](#bhoonidhi).
 :::
 
 (earthdata-login)=
