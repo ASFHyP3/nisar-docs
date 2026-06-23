@@ -1,8 +1,6 @@
 # About NISAR
 
-## Introduction
-
-### The NISAR Mission
+## The NISAR Mission
 
 NISAR is a joint Earth-observing mission between the [National Aeronautics and Space Administration (NASA)](https://www.nasa.gov/) and the [Indian Space Research Organization (ISRO)](https://www.isro.gov.in/), with the goal to make global measurements of the causes and consequences of land surface changes using advanced radar imaging. Access to NISAR mission data is free and open.
 
@@ -10,6 +8,8 @@ The NISAR platform collects data using both [L-band](#l-band) and [S-band](#s-ba
 
 - L-band data is collected globally, providing acquisitions over most landmasses and sea ice on a regular repeat cycle.
 - S-band data is collected over select areas, as described in the [mission observation plan](#nisar-reference-observation-plan). 
+
+### NISAR Mission Concept
 
 The mission concept and the resulting partnership were in response to the [National Academy of Science's 2007 Decadal Survey](https://doi.org/10.17226/11820) [@decadalSurvey2007] of Earth observational priorities for the next decade. 
 
@@ -80,7 +80,7 @@ A more detailed description of the NISAR instrument design is in section 4.7 of 
 
 ### Look Direction
 
-NISAR is a left-looking mission, which allows complete coverage over Antarctica. The tradeoff is an area without coverage in the Arctic around the north pole (@arctic-gap). 
+NISAR is a left-looking mission, which allows complete coverage over Antarctica. The tradeoff is an area around the North Pole where coverage is not available (@arctic-gap). 
 
 ```{figure} ../assets/north-pole-hole.png
 :label: arctic-gap
