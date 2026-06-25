@@ -87,7 +87,7 @@ SAR sensors are always [side looking](https://www.earthdata.nasa.gov/learn/earth
 :alt: Figure illustrating the area around the North Pole where NISAR acquisitions are not available
 :align: center
 
-Area around the North Pole where NISAR aquisitions are not available, as visualized in the [NISAR Reference Observation Plan app](http://localhost:3000/observation-plan#ref-obs-plan-app).
+Area around the North Pole where NISAR aquisitions are not available, as visualized in the [NISAR Reference Observation Plan app](#ref-obs-plan-app).
 ```
 
 ### Bands
