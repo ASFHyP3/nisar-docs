@@ -80,7 +80,18 @@ A more detailed description of the NISAR instrument design is in section 4.7 of 
 
 ### Look Direction
 
-SAR sensors are always [side looking](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/sar#toc-flight-and-directional-terminology), with data being collected at an angle from the nadir (vertically downward from the sensor). NISAR is a left-looking mission, which allows complete coverage over Antarctica. The tradeoff is an area around the North Pole where coverage is not available (@arctic-gap). 
+SAR sensors are always [side looking](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/sar#toc-flight-and-directional-terminology), with data being collected at an angle from the nadir (@observation-geometry-diagram). 
+
+```{figure} ../assets/observation-geometry.png
+:label: observation-geometry-diagram
+:alt: Figure illustrating the observation geometry of the NISAR platform
+:align: left
+:width: 50%
+
+The observing geometry of the NISAR platform.
+```
+
+NISAR is a left-looking mission, which allows for complete coverage over Antarctica. The tradeoff is an area around the North Pole where coverage is not available (@arctic-gap). 
 
 ```{figure} ../assets/north-pole-hole.png
 :label: arctic-gap
