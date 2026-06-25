@@ -109,7 +109,7 @@ The S-band SAR (S-SAR) instrument, developed in a collaboration between NASA and
 (nisar-frequencies)=
 ### Frequencies
 
-NISAR is equipped to acquire data in two slightly different frequencies. @tbl:areas-html summarizes the frequency A and the frequency B settings that define the acquisition modes. For interferometric NISAR products, only frequency A data are used. All other NISAR products can be acquired in a combination of frequency A and frequency B. <!-- TODO: Clarify this statement -->
+NISAR is equipped to acquire data in two slightly different frequencies. @tbl:areas-html summarizes the frequency A and the frequency B settings that define the acquisition modes. Frequency B data is collected primarily for use in atmospheric corrections, but many NISAR products include datasets for both frequency A and frequency B. Frequency B datasets are generally posted at a coarser pixel spacing than frequency A datasets.
 
 :::{table} NISAR acquisition modes
 :label: tbl:areas-html
