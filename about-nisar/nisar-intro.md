@@ -85,10 +85,10 @@ SAR sensors are always [side looking](https://www.earthdata.nasa.gov/learn/earth
 ```{figure} ../assets/observation-geometry.png
 :label: observation-geometry-diagram
 :alt: Figure illustrating the observation geometry of the NISAR platform
-:align: left
+:align: center
 :width: 30%
 
-The observing geometry of the NISAR platform. Diagram modified from the [Harnessing NISAR: Next-Generation Radar Observations for Earth Applications](https://www.earthdata.nasa.gov/learn/trainings/harnessing-nisar-next-generation-radar-observations-earth-applications) course from the NASA Applied Remote Sensing Training Program (ARSET), 2026.
+The observing geometry of the NISAR platform, showing the area imaged by the 240 km NISAR swath relative to the nadir. _Diagram modified from the [Harnessing NISAR: Next-Generation Radar Observations for Earth Applications](https://www.earthdata.nasa.gov/learn/trainings/harnessing-nisar-next-generation-radar-observations-earth-applications) course from the NASA Applied Remote Sensing Training Program (ARSET), 2026._
 ```
 
 NISAR is a left-looking mission, which allows for complete coverage over Antarctica. The tradeoff is an area around the North Pole where coverage is not available (@arctic-gap). 
@@ -96,7 +96,7 @@ NISAR is a left-looking mission, which allows for complete coverage over Antarct
 ```{figure} ../assets/north-pole-hole.png
 :label: arctic-gap
 :alt: Figure illustrating the area around the North Pole where NISAR acquisitions are not available
-:align: left
+:align: center
 :width: 75%
 
 Area around the North Pole where NISAR aquisitions are not available, as visualized in the [NISAR Reference Observation Plan app](#ref-obs-plan-app).
