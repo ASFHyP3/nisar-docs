@@ -48,7 +48,11 @@ NISAR's Smart Tasking Tool triggers UR requests automatically in response to:
 
 UR products can also be manually requested by authorized users at government agencies including USGS, NOAA, and NASA.
 
-The NISAR mission system is capable of providing revised scheduling for new acquisitions in response to an event or an event forecast notification, and delivering data on an expedited timeline. This enables UR acquisitions over areas not covered by the standard observation plan (e.g., over the ocean), but this capability is expected to be exercised rarely. This option will be used when possible provided it does not interfere with planned maintenance or the base [observation plan](#nisar-reference-observation-plan).
+#### Non-Standard Acquisitions
+
+The NISAR mission system is capable of providing revised scheduling for new acquisitions in response to an event or an event forecast notification, and delivering data on an expedited timeline. 
+
+This enables UR acquisitions over areas not covered by the standard observation plan (e.g., over the ocean), but this capability is expected to be exercised rarely. This option will be used when possible provided it does not interfere with planned maintenance or the base [observation plan](#nisar-reference-observation-plan).
 
 ### Naming Convention
 
