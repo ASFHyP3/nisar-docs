@@ -124,3 +124,7 @@ Click the download icon next to the HDF5 file name to save to your computer. You
 
 All product files associated with a GCOV product. The HDF5 file, listed first, contains the science data and imagery, and can be downloaded directly by clicking the download icon, circled in red.  
 ```
+
+## Urgent Response Products
+
+[Urgent Response](#urgent-response-product-overview) (UR) products can be found by setting the [Product Configuration](#tbl:vertex-product-filters) filter to `Urgent Response`. Refer to [Urgent Response: Vertex](#ur-vertex) for more guidance.
