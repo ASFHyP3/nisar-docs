@@ -85,6 +85,7 @@ project:
   abbreviations:
     ASF: Alaska Satellite Facility
     AWS: Amazon Web Services
+    BETA: Pre-calibration datasets
     DAAC: Distributed Active Archive Center
     DEM: Digital Elevation Model
     EDC: Earthdata Cloud
@@ -104,6 +105,7 @@ project:
     NRB: Normalized Radar Backscatter
     PAGER: Prompt Assessment of Global Earthquakes for Response
     PR: Production
+    PROVISIONAL: Datasets that are calibrated but not fully validated
     Q1: Jan/Feb/Mar
     Q2: Apr/May/Jun
     Q3: Jul/Aug/Sep
