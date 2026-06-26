@@ -153,6 +153,7 @@ Frequency B data is collected primarily for use in atmospheric corrections, but 
 </table>
 :::
 
+(nisar-polarization)=
 ### Polarization
 
 The polarization refers to the direction that an electromagnetic wave travels. This can be horizontal, vertical, or circular. Circular polarizations, where the wave is rotating in a constant plane to the left or right, are much less commonly used for SAR sensors than linear (horizontal or vertical) polarizations. 
