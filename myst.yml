@@ -52,6 +52,7 @@ project:
         - file: accessing-nisar/asf-search.md
         - file: accessing-nisar/earthaccess.md
         - file: accessing-nisar/aws-s3-access.md
+        - file: accessing-nisar/worldview.md
     - file: using-nisar/using-overview.md
       children:
         - file: using-nisar/using-arcgis.md
