@@ -4,24 +4,23 @@ short_title: Available Data
 
 # Available NISAR Data
 
-NISAR launched July 30, 2025, and has been successfully collecting data through its Commissioning phase and into the Science phase. The calibration-validation process is underway, and a selection of [pre-calibration L-band data](#nisar-sample-data-feb) generated from NISAR acquisitions is available to the public.
+NISAR launched July 30, 2025, and has been successfully collecting data through its Commissioning phase and into the Science phase. The calibration-validation process is underway, and fully calibrated NISAR PROVISIONAL products for the full observation plan are now available to the public.
 
 In addition, a limited set of [NISAR S-band sample data products](https://bhoonidhi.nrsc.gov.in/NISAR/NisarProducts.html) can now be accessed through ISRO's [Bhoonidhi data hub](https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html). This S-band product release includes RSLC, GSLC, and GCOV products generated from NISAR acquisitions in January and February 2026. Refer to the [Bhoonidhi NISAR Mission site](https://bhoonidhi.nrsc.gov.in/NISAR/) for more information.
 
+(nisar-provisional-data-july)=
+## NISAR PROVISIONAL Data: July 2026
+
+<!-- #TODO: add summary of PROVISIONAL data -->
+
 (nisar-sample-data-feb)=
-## NISAR Pre-Calibration Data: February 2026
+## NISAR BETA Pre-Calibration Data: February 2026
 
 {button}`Find NISAR L-Band Data <https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR&resultsLoaded=true>`
 
-A selection of pre-calibration NISAR L-band Level-1 to Level-3 products are available through the ASF DAAC. This large volume of global data allows users to develop workflows to access the data and metadata for each product type, to become familiar with the characteristics of the L-band products, and to begin working with the data in a substantive way.
+Prior to the release of the PROVISIONAL products, a selection of pre-calibration BETA NISAR L-band Level-1 to Level-3 products were made available through the ASF DAAC. This large volume of global data was released to allow users to develop workflows to access the data and metadata for each product type, to become familiar with the characteristics of the L-band products, and to begin working with the data in a substantive way.
 
-The user community can prepare for managing NISAR’s large data volumes and refine their processing pipelines in anticipation of full global production and release of calibrated data in [July 2026](#timeline-calibrated-forward-processing). Users will find a rich and unprecedented collection of polarimetric and interferometric products to explore, with fine resolution, accurate geolocation, and full of bio/geophysical features.
-
-## Product Availability
-
-The February 2026 release of NISAR L-band pre-calibration data includes a global dataset, representative of the final product distribution of all NISAR products. All Level-1 to Level-3 L-band product types are available.
-
-This release includes data acquired between October 17, 2025 and January 20, 2026. This includes up to 8 acquisitions per track (both ascending and descending). @feb-26-data-release displays the spatial extent of the data included in this release. For a more detailed acquisition map, see the interactive [NISAR February 2026 Released Data](https://experience.arcgis.com/experience/0042193b06104889971cd77f505190e0) map.
+The February 2026 release of NISAR L-band pre-calibration data includes all Level-1 to Level-3 products for a subset of the data acquired between October 17, 2025 and January 20, 2026. This includes up to 8 acquisitions per track (both ascending and descending), and is a representative distribution of the production observation plan. @feb-26-data-release displays the spatial extent of the data included in this release. For a more detailed acquisition map, see the interactive [NISAR February 2026 Released Data](https://experience.arcgis.com/experience/0042193b06104889971cd77f505190e0) map.
 
 ```{figure} ../assets/feb-26-data-release.png
 :label: feb-26-data-release
@@ -33,14 +32,8 @@ Spatial distribution of the archived pre-calibration NISAR data products, highli
 ```
 
 (known-issues)=
-## Known Issues
 (sample-product-limitations)=
-
-A new instrument producing global data products for the first time will necessitate optimization of the products over time. In addition, the NISAR project is still in the calibration and validation phase, and these products are not yet fully calibrated. Nonetheless, the data are expected to be of sufficient quality that most users will benefit from an early look at the products.
-
-See @product-known-issues for a list of known issues reported for the current data release.
-
-Fully calibrated and algorithmically improved global L-band products are expected to be available starting [July 2026](#timeline-calibrated-forward-processing).
+The BETA products are not fully calibrated, and there are a number of [known issues](#product-known-issues) users should be aware of when working with these datasets. The PROVISIONAL products released in July 2026 are fully calibrated and partially validated, and are a significant improvement over the BETA products. Users should exercise care if attempting to analyze BETA products together with PROVISIONAL products.
 
 (data-release-timeline)=
 ## L-Band Data Release Timeline
