@@ -9,6 +9,8 @@ There are a number of Level 2 and 3 NISAR products that are suitable for use in 
 
 Support for the NISAR file format was added to ArcGIS Pro at version 3.4 (November 2024). Those using version 3.4.0 or newer are able to use NISAR products as they would any other HDF5 file in ArcGIS Pro. 
 
+The May 2026 release of ArcGIS Pro 3.7 includes additional support for the NISAR [GCOV](#gcov-product-overview) products.
+
 When using older versions of ArcGIS Pro, [refer to this documentation](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data#ArcEarly) for guidance.
 
 ArcGIS Pro refers to HDF5 [datasets](#h5-datasets) as variables, and this documentation page will use that term.
@@ -17,14 +19,18 @@ ArcGIS Pro refers to HDF5 [datasets](#h5-datasets) as variables, and this docume
 
 This page provides a quick introduction to working with NISAR data in ArcGIS. More in-depth tutorials are also available:
 
-- The [NISAR in GIS](https://www.earthdata.nasa.gov/learn/gis/storymaps/nisar-gis) tutorial provides step-by-step guidance for adding NISAR data to an ArcGIS Pro project, visualizing the data, and using standard and SAR-specific imagery and analysis tools, focusing on the [GCOV](#gcov-product-overview) and [GUNW](#gunw-product-overview) products. 
+- The [NISAR in GIS](https://www.earthdata.nasa.gov/learn/gis/storymaps/nisar-gis) StoryMap tutorial provides step-by-step guidance for adding NISAR data to an ArcGIS Pro project (ArcGIS Pro version 3.4 and higher), visualizing the data, and using standard and SAR-specific imagery and analysis tools, focusing on the [GCOV](#gcov-product-overview) and [GUNW](#gunw-product-overview) products. 
 
-- The [Spatial Subsetting for NISAR Data](https://storymaps.arcgis.com/stories/cac03522f82f420ab992316bb935a709) tutorial demonstrates workflows for subsetting NISAR products and transforming them to other data formats.
+- The [Spatial Subsetting for NISAR Data](https://storymaps.arcgis.com/stories/cac03522f82f420ab992316bb935a709) StoryMap tutorial demonstrates workflows for subsetting NISAR products and transforming them to other data formats.
+
+- The [NISAR GCOV in ArcGIS Pro 3.7](https://storymaps.arcgis.com/stories/07ec769f0a2f44469c3de3809269d3c0) StoryMap tutorial demonstrates the new capabilities available for working with NISAR [GCOV](#gcov-product-overview) products in ArcGIS Pro 3.7.
 
 (arcgis-adding-nisar-data)=
 ## Adding NISAR Data
 
-There are multiple options available for adding NISAR data to an ArcGIS Pro project. You can use the [Add Multidimensional Raster](#arcgis-add-multidimensional-raster-tool) tool or simply [Drag and Drop](#arcgis-drag-and-drop) the HDF5 file from the table of contents. Step-by-step guidance for each method can be found in the [NISAR Data in ArcGIS Pro](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-4Bfbbu) section of the NISAR in GIS tutorial. 
+There are multiple options available for adding NISAR data to an ArcGIS Pro project. You can use the [Add Multidimensional Raster](#arcgis-add-multidimensional-raster-tool) tool or simply [Drag and Drop](#arcgis-drag-and-drop) the HDF5 file from the table of contents. Step-by-step guidance for each method can be found in the [NISAR Data in ArcGIS Pro](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b) section of the NISAR in GIS tutorial. 
+
+When using GCOV products in ArcGIS Pro 3.7 and higher, there is additional drag and drop functionality that allows you to add multiband rasters with a band for each avaialable polarization. Refer to the [NISAR GCOV in ArcGIS Pro 3.7](https://storymaps.arcgis.com/stories/07ec769f0a2f44469c3de3809269d3c0#ref-n-9kBQE1) tutorial for guidance.
 
 (arcgis-add-multidimensional-raster-tool)=
 ### Add Multidimensional Raster Tool
