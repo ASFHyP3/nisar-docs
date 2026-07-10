@@ -11,7 +11,13 @@ In addition, a limited set of [NISAR S-band sample data products](https://bhooni
 (nisar-provisional-data-july)=
 ## NISAR PROVISIONAL Data: July 2026
 
-<!-- #TODO: add summary of PROVISIONAL data -->
+NISAR PROVISIONAL datasets were released July 20, 2026. These products are fully calibrated and have undergone validation at a limited set of sites around the world. These data are designated as PROVISIONAL pending more complete validation over larger areas around the globe, but are a significant improvement over the BETA products released in Feburary 2026.
+
+NISAR PROVISIONAL collections are available for all mission products from Level 0 to Level 3, including raw Level-0B [RRSD](#rrsd-product-overview) products. Prior data releases did not include RRSD products. 
+
+Most of the known issues documented for the BETA products have been resolved, and the PROVISIONAL products meet radiometric and geolocation requirements in areas where ionospheric variability is low, but there are still a few [known issues](#provisional-known-issues) users should be aware of when working with the PROVISIONAL products. 
+
+The PROVISIONAL products are generated using the [NISAR Composite Release ID (CRID) P05023](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid), and are available for all acquisitions starting June 17, 2026. Users should take care if they choose to combine PROVISIONAL products with BETA products (generated at lower CRID numbers than 05023) in analysis workflows, as some differences will be due to changes in the processing software.
 
 (nisar-sample-data-feb)=
 ## NISAR BETA Data: February 2026
@@ -51,7 +57,7 @@ Spatial extent of NISAR L-band data collection, highlighted in green.
 
 All L-band data products processed by the mission will be available to the public through the Alaska Satellite Facility.
 
-The nominal data release timeline as of June 2026 is described below.
+The nominal data release timeline as of July 2026 is described below.
 
 ### Jan 2026: Sample products
 An [initial release](https://www.earthdata.nasa.gov/news/nisar-sample-data-products-available) of 25 pre-calibration sample data products were made available on January 23, 2026. This release included one or more products of each of the nine Level 1-3 product types.
@@ -60,14 +66,14 @@ An [initial release](https://www.earthdata.nasa.gov/news/nisar-sample-data-produ
 A [larger volume](https://www.earthdata.nasa.gov/news/nisar-release-over-100000-new-data-product-files) of pre-calibration global data products were made available on February 27, 2026. This release included over 100,000 Level 1-3 products totaling over 500 TB of science data. These datasets are marked as BETA, as they are not yet fully calibrated.
 
 (timeline-calibrated-forward-processing)=
-### Jul 2026: Provisional forward processing
-After the calibration phase concludes and planned software improvements are completed, the NISAR project will begin forward processing of newly-acquired data. These datasets will be marked as PROVISIONAL, indicating that they are calibrated and partially validated, but processing improvements are still underway. Provisional datasets will be released in the second half of July 2026, including all acquisitions starting from June 17, 2026.
+### Jul 2026: Provisional products
+Global L-band NISAR Provisional products were released on July 20, 2026. These datasets are marked as PROVISIONAL, indicating that they are calibrated and partially validated, but processing improvements are still underway. Provisional datasets are available for all acquisitions starting from June 17, 2026, and forward processing will continue until fully validated products are released.
 
-This release will be the first to include [L0B RRSD](#rrsd-product-overview) products, which will have a nominal latency of 2-10 hours from data acquisition to availability. Level 1-3 products will have a nominal latency of 36-72 hours. Products will be continuously generated and made publicly available for all areas shown in @data-acquisition-extent and in the [NISAR Reference Observation Plan](#nisar-reference-observation-plan). 
+This release is the first to include [L0B RRSD](#rrsd-product-overview) products, which have a nominal latency of 2-10 hours from data acquisition to availability. Level 1-3 products have a nominal latency of 36-72 hours. Products are continuously generated and made publicly available for all areas shown in @data-acquisition-extent and in the [NISAR Reference Observation Plan](#nisar-reference-observation-plan). 
 
 (validated-reprocessing)=
 ### Q4 2026: Validated reprocessing
 
-After the start of forward processing, additional validation will take place using the provisional data, resulting in algorithm improvements. Once the products are fully validated, the NISAR project will transition to generating validated products with a new version of the processor and begin a reprocessing campaign. These validated products will supersede any earlier versions of the data in the archive.
+Additional validation will take place using the provisional data, resulting in algorithm improvements. Once the products are fully validated, the NISAR project will transition to generating validated products with a new version of the processor and begin a reprocessing campaign. These validated products will supersede any earlier versions of the data in the archive.
 
 This reprocessing campaign will generate new versions of Level 0-3 products from the global backlog of all L-band data collected during the science phase of the mission. Data products will be continually published to ASF and made publicly available as they are generated during the reprocessing effort, which is expected to be complete by the end of 2026.
