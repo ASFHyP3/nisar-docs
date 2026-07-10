@@ -14,7 +14,7 @@ In addition, a limited set of [NISAR S-band sample data products](https://bhooni
 <!-- #TODO: add summary of PROVISIONAL data -->
 
 (nisar-sample-data-feb)=
-## NISAR BETA: February 2026
+## NISAR BETA Data: February 2026
 
 {button}`Find NISAR L-Band Data <https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR&resultsLoaded=true>`
 
