@@ -15,7 +15,8 @@ NISAR PROVISIONAL datasets were released July 20, 2026. These products are fully
 
 NISAR PROVISIONAL collections are available for all mission products from Level 0 to Level 3, including raw Level-0B [RRSD](#rrsd-product-overview) products. Prior data releases did not include RRSD products. 
 
-Most of the known issues documented for the BETA products have been resolved, and the PROVISIONAL products meet radiometric and geolocation requirements in areas where ionospheric variability is low, but there are still a few [known issues](#provisional-known-issues) users should be aware of when working with the PROVISIONAL products. 
+(known-issues)=
+Most of the known issues with the BETA products have been resolved in this release, and the PROVISIONAL products meet radiometric and geolocation requirements in areas where ionospheric variability is low, but there are still a few [known issues](#provisional-known-issues) users should be aware of when working with the PROVISIONAL products. 
 
 The PROVISIONAL products are generated using the [NISAR Composite Release ID (CRID) P05023](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid), and are available for all acquisitions starting June 17, 2026. Users should take care if they choose to combine PROVISIONAL products with BETA products (generated at lower CRID numbers than 05023) in analysis workflows, as some differences will be due to changes in the processing software.
 
@@ -26,7 +27,6 @@ The PROVISIONAL products are generated using the [NISAR Composite Release ID (CR
 
 Prior to the release of the PROVISIONAL products, a selection of pre-calibration BETA NISAR L-band products was made available through the ASF DAAC. These BETA products were released to allow users to develop workflows to access the data and metadata for each product type, to become familiar with the characteristics of the L-band products, and to begin working with the data in a substantive way.
 
-(known-issues)=
 (sample-product-limitations)=
 The BETA products are not fully calibrated, and there are a number of [known issues](./product-known-issues.md) users should be aware of when working with these datasets. The PROVISIONAL products released in July 2026 are fully calibrated and partially validated, and are a significant improvement over the BETA products. Users should exercise care if attempting to analyze BETA products together with PROVISIONAL products.
 
