@@ -12,7 +12,7 @@ There are a number of StoryMap tutorials available for NISAR, published both by 
 
 NISAR StoryMaps published by ASF are all displayed in the [ASF ArcGIS Online Gallery](https://asf-daac.maps.arcgis.com/home/gallery.html?sortField=title&sortOrder=asc&categories=%2FCategories%2FNISAR).
 
-<a href="https://asf-daac.maps.arcgis.com/home/gallery.html?sortField=title&sortOrder=asc&categories=%2FCategories%2FNISAR">
+<a href="https://asf-daac.maps.arcgis.com/home/gallery.html?sortField=relevance&sortOrder=desc&searchTerm=NISAR&mode=keyword">
 <img id="asf-nisar-agol-gallery" src="../assets/asf-nisar-agol-gallery.png" alt="Image of the ASF NISAR StoryMap Gallery">
 </a>
 
