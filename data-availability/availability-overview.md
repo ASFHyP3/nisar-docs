@@ -20,6 +20,10 @@ In addition, a limited set of [NISAR S-band sample data products](https://bhooni
 
 Prior to the release of the PROVISIONAL products, a selection of pre-calibration BETA NISAR L-band products was made available through the ASF DAAC. These BETA products were released to allow users to develop workflows to access the data and metadata for each product type, to become familiar with the characteristics of the L-band products, and to begin working with the data in a substantive way.
 
+(known-issues)=
+(sample-product-limitations)=
+The BETA products are not fully calibrated, and there are a number of [known issues](./product-known-issues.md) users should be aware of when working with these datasets. The PROVISIONAL products released in July 2026 are fully calibrated and partially validated, and are a significant improvement over the BETA products. Users should exercise care if attempting to analyze BETA products together with PROVISIONAL products.
+
 The February 2026 release includes all Level-1 to Level-3 products for a subset of the data acquired between October 17, 2025 and January 20, 2026. This includes up to 8 acquisitions per track (both ascending and descending), and is a representative distribution of the production observation plan. @feb-26-data-release displays the spatial extent of the data included in this release. For a more detailed acquisition map, see the interactive [NISAR February 2026 Released Data](https://experience.arcgis.com/experience/0042193b06104889971cd77f505190e0) map.
 
 ```{figure} ../assets/feb-26-data-release.png
@@ -30,10 +34,6 @@ The February 2026 release includes all Level-1 to Level-3 products for a subset 
 Spatial distribution of the archived pre-calibration NISAR data products, highlighted in green, included in the February 2026 data release.  
 <span style="font-size: 12px;">_Basemap credits: Esri, TomTom, Garmin, FAO, NOAA, USGS, (c) OpenStreetMap contributors, and the GIS User Community._</span>
 ```
-
-(known-issues)=
-(sample-product-limitations)=
-The BETA products are not fully calibrated, and there are a number of [known issues](./product-known-issues.md) users should be aware of when working with these datasets. The PROVISIONAL products released in July 2026 are fully calibrated and partially validated, and are a significant improvement over the BETA products. Users should exercise care if attempting to analyze BETA products together with PROVISIONAL products.
 
 (data-release-timeline)=
 ## L-Band Data Release Timeline
