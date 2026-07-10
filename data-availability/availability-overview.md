@@ -11,7 +11,7 @@ In addition, a limited set of [NISAR S-band sample data products](https://bhooni
 (nisar-provisional-data-july)=
 ## NISAR PROVISIONAL Data: July 2026
 
-NISAR PROVISIONAL datasets were released July 20, 2026. These products are fully calibrated and have undergone validation at a limited set of sites around the world. These data are designated as PROVISIONAL pending more complete validation over larger areas around the globe, but are a significant improvement over the BETA products released in Feburary 2026.
+NISAR PROVISIONAL datasets were released July 20, 2026. These products are fully calibrated and have undergone validation at a limited set of sites around the world. These data are designated as PROVISIONAL pending more complete validation over larger areas around the globe, but are a significant improvement over the [BETA products](#nisar-sample-data-feb) released in Feburary 2026.
 
 NISAR PROVISIONAL collections are available for all mission products from Level 0 to Level 3, including raw Level-0B [RRSD](#rrsd-product-overview) products. Prior data releases did not include RRSD products. 
 
