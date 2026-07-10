@@ -19,6 +19,19 @@ A collection of NISAR pre-calibration data products is now available to the publ
 [Learn more about this dataset and the expected timeline for additional product releases](#nisar-sample-data-feb).
 :::
 
+(nisar-maturity-levels)=
+## NISAR Maturity Levels
+
+NASA uses different [data maturity levels](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-maturity-levels) for data generated over the duration of a mission. There are currently NISAR datasets for two different maturity levels available:
+
+- The BETA collections include products from the first two releases of NISAR data in [January 2026](#timeline-januaary) and [February 2026](#timeline-february). These products are not fully calibrated, and exhibit a number of [known issues](../data-availability/product-known-issues.md), but are still useful for those who would like to access products from earlier in the mission.
+
+- The PROVISIONAL collections include products from the [July 2026](#timeline-calibrated-forward-processing) release. These products are fully calibrated and partially validated, but processing improvements are still underway. 
+   - Provisional products will be continuously added to the archive as new data is acquired, until the validation period is complete and the [reprocessing campaign](#validated-reprocessing) is launched to generate validated products from the start of the science phase of the mission onwards. 
+   - These provisional products are available for acquisitions starting June 17, 2026.
+
+The BETA products and PROVISIONAL products do not overlap temporally, so some users who want to access the data from earlier in the mission may still find the BETA products useful. Because of updates to the processing software to improve product quality, use caution when including both BETA and PROVISIONAL products in analysis workflows. Differences between products from the different maturities may be due to differences in the processing workflow rather than actual changes on the landscape.
+
 (nisar-product-levels)=
 ## NISAR Product Levels
 

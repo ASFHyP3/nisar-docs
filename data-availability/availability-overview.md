@@ -61,9 +61,11 @@ All L-band data products processed by the mission will be available to the publi
 
 The nominal data release timeline as of July 2026 is described below.
 
+(timeline-january)=
 ### Jan 2026: Sample products
 An [initial release](https://www.earthdata.nasa.gov/news/nisar-sample-data-products-available) of 25 pre-calibration sample data products were made available on January 23, 2026. This release included one or more products of each of the nine Level 1-3 product types.
 
+(timeline-february)=
 ### Feb 2026: Pre-calibration products
 A [larger volume](https://www.earthdata.nasa.gov/news/nisar-release-over-100000-new-data-product-files) of pre-calibration global data products were made available on February 27, 2026. This release included over 100,000 Level 1-3 products totaling over 500 TB of science data. These datasets are marked as BETA, as they are not yet fully calibrated.
 
