@@ -58,7 +58,7 @@ Spatial extent of NISAR L-band data collection, highlighted in green.
 
 All L-band data products processed by the mission will be available to the public through the Alaska Satellite Facility.
 
-The nominal data release timeline as of June 2026 is described below.
+The nominal data release timeline as of July 2026 is described below.
 
 ### Jan 2026: Sample products
 An [initial release](https://www.earthdata.nasa.gov/news/nisar-sample-data-products-available) of 25 pre-calibration sample data products were made available on January 23, 2026. This release included one or more products of each of the nine Level 1-3 product types.

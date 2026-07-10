@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
+## [0.4.21]
+
+### Added
+- References to the new [NISAR GCOV in ArcGIS Pro 3.7](https://storymaps.arcgis.com/stories/07ec769f0a2f44469c3de3809269d3c0) StoryMap tutorial describing the new features in ArcGIS Pro 3.7 supporting use of NISAR GCOV products
+
 ## [0.4.20]
 
 ### Added
