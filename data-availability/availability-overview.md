@@ -11,6 +11,8 @@ In addition, a limited set of [NISAR S-band sample data products](https://bhooni
 (nisar-provisional-data-july)=
 ## NISAR PROVISIONAL Data: July 2026
 
+{button}`Find NISAR PROVISIONAL L-Band Data <https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR&granuleList=NISAR_L*_*P0502*>`
+
 NISAR PROVISIONAL datasets were released July 20, 2026. These products are fully calibrated and have undergone validation at a limited set of sites around the world. These data are designated as PROVISIONAL pending more complete validation over larger areas around the globe, but are a significant improvement over the [BETA products](#nisar-sample-data-feb) released in Feburary 2026.
 
 NISAR PROVISIONAL collections are available for all mission products from Level 0 to Level 3, including raw Level-0B [RRSD](#rrsd-product-overview) products. Prior data releases did not include RRSD products. 
@@ -23,7 +25,7 @@ The PROVISIONAL products are generated using the [NISAR Composite Release ID (CR
 (nisar-sample-data-feb)=
 ## NISAR BETA Data: February 2026
 
-{button}`Find NISAR L-Band Data <https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR&resultsLoaded=true>`
+{button}`Find NISAR BETA L-Band Data <https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR&granuleList=NISAR_L*_*X05*>`
 
 Prior to the release of the PROVISIONAL products, a selection of pre-calibration BETA NISAR L-band products was made available through the ASF DAAC. These BETA products were released to allow users to develop workflows to access the data and metadata for each product type, to become familiar with the characteristics of the L-band products, and to begin working with the data in a substantive way.
 
