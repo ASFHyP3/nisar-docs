@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Updated the [Data Availability](https://nisar-docs.asf.alaska.edu/availability-overview/) page with the Provisional data release information
-- Added a new [Known Issues](https://nisar-docs.asf.alaska.edu/provisional-known-issues/) page specific to the Provisional data, and hid the known issues page for the BETA datasets from the navigation menu
+- Replaced the [Known Issues](https://nisar-docs.asf.alaska.edu/provisional-known-issues/) page content with information specific to the Provisional data, and hid the known issues page for the BETA datasets from the navigation menu (still accessible by link)
+- Included information about [data maturity levels](https://nisar-docs.asf.alaska.edu/products-overview#nisar-maturity-levels) on the Data Products overview page
 
 ## [0.4.21]
 
