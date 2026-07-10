@@ -18,7 +18,7 @@ In cases where local geometric distortions are larger than a fraction of a pixel
 
 ### Radio Frequency Interference
 
-NISAR L-band data is affected strongly in specific geographic areas by radio-frequency interference (RFI). The PROVISIONAL products have been created with an RFI filter that performs very well, such that in most places, users will not be aware that RFI existed. However, in some places the RFI filter underperforms. This can result in the presence of bright patches that mask landscape features, or attenuation of non-RFI backscatter. 
+NISAR L-band data is affected strongly in specific geographic areas by radio-frequency interference (RFI). The PROVISIONAL products have been created with an RFI filter that performs very well, such that in most places, users will not be aware that RFI existed. However, in some places the RFI filter underperforms, leaving some of the elevated backscatter signature caused by the RFI.
 
 ### Ripples in SLC Data
 
