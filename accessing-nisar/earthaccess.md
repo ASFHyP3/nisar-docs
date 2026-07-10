@@ -121,7 +121,7 @@ ds = xr.open_datatree(
 
 ### Example: Stream via HTTPS
 
-This end-to-end example searches for a single NISAR GCOV product, retrieves its HTTPS access URL, sets a custom `fsspec` configuration, and opens it with `xarray` using the `h5netcdf` engine.
+This end-to-end example searches for a single NISAR PROVISIONAL GCOV product, retrieves its HTTPS access URL, sets a custom `fsspec` configuration, and opens it with `xarray` using the `h5netcdf` engine.
 
 ```python
 import earthaccess
@@ -130,7 +130,7 @@ import xarray as xr
 auth = earthaccess.login()
 
 results = earthaccess.search_data(
-    short_name='NISAR_L2_GCOV_BETA_V1',
+    short_name='NISAR_L2_GCOV_PROVISIONAL_V1',
     count=1
 )
 
