@@ -11,7 +11,7 @@ project:
     - file: about-nisar/nisar-intro.md
     - file: data-availability/availability-overview.md
       children:
-        - file: data-availability/calibrated-known-issues.md
+        - file: data-availability/provisional-known-issues.md
         - file: data-availability/observation-plan.md
     - file: data-products/products-overview.md
       children:
