@@ -13,7 +13,7 @@ In addition, a limited set of [NISAR S-band sample data products](https://bhooni
 
 {button}`Find NISAR PROVISIONAL L-Band Data <https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR&granuleList=NISAR_L*_*P0502*>`
 
-NISAR PROVISIONAL datasets were released July 20, 2026. These products are fully calibrated and have undergone validation at a limited set of sites around the world. These data are designated as PROVISIONAL pending more complete validation over larger areas around the globe, but are a significant improvement over the [BETA products](#nisar-sample-data-feb) released in Feburary 2026.
+NISAR PROVISIONAL datasets were released July 20, 2026. These products are fully calibrated and have undergone validation at a limited set of sites around the world. These datasets are designated as PROVISIONAL pending more complete validation over larger areas around the globe, but are a significant improvement over the [BETA products](#nisar-sample-data-feb) released in Feburary 2026.
 
 NISAR PROVISIONAL collections are available for all mission products from Level 0 to Level 3, including raw Level-0B [RRSD](#rrsd-product-overview) products. Prior data releases did not include RRSD products. 
 
