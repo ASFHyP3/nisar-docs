@@ -22,6 +22,10 @@ Most of the known issues with the BETA products have been resolved in this relea
 
 The PROVISIONAL products are generated using the [NISAR Composite Release ID (CRID) P05023](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid), and are available for all acquisitions starting June 17, 2026. Users should take care if they choose to combine PROVISIONAL products with BETA products (generated at lower CRID numbers than 05023) in analysis workflows, as some differences will be due to changes in the processing software.
 
+### Supplemental Provisional Products
+
+The science team has identified a limited set of NISAR frames that will be used to produce deeper time series backward in time to continue with time-series validation work. These products will also enable community access to longer NISAR time series for tool development, as they will extend back in time further than June 17. These products will be included in the PROVISIONAL collections as they are processed.
+
 (nisar-sample-data-feb)=
 ## NISAR BETA Data: February 2026
 
