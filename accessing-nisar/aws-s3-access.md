@@ -103,7 +103,7 @@ For a full list of exportable variables, see [AWS's Temporary Credentials User G
 
 ### 3. Find NISAR products of interest
 
-NISAR production data is all hosted in the `sds-n-cumulus-prod-nisar-products` S3 bucket. Each product type has a prefix, and while you cannot list the full bucket contents, you can list the contents of each prefix. Refer to @prefix-structure for more information about the organization of the NISAR bucket and a [table of prefixes](#tbl:s3-prefix-list-products) for the NISAR data products and [supporting products](#tbl:s3-prefix-list-supporting).
+NISAR production data is all hosted in the `sds-n-cumulus-prod-nisar-products` S3 bucket. Each product type has a prefix, and while you cannot list the full bucket contents, you can list the contents of each prefix. Refer to @prefix-structure for more information about the organization of the NISAR bucket and the tables of prefixes for NISAR [BETA](#tbl:s3-prefix-list-products-beta) and [PROVISIONAL](#tbl:s3-prefix-list-products-provisional) data products and [supporting products](#tbl:s3-prefix-list-supporting).
 
 For example, if you want to list all available GCOV products, you can use this `aws s3 ls` command: 
 ```
