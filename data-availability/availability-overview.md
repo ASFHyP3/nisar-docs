@@ -18,7 +18,7 @@ NISAR PROVISIONAL datasets were released July 20, 2026. These products are fully
 NISAR PROVISIONAL collections are available for all mission products from Level 0 to Level 3, including raw Level-0B [RRSD](#rrsd-product-overview) products. Prior data releases did not include RRSD products. 
 
 (known-issues)=
-Most of the known issues with the BETA products have been resolved in this release, and the PROVISIONAL products meet radiometric and geolocation requirements in areas where ionospheric variability is low, but there are still a few [known issues](#provisional-known-issues) users should be aware of when working with the PROVISIONAL products. 
+Most of the known issues with the BETA products have been resolved in this release, and the PROVISIONAL products meet radiometric and geolocation requirements (refer to Table 3-3 in the [NISAR Mission Science Users' Handbook](https://dataverse.jpl.nasa.gov/api/access/datafile/97405?gbrecs=true)) in areas where ionospheric variability is low, but there are still a few [known issues](#provisional-known-issues) users should be aware of when working with the PROVISIONAL products. 
 
 The PROVISIONAL products are generated using the [NISAR Composite Release ID (CRID) P05023](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid), and are available for all acquisitions starting June 17, 2026. Users should take care if they choose to combine PROVISIONAL products with BETA products (generated at lower CRID numbers than 05023) in analysis workflows, as some differences will be due to changes in the processing software.
 
