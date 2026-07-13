@@ -47,6 +47,7 @@ project:
           children:
             - file: data-products/product-specification.md
             - file: data-products/atbd.md
+            - file: data-products/science-handbook-tables.md
     - file: accessing-nisar/access-overview.md
       children:
         - file: accessing-nisar/vertex.md
