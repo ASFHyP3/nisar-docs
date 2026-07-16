@@ -11,7 +11,11 @@ short_title: Worldview
  
 ## NISAR Data in Worldview
 
-NISAR [Level-2 Geocoded Covariance (GCOV)](#gcov-product-overview) products are available in Worldview. GCOV imagery is displayed using a false-color red, green, and blue (RGB) decomposition to facilitate more intuitive visual interpretation of the SAR backscatter data. Visualization is applied to acquisitions with multiple polarmetric channels (dual)
+NISAR [Level-2 Geocoded Covariance (GCOV)](#gcov-product-overview) products are available in Worldview. GCOV imagery is displayed using a false-color red, green, and blue (RGB) decomposition to facilitate more intuitive visual interpretation of the SAR backscatter data. Visualization is applied to acquisitions with multiple polarmetric channels (dual-pol or quad-pol) combines co-polarized backscatter(HH or VV) values in the red and blue channels with cross-polarized cross-polarized values (HV or VH) in the green channel. In this false-color scale, vegetated areas appear green; urban and/or sparsely vegetated areas appear orange or yellow; calm water, dry sand, and frozen ground appears blue; and rough water may appear red.
+
+Single-polarization acquisitions, collected mostly in polar regions or over open ocean, are also colorized. Because they only have one available polarization, the false-color approach provides less information. The color bar passes from blue to green to orange to yellow, indicating co-polarized backscatter values from low to high. Water or dry soil is still generally blue, and urban areas are still generally yellow, but vegetated areas may exhibit a different color of green/orange than in the dual-pol RGB decomposition for the same area. Wet snow may appear very yellow, while drier snow is more green or blue.
+
+Note that different landcover types may appear similar to each other in this visualization. Consider referencing other imagery when interpreting this visualization.
 
 ### Adding NISAR Data 
 
