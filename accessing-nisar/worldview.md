@@ -7,16 +7,15 @@ short_title: Worldview
 (worldview-overview)=
 ## Worldview
 
-Worldview application for browsing, comparing, and animating visualizations
+[NASA Worldview](https://worldview.earthdata.nasa.gov/) is a user-friendly visualization tool that enables interactive browsing and animation of over 1,200 satellite data products. Imagery in Worldviews is powered by NASA's Global Imagery Browse Services (GIBS) service and delivers  global, full-resolution visualizations of satellite imagery.
+ 
+## NISAR Data in Worldview
 
-as a part of NASA's Global Imagery Browse Services (GIBS) service to provide visualizations of NASA Earth Science observations. 
-GIBS strives to provide global, full-resolution visualizations of satellite data
-Worldview is highly responsive, enables visual discovery of data 
-Worldview application for browsing, comparing, and animating visualizations
+NISAR [Level-2 Geocoded Covariance (GCOV)](#gcov-product-overview) products are available in Worldview. GCOV imagery is displayed using a false-color red, green, and blue (RGB) decomposition to facilitate more intuitive visual interpretation of the SAR backscatter data. Visualization is applied to acquisitions with multiple polarmetric channels (dual)
 
-### Adding NISAR Data
+### Adding NISAR Data 
 
-Click **Add Layers**, which will open up a window with all available datasets. Using the search bar, type in NISAR. Add your desired data layer(s). 
+To add NISAR GCOV data, click **Add Layers**, which will open up a window with all available datasets. Using the search bar, type in NISAR. Add your desired data layer(s). 
 
 ```{figure} ../assets/worldview-add-layers.png
 :label: worldview-add-layers
@@ -40,6 +39,7 @@ Search for NISAR products in Worldview by adding layers.
 zooming/showing the fine resolution of the available imagery, show difference between 10, 20, 80 m resolution areas
 
 Toggle between Geographic (EPSG 4326), Sea Ice Polar Stereographic North (EPSG:3413), and Antarctic Polar Stereographic (EPSG:3031).
+
 
 * Timeslider 
     - stepping through a day at a time
