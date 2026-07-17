@@ -4,12 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
 ## [0.4.22]
 
 ### Added
-- [NISAR in Worldview product page](accessing-nisar/worldview.md)
-
-## [0.4.22]
+- [NISAR in Worldview product page](tools-services/worldview.md)
 
 ### Changed
 - Updated the [Data Availability](https://nisar-docs.asf.alaska.edu/availability-overview/) page with the PROVISIONAL data release information
