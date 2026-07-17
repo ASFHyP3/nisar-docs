@@ -154,7 +154,7 @@ Download data by clicking the **Data** tab on the **Layers** panel. Select the d
 ```
 
 #### Load into a GIS
-NISAR data can also be loaded into a GIS as a WMS or WMTS service, with WMS being the default. In your GIS, select **Add Layer**, then set the data type to WMS/WMTS. through time.
+NISAR data can also be loaded into a GIS as a WMS or WMTS service, with WMS being the default. In your GIS, select **Add Layer**, then set the data type to WMS/WMTS.
 
 ```{figure} ../assets/worldview-add-new-wms
 :label: worldview-add-new-wms
@@ -164,7 +164,7 @@ NISAR data can also be loaded into a GIS as a WMS or WMTS service, with WMS bein
 Add a new data layer to your GIS with the data type WMS/WMTS. 
 ```
 
-For data in EPSG:4326 projection, use the URL 'https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi' and add to your project. This will provide access to all imagery available, so either search for the desired layer or select the desired layer in the browser under RTC SAR Backscatter. Since this data collection is temporally dependent, you will need to use the Temporal Controller tool in QGIS or the Time Slider tool in ArcGIS Pro to explore the data.
+For data in EPSG:4326 projection, use the URL 'https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi' and add to your project. This will provide access to all imagery available, so either search for the desired layer or select the desired layer in the browser under RTC SAR Backscatter. Since this data collection is temporally dependent, you will need to use the Temporal Controller tool in QGIS or the Time Slider tool in ArcGIS Pro to explore the data through time.
 
 For more information, see the [GIBS Wiki Page]( https://wiki.earthdata.nasa.gov/display/GIBS/).
 
