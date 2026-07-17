@@ -13,7 +13,7 @@ NISAR backscatter observations will estimate a global high-resolution soil moist
 
 Soil moisture products are generated from a time series analysis using Level 2 [GCOV](#gcov-product-overview) products as input. 
 
-:::{warning}Provisional Soil Moisture Products not fully calibrated
+:::{warning}PROVISIONAL Soil Moisture Products Not Fully Calibrated
 
 Because long time series of PROVISIONAL GCOV products are not yet available for use in the Soil Moisture processing workflow, the SME2 products in the PROVISIONAL collection are not fully calibrated. The processing algorithm may be refined as more PROVISIONAL data becomes available for SME2 calibration/validation efforts. 
 
