@@ -14,9 +14,9 @@ One of the most exciting aspects of the NISAR mission is that it generates a num
 For SAR scientists and those who want to generate products to their own specifications, the [Level 0 (Raw)](#level-0-unfocused-raw-products) data and [Level 1 (Range-Doppler)](#level-1-range-doppler-products) products are also available.
 
 :::{important}NISAR Data Product Availability
-A collection of NISAR pre-calibration data products is now available to the public!
+Fully calibrated PROVISIONAL NISAR data products are now available to the public! These products are available for all L-band acquisitions starting June 17, 2026, and the data quality is much better than the BETA products released in February.
 
-[Learn more about this dataset and the expected timeline for additional product releases](#nisar-sample-data-feb).
+[Learn more about PROVISIONAL data and the expected timeline for additional product releases](#nisar-provisional-data-july).
 :::
 
 (nisar-maturity-levels)=
@@ -48,8 +48,6 @@ NISAR Data Product Levels based on product specification documentation
 ```
 
 Additional Level 3 and 4 products will be produced by the NISAR science team, but only for specific areas used for calibration and validation activities. Some of these cal/val products may be archived and available to the public. The algorithms for these higher-level products are available as [Python notebooks](https://gitlab.com/nisar-science-algorithms), allowing users to generate these scientific products themselves for other locations.
-
-<!-- TODO: update links to go to the product overview headings rather than the .md -->
 
 (level-0-unfocused-raw-products)=
 ### Level 0: Unfocused Raw Products
@@ -83,7 +81,7 @@ Level 2 products are derived from Level 1 products, resampled and geocoded to a 
 
 Level 3 products represent geophysical parameters derived from radar-specific parameters and geocoded to a geographic grid.
 
-- The [Soil Moisture (SME2)](#sme2-product-overview) product contains soil moisture estimates derived from NISAR data using three different algorithms at agricultural field-scale (200m) posting for most regions (the Sahara Desert will be at 500m).  Soil moisture information can be used for reservoir management, early warning of droughts, irrigation scheduling, and crop yield forecasting.
+- The [Soil Moisture (SME2)](#sme2-product-overview) product contains soil moisture estimates derived from NISAR data using three different algorithms at agricultural field-scale (200m) posting for most regions (the Sahara Desert will be at 500m). Soil moisture information can be used for reservoir management, early warning of droughts, irrigation scheduling, and crop yield forecasting.
 
 ## Summary
 

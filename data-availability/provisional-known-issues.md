@@ -6,7 +6,7 @@ short_title: Known Issues
 (provisional-known-issues)=
 ## Provisional Product Known Issues
 
-The PROVISIONAL products [released in July 2026](#nisar-provisional-data-july) are calibrated and have undergone validation at a limited set of sites around the world. These data are designated as PROVISIONAL pending more complete validation over larger areas around the globe. The Provisional products meet [radiometric and geolocation requirements](tbl:science-traceability-matrix-table) in areas where ionospheric variability is low, generally in the lower latitudes. 
+The PROVISIONAL products [released in July 2026](#nisar-provisional-data-july) are calibrated and have undergone validation at a limited set of sites around the world. These data are designated as PROVISIONAL pending more complete validation over larger areas around the globe. The Provisional products meet [radiometric and geolocation requirements](#tbl:science-traceability-matrix-table) in areas where ionospheric variability is low, generally in the lower latitudes. 
 
 These products, processed using the [NISAR Composite Release ID (CRID) P05023](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid), are a significant improvement over the [pre-calibration BETA products](#nisar-sample-data-feb) released in February 2026, and most of the [known issues associated with the BETA products](./product-known-issues.md) have been resolved. There are, however, a few known issues with the PROVISIONAL products that users should be aware of. 
 
@@ -27,6 +27,13 @@ Low-level ripples in the SLC data may occasionally be seen in areas with dark ba
 ### Frequency B Calibration
 
 The calibration of the 5 MHz `Frequency B` channel, which is designed for split-spectrum processing, has larger systematic radiometric calibration residuals than the main band `Frequency A`. While there are no radiometric requirements for Frequency B, science team members have found these data to be useful in their own right. In future releases, the project will work to reduce these residuals further.
+
+(provisional-known-issues-sme2)=
+### Soil Moisture Products
+
+[Soil Moisture (SME2)](#sme2-product-overview) products require time series of Level 2 [GCOV](#gcov-product-overview) products as input for the processing workflow. Because fully calibrated GCOV products have only recently become available, and the calibration/validation process requires longer time series before some cal/val metrics (e.g., un-biased root mean squared error (UBRMSE)) can be computed, the SME2 products in the PROVISIONAL collection are not yet fully calibrated. 
+
+In areas of quad-pol acquisitions, there are three to six gaps across the swath due to the nature of NISAR’s SweepSAR acquisition and the number of time steps used in the soil moisture algorithm. In these gap areas, there will be occasions where one or more of the three soil moisture algorithms included in the SME2 products may not deliver an estimate.
 
 ## BETA and PROVISIONAL Products
 
