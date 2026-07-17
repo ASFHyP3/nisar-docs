@@ -8,7 +8,7 @@ This is a collection of tables from the NISAR Mission Science Users' Handbook [@
 :label: tbl:science-traceability-matrix-table
 
 <a href="https://dataverse.jpl.nasa.gov/api/access/datafile/97405?gbrecs=true">
-<img id="nisar-mission-page" src="../assets/science-traceability-matrix.png" alt="Table 3-3 from NISAR Mission Science Users' Handbook [@nisarMissionHandbook2025]">
+<img id="science-traceability-matrix" src="../assets/science-traceability-matrix.png" alt="Table 3-3 from NISAR Mission Science Users' Handbook [@nisarMissionHandbook2025]">
 </a>
 
 :::
