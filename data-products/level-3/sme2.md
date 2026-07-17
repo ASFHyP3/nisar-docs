@@ -17,7 +17,7 @@ Soil moisture products are generated from a time series analysis using Level 2 [
 
 Because long time series of PROVISIONAL GCOV products are not yet available for use in the Soil Moisture processing workflow, the SME2 products in the PROVISIONAL collection are not yet fully calibrated. 
 
-Refer to the [Known Issues](#provisional-known-issues-sme2) for more information.
+Refer to [PROVISIONAL Known Issues](#provisional-known-issues-sme2) for more information.
 :::
 
 Soil moisture estimates will be provided over areas with dense vegetation (VWC greater than 5 kg/m2), but will be flagged as potentially unreliable. No soil moisture retrievals will be provided for areas with urban build-up, permanent snow and ice cover, or permanent inland waterbodies, and these pixels will be flagged appropriately. No soil moisture retrieval will be performed over areas with excessive precipitation, frozen ground, or snow on the ground. 
