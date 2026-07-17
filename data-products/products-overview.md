@@ -14,10 +14,23 @@ One of the most exciting aspects of the NISAR mission is that it generates a num
 For SAR scientists and those who want to generate products to their own specifications, the [Level 0 (Raw)](#level-0-unfocused-raw-products) data and [Level 1 (Range-Doppler)](#level-1-range-doppler-products) products are also available.
 
 :::{important}NISAR Data Product Availability
-A collection of NISAR pre-calibration data products is now available to the public!
+Fully calibrated PROVISIONAL NISAR data products are now available to the public! These products are available for all L-band acquisitions starting June 17, 2026, and the data quality is much better than the BETA products released in February.
 
-[Learn more about this dataset and the expected timeline for additional product releases](#nisar-sample-data-feb).
+[Learn more about PROVISIONAL data and the expected timeline for additional product releases](#nisar-provisional-data-july).
 :::
+
+(nisar-maturity-levels)=
+### NISAR Maturity Levels
+
+NASA uses different [data maturity levels](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-maturity-levels) for data generated over the duration of a mission. There are currently NISAR datasets for two different maturity levels available:
+
+- The BETA collections include products from the first two releases of NISAR data in [January 2026](#timeline-january) and [February 2026](#timeline-february). These products are not fully calibrated, and exhibit a number of [known issues](../data-availability/product-known-issues.md), but are still useful for those who would like to access products from earlier in the mission.
+
+- The PROVISIONAL collections include products from the [July 2026](#timeline-calibrated-forward-processing) release. These products are fully calibrated and partially validated, but processing improvements are still underway. 
+   - Provisional products will be continuously added to the archive as new data is acquired, until the validation period is complete and the [reprocessing campaign](#validated-reprocessing) is launched to generate validated products from the start of the science phase of the mission onwards. 
+   - These provisional products are available for acquisitions starting June 17, 2026.
+
+The BETA products and PROVISIONAL products do not overlap temporally, so some users who want to access the data from earlier in the mission may still find the BETA products useful. Because of updates to the processing software to improve product quality, use caution when including both BETA and PROVISIONAL products in analysis workflows. Differences between products from the different maturities may be due to differences in the processing workflow rather than actual changes on the landscape.
 
 (nisar-product-levels)=
 ## NISAR Product Levels
@@ -36,17 +49,15 @@ NISAR Data Product Levels based on product specification documentation
 
 Additional Level 3 and 4 products will be produced by the NISAR science team, but only for specific areas used for calibration and validation activities. Some of these cal/val products may be archived and available to the public. The algorithms for these higher-level products are available as [Python notebooks](https://gitlab.com/nisar-science-algorithms), allowing users to generate these scientific products themselves for other locations.
 
-<!-- TODO: update links to go to the product overview headings rather than the .md -->
-
 (level-0-unfocused-raw-products)=
-## Level 0: Unfocused Raw Products
+### Level 0: Unfocused Raw Products
 
 Level 0 products are unprocessed instrument data. L0A products are the received raw data, which are archived for reference but are not of use to the scientific community. L0B products have been processed to remove transmission artifacts, and are the starting point for processing all additional mission products. They are generally only of interest to SAR scientists.
 
 - The [Radar Raw Signal Data (RRSD)](#rrsd-product-overview) L0B product contains corrected, aligned radar pulse data.
 
 (level-1-range-doppler-products)=
-## Level 1: Range-Doppler Products
+### Level 1: Range-Doppler Products
 
 Level 1 products are processed instrument data, focused to full resolution complex images. They are time referenced and annotated with ancillary information, including radiometric and relevant geometric calibration coefficients and georeferencing parameters (i.e. platform ephemeris). Level 1 products are in natural radar coordinates, and cannot be directly overlaid on a map.
 
@@ -56,7 +67,7 @@ Level 1 products are processed instrument data, focused to full resolution compl
 - The [Range-Doppler Unwrapped Interferogram (RUNW)](#runw-product-overview) product represents the unwrapped, multi-looked differential interferogram generated from two RSLCs in range-Doppler coordinates. The RUNW product primarily supports the solid earth requirement of ground surface displacement measurements.
 
 (level-2-geocoded-products)=
-## Level 2: Geocoded Products
+### Level 2: Geocoded Products
 
 Level 2 products are derived from Level 1 products, resampled and geocoded to a geographic grid. They can be directly overlaid on a map and combined with other data in geographic coordinates.
 
@@ -66,11 +77,11 @@ Level 2 products are derived from Level 1 products, resampled and geocoded to a 
 - The [Geocoded Unwrapped Interferogram (GUNW)](#gunw-product-overview) product represents the unwrapped, multi-looked differential interferogram generated from two RSLCs in geographic coordinates. The GUNW product primarily supports the solid earth requirement of ground surface displacement measurements.
 
 (level-3-geophysical-products)=
-## Level 3: Geophysical Products
+### Level 3: Geophysical Products
 
 Level 3 products represent geophysical parameters derived from radar-specific parameters and geocoded to a geographic grid.
 
-- The [Soil Moisture (SME2)](#sme2-product-overview) product contains soil moisture estimates derived from NISAR data using three different algorithms at agricultural field-scale (200m) posting for most regions (the Sahara Desert will be at 500m).  Soil moisture information can be used for reservoir management, early warning of droughts, irrigation scheduling, and crop yield forecasting.
+- The [Soil Moisture (SME2)](#sme2-product-overview) product contains soil moisture estimates derived from NISAR data using three different algorithms at agricultural field-scale (200m) posting for most regions (the Sahara Desert will be at 500m). Soil moisture information can be used for reservoir management, early warning of droughts, irrigation scheduling, and crop yield forecasting.
 
 ## Summary
 

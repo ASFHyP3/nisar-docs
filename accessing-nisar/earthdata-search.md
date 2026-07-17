@@ -3,7 +3,7 @@ short_title: Earthdata Search
 ---
 # Finding NISAR Data with Earthdata Search
 
-{button}`Search for all NISAR Data Products<https://search.earthdata.nasa.gov/search?q=nisar%20beta>`
+{button}`Search for all NISAR Data Products<https://search.earthdata.nasa.gov/search?fpc0=Earth+Observation+Satellites&fps0=NISAR&fpb0=Space-based+Platforms>`
 
 (earthdata-search-overview)=
 ## Earthdata Search
@@ -29,10 +29,27 @@ Get started searching for NISAR data quickly by using the search bar on the [Ear
 Search using the search bar on the Earthdata Search landing page. 
 ```
 
-To search for a specific product type, input the corresponding short name from @tbl:earthdata-search-shortname-list into the search bar. For ancillary datasets such as orbit ephemeris files, refer to @tbl:earthdata-search-supporting-shortname-list for the short names.
+To search for a specific product type, input the corresponding short name from either @tbl:earthdata-search-shortname-list-provisional for PROVISIONAL datasets or @tbl:earthdata-search-shortname-list-beta for BETA datasets into the search bar. For ancillary datasets such as orbit ephemeris files, refer to @tbl:earthdata-search-supporting-shortname-list for the short names.
 
-:::{table} NISAR Data Product Short Names
-:label: tbl:earthdata-search-shortname-list
+:::{table} NISAR PROVISIONAL Data Product Short Names
+:label: tbl:earthdata-search-shortname-list-provisional
+
+| Product | Short Name                   |
+|---------|------------------------------|
+| SME2    | NISAR_L3_SME2_PROVISIONAL_V1 |
+| GCOV    | NISAR_L2_GCOV_PROVISIONAL_V1 |
+| GUNW    | NISAR_L2_GUNW_PROVISIONAL_V1 |
+| GOFF    | NISAR_L2_GOFF_PROVISIONAL_V1 |
+| GSLC    | NISAR_L2_GSLC_PROVISIONAL_V1 |
+| RUNW    | NISAR_L1_RUNW_PROVISIONAL_V1 |
+| RIFG    | NISAR_L1_RIFG_PROVISIONAL_V1 |
+| ROFF    | NISAR_L1_ROFF_PROVISIONAL_V1 |
+| RSLC    | NISAR_L1_RSLC_PROVISIONAL_V1 |
+
+:::
+
+:::{table} NISAR BETA Data Product Short Names
+:label: tbl:earthdata-search-shortname-list-beta
 
 | Product | Short Name            |
 |---------|-----------------------|

@@ -11,7 +11,9 @@ project:
     - file: about-nisar/nisar-intro.md
     - file: data-availability/availability-overview.md
       children:
+        - file: data-availability/provisional-known-issues.md
         - file: data-availability/product-known-issues.md
+          hidden: true
         - file: data-availability/observation-plan.md
     - file: data-products/products-overview.md
       children:
@@ -74,6 +76,7 @@ project:
         - file: resources/webinars.md
         - file: tutorials/mission-homepage-tutorials.md
         - file: resources/documents.md
+        - file: resources/science-handbook-tables.md
         - file: appendices/acronyms.md
         - file: appendices/glossary.md
     - file: applications/applications-overview.md

@@ -32,19 +32,37 @@ conda update earthaccess
 
 ## Search for NISAR data
 
-To search for a specific product type, provide the corresponding short name from @tbl:earthaccess-search-shortname-list as the `short_name` parameter. For example, to find a single [GCOV](#gcov-product-overview) product, use the following Python code:
+To search for a specific product type, provide the corresponding short name from either @tbl:earthaccess-search-shortname-list-provisional for PROVISIONAL datasets or @tbl:earthaccess-search-shortname-list for BETA datasets as the `short_name` parameter. For example, to find a single [GCOV](#gcov-product-overview) product from the PROVISIONAL data release, use the following Python code:
 
 ```python
 import earthaccess
 
 results = earthaccess.search_data(
-    short_name='NISAR_L2_GCOV_BETA_V1',
+    short_name='NISAR_L2_GCOV_PROVISIONAL_V1',
     count=1
 )
 ```
 For a description of NISAR's data product types, see @data-products-overview. You can also refine your search by setting time bounds using the [`temporal=`](https://earthaccess.readthedocs.io/en/stable/user_guide/search/#search-for-datasets-or-data-by-time-range) parameter, or by providing an area or region of interest [geometry](https://earthaccess.readthedocs.io/en/stable/user_guide/search/#search-for-datasets-or-data-using-a-region-of-interest).
 
-:::{table} NISAR Data Collection Short Name List
+
+:::{table} NISAR PROVISIONAL Data Collection Short Names
+:label: tbl:earthaccess-search-shortname-list-provisional
+
+| Product | Short Name                   |
+|---------|------------------------------|
+| SME2    | NISAR_L3_SME2_PROVISIONAL_V1 |
+| GCOV    | NISAR_L2_GCOV_PROVISIONAL_V1 |
+| GUNW    | NISAR_L2_GUNW_PROVISIONAL_V1 |
+| GOFF    | NISAR_L2_GOFF_PROVISIONAL_V1 |
+| GSLC    | NISAR_L2_GSLC_PROVISIONAL_V1 |
+| RUNW    | NISAR_L1_RUNW_PROVISIONAL_V1 |
+| RIFG    | NISAR_L1_RIFG_PROVISIONAL_V1 |
+| ROFF    | NISAR_L1_ROFF_PROVISIONAL_V1 |
+| RSLC    | NISAR_L1_RSLC_PROVISIONAL_V1 |
+
+:::
+
+:::{table} NISAR BETA Data Collection Short Names
 :label: tbl:earthaccess-search-shortname-list
 
 | Product | Short Name            |
@@ -103,7 +121,7 @@ ds = xr.open_datatree(
 
 ### Example: Stream via HTTPS
 
-This end-to-end example searches for a single NISAR GCOV product, retrieves its HTTPS access URL, sets a custom `fsspec` configuration, and opens it with `xarray` using the `h5netcdf` engine.
+This end-to-end example searches for a single NISAR PROVISIONAL GCOV product, retrieves its HTTPS access URL, sets a custom `fsspec` configuration, and opens it with `xarray` using the `h5netcdf` engine.
 
 ```python
 import earthaccess
@@ -112,7 +130,7 @@ import xarray as xr
 auth = earthaccess.login()
 
 results = earthaccess.search_data(
-    short_name='NISAR_L2_GCOV_BETA_V1',
+    short_name='NISAR_L2_GCOV_PROVISIONAL_V1',
     count=1
 )
 
@@ -134,7 +152,7 @@ ds = xr.open_datatree(
 
 ### Example: Stream via S3
 
-This end-to-end example searches for a single NISAR GCOV product, retrieves its S3 access URI, sets a custom `fsspec` configuration, and opens it with `xarray` using the `h5netcdf` engine. Behind the scenes, `earthaccess` will request temporary AWS credentials for you, which is described in @aws-s3-access-overview.
+This end-to-end example searches for a single NISAR PROVISIONAL GCOV product, retrieves its S3 access URI, sets a custom `fsspec` configuration, and opens it with `xarray` using the `h5netcdf` engine. Behind the scenes, `earthaccess` will request temporary AWS credentials for you, which is described in @aws-s3-access-overview.
 
 :::{warning}Endpoint must be specified for NISAR
 For the time being, you must specify the `endpoint=` parameter when using functions like `get_s3_filesystem` for NISAR data. Using `daac='ASF'` will result in errors when attempting to access NISAR data. See `earthaccess` issue [#1184](https://github.com/earthaccess-dev/earthaccess/issues/1184) for more details.
@@ -151,7 +169,7 @@ import xarray as xr
 auth = earthaccess.login()
 
 results = earthaccess.search_data(
-    short_name='NISAR_L2_GCOV_BETA_V1',
+    short_name='NISAR_L2_GCOV_PROVISIONAL_V1',
     count=1
 )
 
