@@ -10,16 +10,17 @@ There are a number of StoryMap tutorials available for NISAR, published both by 
 (asf-nisar-storymaps)=
 ### ASF NISAR StoryMaps
 
-NISAR StoryMaps published by ASF are all displayed in the [ASF ArcGIS Online Gallery](https://asf-daac.maps.arcgis.com/home/gallery.html?sortField=title&sortOrder=asc&categories=%2FCategories%2FNISAR).
+NISAR StoryMaps published by ASF are all displayed in the [ASF ArcGIS Online Gallery](https://asf-daac.maps.arcgis.com/home/gallery.html?sortField=relevance&sortOrder=desc&searchTerm=NISAR&mode=keyword).
 
-<a href="https://asf-daac.maps.arcgis.com/home/gallery.html?sortField=title&sortOrder=asc&categories=%2FCategories%2FNISAR">
-<img id="asf-nisar-agol-gallery" src="../assets/asf-nisar-agol-gallery.png" alt="Image of the ASF NISAR StoryMap Gallery" width="75%">
+<a href="https://asf-daac.maps.arcgis.com/home/gallery.html?sortField=relevance&sortOrder=desc&searchTerm=NISAR&mode=keyword">
+<img id="asf-nisar-agol-gallery" src="../assets/asf-nisar-agol-gallery.png" alt="Image of the ASF NISAR StoryMap Gallery">
 </a>
 
 They can also be accessed directly:
 
 * [NISAR in GIS](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b) (February 2025\)  
-* [Spatial Subsetting for NISAR Data](https://storymaps.arcgis.com/stories/cac03522f82f420ab992316bb935a709) (April 2025\)  
+* [Spatial Subsetting for NISAR Data](https://storymaps.arcgis.com/stories/cac03522f82f420ab992316bb935a709) (April 2025\)
+* [NISAR GCOV in ArcGIS Pro 3.7](https://storymaps.arcgis.com/stories/07ec769f0a2f44469c3de3809269d3c0) (July 2026\)
 
 (jpl-nisar-storymaps)=
 ### JPL NISAR StoryMaps
