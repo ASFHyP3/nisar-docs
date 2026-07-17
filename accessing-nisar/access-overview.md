@@ -59,7 +59,7 @@ Map-based web interfaces make it easy to explore data available for a particular
 
 (worldview)=
 ### Worldview 
-[Worldview] is a user-friendly visualization tool that enables interactive browsing, comparison, and animation of over 1,200 NASA satellite data products. 
+[Worldview](https://worldview.earthdata.nasa.gov/) is a user-friendly visualization tool that enables interactive browsing, comparison, and animation of over 1,200 NASA satellite data products. 
 
 <a href="https://worldview.earthdata.nasa.gov/">
 <img id="worldview-page" src="../assets/worldview-page.png" alt="Image of the Worldview landing page">
