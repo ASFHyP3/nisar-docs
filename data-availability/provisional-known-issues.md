@@ -28,6 +28,13 @@ Low-level ripples in the SLC data may occasionally be seen in areas with dark ba
 
 The calibration of the 5 MHz `Frequency B` channel, which is designed for split-spectrum processing, has larger systematic radiometric calibration residuals than the main band `Frequency A`. While there are no radiometric requirements for Frequency B, science team members have found these data to be useful in their own right. In future releases, the project will work to reduce these residuals further.
 
+(provisional-known-issues-sme2)=
+### Soil Moisture Products
+
+The soil moisture products have not yet been fully calibrated, because of the dependence on the existence of fully calibrated lower-level products that have only recently started becoming available, and because of the need to sample a longer time series before some of the metrics needed for calibration/validation (e.g., un-biased root mean squared error, or UBRMSE) can be computed. 
+
+In areas of quad-pol acquisitions, there are three to six gaps across the swath due to the nature of NISAR’s SweepSAR acquisition and the number of time steps used in the soil moisture algorithm. In these gap areas, there will be occasions where not all three algorithms deliver an estimate.
+
 ## BETA and PROVISIONAL Products
 
 The PROVISIONAL products are available for acquisitions starting June 17, 2026. Until the [reprocessing campaign](#validated-reprocessing) is undertaken to release fully validated data from the start of the science phase of the mission onward, only the BETA products will be available for earlier acquisition dates. 
