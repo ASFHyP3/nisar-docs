@@ -167,6 +167,8 @@ Exit Comparison mode by clicking the **Exit Comparison** button on the bottom of
 
 ### Downloading Data
 
+<!-- TODO: clarify that this functionality sends to to Earthdata Search -->
+
 #### Open in Earthdata Search
 Once a day and area have been selected, and you ready to download data, click on the **Data** tab. Select the layer to download from. Note that only one data layer can be downloaded at a time. It can be helpful to click the **Set Area of Interest** checkbox, which will allow a rectangular AOI to be drawn on and passed to Earthdata Search. Click on **Download Via Earthdata Search** to open a new window with all the parameters from Worldview set. For more information on downloading data using Earthdata Search, refer to @download-nisar-data-earthdata-search.
 
@@ -178,8 +180,13 @@ Once a day and area have been selected, and you ready to download data, click on
 Download data by clicking the **Data** tab on the **Layers** panel. Select the data layer you want download, click the checkmark to set an area of interst, and click **Download Via Earthdata Search**. This will open Earthdata Search with all the parameters selected. 
 ```
 
-#### Load into a GIS
-NISAR data can also be loaded into a GIS as a WMS or WMTS service, with WMS being the default. In your GIS, select **Add Layer**, then set the data type to WMS/WMTS.
+### Worldview WMS Layers
+
+Users can interact with Worldview layers as WMS or WMTS services. This allows you to add the NISAR GCOV visualization to any GIS software platforms, web maps, or apps that support WMS services.
+
+#### NISAR GCOV WMS in QGIS
+
+In QGIS, select **Add Layer**, then set the data type to WMS/WMTS.
 
 ```{figure} ../assets/worldview-add-new-wms.png
 :label: worldview-add-new-wms-image
@@ -200,3 +207,11 @@ For more information, see the [GIBS Wiki Page]( https://wiki.earthdata.nasa.gov/
 
 Use the URL 'https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi' in the WMS/WMTS connection and press OK to add to your GIS. 
 ```
+
+#### NISAR GCOV WMS in ArcGIS Pro
+
+<-- TODO: Add content. Reference https://storymaps.arcgis.com/stories/dc2807b444924fc3a76c117a2c909f8b#ref-n-rWzJMt -->
+
+#### NISAR GCOV WMS in ArcGIS Web Maps
+
+<-- TODO: Add content. Reference https://storymaps.arcgis.com/stories/dc2807b444924fc3a76c117a2c909f8b#ref-n-rWzJMt -->
