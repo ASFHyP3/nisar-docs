@@ -165,11 +165,11 @@ Note that you cannot animate nor download data in comparison mode. Exit comparis
 Exit Comparison mode by clicking the **Exit Comparison** button on the bottom of the **Layers** panel. 
 ```
 
-### Downloading Data
+## Downloading Data
 
-<!-- TODO: clarify that this functionality sends you to Earthdata Search -->
+<!-- TODO: clarify that this functionality sends you out to Earthdata Search -->
 
-#### Open in Earthdata Search
+### Open in Earthdata Search
 Once a day and area have been selected, and you ready to download data, click on the **Data** tab. Select the layer to download from. Note that only one data layer can be downloaded at a time. It can be helpful to click the **Set Area of Interest** checkbox, which will allow a rectangular AOI to be drawn on and passed to Earthdata Search. Click on **Download Via Earthdata Search** to open a new window with all the parameters from Worldview set. For more information on downloading data using Earthdata Search, refer to @download-nisar-data-earthdata-search.
 
 ```{figure} ../assets/worldview-download-data.png
@@ -180,11 +180,13 @@ Once a day and area have been selected, and you ready to download data, click on
 Download data by clicking the **Data** tab on the **Layers** panel. Select the data layer you want download, click the checkmark to set an area of interst, and click **Download Via Earthdata Search**. This will open Earthdata Search with all the parameters selected. 
 ```
 
-### Worldview WMS Layers
+## Worldview WMS Layers
 
-Users can interact with Worldview layers as WMS or WMTS services. This allows you to add the NISAR GCOV visualization to any GIS software platforms, web maps, or apps that support WMS services.
+NASA Worldview uses the [Global Imagery Browse Services (GIBS)](https://earthdata.nasa.gov/gibs) to rapidly retrieve its imagery for an interactive browsing experience. While NASA Worldview uses OpenLayers as its mapping library, GIBS imagery, including the NISAR GCOV layer, can also be accessed from GIS software, Google Earth, NASA World Wind, and other geospatial applications.
 
-#### NISAR GCOV WMS in QGIS
+To add any layer served by the GIBS WMS to an application, connect to  https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi  through the application, and select the desired layer to add. Refer to the [GIBS Wiki Page]( https://wiki.earthdata.nasa.gov/display/GIBS/) for more information. <!-- TODO: check to make sure that this is accessible to the public; it's behind EDL, but maybe anyone with an EDL can access it. -->
+
+### NISAR GCOV WMS in QGIS
 
 In QGIS, select **Add Layer**, then set the data type to WMS/WMTS.
 
@@ -198,8 +200,6 @@ Add a new data layer to your GIS with the data type WMS/WMTS.
 
 For data in EPSG:4326 projection, use the URL 'https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi' and add to your project. This will provide access to all imagery available, so either search for the desired layer or select the desired layer in the browser under RTC SAR Backscatter. Since this data collection is temporally dependent, you will need to use the Temporal Controller tool in QGIS or the Time Slider tool in ArcGIS Pro to explore the data through time.
 
-For more information, see the [GIBS Wiki Page]( https://wiki.earthdata.nasa.gov/display/GIBS/).
-
 ```{figure} ../assets/worldview-add-wms-connection.png
 :label: worldview-add-new-wms-image
 :alt: Screenshot of a QGIS window ready to load the GIBS WMS service.   
@@ -208,10 +208,14 @@ For more information, see the [GIBS Wiki Page]( https://wiki.earthdata.nasa.gov/
 Use the URL 'https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi' in the WMS/WMTS connection and press OK to add to your GIS. 
 ```
 
-#### NISAR GCOV WMS in ArcGIS Pro
+%### NISAR GCOV WMS in ArcGIS Pro
 
-<-- TODO: Add content. Reference https://storymaps.arcgis.com/stories/dc2807b444924fc3a76c117a2c909f8b#ref-n-rWzJMt -->
+<!-- TODO: Add content. Reference https://storymaps.arcgis.com/stories/dc2807b444924fc3a76c117a2c909f8b#ref-n-rWzJMt -->
 
-#### NISAR GCOV WMS in ArcGIS Web Maps
+%### NISAR GCOV WMS in ArcGIS Web Maps
 
-<-- TODO: Add content. Reference https://storymaps.arcgis.com/stories/dc2807b444924fc3a76c117a2c909f8b#ref-n-rWzJMt -->
+<!-- TODO: Add content. Reference https://storymaps.arcgis.com/stories/dc2807b444924fc3a76c117a2c909f8b#ref-n-rWzJMt -->
+
+%### NISAR GCOV WMS in Google Earth
+
+<!-- TODO: Add content. -->
