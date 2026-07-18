@@ -15,6 +15,8 @@ NISAR [Level-2 Geocoded Covariance (GCOV)](#gcov-product-overview) data can now 
 (worldview-nisar-gcov)=
 ## NISAR GCOV Layer
 
+<!-- {button}`View NISAR GCOV in Worldview <%TODO: Add URL to Worldview with just the NISAR GCOV layer and shorelines>` -->
+
 NISAR PROVISIONAL GCOV products are displayed as a daily mosaic, and users can click through each day to view the available data. GCOV imagery is displayed using a false-color [RGB decomposition](#worldview-rgb-decomp) to facilitate more intuitive visual interpretation of SAR backscatter data, and the daily mosaics are posted to a [pixel spacing](#worldview-pixel-spacing) of 15.5 meters.
 
 (worldview-pixel-spacing)=
@@ -27,13 +29,25 @@ Where multiple frequencies are available, the higher-resolution frequency is inc
 (worldview-rgb-decomp)=
 ### RGB Decomposition
 
-For GCOV products containing multiple polarimetric channels (dual-pol or quad-pol), the visualization combines co-polarized backscatter (HH or VV) values in the red and blue channels with cross-polarized values (HV or VH) in the green channel. In this false-color scale, vegetated areas appear green; urban and/or sparsely vegetated areas appear orange or yellow; calm water, dry sand, and frozen ground all appear blue; and rough water may appear red. 
+All GCOV products are included in a single visualization layer, even if they are collected using different modes or frequencies. Quad-pol products, which contain all four available polarimetric channels (HH, HV, VH, VV), are colorized using the same approach as dual-pol products (containing HH and HV or VV and VH) to make the mosaic appear more consistent. 
 
-Single-polarization acquisitions, collected mostly in polar regions or over open ocean, are also colorized. Because they only have one available polarization, there is less information to integrate into the false-color visualization. The color bar passes from blue to green to orange to yellow, indicating co-polarized backscatter values from low to high. Calm water or dry soil is still generally blue, and urban areas are still generally yellow, but vegetated areas may exhibit a different color of green/orange than in the dual-pol RGB decomposition for the same area. Wet snow may appear very yellow, while drier snow is more green or blue.
+The single-pol products require a different colorization approach, as they lack multiple polarimetric channels to decompose. The color bar configured for use with single-pol data was designed to mimic the dual-pol colors to the extent possible, but you will notice different color characteristics between images processed using the [dual-pol approach](#rgb-dual-pol) and the [single-pol approach](#rgb-single-pol). 
+
+Refer to @worldview-colorbars for a comparison of the color bars for the dual-pol and single-pol RGB decomposition approaches. 
 
 Note that different land cover types may appear similar to each other in this visualization. Comparing this visualization with other imagery in Worldview may help when interpreting NISAR GCOV data.  
 
-Refer to @worldview-colorbars for a comparison of the color bars for the dual-pol and single-pol RGB decomposition approaches. 
+(rgb-dual-pol)=
+#### Dual-pol Approach
+
+For GCOV products containing multiple polarimetric channels (dual-pol or quad-pol), the visualization combines co-polarized backscatter (HH or VV) values in the red and blue channels with cross-polarized values (HV or VH) in the green channel. In this false-color scale, vegetated areas appear green; urban and/or sparsely vegetated areas appear orange or yellow; calm water, dry sand, and frozen ground all appear blue; and rough water may appear red. 
+
+(rgb-single-pol)=
+#### Single-pol Approach
+
+Single-polarization acquisitions, collected mostly in polar regions or over open ocean, are also colorized. Because they only have one available polarization, there is less information to integrate into the false-color visualization. The color bar passes from blue to green to orange to yellow, indicating co-polarized backscatter values from low to high. 
+
+Calm water or dry soil is still generally blue, and urban areas are still generally yellow, but vegetated areas may exhibit a different color of green/orange than in the dual-pol RGB decomposition for the same area. Wet snow may appear very yellow, while drier snow is more green or blue.
 
 ```{figure} ../assets/worldview-colorbars.png
 :label: worldview-colorbars
@@ -49,7 +63,7 @@ Color bars used in multipolarmetric and single-polarization imagery visualizatio
 
 To add NISAR GCOV data, click on the **Add Layers** in the Layers tab, which will open up a window with all available datasets. Using the search bar, type **NISAR**, which will return a list of available layers associated with the NISAR mission.
 
- Note that SAR data layers are currently only searchable and visible in Geographic (EPSG 4326) projection. 
+While Worldview allows users to change the display to a polar view (Arctic or Antarctic) instead of the default Geographic view (WGS84 coordinate system), you will not be able to search for or display NISAR layers when a polar view setting has been applied. 
 
 ```{figure} ../assets/worldview-add-layers.png
 :label: worldview-add-layers
