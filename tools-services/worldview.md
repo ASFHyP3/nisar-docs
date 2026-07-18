@@ -167,7 +167,7 @@ Exit Comparison mode by clicking the **Exit Comparison** button on the bottom of
 
 ### Downloading Data
 
-<!-- TODO: clarify that this functionality sends to to Earthdata Search -->
+<!-- TODO: clarify that this functionality sends you to Earthdata Search -->
 
 #### Open in Earthdata Search
 Once a day and area have been selected, and you ready to download data, click on the **Data** tab. Select the layer to download from. Note that only one data layer can be downloaded at a time. It can be helpful to click the **Set Area of Interest** checkbox, which will allow a rectangular AOI to be drawn on and passed to Earthdata Search. Click on **Download Via Earthdata Search** to open a new window with all the parameters from Worldview set. For more information on downloading data using Earthdata Search, refer to @download-nisar-data-earthdata-search.
