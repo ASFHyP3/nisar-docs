@@ -7,21 +7,33 @@ short_title: Worldview
 (worldview-overview)=
 ## Worldview
 [NASA Worldview](https://worldview.earthdata.nasa.gov/) is a user-friendly visualization tool that enables interactive browsing and animation of over 1,200 satellite data products. Imagery in Worldviews is powered by NASA's Global Imagery Browse Services (GIBS) service and delivers  global, full-resolution visualizations of satellite imagery.
- 
-(nisar-in-worldview)=
-## NISAR Data in Worldview
-NISAR imagery is available for visualization in Worldview. Where multiple frequencies are available, the higher-resolution frequency is displayed. Regardless of the original source resolution, all products are resampled to 15.5-m pixel spacing.
+
+:::{information}NISAR GCOV Layer Available in Worldview
+NISAR [Level-2 Geocoded Covariance (GCOV)](#gcov-product-overview) data can now be [visualized in Worldview](#worldview-nisar-gcov)! 
+ :::
+
+(worldview-nisar-gcov)=
+## NISAR GCOV Layer
+
+NISAR PROVISIONAL GCOV products are displayed as a daily mosaic, and users can click through each day to view the available data. GCOV imagery is displayed using a false-color [RGB decomposition](#worldview-rgb-decomp) to facilitate more intuitive visual interpretation of SAR backscatter data, and the daily mosaics are posted to a [pixel spacing](#worldview-pixel-spacing) of 15.5 meters.
+
+(worldview-pixel-spacing)=
+### Pixel Spacing
+
+Where multiple frequencies are available, the higher-resolution frequency is included in the visualization (generally [Frequency A](#nisar-frequencies)). Regardless of the pixel spacing of the source GCOV dataset, however, all products are resampled to 15.5-m pixel spacing in the visualization layer.
+
 % TODO zooming/showing the fine resolution of the available imagery, show difference between 10, 20, 80 m resolution areas
 
-### NISAR GCOV 
-Currently, only NISAR [Level-2 Geocoded Covariance (GCOV)](#gcov-product-overview) products are available in Worldview. GCOV imagery is displayed using a false-color RGB decomposition to facilitate more intuitive visual interpretation of SAR backscatter data.
+(worldview-rgb-decomp)=
+### RGB Decomposition
 
-For acquisitions containing multiple polarimetric channels (dual-pol or quad-pol), visualization combines co-polarized backscatter (HH or VV) in the red and blue channels with cross-polarized backscatter (HV or VH) in the green channel. In this false-color scale, calm water, dry sand, and frozen ground appear blue, vegetated areas appear green, and urban and/or sparsely vegetated areas appear orange or yellow.
+For GCOV products containing multiple polarimetric channels (dual-pol or quad-pol), the visualization combines co-polarized backscatter (HH or VV) values in the red and blue channels with cross-polarized values (HV or VH) in the green channel. In this false-color scale, vegetated areas appear green; urban and/or sparsely vegetated areas appear orange or yellow; calm water, dry sand, and frozen ground all appear blue; and rough water may appear red. 
 
-Single-polarization acquisitions, primarily collected in polar regions or over open ocean, are also colorized. With only one polarization channel available, however, the visualization provides less information than dual-pol or quad-pol composites. The color bar progresses from blue to green to orange to yellow, representing co-polarized backscatter values from low to high. In this presentation, water or dry soil still generally appears blue, and urban areas still typically appear yellow. However, vegetated areas may exhibit a different green/orange color than in the dual-pol RGB decomposition for the same area. Wet snow may appear very yellow, while drier snow is generally greener or bluer.
+Single-polarization acquisitions, collected mostly in polar regions or over open ocean, are also colorized. Because they only have one available polarization, there is less information to integrate into the false-color visualization. The color bar passes from blue to green to orange to yellow, indicating co-polarized backscatter values from low to high. Calm water or dry soil is still generally blue, and urban areas are still generally yellow, but vegetated areas may exhibit a different color of green/orange than in the dual-pol RGB decomposition for the same area. Wet snow may appear very yellow, while drier snow is more green or blue.
 
+Note that different land cover types may appear similar to each other in this visualization. Comparing this visualization with other imagery in Worldview may help when interpreting NISAR GCOV data.  
 
-A comparison of the multipolametric and single-polarization color bars can be seen in (@worldview-colorbars). 
+Refer to @worldview-colorbars for a comparison of the color bars for the dual-pol and single-pol RGB decomposition approaches. 
 
 ```{figure} ../assets/worldview-colorbars.png
 :label: worldview-colorbars
@@ -30,9 +42,6 @@ A comparison of the multipolametric and single-polarization color bars can be se
 
 Color bars used in multipolarmetric and single-polarization imagery visualization for NISAR GCOV products in Worldview. 
 ```
-
-Note that different land cover types may appear similar to each other in this visualization. Comparing this visualization with other imagery in Worldview may help when interpreting NISAR GOV data.  
-
 
 ## Using NISAR Data in Worldview
 
@@ -75,7 +84,9 @@ The layers panel allows for toggling on and off of each layer. This can be done 
 You can select a desired base layer in the Base Layers menu, which include default options with [Moderate Resolution Imaging Spectroradiometer (MODIS)](https://www.earthdata.nasa.gov/data/instruments/modis), [Visible Infrared Imaging Radiometer Suite (VIIRS)](https://www.earthdata.nasa.gov/data/instruments/viirs), and [Ocean Color Instrument (OCI)](https://www.earthdata.nasa.gov/data/instruments/oci) data. Learn more about the base layer options in this [Earthdata Forum post](https://forum.earthdata.nasa.gov/viewtopic.php?t=5228). For the purposes of this documentation, we will use MODIS v6.1.STD as our base layer.
 
 ### Exploring NISAR Data
+
 #### Time Slider Tool
+
 Once NISAR data are loaded into Worldview, search for available data temporally by using the time slider tool. As a default, an arrow click steps through time one day at a time. This can be useful when determining when there are data acquisitions over an area of interest. 
 
 Once a single day of data acquisition has been established, you can customize the time slider tool to step through time in a custom increment. Click the **1 Day** text above the time slider arrows, and select **Custom** from the pop-up menu.  By adjusting the Custom Interval Selector to 12 days, you can explore data acquired each cycle. This allows for quick access to multiple available acquisitions over an area of interest. 
