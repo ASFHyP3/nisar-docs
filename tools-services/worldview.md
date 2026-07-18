@@ -8,7 +8,7 @@ short_title: Worldview
 ## Worldview
 [NASA Worldview](https://worldview.earthdata.nasa.gov/) is a user-friendly visualization tool that enables interactive browsing and animation of over 1,200 satellite data products. Imagery in Worldviews is powered by NASA's Global Imagery Browse Services (GIBS) service and delivers  global, full-resolution visualizations of satellite imagery.
 
-:::{information}NISAR GCOV Layer Available in Worldview
+:::{important}NISAR GCOV Layer Available in Worldview
 NISAR [Level-2 Geocoded Covariance (GCOV)](#gcov-product-overview) data can now be [visualized in Worldview](#worldview-nisar-gcov)! 
  :::
 
