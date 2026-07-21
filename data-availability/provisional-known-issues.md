@@ -38,7 +38,7 @@ Users will find that the L-SAR products using calibration modes in Track 161/174
 
 ### 40 MHz Banding
 
-40 MHz products in joint mode appear to have residuals radiometric bands that are larger than typical.  They are still within requirements, but are visually noticeable.  The team is working on understanding this issue.
+40 MHz products in joint mode appear to have residual radiometric bands that are larger than typical. They are still within requirements, but are visually noticeable. The NISAR team is working on understanding this issue.
 
 (provisional-known-issues-sme2)=
 ### Soil Moisture Products
