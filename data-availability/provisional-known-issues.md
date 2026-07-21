@@ -30,7 +30,7 @@ The calibration of the 5 MHz `Frequency B` channel, which is designed for split-
 
 ### Incomplete L0B Products
 
-Users will find some products were generated from incomplete L0B datasets, due to missing data in the downlink (due to weather and other capture issues).  The quality flags in the L0B data quality products identify where these data issues occur.  We have chosen to release the higher-level products since some users may find them useful, and the issues are ephemeral, so difficult to track in advance.
+Users will find some products were generated from incomplete L0B datasets, due to missing data in the downlink caused by weather and other capture issues.  The quality flags in the L0B data quality products identify where these data issues occur.  We have chosen to release the higher-level products since some users may find them useful, and the issues are ephemeral, so difficult to track in advance.
 
 ### Diagnostic Mode Frames
 
