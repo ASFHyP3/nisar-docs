@@ -6,7 +6,7 @@ short_title: Known Issues
 (provisional-known-issues)=
 ## Provisional Product Known Issues
 
-The PROVISIONAL products [released in July 2026](#nisar-provisional-data-july) are calibrated and have undergone validation at a limited set of sites around the world. These data are designated as PROVISIONAL pending more complete validation over larger areas around the globe. The Provisional products generally meet [radiometric and geolocation requirements](#tbl:science-traceability-matrix-table) in lower-latitude areas where ionospheric variability is low. 
+The PROVISIONAL products [released in July 2026](#nisar-provisional-data-july) are calibrated and have undergone validation at a limited set of sites around the world. These data are designated as PROVISIONAL pending more complete validation over larger areas around the globe. The Provisional products generally meet radiometric and geolocation requirements in lower-latitude areas where ionospheric variability is low. 
 
 These products, processed using the [NISAR Composite Release ID (CRID) P05023](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid), are a significant improvement over the [pre-calibration BETA products](#nisar-sample-data-feb) released in February 2026, and most of the [known issues associated with the BETA products](./product-known-issues.md) have been resolved. There are, however, a few known issues with the PROVISIONAL products that users should be aware of. 
 
@@ -27,6 +27,18 @@ Low-level ripples in the SLC data may occasionally be seen in areas with dark ba
 ### Frequency B Calibration
 
 The calibration of the 5 MHz `Frequency B` channel, which is designed for split-spectrum processing, has larger systematic radiometric calibration residuals than the main band `Frequency A`. While there are no radiometric requirements for Frequency B, science team members have found these data to be useful in their own right. In future releases, the project will work to reduce these residuals further.
+
+### Incomplete L0B Products
+
+Users will find some products were generated from incomplete L0B datasets, due to missing data in the downlink caused by weather and other capture issues.  The quality flags in the L0B data quality products identify where these data issues occur. The higher-level products generated from these incomplete L0B are included in the archive, since some users may still find them useful. Because the issues are ephemeral, they are difficult to track in advance.
+
+### Diagnostic Mode Frames
+
+Users will find that the L-SAR products using calibration modes in Track 161/174, 161/175, 169/090, 169/091 are not usable. This will be rectified in August 2026.
+
+### Joint Mode 40 MHz Banding
+
+40 MHz products in joint mode appear to have residual radiometric bands that are larger than typical. They are still within requirements, but are visually noticeable. The NISAR team is working on understanding this issue.
 
 (provisional-known-issues-sme2)=
 ### Soil Moisture Products
