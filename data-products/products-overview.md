@@ -54,6 +54,8 @@ Additional Level 3 and 4 products will be produced by the NISAR science team, bu
 
 Level 0 products are unprocessed instrument data. L0A products are the received raw data, which are archived for reference but are not of use to the scientific community. L0B products have been processed to remove transmission artifacts, and are the starting point for processing all additional mission products. They are generally only of interest to SAR scientists.
 
+Users will find some products were generated from incomplete L0B datasets, due to missing data in the downlink (due to weather and other capture issues).  The quality flags in the L0B data quality products identify where these data issues occur.  We have chosen to release the higher-level products since some users may find them useful, and the issues are ephemeral, so difficult to track in advance.
+
 - The [Radar Raw Signal Data (RRSD)](#rrsd-product-overview) L0B product contains corrected, aligned radar pulse data.
 
 (level-1-range-doppler-products)=
