@@ -26,7 +26,7 @@ The PROVISIONAL products are generated using the [NISAR Composite Release ID (CR
 
 The science team has identified a limited set of NISAR frames that will be used to produce deeper time series backward in time to continue with time-series validation work. These products will also enable community access to longer NISAR time series for tool development, as they will extend back in time further than June 17. These products will be included in the PROVISIONAL collections as they are processed.
 
-Users will find that the L-SAR products using calibration modes in Track 161/174, 161/175, 169/090, 169/091 are not useable.   This will be rectified in August 2026.
+Users will find that the L-SAR products using calibration modes in Track 161/174, 161/175, 169/090, 169/091 are not usable. This will be rectified in August 2026.
 
 (nisar-sample-data-feb)=
 ## NISAR BETA Data: February 2026
