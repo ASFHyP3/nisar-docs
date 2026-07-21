@@ -36,7 +36,7 @@ Users will find some products were generated from incomplete L0B datasets, due t
 
 Users will find that the L-SAR products using calibration modes in Track 161/174, 161/175, 169/090, 169/091 are not usable. This will be rectified in August 2026.
 
-### 40 MHz Banding
+### Joint Mode 40 MHz Banding
 
 40 MHz products in joint mode appear to have residual radiometric bands that are larger than typical. They are still within requirements, but are visually noticeable. The NISAR team is working on understanding this issue.
 
