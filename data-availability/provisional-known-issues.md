@@ -28,17 +28,17 @@ Low-level ripples in the SLC data may occasionally be seen in areas with dark ba
 
 The calibration of the 5 MHz `Frequency B` channel, which is designed for split-spectrum processing, has larger systematic radiometric calibration residuals than the main band `Frequency A`. While there are no radiometric requirements for Frequency B, science team members have found these data to be useful in their own right. In future releases, the project will work to reduce these residuals further.
 
-### 40 MHz Banding
+### Incomplete L0B Products
 
-40 MHz products in joint mode appear to have residuals radiometric bands that are larger than typical.  They are still within requirements, but are visually noticeable.  The team is working on understanding this issue.
+Users will find some products were generated from incomplete L0B datasets, due to missing data in the downlink (due to weather and other capture issues).  The quality flags in the L0B data quality products identify where these data issues occur.  We have chosen to release the higher-level products since some users may find them useful, and the issues are ephemeral, so difficult to track in advance.
 
 ### Diagnostic Mode Frames
 
 Users will find that the L-SAR products using calibration modes in Track 161/174, 161/175, 169/090, 169/091 are not usable. This will be rectified in August 2026.
 
-### Incomplete L0B Products
+### 40 MHz Banding
 
-Users will find some products were generated from incomplete L0B datasets, due to missing data in the downlink (due to weather and other capture issues).  The quality flags in the L0B data quality products identify where these data issues occur.  We have chosen to release the higher-level products since some users may find them useful, and the issues are ephemeral, so difficult to track in advance.
+40 MHz products in joint mode appear to have residuals radiometric bands that are larger than typical.  They are still within requirements, but are visually noticeable.  The team is working on understanding this issue.
 
 (provisional-known-issues-sme2)=
 ### Soil Moisture Products
