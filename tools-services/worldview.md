@@ -119,19 +119,19 @@ The GCOV layer is zoomed to the point where users can see the full 15.5-m pixel 
 
 ### Adding NISAR Data 
 
-To add NISAR GCOV data, click on the **Add Layers** in the Layers tab, which will open up a window with all available datasets. Using the search bar, type **NISAR**, which will return a list of available layers associated with the NISAR mission.
+1. Click on the **Add Layers** in the Layers tab to open a window providing access to all available datasets and type **NISAR** into the search bar to return a list of available layers associated with the NISAR mission (@worldview-add-layers-image).
 
 ```{figure} ../assets/worldview-add-layers.png
 :label: worldview-add-layers-image
 :alt: Screenshot highlighting the **Add Layers** button and the search bar. 
 :align: center
 
-Search for NISAR products in Worldview by adding layers. 
+Click the `Add Layers` button and enter `NISAR` in the search bar to find available NISAR layers and add them to Worldview.
 ```
 
-While Worldview allows users to change the display to a polar view (Arctic or Antarctic) instead of the default Geographic view (WGS84 coordinate system), you will not be able to search for or display NISAR layers when a polar view setting has been applied. 
+_While Worldview allows users to change the display to a polar view (Arctic or Antarctic) instead of the default Geographic view (WGS84 coordinate system), note that you will not be able to search for or display NISAR layers when a polar view setting has been applied._
 
-Click on the data type you want to add. You can either select the checkbox next to the data layer in the results panel or the **Add Layer** button in the layer explanation panel.  
+2. Click on the data type you want to add. You can either select the checkbox next to the data layer in the results panel or click the **Add Layer** button in the layer explanation panel (@worldview-add-nisar-layer-image).  
 
 ```{figure} ../assets/worldview-add-nisar-layer.png
 :label: worldview-add-nisar-layer-image
@@ -141,9 +141,11 @@ Click on the data type you want to add. You can either select the checkbox next 
 Add layers to the map using either the **Add Layer** button or by clicking the checkbox next to the desired data layer. 
 ```
 
-Click the **X** on the top right of the pop-up to see the data listed on in the **Layers** panel. You can click the checkbox next to **Group Similar Layers** to help organize data layers, which can be helpful if comparing multiple data types.
+3. Click the **X** on the top right of the pop-up to close the search window and view the layers.
 
-Above the newly added data in the layer panel, you can toggle on/off **Place Labels**, **Coastlines/Borders/Roads** and **Coastlines** layers to help locate and orient yourself while exploring data. 
+- You can click the checkbox next to **Group Similar Layers** to help organize data layers, which can be helpful if comparing multiple data types.
+
+- Above the newly added data in the layer panel, you can toggle on/off **Place Labels**, **Coastlines/Borders/Roads** and **Coastlines** layers to help locate and orient yourself while exploring data (@worldview-layers-panel-image). 
 
 ```{figure} ../assets/worldview-layers-panel.png
 :label: worldview-layers-panel-image
