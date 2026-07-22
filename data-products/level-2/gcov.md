@@ -13,17 +13,37 @@ Geocoded Polarimetric Covariance (GCOV) products provide calibrated backscatter 
 
 Due to the side-looking nature of NISAR, topography can significantly affect the magnitude of backscatter, with areas facing the sensor becoming artificially “brighter” (returning higher backscatter) than expected, which biases covariance measurements. To mitigate the effect of topography, an area-based RTC is applied to the covariance terms, normalizing the backscatter. The reference digital elevation model (DEM) for processing and RTC is based on the [Copernicus 30-m and 90-m DEM](https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM). These normalized terms are then geocoded to the output grid using area-based adaptive multi-looking.
 
-GCOV products are projected to the appropriate UTM zone for their location and have a pixel spacing of 10 or 20 meters, depending on the acquisition location. They can be used directly in geospatial analysis platforms and workflows. Each product includes a covariance [dataset](#h5-datasets) for each polarization available from the acquisition.
+GCOV products are projected to the appropriate UTM zone for their location and have a [pixel spacing](#gcov-pixel-spacing) of 10 or 20 meters, depending on the acquisition location. They can be used directly in geospatial analysis platforms and workflows. Each product includes a covariance [dataset](#h5-datasets) for each polarization available from the acquisition.
 
 ## Product Specification
 
 A complete description of NISAR GCOV products is available in @l2_gcov_product_specs2025.
 
+(gcov-pixel-spacing)=
+## Pixel Spacing
+
+Most GCOV products for acquisitions over land are posted to either 10-m or 20-m pixel spacing for Frequency A acquisitions, and Frequency B datasets have a pixel spacing of 80 meters. The pixel spacing depends on the acquisition mode used, as indicated in @tbl:gcov-pixel-spacing.
+
+:::{table} NISAR GCOV Pixel Spacing by L-Band Acquisition Bandwidth 
+:label: tbl:gcov-pixel-spacing
+
+| L-band Acquisition Bandwidth (MHz) | RSLC Azimuth Pixel Spacing (m) | RSLC Range Pixel Spacing (m) | GCOV Pixel Spacing (m) |
+|:----------------------------------:|:------------------------------:|:----------------------------:|:----------------------:|
+|                 5                  |               ~5               |             ~25              |           80           |
+|                 20                 |               ~5               |            ~6.25             |           20           |
+|                 40                 |               ~5               |            ~3.12             |           10           |
+|                 77                 |               ~5               |            ~1.56             |           20           |
+::::
+
 ## Data Layers
 
-A GCOV data product includes the following raster datasets. Complete descriptions of these dataset layers are available in @l2_gcov_product_specs2025 [Section 4.3].
+The primary datasets of interest in the GCOV data products are the covariance terms. Complete descriptions of these dataset layers are available in @l2_gcov_product_specs2025 [Section 4.3]. The frequencies and polarizations available in a particular GCOV data product will vary based on the acquisition mode used to collect the data.
 
 ### Geocoded Polarimetric Covariance Terms
+
+The primary data elements of the GCOV product are the images of the geocoded polarimetric covariance terms. Refer to @nisarPolarimetry to learn more about NISAR polarimetry. Not all products will include all possible terms from the covariance matrix, as the polarimetric channels available will depend on the acquisition mode. 
+
+The covariance datasets available in the GCOV products will be a selection of the following:
 
 `/science/LSAR/GCOV/grids/frequency[A|B]/HHHH` \
 `/science/LSAR/GCOV/grids/frequency[A|B]/HVHV` \
@@ -39,13 +59,9 @@ A GCOV data product includes the following raster datasets. Complete description
 `/science/LSAR/GCOV/grids/frequency[A|B]/RVRV` \
 `/science/LSAR/GCOV/grids/frequency[A|B]/RHRV`
 
-The primary data elements of the GCOV product are the images of the geocoded polarimetric covariance terms. Visit @nisarPolarimetry to learn more about NISAR polarimetry.
-
-The diagonal terms shown in @gcov-matrix (HHHH, HVHV, VVVV, VHVH, RHRH, RVRV) are real-valued and describe the intensity of the radar backscatter for the given polarization.
+The diagonal terms shown in @gcov-matrix (HHHH, HVHV, VVVV, VHVH, RHRH, RVRV) are real-valued and describe the intensity of the radar backscatter for the given polarization. They are radiometrically terrain corrected, and can be used as you would any other SAR Normalized Radar Backsactter (NRB) or Radiometrically Terrain Corrected (RTC) product. 
 
 The remaining terms shown in @gcov-matrix (HHHV, HHVH, HHVV, HVVH, HVVV, VHVV, RHRV) are complex-valued and describe the intensity and phase between different polarizations. These off-diagonal terms are only included for quad-pol data acquisitions. Users who require off-diagonal values for dual-pol acquisitions will need to generate these layers manually from [GSLC](#gslc-product-overview) products. <!-- TODO: Link to the OSL notebook once it's available: There are [workflows available](link to OSL notebook or other reference) for generating off-diagonal terms for dual-pol acquisitions from [GSLC](#gslc-product-overview) products if you need these values for your application.-->
-
-The frequencies and polarizations available in a particular GCOV data product will vary based on the acquisition mode used to collect the data.
 
 ```{figure} ../../assets/nisar-gcov.png
 :label: gcov-matrix
