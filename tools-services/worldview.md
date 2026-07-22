@@ -33,7 +33,7 @@ All GCOV products are included in a single visualization layer, even if they are
 
 The single-pol products require a different colorization approach, as they lack multiple polarimetric channels to decompose. The color bar configured for use with single-pol data was designed to mimic the dual-pol colors to the extent possible, but you will notice different color characteristics between images processed using the [dual-pol approach](#rgb-dual-pol) and the [single-pol approach](#rgb-single-pol). 
 
-Refer to @worldview-colorbars for a comparison of the color bars for the dual-pol and single-pol RGB decomposition approaches. 
+Refer to @worldview-colorbars-image for a comparison of the color bars for the dual-pol and single-pol RGB decomposition approaches. 
 
 Note that different land cover types may appear similar to each other in this visualization. Comparing this visualization with other imagery in Worldview may help when interpreting NISAR GCOV data.  
 
@@ -54,7 +54,7 @@ Calm water or dry soil is still generally blue, and urban areas are still genera
 :alt: Comparison of multipolarimetric and single-polarization color bars used in Worldview.  
 :align: center
 
-Color bars used in multipolarmetric and single-polarization imagery visualization for NISAR GCOV products in Worldview. 
+Color bars used in dual-polarization (top) and single-polarization (bottom) imagery visualization for NISAR GCOV products in Worldview. 
 ```
 
 ## Using NISAR Data in Worldview
@@ -198,14 +198,14 @@ In QGIS, select **Add Layer**, then set the data type to WMS/WMTS.
 Add a new data layer to your GIS with the data type WMS/WMTS. 
 ```
 
-For data in EPSG:4326 projection, use the URL 'https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi' and add to your project. This will provide access to all imagery available, so either search for the desired layer or select the desired layer in the browser under RTC SAR Backscatter. Since this data collection is temporally dependent, you will need to use the Temporal Controller tool in QGIS or the Time Slider tool in ArcGIS Pro to explore the data through time.
+For data in EPSG:4326 projection, use the URL `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi` and add to your project. This will provide access to all imagery available, so either search for the desired layer or select the desired layer in the browser under RTC SAR Backscatter. Since this data collection is temporally dependent, you will need to use the Temporal Controller tool in QGIS or the Time Slider tool in ArcGIS Pro to explore the data through time.
 
 ```{figure} ../assets/worldview-add-wms-connection.png
-:label: worldview-add-new-wms-image
+:label: worldview-add-wms-connection-image
 :alt: Screenshot of a QGIS window ready to load the GIBS WMS service.   
 :align: center
 
-Use the URL 'https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi' in the WMS/WMTS connection and press OK to add to your GIS. 
+Use the URL `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi` in the WMS/WMTS connection and press OK to add to your GIS. 
 ```
 
 %### NISAR GCOV WMS in ArcGIS Pro
