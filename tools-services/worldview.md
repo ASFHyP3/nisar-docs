@@ -121,8 +121,6 @@ The GCOV layer is zoomed to the point where users can see the full 15.5-m pixel 
 
 To add NISAR GCOV data, click on the **Add Layers** in the Layers tab, which will open up a window with all available datasets. Using the search bar, type **NISAR**, which will return a list of available layers associated with the NISAR mission.
 
-While Worldview allows users to change the display to a polar view (Arctic or Antarctic) instead of the default Geographic view (WGS84 coordinate system), you will not be able to search for or display NISAR layers when a polar view setting has been applied. 
-
 ```{figure} ../assets/worldview-add-layers.png
 :label: worldview-add-layers-image
 :alt: Screenshot highlighting the **Add Layers** button and the search bar. 
@@ -130,6 +128,8 @@ While Worldview allows users to change the display to a polar view (Arctic or An
 
 Search for NISAR products in Worldview by adding layers. 
 ```
+
+While Worldview allows users to change the display to a polar view (Arctic or Antarctic) instead of the default Geographic view (WGS84 coordinate system), you will not be able to search for or display NISAR layers when a polar view setting has been applied. 
 
 Click on the data type you want to add. You can either select the checkbox next to the data layer in the results panel or the **Add Layer** button in the layer explanation panel.  
 
