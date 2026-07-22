@@ -49,23 +49,6 @@ Users can click through the layer day by day, or use the `Custom Interval Select
 Click on the interval indicator (default is `1 DAY`), and select the `CUSTOM` option to set the interval to 12 days. 
 ```
 
-(worldview-pixel-spacing)=
-### Pixel Spacing
-
-Where multiple frequencies are available, the higher-resolution frequency is included in the visualization (generally [Frequency A](#nisar-frequencies)). Over land, most GCOV Frequency A datasets have a pixel spacing of 10 or 20 meters, while Frequency B datasets have a pixel spacing of 80 meters. Regardless of the pixel spacing of the source GCOV dataset, however, all products are resampled to 15.5-m pixel spacing in the visualization layer.
-
-Because the pixel spacing of the visualization is very close to the pixel spacing of the Frequency A products, it generally gives a very good indication of the level of detail represented in the source rasters. 
-
-```{figure} ../assets/worldview-full-zoom.png
-:label: worldview-full-zoom-image
-:alt: Image of GCOV layer zoomed to view full 15.5-m pixel spacing.  
-:align: center
-
-The GCOV layer is zoomed to the point where users can see the full 15.5-m pixel spacing of the imagery in an area where the source GCOV rasters have 10-m pixel spacing.
-```
-
-% TODO zooming/showing the fine resolution of the available imagery, show difference between 10, 20, 80 m resolution areas
-
 (worldview-rgb-decomp)=
 ### RGB Decomposition
 
@@ -95,6 +78,37 @@ Calm water or dry soil is still generally blue, and urban areas are still genera
 :align: center
 
 Color bars used in dual-polarization (top) and single-polarization (bottom) imagery visualization for NISAR GCOV products in Worldview. 
+```
+
+(worldview-pixel-spacing)=
+### Pixel Spacing
+
+Where multiple frequencies are available, the higher-resolution frequency is included in the visualization (generally [Frequency A](#nisar-frequencies)). Over land, most GCOV Frequency A datasets have a pixel spacing of 10 or 20 meters, while Frequency B datasets have a pixel spacing of 80 meters. Regardless of the pixel spacing of the source GCOV dataset, however, all products are resampled to 15.5-m pixel spacing in the visualization layer.
+
+Because the pixel spacing of the visualization is very close to the pixel spacing of the Frequency A products, it generally gives a very good indication of the level of detail represented in the source rasters. Take a look at example products zoomed to the full resolution of the imagery for areas with source rasters posted to [10-m](#worldview-full-zoom-10-image), [20-m](#worldview-full-zoom-20-image), and [80-m](#worldview-full-zoom-80-image) pixel spacing. 
+
+```{figure} ../assets/worldview-full-zoom-10m.png
+:label: worldview-full-zoom-10-image
+:alt: Image of GCOV layer from 10-m source raster zoomed to view full 15.5-m pixel spacing.
+:align: center
+
+The GCOV layer is zoomed to the point where users can see the full 15.5-m pixel spacing of the imagery in an area where the source GCOV rasters have 10-m pixel spacing.
+```
+
+```{figure} ../assets/worldview-full-zoom-20m.png
+:label: worldview-full-zoom-20-image
+:alt: Image of GCOV layer from 20-m source raster zoomed to view full 15.5-m pixel spacing.
+:align: center
+
+The GCOV layer is zoomed to the point where users can see the full 15.5-m pixel spacing of the imagery in an area where the source GCOV rasters have 20-m pixel spacing.
+```
+
+```{figure} ../assets/worldview-full-zoom-80m.png
+:label: worldview-full-zoom-80-image
+:alt: Comparison of 10-m and 80-m source rasters in the visualization
+:align: center
+
+The GCOV layer is zoomed to the point where users can see the full 15.5-m pixel spacing of the imagery in an area with different acquisition modes collected on different dates. The image on the left shows the visualization when the source raster is a dual-pol image with 10-m pixel spacing, and the image on the right shows the visualization when the source raster is a single-pol image with 80-m pixel spacing.
 ```
 
 ## Using NISAR Data in Worldview
