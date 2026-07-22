@@ -123,7 +123,9 @@ The S-band SAR (S-SAR) instrument, developed in a collaboration between NASA and
 
 NISAR is equipped to acquire data in two slightly different frequencies. @tbl:areas-html summarizes the Frequency A and the Frequency B settings that define the acquisition modes. 
 
-Frequency B data is collected primarily for use in atmospheric corrections, but many NISAR products include datasets for both Frequency A and Frequency B data. Frequency B datasets are generally posted at a coarser pixel spacing than Frequency A datasets.
+Frequency A is the primary frequency used for generating scientific products, while Frequency B data is collected primarily for use in atmospheric corrections. Many NISAR products include datasets for both Frequency A and Frequency B data, and some users may find the Frequency B data useful in its own right. 
+
+Frequency B datasets are generally posted at a coarser pixel spacing than Frequency A datasets, so analysis workflows requiring higher resolution are better served by the Frequency A data. The larger pixels of Frequency B datasets result in them being much smaller files, which take less time to download and render, making them useful for regional analysis workflows or a quick look at the data.
 
 :::{table} NISAR acquisition modes
 :label: tbl:areas-html
