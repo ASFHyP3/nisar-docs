@@ -20,7 +20,16 @@ Refer to the @tools-services-roadmap to check the status of these development ef
 
 NASA's [Worldview](https://www.earthdata.nasa.gov/data/tools/worldview) is a powerful visualization platform, allowing users to browse hundreds of different NASA datasets. Users can view the extent of available acquisitions through time, compare different datasets or acquisition dates, and generate time series animations. 
 
-Development is underway for a visualization of the NISAR GCOV products, which we expect to be available on the [Worldview](https://worldview.earthdata.nasa.gov/) platform in July, 2026.
+:::{important}NISAR GCOV Layers Available in Worldview!
+
+NISAR [PROVISIONAL](#nisar-provisional-data-july) [Geocoded Polarimetric Covariance (GCOV)](#gcov-product-overview) layers are now available to explore on [Worldview](https://worldview.earthdata.nasa.gov/)!
+
+<a href="https://worldview.earthdata.nasa.gov/?v=-283.0791525473933,-136.9755200581828,233.8728850905137,117.46181096672454&l=Reference_Labels_15m(hidden),Reference_Features_15m(hidden),Coastlines_15m,NISAR_L2_Geocoded_Polarimetric_Covariance_12Day,NISAR_L2_Geocoded_Polarimetric_Covariance,Land_Water_Map(opacity=0.77)&lg=true&t=2026-07-17-T13%3A26%3A54Z">
+<img id="worldview-nisar-12-day-image" src="../assets/worldview-nisar-12-day.png" alt="Image of NISAR datasets in Worldview">
+</a>
+
+[Learn more about the layers and how to leverage visualization tools in Worldview.](#worldview-overview)
+:::
 
 <a href="https://www.earthdata.nasa.gov/data/tools/worldview">
 <img id="ed-worldview-image" src="../assets/ed-worldview.png" alt="Click to open https://www.earthdata.nasa.gov/data/tools/worldview">
