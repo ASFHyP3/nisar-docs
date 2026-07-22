@@ -72,6 +72,7 @@ project:
     - title: Resources
       children:
         - file: resources/earthdata-forum.md
+        - file: resources/snwg.md
         - file: resources/webinars.md
         - file: tutorials/mission-homepage-tutorials.md
         - file: resources/documents.md
