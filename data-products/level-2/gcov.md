@@ -19,22 +19,6 @@ GCOV products are projected to the appropriate UTM zone for their location and h
 
 A complete description of NISAR GCOV products is available in @l2_gcov_product_specs2025.
 
-(gcov-pixel-spacing)=
-## Pixel Spacing
-
-Most GCOV products for acquisitions over land are posted to either 10-m or 20-m pixel spacing for Frequency A acquisitions, and Frequency B datasets have a pixel spacing of 80 meters. The pixel spacing depends on the acquisition mode used, as indicated in @tbl:gcov-pixel-spacing.
-
-:::{table} NISAR GCOV Pixel Spacing by L-Band Acquisition Bandwidth 
-:label: tbl:gcov-pixel-spacing
-
-| L-band Acquisition Bandwidth (MHz) | RSLC Azimuth Pixel Spacing (m) | RSLC Range Pixel Spacing (m) | GCOV Pixel Spacing (m) |
-|:----------------------------------:|:------------------------------:|:----------------------------:|:----------------------:|
-|                 5                  |               ~5               |             ~25              |           80           |
-|                 20                 |               ~5               |            ~6.25             |           20           |
-|                 40                 |               ~5               |            ~3.12             |           10           |
-|                 77                 |               ~5               |            ~1.56             |           20           |
-::::
-
 ## Data Layers
 
 The primary datasets of interest in the GCOV data products are the covariance terms. Complete descriptions of these dataset layers are available in @l2_gcov_product_specs2025 [Section 4.3]. The frequencies and polarizations available in a particular GCOV data product will vary based on the acquisition mode used to collect the data.
@@ -91,6 +75,23 @@ The mask layer provides information about the averaging ensemble of radar sample
 `/science/LSAR/GCOV/grids/frequency[A|B]/rtcGammaToSigmaFactor`
 
 The RTC Gamma-to-Sigma factor provides factors to normalize the backscatter normalization convention of the GCOV matrix from gamma0 to sigma0.
+
+(gcov-pixel-spacing)=
+## Pixel Spacing
+
+Most GCOV products for acquisitions over land are posted to either 10-m or 20-m pixel spacing for [Frequency A](#nisar-frequencies) acquisitions, and [Frequency B](#nisar-frequencies) datasets have a pixel spacing of 80 meters. The pixel spacing depends on the acquisition bandwidth used, as indicated in @tbl:gcov-pixel-spacing.
+
+:::{table} NISAR GCOV Pixel Spacing by L-Band Acquisition Bandwidth 
+:label: tbl:gcov-pixel-spacing
+
+| L-Band Acquisition Bandwidth (MHz) | RSLC Azimuth Pixel Spacing (m) | RSLC Range Pixel Spacing (m) | GCOV Pixel Spacing (m) |
+|:----------------------------------:|:------------------------------:|:----------------------------:|:----------------------:|
+|                 5                  |               ~5               |             ~25              |           80           |
+|                 20                 |               ~5               |            ~6.25             |           20           |
+|                 40                 |               ~5               |            ~3.12             |           10           |
+|                 77                 |               ~5               |            ~1.56             |           20           |
+::::
+
 
 ## Naming Convention
 
