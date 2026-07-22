@@ -131,7 +131,11 @@ Click the `Add Layers` button and enter `NISAR` in the search bar to find availa
 
 _While Worldview allows users to change the display to a polar view (Arctic or Antarctic) instead of the default Geographic view (WGS84 coordinate system), note that you will not be able to search for or display NISAR layers when a polar view setting has been applied._
 
-2. Click on the data type you want to add. You can either select the checkbox next to the data layer in the results panel or click the **Add Layer** button in the layer explanation panel (@worldview-add-nisar-layer-image).  
+2. Click on the data type you want to add. You can either select the checkbox next to the data layer(s) in the results panel or click the **Add Layer** button in the layer explanation panel (@worldview-add-nisar-layer-image).
+
+    - NISAR GCOV layers are listed under the `RTC SAR Backscatter` category
+    - NISAR GCOV layers are named `NISAR Normalized Radar Backscatter`
+    - There are layers available for [daily mosaics](#worldview-daily-mosaics) and [12-day mosaics](#worldview-12-day-mosaics)
 
 ```{figure} ../assets/worldview-add-nisar-layer.png
 :label: worldview-add-nisar-layer-image
@@ -143,19 +147,22 @@ Add layers to the map using either the **Add Layer** button or by clicking the c
 
 3. Click the **X** on the top right of the pop-up to close the search window and view the layers.
 
+#### Organizing Layers
+
 - You can click the checkbox next to **Group Similar Layers** to help organize data layers, which can be helpful if comparing multiple data types.
 
 - Above the newly added data in the layer panel, you can toggle on/off **Place Labels**, **Coastlines/Borders/Roads** and **Coastlines** layers to help locate and orient yourself while exploring data (@worldview-layers-panel-image). 
 
-```{figure} ../assets/worldview-layers-panel.png
-:label: worldview-layers-panel-image
-:alt: Screenshot describing the layer panel options. 
-:align: center
+    ```{figure} ../assets/worldview-layers-panel.png
+    :label: worldview-layers-panel-image
+    :alt: Screenshot describing the layer panel options. 
+    :align: center
+    
+    The layers panel allows for toggling on and off of each layer. This can be done by clicking on the eye icon. In this screenshot, all the reference layers are on, displaying place labels, borders, and coastlines. On the bottom of the panel, the **Group Similar Layers** checkbox is checked, which helps organize data layers. This can be helpful when comparing across multiple data types. 
+    ```
 
-The layers panel allows for toggling on and off of each layer. This can be done by clicking on the eye icon. In this screenshot, all the reference layers are on, displaying place labels, borders, and coastlines. On the bottom of the panel, the **Group Similar Layers** checkbox is checked, which helps organize data layers. This can be helpful when comparing across multiple data types. 
-```
-
-You can select a desired base layer in the Base Layers menu, which include default options with [Moderate Resolution Imaging Spectroradiometer (MODIS)](https://www.earthdata.nasa.gov/data/instruments/modis), [Visible Infrared Imaging Radiometer Suite (VIIRS)](https://www.earthdata.nasa.gov/data/instruments/viirs), and [Ocean Color Instrument (OCI)](https://www.earthdata.nasa.gov/data/instruments/oci) data. Learn more about the base layer options in this [Earthdata Forum post](https://forum.earthdata.nasa.gov/viewtopic.php?t=5228). For the purposes of this documentation, we will use MODIS v6.1.STD as our base layer.
+- You can select a base layer from the Base Layers menu if desired. Layers available by default include [Moderate Resolution Imaging Spectroradiometer (MODIS)](https://www.earthdata.nasa.gov/data/instruments/modis), [Visible Infrared Imaging Radiometer Suite (VIIRS)](https://www.earthdata.nasa.gov/data/instruments/viirs), and [Ocean Color Instrument (OCI)](https://www.earthdata.nasa.gov/data/instruments/oci) imagery.
+    - Learn more about base layer options in this [Earthdata Forum post](https://forum.earthdata.nasa.gov/viewtopic.php?t=5228).
 
 ### Exploring NISAR Data
 
