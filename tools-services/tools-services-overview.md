@@ -8,23 +8,12 @@ short_title: Tools and Services
 
 ASF is working in collaboration with other development teams across the Earthdata ecosystem to make NISAR data available using existing Earthdata tools and platforms, including:
 
-- [NASA Harmony](#ed-harmony)
 - [Worldview](#ed-worldview)
+- [NASA Harmony](#ed-harmony)
 - [Earthdata GIS (EGIS)](#ed-egis)
 - [HyP3](#ed-hyp3)
 
 Refer to the @tools-services-roadmap to check the status of these development efforts.
-
-(ed-harmony)=
-### NASA Harmony
-
-NASA's [Harmony](https://www.earthdata.nasa.gov/data/tools/nasa-harmony) service allows users to transform NASA datasets, customizing the output to better meet their needs. 
-
-For NISAR products, Harmony services are being developed to support subsetting a NISAR HDF5 by [dataset](#h5-datasets) or geographic range, with the option for some output products to be generated in a different file format or projection.
-
-<a href="https://www.earthdata.nasa.gov/data/tools/nasa-harmony">
-<img id="ed-harmony-image" src="../assets/ed-harmony.png" alt="Click to open https://www.earthdata.nasa.gov/data/tools/nasa-harmony">
-</a>
 
 (ed-worldview)=
 ### Worldview
@@ -35,6 +24,17 @@ Development is underway for a visualization of the NISAR GCOV products, which we
 
 <a href="https://www.earthdata.nasa.gov/data/tools/worldview">
 <img id="ed-worldview-image" src="../assets/ed-worldview.png" alt="Click to open https://www.earthdata.nasa.gov/data/tools/worldview">
+</a>
+
+(ed-harmony)=
+### NASA Harmony
+
+NASA's [Harmony](https://www.earthdata.nasa.gov/data/tools/nasa-harmony) service allows users to transform NASA datasets, customizing the output to better meet their needs. 
+
+For NISAR products, Harmony services are being developed to support subsetting a NISAR HDF5 by [dataset](#h5-datasets) or geographic range, with the option for some output products to be generated in a different file format or projection.
+
+<a href="https://www.earthdata.nasa.gov/data/tools/nasa-harmony">
+<img id="ed-harmony-image" src="../assets/ed-harmony.png" alt="Click to open https://www.earthdata.nasa.gov/data/tools/nasa-harmony">
 </a>
 
 (ed-egis)=
