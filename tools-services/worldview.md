@@ -8,21 +8,61 @@ short_title: Worldview
 ## Worldview
 [NASA Worldview](https://worldview.earthdata.nasa.gov/) is a user-friendly visualization tool that enables interactive browsing and animation of over 1,200 satellite data products. Imagery in Worldviews is powered by NASA's Global Imagery Browse Services (GIBS) service and delivers  global, full-resolution visualizations of satellite imagery.
 
-:::{important}NISAR GCOV Layer Available in Worldview
+:::{important}NISAR GCOV Layers Available in Worldview
 NISAR [Level-2 Geocoded Covariance (GCOV)](#gcov-product-overview) data can now be [visualized in Worldview](#worldview-nisar-gcov)! 
+
+<a href="https://worldview.earthdata.nasa.gov/?v=-283.0791525473933,-136.9755200581828,233.8728850905137,117.46181096672454&l=Reference_Labels_15m(hidden),Reference_Features_15m(hidden),Coastlines_15m,NISAR_L2_Geocoded_Polarimetric_Covariance_12Day,NISAR_L2_Geocoded_Polarimetric_Covariance,Land_Water_Map(opacity=0.77)&lg=true&t=2026-07-17-T13%3A26%3A54Z">
+<img id="worldview-nisar-12-day-image" src="../assets/worldview-nisar-12-day.png" alt="Image of NISAR datasets in Worldview">
+</a>
+
+Layers are available for [1-day](#worldview-daily-mosaics) or [12-day](#worldview-12-day-mosaics) mosaics. 
  :::
 
 (worldview-nisar-gcov)=
-## NISAR GCOV Layer
+## NISAR GCOV Layers
 
-<!-- {button}`View NISAR GCOV in Worldview <%TODO: Add URL to Worldview with just the NISAR GCOV layer and shorelines>` -->
+{button}`View NISAR GCOV Layers in Worldview <https://worldview.earthdata.nasa.gov/?v=-283.0791525473933,-136.9755200581828,233.8728850905137,117.46181096672454&l=Reference_Labels_15m(hidden),Reference_Features_15m(hidden),Coastlines_15m,NISAR_L2_Geocoded_Polarimetric_Covariance_12Day,NISAR_L2_Geocoded_Polarimetric_Covariance,Land_Water_Map(opacity=0.77)&lg=true&t=2026-07-17-T13%3A26%3A54Z>`
 
-NISAR PROVISIONAL GCOV products are displayed as a daily mosaic, and users can click through each day to view the available data. GCOV imagery is displayed using a false-color [RGB decomposition](#worldview-rgb-decomp) to facilitate more intuitive visual interpretation of SAR backscatter data, and the daily mosaics are posted to a [pixel spacing](#worldview-pixel-spacing) of 15.5 meters.
+NISAR GCOV layers in Worldview are displayed as mosaics of [PROVISIONAL GCOV](#nisar-provisional-data-july) products using a false-color [RGB decomposition](#worldview-rgb-decomp) to facilitate more intuitive visual interpretation of SAR backscatter data. The mosaics are posted to a [pixel spacing](#worldview-pixel-spacing) of 15.5 meters. 
+
+The layers include all GCOV acquisitions, regardless of the acquisition mode, with the best available and most recent product for any given area displayed. This approach prioritizes Frequency A acquisitions, and acquisitions with the most available polarimetric channels. <!-- TODO: verify display order: For areas with both ascending and descending acquisitions available for the same day, the most recent image will be displayed.-->
+
+There are two different NISAR GCOV layers available in Worldview: [daily mosaics](#worldview-daily-mosaics) and [12-day mosaics](#worldview-12-day-mosaics).
+
+(worldview-daily-mosaics)=
+#### Daily Mosaics
+
+NISAR PROVISIONAL GCOV products are displayed as a daily mosaic, and users can click through each day to view a mosaic of the GCOV products acquired on that day. 
+
+(worldview-12-day-mosaics)=
+#### Rolling 12-Day Mosaics
+
+This rolling 12-day layer loads the past twelve days of images, with the latest date displayed on top. The NISAR mission has a 12-day repeat cycle, so each of these 12-day mosaics should provide global coverage. 
+
+Users can click through the layer day by day, or use the `Custom Interval Selector` option to set a custom interval of 12 days to quickly cycle through global mosaics.
+
+```{figure} ../assets/worldview-custom-interval.png
+:label: worldview-custom-interval-image
+:alt: Screenshot displaying the Custom Interval option in Worldview.
+:align: center
+
+Click on the interval indicator (default is `1 DAY`), and select the `CUSTOM` option to set the interval to 12 days. 
+```
 
 (worldview-pixel-spacing)=
 ### Pixel Spacing
 
-Where multiple frequencies are available, the higher-resolution frequency is included in the visualization (generally [Frequency A](#nisar-frequencies)). Regardless of the pixel spacing of the source GCOV dataset, however, all products are resampled to 15.5-m pixel spacing in the visualization layer.
+Where multiple frequencies are available, the higher-resolution frequency is included in the visualization (generally [Frequency A](#nisar-frequencies)). Over land, most GCOV Frequency A datasets have a pixel spacing of 10 or 20 meters, while Frequency B datasets have a pixel spacing of 80 meters. Regardless of the pixel spacing of the source GCOV dataset, however, all products are resampled to 15.5-m pixel spacing in the visualization layer.
+
+Because the pixel spacing of the visualization is very close to the pixel spacing of the Frequency A products, it generally gives a very good indication of the level of detail represented in the source rasters. 
+
+```{figure} ../assets/worldview-full-zoom.png
+:label: worldview-full-zoom-image
+:alt: Image of GCOV layer zoomed to view full 15.5-m pixel spacing.  
+:align: center
+
+The GCOV layer is zoomed to the point where users can see the full 15.5-m pixel spacing of the imagery in an area where the source GCOV rasters have 10-m pixel spacing.
+```
 
 % TODO zooming/showing the fine resolution of the available imagery, show difference between 10, 20, 80 m resolution areas
 
@@ -180,6 +220,7 @@ Once a day and area have been selected, and you ready to download data, click on
 Download data by clicking the **Data** tab on the **Layers** panel. Select the data layer you want download, click the checkmark to set an area of interst, and click **Download Via Earthdata Search**. This will open Earthdata Search with all the parameters selected. 
 ```
 
+(worldview-wms-layers)=
 ## Worldview WMS Layers
 
 NASA Worldview uses the [Global Imagery Browse Services (GIBS)](https://earthdata.nasa.gov/gibs) to rapidly retrieve its imagery for an interactive browsing experience. While NASA Worldview uses OpenLayers as its mapping library, GIBS imagery, including the NISAR GCOV layer, can also be accessed from GIS software, Google Earth, NASA World Wind, and other geospatial applications.
