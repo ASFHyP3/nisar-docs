@@ -332,7 +332,48 @@ Since this data collection is temporally dependent, you will need to use the Tem
 
 %### NISAR GCOV WMS in ArcGIS Pro
 
-<!-- TODO: Add content. Reference https://storymaps.arcgis.com/stories/dc2807b444924fc3a76c117a2c909f8b#ref-n-rWzJMt -->
+To add the GIBS WMS Server to ArcGIS Pro, click the **Connections** button in the **Insert** menu, then click **Server** in the drop-down menu and select **New WMS Server** (@gibs-arcgispro-server-connection-image). 
+
+```{figure} ../assets/gibs-arcgispro-server-connection.png
+:label: gibs-arcgispro-server-connection-image
+:alt: Screenshot of adding a new WMS server in ArcGIS Pro
+:align: center
+
+To add a GIBS WMS Server to ArcGIS Pro, click the **Connections** button in the **Insert** menu, then click **Server** in the drop-down menu and select **New WMS Server**.
+```
+
+Enter the following URL into the **Server URL** field:  
+`https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi`  
+
+Leave the default settings for all other fields (including blank fields).
+
+```{figure} ../assets/gibs-arcgispro-server-gibs-url.png
+:label: gibs-arcgispro-server-gibs-url-image
+:alt: Screenshot of entering the URL for the GIBS WMS to an ArcGIS Pro Server Connection setup
+:align: center
+
+Enter the URL for the GIBS WMS to the **Server URL** field in the **Add WMS Server Connection** window in ArcGIS Pro.
+```
+
+Expand the GIBS item in the Servers Section of the Catalog pane, expand the RTC SAR Backscatter entry, and drag the NISAR_L2_Geocoded_Polarimetric_Covariance service into the map to add it as a map layer. 
+
+```{figure} ../assets/gibs-arcgispro-add-service.png
+:label: gibs-arcgispro-add-service-image
+:alt: Screenshot of finding and adding the NISAR GCOV service to an ArcGIS Pro map
+:align: center
+
+Navigate to the NISAR GCOV layer in the list of GIBS WMS services, and drag it onto the map to add the service as a layer.
+```
+
+Select the WMS layer in the Contents pane, and click the **Time** menu to adjust the time slider settings. You might want to set a custom date range and adjust the interval between time slider steps.
+
+```{figure} ../assets/gibs-arcgispro-time-slider.png
+:label: gibs-arcgispro-time-slider-image
+:alt: Screenshot of adjusting time slider settings. 
+:align: center
+
+Use the **Time** menu to adjust the time slider settings as desired. 
+```
 
 %### NISAR GCOV WMS in ArcGIS Web Maps
 
