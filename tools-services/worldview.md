@@ -72,7 +72,7 @@ In this false-color scale, vegetated areas appear green; urban and/or sparsely v
 (rgb-single-pol)=
 #### Single-pol Approach
 
-Single-polarization acquisitions, collected mostly in polar regions or over open ocean, are also colorized. Because they only have one available polarization, there is less information to integrate into the false-color visualization. The color bar passes from blue to green to orange to yellow, indicating co-polarized backscatter values from low to high. 
+Single-polarization acquisitions, collected mostly in polar regions or over open ocean, are also colorized. Because they only have one available polarization, there is less information to integrate into the false-color visualization. The [color bar](#worldview-colorbars-image) passes from blue to green to orange to yellow, indicating co-polarized backscatter values from low to high. 
 
 Calm water or dry soil is still generally blue, and urban areas are still generally yellow, but vegetated areas may exhibit a different color of green/orange than in the dual-pol RGB decomposition for the same area. Wet snow may appear very yellow, while drier snow is more green or blue. Sea ice can exhibit colors similar to features on land, especially when surface melt increases the amount of backscatter.
 
