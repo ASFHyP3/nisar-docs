@@ -172,7 +172,7 @@ Explore the layers displayed in Worldview temporally using the time slider tool.
 
 You can customize the time slider tool to step through time using a custom increment. Click the **1 Day** text above the time slider arrows, and select **Custom** from the pop-up menu (@worldview-customize-timestep-image). 
 
-By adjusting the **Custom Interval Selector** to 12 days, you can explore data acquired each cycle. This allows you to quickly cycle through acquisitions with the same viewing geometry over time for an area of interest. 
+By adjusting the **Custom Interval Selector** to 12 days, you can explore data acquired each cycle. This allows you to quickly click through acquisitions with the same viewing geometry over time for an area of interest. 
 
 ```{figure} ../assets/worldview-customize-timestep.png
 :label: worldview-customize-timestep-image
