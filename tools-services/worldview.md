@@ -330,7 +330,7 @@ Select the newly added connection from the dropdown menu and click the **Connect
 
 Since this data collection is temporally dependent, you will need to use the Temporal Controller tool in QGIS to explore the data through time.
 
-%### NISAR GCOV WMS in ArcGIS Pro
+### NISAR GCOV WMS in ArcGIS Pro
 
 To add the GIBS WMS Server to ArcGIS Pro, click the **Connections** button in the **Insert** menu, then click **Server** in the drop-down menu and select **New WMS Server** (@gibs-arcgispro-server-connection-image). 
 
