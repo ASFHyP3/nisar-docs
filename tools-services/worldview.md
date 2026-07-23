@@ -168,7 +168,7 @@ Once NISAR data are loaded into Worldview, search for available data temporally 
 
 You can customize the time slider tool to step through time using a custom increment. Click the **1 Day** text above the time slider arrows, and select **Custom** from the pop-up menu (@worldview-customize-timestep-image). 
 
-By adjusting the Custom Interval Selector to 12 days, you can explore data acquired each cycle. This allows you to quickly cycle through acquisitions with the same viewing geometry over time for an area of interest. 
+By adjusting the **Custom Interval Selector** to 12 days, you can explore data acquired each cycle. This allows you to quickly cycle through acquisitions with the same viewing geometry over time for an area of interest. 
 
 ```{figure} ../assets/worldview-customize-timestep.png
 :label: worldview-customize-timestep-image
@@ -194,7 +194,7 @@ To create an animation from available imagery, click the video recorder icon to 
 Click on the video recorder icon next to the time step arrows to animate a timeseries. A pop-up box will allow for further refinement of the time step, start and end date, and frames per second in the animation. Click on the video recorder icon circled in red to create the animated GIF. 
 ```
 
-- Click on the video recorder icon in the settings window (#worldview-animate-timeseries-image), which will open a pop-up to further refine the area of interest to be shown in the final animation. Here, you can select the resolution of the output GIF. 
+- Click on the video recorder icon in the settings window (@worldview-animate-timeseries-image), which will open a pop-up to further refine the area of interest to be shown in the final animation. Here, you can select the resolution of the output GIF. 
 - Click the **Create GIF** button to create the GIF and save locally (@worldview-save-animation-gif-image). 
 
 ```{figure} ../assets/worldview-save-animation-gif.png
