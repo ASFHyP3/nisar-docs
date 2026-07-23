@@ -295,7 +295,7 @@ Download data by clicking the **Data** tab on the **Layers** panel. Select the d
 (worldview-wms-layers)=
 ## Worldview WMS Layers
 
-NASA Worldview uses the [Global Imagery Browse Services (GIBS)](https://earthdata.nasa.gov/gibs) to rapidly retrieve its imagery for an interactive browsing experience. While NASA Worldview uses OpenLayers as its mapping library, GIBS imagery, including the NISAR GCOV layer, can also be accessed directly using GIS software, Google Earth, [NASA WorldWind](https://worldwind.arc.nasa.gov/), and other geospatial applications.
+NASA Worldview uses the [Global Imagery Browse Services (GIBS)](https://earthdata.nasa.gov/gibs) to rapidly retrieve its imagery for an interactive browsing experience. While NASA Worldview uses OpenLayers as its mapping library, GIBS imagery, including the NISAR GCOV layer, can also be accessed directly using GIS software, [NASA WorldWind](https://worldwind.arc.nasa.gov/), web maps, and other geospatial applications.
 
 To add any layer served by the GIBS WMS to an application, connect to  https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi  through the application, and select the desired layer to add. Refer to the [GIBS Wiki Page]( https://wiki.earthdata.nasa.gov/display/GIBS/) for more information. <!-- TODO: check to make sure that this is accessible to the public; it's behind EDL, but maybe anyone with an EDL can access it. -->
 
