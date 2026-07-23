@@ -141,9 +141,11 @@ Add layers to the map using either the **Add Layer** button or by clicking the c
 
 #### Organizing Layers
 
-- You can click the checkbox next to **Group Similar Layers** to help organize data layers, which can be helpful if comparing multiple data types.
+As illustrated in @worldview-layers-panel-image, there are options available for organizing layers in Worldview.
 
-- Above the newly added data in the layer panel, you can toggle on/off **Place Labels**, **Coastlines/Borders/Roads**, and **Coastlines** layers to help locate and orient yourself while exploring data (@worldview-layers-panel-image). 
+- Above the newly added data in the layer panel, you can toggle on/off **Place Labels**, **Coastlines/Borders/Roads**, and **Coastlines** layers to help locate and orient yourself while exploring data.
+
+- Click the checkbox next to **Group Similar Layers** to help organize data layers, which can be helpful if comparing multiple data types.
 
     ```{figure} ../assets/worldview-layers-panel.png
     :label: worldview-layers-panel-image
@@ -153,7 +155,7 @@ Add layers to the map using either the **Add Layer** button or by clicking the c
     The layers panel allows for toggling on and off of each layer. This can be done by clicking on the eye icon. In this screenshot, all the reference layers are on, displaying place labels, borders, and coastlines. On the bottom of the panel, the **Group Similar Layers** checkbox is checked, which helps organize data layers. This can be helpful when comparing across multiple data types. 
     ```
 
-- You can select a base layer from the **Base Layers** menu if desired. Layers available by default include [Moderate Resolution Imaging Spectroradiometer (MODIS)](https://www.earthdata.nasa.gov/data/instruments/modis), [Visible Infrared Imaging Radiometer Suite (VIIRS)](https://www.earthdata.nasa.gov/data/instruments/viirs), and [Ocean Color Instrument (OCI)](https://www.earthdata.nasa.gov/data/instruments/oci) imagery.
+- You can choose to display a base layer from the **Base Layers** menu. Layers available by default include [Moderate Resolution Imaging Spectroradiometer (MODIS)](https://www.earthdata.nasa.gov/data/instruments/modis), [Visible Infrared Imaging Radiometer Suite (VIIRS)](https://www.earthdata.nasa.gov/data/instruments/viirs), and [Ocean Color Instrument (OCI)](https://www.earthdata.nasa.gov/data/instruments/oci) imagery.
     - Learn more about base layer options in this [Earthdata Forum post](https://forum.earthdata.nasa.gov/viewtopic.php?t=5228).
 
 ### Exploring NISAR Data
