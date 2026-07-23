@@ -23,7 +23,7 @@ Layers are available for [1-day](#worldview-daily-mosaics) or [12-day](#worldvie
 
 {button}`View NISAR GCOV Layers in Worldview <https://worldview.earthdata.nasa.gov/?v=-283.0791525473933,-136.9755200581828,233.8728850905137,117.46181096672454&l=Reference_Labels_15m(hidden),Reference_Features_15m(hidden),Coastlines_15m,NISAR_L2_Geocoded_Polarimetric_Covariance_12Day,NISAR_L2_Geocoded_Polarimetric_Covariance,Land_Water_Map(opacity=0.77)&lg=true&t=2026-07-17-T13%3A26%3A54Z>`
 
-NISAR GCOV layers in Worldview are displayed as mosaics of [PROVISIONAL GCOV](#nisar-provisional-data-july) products using a false-color [RGB decomposition](#worldview-rgb-decomp) to facilitate more intuitive visual interpretation of SAR backscatter data. The mosaics are posted to a [pixel spacing](#worldview-pixel-spacing) of 15.5 meters. 
+NISAR GCOV layers in Worldview are displayed as mosaics of [PROVISIONAL GCOV](#nisar-provisional-data-july) products using a false-color [RGB decomposition](#worldview-rgb-decomp) to facilitate more intuitive visual interpretation of SAR backscatter data. The mosaics are posted to a [pixel spacing](#worldview-pixel-spacing) of 15.625 meters. 
 
 The layers include all GCOV acquisitions, regardless of the acquisition mode, with the best available product for any given area displayed. This approach prioritizes [Frequency A](#nisar-frequencies) acquisitions and acquisitions with the most available [polarimetric channels](#nisar-polarization). <!-- TODO: The current mosaics do not enforce a display order, so overlapping areas can be a patchwork of components from the overlapping images. The Worldview team is aware, and may implement a fix at some point. If so, add in this documentation: For areas with both ascending and descending acquisitions available for the same day, the most recent image will be displayed.-->
 
@@ -79,24 +79,24 @@ Calm water or dry soil is still generally blue, and urban areas are still genera
 (worldview-pixel-spacing)=
 ### Pixel Spacing
 
-Where multiple frequencies are available, the higher-resolution frequency is included in the visualization (generally [Frequency A](#nisar-frequencies)). Over land, most GCOV Frequency A datasets have a pixel spacing of 10 or 20 meters, while Frequency B datasets have a pixel spacing of 80 meters. Regardless of the [pixel spacing of the source GCOV dataset]((#gcov-pixel-spacing)), however, all products are resampled to 15.5-m pixel spacing in the visualization layer.
+Where multiple frequencies are available, the higher-resolution frequency is included in the visualization (generally [Frequency A](#nisar-frequencies)). Over land, most GCOV Frequency A datasets have a pixel spacing of 10 or 20 meters, while Frequency B datasets have a pixel spacing of 80 meters. Regardless of the [pixel spacing of the source GCOV dataset]((#gcov-pixel-spacing)), however, all products are resampled to 15.625-m pixel spacing in the visualization layer.
 
 Because the pixel spacing of the visualization is very close to the pixel spacing of the Frequency A products, it generally gives a very good indication of the level of detail represented in the source rasters. Take a look at example products zoomed to the full resolution of the imagery for areas with source rasters posted to [10-m](#worldview-full-zoom-10-image), [20-m](#worldview-full-zoom-20-image), and [80-m](#worldview-full-zoom-80-image) pixel spacing. 
 
 ```{figure} ../assets/worldview-full-zoom-10m.png
 :label: worldview-full-zoom-10-image
-:alt: Image of GCOV layer from 10-m source raster zoomed to view full 15.5-m pixel spacing.
+:alt: Image of GCOV layer from 10-m source raster zoomed to view full mosaic resolution.
 :align: center
 
-The GCOV layer is zoomed to the point where users can see the full 15.5-m pixel spacing of the imagery in an area where the source GCOV rasters have 10-m pixel spacing.
+The GCOV layer is zoomed to the point where users can see the full mosaic resolution of the imagery in an area where the source GCOV rasters have 10-m pixel spacing.
 ```
 
 ```{figure} ../assets/worldview-full-zoom-20m.png
 :label: worldview-full-zoom-20-image
-:alt: Image of GCOV layer from 20-m source raster zoomed to view full 15.5-m pixel spacing.
+:alt: Image of GCOV layer from 20-m source raster zoomed to view full mosaic resolution.
 :align: center
 
-The GCOV layer is zoomed to the point where users can see the full 15.5-m pixel spacing of the imagery in an area where the source GCOV rasters have 20-m pixel spacing.
+The GCOV layer is zoomed to the point where users can see the full mosaic resolution of the imagery in an area where the source GCOV rasters have 20-m pixel spacing.
 ```
 
 ```{figure} ../assets/worldview-full-zoom-80m.png
@@ -104,7 +104,7 @@ The GCOV layer is zoomed to the point where users can see the full 15.5-m pixel 
 :alt: Comparison of 10-m and 80-m source rasters in the visualization
 :align: center
 
-The GCOV layer is zoomed to the point where users can see the full 15.5-m pixel spacing of the imagery in an area with different acquisition modes collected on different dates. The image on the left shows the visualization when the source raster is a dual-pol image with 10-m pixel spacing, and the image on the right shows the visualization when the source raster is a single-pol image with 80-m pixel spacing.
+The GCOV layer is zoomed to the point where users can see the full mosaic resolution of the imagery in an area with different acquisition modes collected on different dates. The image on the left shows the visualization when the source raster is a dual-pol image with 10-m pixel spacing, and the image on the right shows the visualization when the source raster is a single-pol image with 80-m pixel spacing.
 ```
 
 ## Using NISAR Data in Worldview
