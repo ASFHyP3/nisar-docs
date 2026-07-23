@@ -291,7 +291,7 @@ Download data by clicking the **Data** tab on the **Layers** panel. Select the d
 
 NASA Worldview uses [Global Imagery Browse Services (GIBS)](https://earthdata.nasa.gov/gibs) to rapidly retrieve its imagery for an interactive browsing experience. While NASA Worldview uses [OpenLayers](https://openlayers.org/) as its mapping library, GIBS imagery, including the NISAR GCOV layer, can also be accessed directly using GIS software, [NASA WorldWind](https://worldwind.arc.nasa.gov/), web maps, and other geospatial applications.
 
-To add any layer served by the GIBS WMS to an application, connect to  https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi  through the application, and select the desired layer to add. Refer to [GIBS Documentation](https://nasa-gibs.github.io/gibs-api-docs/) for more information.
+To add any layer served by the GIBS WMS to an application, connect to `https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi` through the application, and select the desired layer to add. Refer to [GIBS Documentation](https://nasa-gibs.github.io/gibs-api-docs/) for more information.
 
 ### NISAR GCOV WMS in QGIS
 
