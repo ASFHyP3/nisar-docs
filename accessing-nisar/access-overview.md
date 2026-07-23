@@ -44,7 +44,7 @@ Map-based web interfaces make it easy to explore data available for a particular
 <img id="vertex-nisar-screenshot" src="../assets/vertex-nisar-screenshot.png" alt="Searching for NISAR data on ASF's Vertex Data Search site">
 </a>
 
-[Learn more about using Vertex to search for NISAR data!](vertex#vertex-overview)
+[**Learn more about using Vertex to search for NISAR data!**](#vertex-overview)
 
 (earthdata-search)=
 ### Earthdata Search
@@ -55,7 +55,17 @@ Map-based web interfaces make it easy to explore data available for a particular
 <img id="earthdata-search-page" src="../assets/earthdata-search-page.png" alt="Image of the Earthdata Search web interface">
 </a>
 
-[Learn more about using Earthdata Search to access NISAR data!](earthdata-search#earthdata-search-overview)
+[**Learn more about using Earthdata Search to access NISAR data!**](#earthdata-search-overview)
+
+(worldview)=
+#### Worldview 
+[Worldview](https://worldview.earthdata.nasa.gov/) is a user-friendly visualization tool that enables interactive browsing, comparison, and animation of over 1,200 NASA satellite data products. Users can then launch Earthdata Search directly from the Worldview user interface to find source rasters for the desired visualization layer for the selected date.
+
+<a href="https://worldview.earthdata.nasa.gov/?v=-283.0791525473933,-136.9755200581828,233.8728850905137,117.46181096672454&l=Reference_Labels_15m(hidden),Reference_Features_15m(hidden),Coastlines_15m,NISAR_L2_Geocoded_Polarimetric_Covariance_12Day,NISAR_L2_Geocoded_Polarimetric_Covariance,Land_Water_Map(opacity=0.77)&lg=true&t=2026-07-17-T13%3A26%3A54Z">
+<img id="access-worldview-nisar-12-day-image" src="../assets/worldview-nisar-12-day.png" alt="Image of NISAR datasets in Worldview">
+</a>
+
+[**Learn more about using Worldview to explore NISAR data!**](#worldview-overview)
 
 (bhoonidhi)=
 ### Bhoonidhi
@@ -82,7 +92,7 @@ The [asf_search Python package](https://pypi.org/project/asf-search/) allows use
 
 Refer to the [ASF Data Search Manual](https://docs.asf.alaska.edu/asf_search/basics/) to learn about installation options and how to use `asf_search` to find and download all of ASF's SAR holdings.
 
-[Learn more about searching for NISAR datasets with the ASF Search Python Package!](#asf-search-package)
+[**Learn more about searching for NISAR datasets with the ASF Search Python Package!**](#asf-search-package)
 
 (earthaccess-python-package)=
 ### Earthaccess Python Package
@@ -93,13 +103,13 @@ The [earthaccess Python package](https://earthaccess.readthedocs.io/en/stable/) 
 <img id="earthaccess-page" src="../assets/earthaccess-page.png" alt="Image of the earthaccess web page">
 </a>
 
-[Learn more about using earthaccess with NISAR datasets!](#earthaccess-package)
+[**Learn more about using earthaccess with NISAR datasets!**](#earthaccess-package)
 
 ## Direct AWS S3 Access
 
 Because all NISAR data is hosted in EDC, which leverages AWS infrastructure, users can access the data directly in S3 using the AWS CLI or other supported methods. 
 
-[Learn more about Direct AWS S3 Access!](#aws-s3-access-overview)
+[**Learn more about Direct AWS S3 Access!**](#aws-s3-access-overview)
 
 <style>section {page-break-before: avoid}</style>
 
