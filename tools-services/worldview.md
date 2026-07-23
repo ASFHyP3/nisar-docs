@@ -321,7 +321,7 @@ Click OK to add the WMS server connection to your project. This will provide acc
 :alt: Screenshot of a QGIS window ready to load the GIBS WMS service.   
 :align: center
 
-Use the URL `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi` in the WMS/WMTS connection and press OK to add to your GIS. 
+Enter `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi` into the **URL** field for the WMS/WMTS connection and press OK to add the WMS connection to your project. 
 ```
 
 Select the newly added connection from the dropdown menu and click the **Connect** button to list the layers. Either search for the desired layer by typing NISAR into the search bar or expand the RTC SAR Backscatter category to find and select the NISAR GCOV layers. 
