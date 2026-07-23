@@ -301,7 +301,7 @@ To add any layer served by the GIBS WMS to an application, connect to  https://g
 
 ### NISAR GCOV WMS in QGIS
 
-To add a GIBS WMS layer to QGIS, select **Add Layer**, then set the data type to WMS/WMTS. Click the New button. 
+To add a GIBS WMS layer to QGIS, select **Add Layer**, then set the data type to WMS/WMTS. Click the New button (@worldview-add-new-wms-image). 
 
 ```{figure} ../assets/worldview-add-new-wms.png
 :label: worldview-add-new-wms-image
@@ -311,7 +311,7 @@ To add a GIBS WMS layer to QGIS, select **Add Layer**, then set the data type to
 Add a new data layer to your GIS with the data type WMS/WMTS. 
 ```
 
-Enter a name for the connection, and enter the following URL into the **URL** field:  
+Enter a name for the connection, and enter the following URL into the **URL** field (@worldview-add-wms-connection-image):  
 `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi`  
 
 Click OK to add the WMS server connection to your project. This will provide access to all available GIBS imagery layers served using the EPSG 4326 coordinate system (which includes the NISAR layers).
@@ -342,7 +342,7 @@ To add the GIBS WMS Server to ArcGIS Pro, click the **Connections** button in th
 To add a GIBS WMS Server to ArcGIS Pro, click the **Connections** button in the **Insert** menu, then click **Server** in the drop-down menu and select **New WMS Server**.
 ```
 
-Enter the following URL into the **Server URL** field:  
+Enter the following URL into the **Server URL** field (@gibs-arcgispro-server-gibs-url-image):  
 `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi`  
 
 Leave the default settings for all other fields (including blank fields).
@@ -355,7 +355,7 @@ Leave the default settings for all other fields (including blank fields).
 Enter the URL for the GIBS WMS to the **Server URL** field in the **Add WMS Server Connection** window in ArcGIS Pro.
 ```
 
-Expand the GIBS item in the Servers Section of the Catalog pane, expand the RTC SAR Backscatter entry, and drag the NISAR_L2_Geocoded_Polarimetric_Covariance service into the map to add it as a map layer. 
+Expand the GIBS item in the Servers Section of the Catalog pane, expand the RTC SAR Backscatter entry, and drag the NISAR_L2_Geocoded_Polarimetric_Covariance service into the map to add it as a map layer (@gibs-arcgispro-add-service-image). 
 
 ```{figure} ../assets/gibs-arcgispro-add-service.png
 :label: gibs-arcgispro-add-service-image
@@ -365,7 +365,7 @@ Expand the GIBS item in the Servers Section of the Catalog pane, expand the RTC 
 Navigate to the NISAR GCOV layer in the list of GIBS WMS services, and drag it onto the map to add the service as a layer.
 ```
 
-Select the WMS layer in the Contents pane, and click the **Time** menu to adjust the time slider settings. You might want to set a custom date range and adjust the interval between time slider steps.
+Select the WMS layer in the Contents pane, and click the **Time** menu to adjust the time slider settings (@gibs-arcgispro-time-slider-image). You might want to set a custom date range and adjust the interval between time slider steps.
 
 ```{figure} ../assets/gibs-arcgispro-time-slider.png
 :label: gibs-arcgispro-time-slider-image
