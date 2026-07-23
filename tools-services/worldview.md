@@ -41,14 +41,6 @@ This rolling 12-day layer loads the past twelve days of images, with the latest 
 
 Users can click through the layer day by day, or use the `Custom Interval Selector` option to set a [custom interval](#wv-ts-custom-interval) of 12 days to quickly cycle through global mosaics.
 
-```{figure} ../assets/worldview-custom-interval.png
-:label: worldview-custom-interval-image
-:alt: Screenshot displaying the Custom Interval option in Worldview.
-:align: center
-
-Click on the interval indicator (default is `1 DAY`), and select the `CUSTOM` option to set the interval to 12 days. 
-```
-
 (worldview-rgb-decomp)=
 ### RGB Decomposition
 
@@ -135,7 +127,9 @@ _While Worldview allows users to change the display to a polar view (Arctic or A
 
     - NISAR GCOV layers are listed under the `RTC SAR Backscatter` category
     - NISAR GCOV layers are named `NISAR Normalized Radar Backscatter`
-    - There are layers available for [daily mosaics](#worldview-daily-mosaics) and [12-day mosaics](#worldview-12-day-mosaics)
+    - There are separate layers available for [daily mosaics](#worldview-daily-mosaics) and [12-day mosaics](#worldview-12-day-mosaics)
+   
+3. Click the **X** on the top right of the pop-up to close the search window and view the layers.
 
 ```{figure} ../assets/worldview-add-nisar-layer.png
 :label: worldview-add-nisar-layer-image
@@ -144,8 +138,6 @@ _While Worldview allows users to change the display to a polar view (Arctic or A
 
 Add layers to the map using either the **Add Layer** button or by clicking the checkbox next to the desired data layer. 
 ```
-
-3. Click the **X** on the top right of the pop-up to close the search window and view the layers.
 
 #### Organizing Layers
 
@@ -161,7 +153,7 @@ Add layers to the map using either the **Add Layer** button or by clicking the c
     The layers panel allows for toggling on and off of each layer. This can be done by clicking on the eye icon. In this screenshot, all the reference layers are on, displaying place labels, borders, and coastlines. On the bottom of the panel, the **Group Similar Layers** checkbox is checked, which helps organize data layers. This can be helpful when comparing across multiple data types. 
     ```
 
-- You can select a base layer from the Base Layers menu if desired. Layers available by default include [Moderate Resolution Imaging Spectroradiometer (MODIS)](https://www.earthdata.nasa.gov/data/instruments/modis), [Visible Infrared Imaging Radiometer Suite (VIIRS)](https://www.earthdata.nasa.gov/data/instruments/viirs), and [Ocean Color Instrument (OCI)](https://www.earthdata.nasa.gov/data/instruments/oci) imagery.
+- You can select a base layer from the **Base Layers** menu if desired. Layers available by default include [Moderate Resolution Imaging Spectroradiometer (MODIS)](https://www.earthdata.nasa.gov/data/instruments/modis), [Visible Infrared Imaging Radiometer Suite (VIIRS)](https://www.earthdata.nasa.gov/data/instruments/viirs), and [Ocean Color Instrument (OCI)](https://www.earthdata.nasa.gov/data/instruments/oci) imagery.
     - Learn more about base layer options in this [Earthdata Forum post](https://forum.earthdata.nasa.gov/viewtopic.php?t=5228).
 
 ### Exploring NISAR Data
@@ -235,7 +227,7 @@ Adjust the dates to compare by moving the **A** and **B** arrows on the time sli
 Adjust the date of the comparison sides by moving the time slider arrows of **A** or **B**, circled in red, or by clicking into the **A** or **B** tabs highlighted on the Layers panel. 
 ```
 
-Besides the [**Swipe**](@worldview-adjust-comparison-image) setting for the Comparsion tool, there are also options for [**Opacity**](@worldview-compare-opacity-image) or [**Spy**](@worldview-compare-spy-image) settings. 
+Besides the [**Swipe**](@worldview-adjust-comparison-image) setting for the Comparison tool, there are also options for [**Opacity**](@worldview-compare-opacity-image) or [**Spy**](@worldview-compare-spy-image) settings. 
 
 - The **Opacity** option (@worldview-compare-opacity-image) overlays the two dates, and allows you to adjust the relative transparency of the two layers.  
 
@@ -286,7 +278,7 @@ As illustrated in @worldview-download-data-image:
 
 ```{figure} ../assets/worldview-download-data.png
 :label: worldview-download-data-image
-:alt: Screenshot dispalying the Data download parameters.  
+:alt: Screenshot displaying the Data download parameters.  
 :align: center
 
 Download data by clicking the **Data** tab on the **Layers** panel. Select the data layer you want to access source data for, click the checkmark to set an area of interest (optional), and click **Download Via Earthdata Search**. This will open Earthdata Search with all the selected parameters pre-populated. 
@@ -326,9 +318,23 @@ Enter `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi` into the *
 
 Select the newly added connection from the dropdown menu and click the **Connect** button to list the layers. Either search for the desired layer by typing NISAR into the search bar or expand the RTC SAR Backscatter category to find and select the NISAR GCOV layers. 
 
-<!-- TODO: add QGIS screen shot of this last step -->
+```{figure} ../assets/worldview-qgis-add-nisar-wms.png
+:label: worldview-qgis-add-nisar-wms-image
+:alt: Screenshot of a QGIS window ready to add the NISAR WMS layer.   
+:align: center
+
+Select the newly added connection in the dropdown menu and press **Connect**. Scroll down and expand the RTC SAR Backscatter category. Then, select the NISAR GCOV layer and press **Add**. 
+```
 
 Since this data collection is temporally dependent, you will need to use the Temporal Controller tool in QGIS to explore the data through time.
+
+```{figure} ../assets/worldview-qgis-temporalcontroller.png
+:label: worldview-qgis-temporal-controller-image
+:alt: Screenshot highlighting the Temporal Controller tool in QGIS that allows NISAR data to be shown.   
+:align: center
+
+Select the clock icon to open the Temporal Controller tool in QGIS. Adjust the dates in the animation range to your desired time period to expose NISAR data. 
+```
 
 ### NISAR GCOV WMS in ArcGIS Pro
 
