@@ -143,7 +143,7 @@ Add layers to the map using either the **Add Layer** button or by clicking the c
 
 - You can click the checkbox next to **Group Similar Layers** to help organize data layers, which can be helpful if comparing multiple data types.
 
-- Above the newly added data in the layer panel, you can toggle on/off **Place Labels**, **Coastlines/Borders/Roads** and **Coastlines** layers to help locate and orient yourself while exploring data (@worldview-layers-panel-image). 
+- Above the newly added data in the layer panel, you can toggle on/off **Place Labels**, **Coastlines/Borders/Roads**, and **Coastlines** layers to help locate and orient yourself while exploring data (@worldview-layers-panel-image). 
 
     ```{figure} ../assets/worldview-layers-panel.png
     :label: worldview-layers-panel-image
