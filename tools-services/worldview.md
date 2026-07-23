@@ -284,6 +284,8 @@ As illustrated in @worldview-download-data-image:
 Download data by clicking the **Data** tab on the **Layers** panel. Select the data layer you want to access source data for, click the checkmark to set an area of interest (optional), and click **Download Via Earthdata Search**. This will open Earthdata Search with all the selected parameters pre-populated. 
 ```
 
+[Learn more about searching for NISAR data products in Earthdata Search.](#earthdata-search-overview)
+
 (worldview-wms-layers)=
 ## Worldview WMS Layers
 
