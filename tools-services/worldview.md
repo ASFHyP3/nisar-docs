@@ -321,7 +321,9 @@ Enter a name for the connection, and enter `https://uat.gibs.earthdata.nasa.gov/
 Use the URL `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi` in the WMS/WMTS connection and press OK to add to your GIS. 
 ```
 
-Select the newly added connection from the dropdown menu and click the Connect button to list the layers. Either search for the desired layer by typing NISAR into the search bar or expand the RTC SAR Backscatter category to find and select the NISAR GCOV layers. 
+Select the newly added connection from the dropdown menu and click the **Connect** button to list the layers. Either search for the desired layer by typing NISAR into the search bar or expand the RTC SAR Backscatter category to find and select the NISAR GCOV layers. 
+
+<!-- TODO: add QGIS screen shot of this last step -->
 
 Since this data collection is temporally dependent, you will need to use the Temporal Controller tool in QGIS to explore the data through time.
 
