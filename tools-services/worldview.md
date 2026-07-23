@@ -79,7 +79,7 @@ Calm water or dry soil is still generally blue, and urban areas are still genera
 (worldview-pixel-spacing)=
 ### Pixel Spacing
 
-Where multiple frequencies are available, the higher-resolution frequency is included in the visualization (generally [Frequency A](#nisar-frequencies)). Over land, most GCOV Frequency A datasets have a pixel spacing of 10 or 20 meters, while Frequency B datasets have a pixel spacing of 80 meters. Regardless of the [pixel spacing of the source GCOV dataset]((#gcov-pixel-spacing)), however, all products are resampled to 15.625-m pixel spacing in the visualization layer.
+Where multiple frequencies are available, the higher-resolution frequency is included in the visualization (generally [Frequency A](#nisar-frequencies)). Over land, most GCOV Frequency A datasets have a pixel spacing of 10 or 20 meters, while Frequency B datasets have a pixel spacing of 80 meters. Regardless of the [pixel spacing of the source GCOV dataset](#gcov-pixel-spacing), however, all products are resampled to 15.625-m pixel spacing in the visualization layer.
 
 Because the pixel spacing of the visualization is very close to the pixel spacing of the Frequency A products, it generally gives a very good indication of the level of detail represented in the source rasters. Take a look at example products zoomed to the full resolution of the imagery for areas with source rasters posted to [10-m](#worldview-full-zoom-10-image), [20-m](#worldview-full-zoom-20-image), and [80-m](#worldview-full-zoom-80-image) pixel spacing. 
 
@@ -160,10 +160,12 @@ As illustrated in @worldview-layers-panel-image, there are options available for
 
 ### Exploring NISAR Data
 
+There are several handy tools available in Worldview that allow you to explore and compare datasets 
+
 (worldview-time-slider)=
 #### Time Slider Tool
 
-Once NISAR data are loaded into Worldview, search for available data temporally by using the time slider tool. As a default, an arrow click steps through time one day at a time. This can be useful when determining when there are data acquisitions over an area of interest. 
+Explore the layers displayed in Worldview temporally using the time slider tool. By default, an arrow click steps through time one day at a time. This is a useful tool for determining when products are available over an area of interest. 
 
 (wv-ts-custom-interval)=
 ##### Custom Interval
