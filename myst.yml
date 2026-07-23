@@ -61,6 +61,7 @@ project:
         - file: using-nisar/data-use-citation-guidance.md
     - file: tools-services/tools-services-overview.md
       children:
+        - file: tools-services/worldview.md
         - file: tools-services/roadmap.md
     - file: tutorials/tutorials-overview.md
       children:
