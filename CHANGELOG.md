@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - [NISAR in Worldview product page](tools-services/worldview.md)
+- Pixel spacing reference table to [GCOV product page](data-products/gcov.md)
+
+### Changed
+- Updated Tools and Services overview page and development roadmap with new Worldview content
+- Added more information on frequency A/B acquisitions in the About NISAR page
+- Added a reference to Worldview in the Earthdata Search section of the Accessing NISAR Data overview page
 
 ## [0.4.22]
 
