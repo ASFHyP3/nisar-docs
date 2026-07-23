@@ -301,7 +301,7 @@ To add any layer served by the GIBS WMS to an application, connect to  https://g
 
 ### NISAR GCOV WMS in QGIS
 
-To add a GIBS WMS layer to QGIS, select **Add Layer**, then set the data type to WMS/WMTS.
+To add a GIBS WMS layer to QGIS, select **Add Layer**, then set the data type to WMS/WMTS. Click the New button. 
 
 ```{figure} ../assets/worldview-add-new-wms.png
 :label: worldview-add-new-wms-image
@@ -311,7 +311,7 @@ To add a GIBS WMS layer to QGIS, select **Add Layer**, then set the data type to
 Add a new data layer to your GIS with the data type WMS/WMTS. 
 ```
 
-For data in EPSG:4326 projection, use the URL `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi` and add to your project. This will provide access to all available GIBS imagery layers, so either search for the desired layer or select the desired layer in the browser under the RTC SAR Backscatter category. 
+Enter a name for the connection, and enter `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi` into the **URL** field and click OK to add to WMS server connection to your project. This will provide access to all available GIBS imagery layers served using the EPSG 4326 coordinate system (which includes the NISAR layers).
 
 ```{figure} ../assets/worldview-add-wms-connection.png
 :label: worldview-add-wms-connection-image
@@ -320,6 +320,8 @@ For data in EPSG:4326 projection, use the URL `https://uat.gibs.earthdata.nasa.g
 
 Use the URL `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi` in the WMS/WMTS connection and press OK to add to your GIS. 
 ```
+
+Select the newly added connection fromt he dropdown menu and click the Connect button to list the layers. Either search for the desired layer by typing NISAR into the search bar or expand the RTC SAR Backscatter category to find and select the NISAR GCOV layers. 
 
 Since this data collection is temporally dependent, you will need to use the Temporal Controller tool in QGIS to explore the data through time.
 
