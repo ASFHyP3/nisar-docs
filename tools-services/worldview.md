@@ -295,20 +295,23 @@ To add any layer served by the GIBS WMS to an application, connect to `https://g
 
 ### NISAR GCOV WMS in QGIS
 
-To add a GIBS WMS layer to QGIS, select **Add Layer**, then set the data type to WMS/WMTS. Click the New button (@worldview-add-new-wms-image). 
+To add a GIBS WMS layer to QGIS: 
+
+1. Select **Add Layer**, then select the **WMS/WMTS** option (@worldview-add-new-wms-image). 
+2. Click the **New** button to configure the server connection. 
 
 ```{figure} ../assets/worldview-add-new-wms.png
 :label: worldview-add-new-wms-image
-:alt: Screenshot of a QGIS window ready to load the GIBS WMS service.   
+:alt: Screenshot of a QGIS window ready to create a connection to the GIBS WMS server.   
 :align: center
 
-Add a new data layer to your GIS with the data type WMS/WMTS. 
+Open the **Data Source Manager** window, select **WMS/WMTS**, and click the **New** button to add a connection to the GIBS WMS server. 
 ```
 
-Enter a name for the connection, and enter the following URL into the **URL** field (@worldview-add-wms-connection-image):  
+3. Enter a name for the connection in the **Name** field, and enter the following URL into the **URL** field (@worldview-add-wms-connection-image):  
 `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi`  
 
-Click OK to add the WMS server connection to your project. This will provide access to all available GIBS imagery layers served using the EPSG 4326 coordinate system (which includes the NISAR layers).
+4. Click **OK** to add the WMS server connection to your project. This will provide access to all available GIBS imagery layers served using the EPSG 4326 coordinate system (which includes the NISAR GCOV layers).
 
 ```{figure} ../assets/worldview-add-wms-connection.png
 :label: worldview-add-wms-connection-image
@@ -318,7 +321,12 @@ Click OK to add the WMS server connection to your project. This will provide acc
 Enter `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi` into the **URL** field for the WMS/WMTS connection and press OK to add the WMS connection to your project. 
 ```
 
-Select the newly added connection from the dropdown menu and click the **Connect** button to list the layers. Either search for the desired layer by typing NISAR into the search bar or expand the RTC SAR Backscatter category to find and select the NISAR GCOV layers. 
+5. Select the newly added connection from the dropdown menu and click the **Connect** button to list the layers.
+
+6. Find and select the desired NISAR GCOV layer using one of the following approaches:
+
+    - Search for the desired layer by typing `NISAR` into the search bar 
+    - Expand the `RTC SAR Backscatter` category to find and select the NISAR GCOV layer
 
 ```{figure} ../assets/worldview-qgis-add-nisar-wms.png
 :label: worldview-qgis-add-nisar-wms-image
@@ -328,14 +336,14 @@ Select the newly added connection from the dropdown menu and click the **Connect
 Select the newly added connection in the dropdown menu and press **Connect**. Scroll down and expand the RTC SAR Backscatter category. Then, select the NISAR GCOV layer and press **Add**. 
 ```
 
-Since this data collection is temporally dependent, you will need to use the Temporal Controller tool in QGIS to explore the data through time.
+Since this data collection is temporally dependent, you will need to use the **Temporal Controller** tool in QGIS to explore the data through time (@worldview-qgis-temporal-controller-image).
 
 ```{figure} ../assets/worldview-qgis-temporalcontroller.png
 :label: worldview-qgis-temporal-controller-image
 :alt: Screenshot highlighting the Temporal Controller tool in QGIS that allows NISAR data to be shown.   
 :align: center
 
-Select the clock icon to open the Temporal Controller tool in QGIS. Adjust the dates in the animation range to your desired time period to expose NISAR data. 
+Select the clock icon to open the **Temporal Controller** tool in QGIS. Adjust the dates in the animation range to your desired time period to display NISAR data. 
 ```
 
 ### NISAR GCOV WMS in ArcGIS Pro
