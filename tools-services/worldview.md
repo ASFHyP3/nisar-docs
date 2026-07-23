@@ -175,7 +175,7 @@ By adjusting the **Custom Interval Selector** to 12 days, you can explore data a
 :alt: Screenshot illustrating adjusting the Custom Interval Selector to 12 Days. 
 :align: center
 
-Click on the the **1 Day** text above the time step arrows, then select **Custom** from the pop-up menu. Enter 12 days into the Custom Interval Selector to step through time 12 days/one NISAR cycle at a time. 
+Click on the the **1 Day** text above the time step arrows, then select **Custom** from the pop-up menu. Enter 12 days into the **Custom Interval Selector** to step through time 12 days/one NISAR cycle at a time. 
 ```
 
 (wv-ts-animation)=
@@ -195,7 +195,7 @@ Click on the video recorder icon next to the time step arrows to animate a times
 ```
 
 - Click on the video recorder icon in the settings window (@worldview-animate-timeseries-image), which will open a pop-up to further refine the area of interest to be shown in the final animation. Here, you can select the resolution of the output GIF. 
-- Click the **Create GIF** button to create the GIF and save locally (@worldview-save-animation-gif-image). 
+- Click the **Create GIF** button to create the GIF and save it locally (@worldview-save-animation-gif-image). 
 
 ```{figure} ../assets/worldview-save-animation-gif.png
 :label: worldview-save-animation-gif-image
