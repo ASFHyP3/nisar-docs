@@ -32,14 +32,14 @@ There are two different NISAR GCOV layers available in Worldview: [daily mosaics
 (worldview-daily-mosaics)=
 #### Daily Mosaics
 
-NISAR PROVISIONAL GCOV products are displayed as a daily mosaic, and users can click through each day to view a mosaic of the GCOV products acquired on that day. 
+NISAR PROVISIONAL GCOV products are displayed as a daily mosaic, and users can use the [time slider](#worldview-time-slider) to click through each day to view a mosaic of the GCOV products acquired on that date. 
 
 (worldview-12-day-mosaics)=
 #### Rolling 12-Day Mosaics
 
 This rolling 12-day layer loads the past twelve days of images, with the latest date displayed on top. The NISAR mission has a 12-day repeat cycle, so each of these 12-day mosaics should provide global coverage. 
 
-Users can click through the layer day by day, or use the `Custom Interval Selector` option to set a custom interval of 12 days to quickly cycle through global mosaics.
+Users can click through the layer day by day, or use the `Custom Interval Selector` option to set a [custom interval](#wv-ts-custom-interval) of 12 days to quickly cycle through global mosaics.
 
 ```{figure} ../assets/worldview-custom-interval.png
 :label: worldview-custom-interval-image
@@ -166,11 +166,17 @@ Add layers to the map using either the **Add Layer** button or by clicking the c
 
 ### Exploring NISAR Data
 
+(worldview-time-slider)=
 #### Time Slider Tool
 
 Once NISAR data are loaded into Worldview, search for available data temporally by using the time slider tool. As a default, an arrow click steps through time one day at a time. This can be useful when determining when there are data acquisitions over an area of interest. 
 
-Once a single day of data acquisition has been established, you can customize the time slider tool to step through time in a custom increment. Click the **1 Day** text above the time slider arrows, and select **Custom** from the pop-up menu.  By adjusting the Custom Interval Selector to 12 days, you can explore data acquired each cycle. This allows for quick access to multiple available acquisitions over an area of interest. 
+(wv-ts-custom-interval)=
+##### Custom Interval
+
+You can customize the time slider tool to step through time using a custom increment. Click the **1 Day** text above the time slider arrows, and select **Custom** from the pop-up menu (@worldview-customize-timestep-image). 
+
+By adjusting the Custom Interval Selector to 12 days, you can explore data acquired each cycle. This allows you to quickly cycle through acquisitions with the same viewing geometry over time for an area of interest. 
 
 ```{figure} ../assets/worldview-customize-timestep.png
 :label: worldview-customize-timestep-image
@@ -180,7 +186,13 @@ Once a single day of data acquisition has been established, you can customize th
 Click on the the **1 Day** text above the time step arrows, then select **Custom** from the pop-up menu. Enter 12 days into the Custom Interval Selector to step through time 12 days/one NISAR cycle at a time. 
 ```
 
-To create an animation from available imagery, click the video recorder icon to the right of the arrows. Like the time slider tool, the animation tool allows for a custom increment of 12 days for stepping through each NISAR cycle. Select a start date, end date, and how many frames pers second will be shown in the final animation. 
+(wv-ts-animation)=
+##### Animation
+
+To create an animation from available imagery, click the video recorder icon to the right of the arrows (@worldview-animate-timeseries-image). 
+
+- Like the time slider tool, the animation tool allows for a custom increment of 12 days for stepping through each NISAR cycle if desired. 
+- Select a start date, end date, and how many frames pers second will be shown in the final animation. 
 
 ```{figure} ../assets/worldview-animate-timeseries.png
 :label: worldview-animate-timeseries-image
@@ -190,7 +202,8 @@ To create an animation from available imagery, click the video recorder icon to 
 Click on the video recorder icon next to the time step arrows to animate a timeseries. A pop-up box will allow for further refinement of the time step, start and end date, and frames per second in the animation. Click on the video recorder icon circled in red to create the animated GIF. 
 ```
 
-Click on the video recorder icon, which will open a pop-up to further refine the area of interest to be shown in the final animation. Here, you can select the resolution of the output GIF. Click the **Create GIF** button to create the GIF and save locally. 
+- Click on the video recorder icon in the settings window (#worldview-animate-timeseries-image), which will open a pop-up to further refine the area of interest to be shown in the final animation. Here, you can select the resolution of the output GIF. 
+- Click the **Create GIF** button to create the GIF and save locally (@worldview-save-animation-gif-image). 
 
 ```{figure} ../assets/worldview-save-animation-gif.png
 :label: worldview-save-animation-gif-image
@@ -202,7 +215,7 @@ Adjust the rectangle over an area of interest to be animated. Select the output 
 
 #### Comparison Tool
 
-Data can be compared across dates and datasets by using the clicking the **Start Comparison** button. A swipe bar will appear on the screen, allowing users to swipe between two different tabs of data. The mode of comparison can also be changed to opacity or with a "spy" tool. 
+Data can be compared across dates and datasets by using the clicking the **Start Comparison** button (@worldview-start-comparison-image). By default, a swipe bar will appear on the screen, allowing users to swipe between two different tabs of data. 
 
 ```{figure} ../assets/worldview-start-comparison.png
 :label: worldview-start-comparison-image
@@ -212,7 +225,7 @@ Data can be compared across dates and datasets by using the clicking the **Start
 Select the **Start Comparison** button to enter comparison mode. 
 ```
 
-The date of the comparison layer can be changed either by moving the **A** and **B** arrows on the time slider or by clicking into the **A** and **B** tabs in the **Layers** panel. Within each comparison tab, you can toggle layers on and off, which can be particularly useful when comparing across datasets.
+Adjust the dates to compare by moving the **A** and **B** arrows on the time slider or by clicking into the **A** and **B** tabs in the **Layers** panel (@worldview-adjust-comparison-image). Within each comparison tab, you can toggle layers on and off, which can be particularly useful when comparing across datasets.
  
 ```{figure} ../assets/worldview-adjust-comparison.png
 :label: worldview-adjust-comparison-image
@@ -222,7 +235,29 @@ The date of the comparison layer can be changed either by moving the **A** and *
 Adjust the date of the comparison sides by moving the time slider arrows of **A** or **B**, circled in red, or by clicking into the **A** or **B** tabs highlighted on the Layers panel. 
 ```
 
-Note that you cannot animate nor download data in comparison mode. Exit comparison mode by clicking the **Exit Comparison** button on the bottom of the **Layers** panel. 
+Besides the [**Swipe**](@worldview-adjust-comparison-image) setting for the Comparsion tool, there are also options for [**Opacity**](@worldview-compare-opacity-image) or [**Spy**](@worldview-compare-spy-image) settings. 
+
+- The **Opacity** option (@worldview-compare-opacity-image) overlays the two dates, and allows you to adjust the relative transparency of the two layers.  
+
+    ```{figure} ../assets/worldview-compare-opacity.png
+    :label: worldview-compare-opacity-image
+    :alt: Screenshot highlighting the opacity option in the comparison tool. 
+    :align: center
+    
+    Use the **Opacity** setting of the Comparison tool to set the relative transparency of the two layers. 
+    ```
+
+- The **Spy** option (@worldview-compare-spy-image) allows you to peek through one layer to see the other layer using a movable viewing window.
+
+    ```{figure} ../assets/worldview-compare-spy.png
+    :label: worldview-compare-spy-image
+    :alt: Screenshot highlighting the spy option in the comparison tool. 
+    :align: center
+    
+    Use the **Spy** setting of the Comparison tool to peek through one layer into the other using a movable viewing window. 
+    ```
+
+You cannot animate or download data while in comparison mode. Click the **Exit Comparison** button on the bottom of the **Layers** panel to leave the comparison mode.
 
 ```{figure} ../assets/worldview-exit-comparison.png
 :label: worldview-exit-comparison-image
