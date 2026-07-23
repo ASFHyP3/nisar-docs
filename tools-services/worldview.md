@@ -269,29 +269,39 @@ Exit Comparison mode by clicking the **Exit Comparison** button on the bottom of
 
 ## Downloading Data
 
-<!-- TODO: clarify that this functionality sends you out to Earthdata Search -->
+Worldview makes it easy to launch a search for the source data products that were used to create a visualization. If you find a date with good imagery for your area of interest, you can use the **Data** tab to launch [Earthdata Search](#earthdata-search-overview) directly from the Worldview interface. 
 
-### Open in Earthdata Search
-Once a day and area have been selected, and you ready to download data, click on the **Data** tab. Select the layer to download from. Note that only one data layer can be downloaded at a time. It can be helpful to click the **Set Area of Interest** checkbox, which will allow a rectangular AOI to be drawn on and passed to Earthdata Search. Click on **Download Via Earthdata Search** to open a new window with all the parameters from Worldview set. For more information on downloading data using Earthdata Search, refer to @download-nisar-data-earthdata-search.
+This functionality pre-populates your search criteria with the collection of products used to create the visualization (in this case, [NISAR PROVISIONAL GCOV](https://search.earthdata.nasa.gov/search/granules/collection-details?p=C2854338529-ASF) products), the date you've selected in the time slider, and (optionally) an area of interest.
+
+### Launch Earthdata Search from Worldview
+
+As illustrated in @worldview-download-data-image:
+
+1. Navigate to your area of interest in the map and select a date that has imagery of interest. 
+2. Click the **Data** tab in the Worldview pane.
+3. Select the layer you want to use for your data search by clicking the radio button.
+   - You can only search for source data for one layer at a time.
+4. If desired, click the **Set Area of Interest** checkbox, which will allow you to draw a rectangular AOI to pass to Earthdata Search as a spatial extent filter.
+5. Click the **Download Via Earthdata Search** button to launch Earthdata Search, which will be pre-populated with your search criteria.
 
 ```{figure} ../assets/worldview-download-data.png
 :label: worldview-download-data-image
 :alt: Screenshot dispalying the Data download parameters.  
 :align: center
 
-Download data by clicking the **Data** tab on the **Layers** panel. Select the data layer you want download, click the checkmark to set an area of interst, and click **Download Via Earthdata Search**. This will open Earthdata Search with all the parameters selected. 
+Download data by clicking the **Data** tab on the **Layers** panel. Select the data layer you want to access source data for, click the checkmark to set an area of interest (optional), and click **Download Via Earthdata Search**. This will open Earthdata Search with all the selected parameters pre-populated. 
 ```
 
 (worldview-wms-layers)=
 ## Worldview WMS Layers
 
-NASA Worldview uses the [Global Imagery Browse Services (GIBS)](https://earthdata.nasa.gov/gibs) to rapidly retrieve its imagery for an interactive browsing experience. While NASA Worldview uses OpenLayers as its mapping library, GIBS imagery, including the NISAR GCOV layer, can also be accessed from GIS software, Google Earth, NASA World Wind, and other geospatial applications.
+NASA Worldview uses the [Global Imagery Browse Services (GIBS)](https://earthdata.nasa.gov/gibs) to rapidly retrieve its imagery for an interactive browsing experience. While NASA Worldview uses OpenLayers as its mapping library, GIBS imagery, including the NISAR GCOV layer, can also be accessed directly using GIS software, Google Earth, [NASA WorldWind](https://worldwind.arc.nasa.gov/), and other geospatial applications.
 
 To add any layer served by the GIBS WMS to an application, connect to  https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi  through the application, and select the desired layer to add. Refer to the [GIBS Wiki Page]( https://wiki.earthdata.nasa.gov/display/GIBS/) for more information. <!-- TODO: check to make sure that this is accessible to the public; it's behind EDL, but maybe anyone with an EDL can access it. -->
 
 ### NISAR GCOV WMS in QGIS
 
-In QGIS, select **Add Layer**, then set the data type to WMS/WMTS.
+To add a GIBS WMS layer to QGIS, select **Add Layer**, then set the data type to WMS/WMTS.
 
 ```{figure} ../assets/worldview-add-new-wms.png
 :label: worldview-add-new-wms-image
@@ -301,7 +311,7 @@ In QGIS, select **Add Layer**, then set the data type to WMS/WMTS.
 Add a new data layer to your GIS with the data type WMS/WMTS. 
 ```
 
-For data in EPSG:4326 projection, use the URL `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi` and add to your project. This will provide access to all imagery available, so either search for the desired layer or select the desired layer in the browser under RTC SAR Backscatter. Since this data collection is temporally dependent, you will need to use the Temporal Controller tool in QGIS or the Time Slider tool in ArcGIS Pro to explore the data through time.
+For data in EPSG:4326 projection, use the URL `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi` and add to your project. This will provide access to all available GIBS imagery layers, so either search for the desired layer or select the desired layer in the browser under the RTC SAR Backscatter category. 
 
 ```{figure} ../assets/worldview-add-wms-connection.png
 :label: worldview-add-wms-connection-image
@@ -310,6 +320,8 @@ For data in EPSG:4326 projection, use the URL `https://uat.gibs.earthdata.nasa.g
 
 Use the URL `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi` in the WMS/WMTS connection and press OK to add to your GIS. 
 ```
+
+Since this data collection is temporally dependent, you will need to use the Temporal Controller tool in QGIS to explore the data through time.
 
 %### NISAR GCOV WMS in ArcGIS Pro
 
