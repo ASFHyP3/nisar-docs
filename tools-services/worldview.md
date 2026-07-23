@@ -348,7 +348,10 @@ Select the clock icon to open the **Temporal Controller** tool in QGIS. Adjust t
 
 ### NISAR GCOV WMS in ArcGIS Pro
 
-To add the GIBS WMS Server to ArcGIS Pro, click the **Connections** button in the **Insert** menu, then click **Server** in the drop-down menu and select **New WMS Server** (@gibs-arcgispro-server-connection-image). 
+To add a GIBS WMS layer to ArcGIS Pro: 
+
+1. Click the **Connections** button in the **Insert** menu (@gibs-arcgispro-server-connection-image).
+2. Click **Server** in the drop-down menu and select **New WMS Server**. 
 
 ```{figure} ../assets/gibs-arcgispro-server-connection.png
 :label: gibs-arcgispro-server-connection-image
@@ -358,10 +361,10 @@ To add the GIBS WMS Server to ArcGIS Pro, click the **Connections** button in th
 To add a GIBS WMS Server to ArcGIS Pro, click the **Connections** button in the **Insert** menu, then click **Server** in the drop-down menu and select **New WMS Server**.
 ```
 
-Enter the following URL into the **Server URL** field (@gibs-arcgispro-server-gibs-url-image):  
+3. Enter the following URL into the **Server URL** field (@gibs-arcgispro-server-gibs-url-image):  
 `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi`  
 
-Leave the default settings for all other fields (including blank fields).
+    - Leave the default settings for all other fields, including blank fields
 
 ```{figure} ../assets/gibs-arcgispro-server-gibs-url.png
 :label: gibs-arcgispro-server-gibs-url-image
@@ -371,7 +374,9 @@ Leave the default settings for all other fields (including blank fields).
 Enter the URL for the GIBS WMS to the **Server URL** field in the **Add WMS Server Connection** window in ArcGIS Pro.
 ```
 
-Expand the GIBS item in the Servers Section of the Catalog pane, expand the RTC SAR Backscatter entry, and drag the NISAR_L2_Geocoded_Polarimetric_Covariance service into the map to add it as a map layer (@gibs-arcgispro-add-service-image). 
+4. Expand the GIBS item in the **Servers** section of the **Catalog** pane until you can see the list of service categories (@gibs-arcgispro-add-service-image).
+5. Scroll down to the **RTC SAR Backscatter** category and expand it to see the available services.
+6. Drag the **NISAR_L2_Geocoded_Polarimetric_Covariance** service into the map to add it as a map layer. 
 
 ```{figure} ../assets/gibs-arcgispro-add-service.png
 :label: gibs-arcgispro-add-service-image
@@ -381,7 +386,9 @@ Expand the GIBS item in the Servers Section of the Catalog pane, expand the RTC 
 Navigate to the NISAR GCOV layer in the list of GIBS WMS services, and drag it onto the map to add the service as a layer.
 ```
 
-Select the WMS layer in the Contents pane, and click the **Time** menu to adjust the time slider settings (@gibs-arcgispro-time-slider-image). You might want to set a custom date range and adjust the interval between time slider steps.
+To view imagery from specific dates, select the WMS layer in the **Contents** pane and click the **Time** menu to adjust the time slider settings (@gibs-arcgispro-time-slider-image). 
+
+You might want to set a custom date range and adjust the interval between time slider steps.
 
 ```{figure} ../assets/gibs-arcgispro-time-slider.png
 :label: gibs-arcgispro-time-slider-image

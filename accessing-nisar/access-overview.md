@@ -44,7 +44,7 @@ Map-based web interfaces make it easy to explore data available for a particular
 <img id="vertex-nisar-screenshot" src="../assets/vertex-nisar-screenshot.png" alt="Searching for NISAR data on ASF's Vertex Data Search site">
 </a>
 
-[Learn more about using Vertex to search for NISAR data!](vertex#vertex-overview)
+[Learn more about using Vertex to search for NISAR data!](#vertex-overview)
 
 (earthdata-search)=
 ### Earthdata Search
@@ -55,7 +55,7 @@ Map-based web interfaces make it easy to explore data available for a particular
 <img id="earthdata-search-page" src="../assets/earthdata-search-page.png" alt="Image of the Earthdata Search web interface">
 </a>
 
-[Learn more about using Earthdata Search to access NISAR data!](earthdata-search#earthdata-search-overview)
+[Learn more about using Earthdata Search to access NISAR data!](#earthdata-search-overview)
 
 (worldview)=
 #### Worldview 
@@ -64,7 +64,7 @@ Map-based web interfaces make it easy to explore data available for a particular
 Worldview visualization layers are also available as [WMS services](#worldview-wms-layers) that can be used interactively within geospatial applications outside the Worldview platform.
 
 <a href="https://worldview.earthdata.nasa.gov/?v=-283.0791525473933,-136.9755200581828,233.8728850905137,117.46181096672454&l=Reference_Labels_15m(hidden),Reference_Features_15m(hidden),Coastlines_15m,NISAR_L2_Geocoded_Polarimetric_Covariance_12Day,NISAR_L2_Geocoded_Polarimetric_Covariance,Land_Water_Map(opacity=0.77)&lg=true&t=2026-07-17-T13%3A26%3A54Z">
-<img id="worldview-nisar-12-day-image" src="../assets/worldview-nisar-12-day.png" alt="Image of NISAR datasets in Worldview">
+<img id="access-worldview-nisar-12-day-image" src="../assets/worldview-nisar-12-day.png" alt="Image of NISAR datasets in Worldview">
 </a>
 
 [Learn more about using Worldview to explore NISAR data!](#worldview-overview)
