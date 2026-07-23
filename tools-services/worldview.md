@@ -79,7 +79,7 @@ Calm water or dry soil is still generally blue, and urban areas are still genera
 (worldview-pixel-spacing)=
 ### Pixel Spacing
 
-Where multiple frequencies are available, the higher-resolution frequency is included in the visualization (generally [Frequency A](#nisar-frequencies)). Over land, most GCOV Frequency A datasets have a pixel spacing of 10 or 20 meters, while Frequency B datasets have a pixel spacing of 80 meters. Regardless of the pixel spacing of the source GCOV dataset, however, all products are resampled to 15.5-m pixel spacing in the visualization layer.
+Where multiple frequencies are available, the higher-resolution frequency is included in the visualization (generally [Frequency A](#nisar-frequencies)). Over land, most GCOV Frequency A datasets have a pixel spacing of 10 or 20 meters, while Frequency B datasets have a pixel spacing of 80 meters. Regardless of the [pixel spacing of the source GCOV dataset]((#gcov-pixel-spacing)), however, all products are resampled to 15.5-m pixel spacing in the visualization layer.
 
 Because the pixel spacing of the visualization is very close to the pixel spacing of the Frequency A products, it generally gives a very good indication of the level of detail represented in the source rasters. Take a look at example products zoomed to the full resolution of the imagery for areas with source rasters posted to [10-m](#worldview-full-zoom-10-image), [20-m](#worldview-full-zoom-20-image), and [80-m](#worldview-full-zoom-80-image) pixel spacing. 
 
