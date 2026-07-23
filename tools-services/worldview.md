@@ -311,7 +311,10 @@ To add a GIBS WMS layer to QGIS, select **Add Layer**, then set the data type to
 Add a new data layer to your GIS with the data type WMS/WMTS. 
 ```
 
-Enter a name for the connection, and enter `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi` into the **URL** field and click OK to add to WMS server connection to your project. This will provide access to all available GIBS imagery layers served using the EPSG 4326 coordinate system (which includes the NISAR layers).
+Enter a name for the connection, and enter the following URL into the **URL** field:  
+`https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi`  
+
+Click OK to add the WMS server connection to your project. This will provide access to all available GIBS imagery layers served using the EPSG 4326 coordinate system (which includes the NISAR layers).
 
 ```{figure} ../assets/worldview-add-wms-connection.png
 :label: worldview-add-wms-connection-image
