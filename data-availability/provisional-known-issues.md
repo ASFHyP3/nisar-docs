@@ -3,12 +3,14 @@ short_title: Known Issues
 ---
 # Provisional Products
 
+_Updated July 23, 2026_
+
 (provisional-known-issues)=
 ## Provisional Product Known Issues
 
-The PROVISIONAL products [released in July 2026](#nisar-provisional-data-july) are calibrated and have undergone validation at a limited set of sites around the world. These data are designated as PROVISIONAL pending more complete validation over larger areas around the globe. The Provisional products generally meet radiometric and geolocation requirements in lower-latitude areas where ionospheric variability is low. 
+The PROVISIONAL products [released in July 2026](#nisar-provisional-data-july) are calibrated and have undergone validation at a limited set of sites around the world. These data are designated as PROVISIONAL pending more complete validation over larger areas around the globe.  
 
-These products, processed using the [NISAR Composite Release ID (CRID) P05023](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid), are a significant improvement over the [pre-calibration BETA products](#nisar-sample-data-feb) released in February 2026, and most of the [known issues associated with the BETA products](./product-known-issues.md) have been resolved. There are, however, a few known issues with the PROVISIONAL products that users should be aware of. 
+These products, processed using the [NISAR Composite Release ID (CRID) P05023](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid), are a significant improvement over the [pre-calibration BETA products](#nisar-sample-data-feb) released in February 2026. There are, however, a few known issues with the PROVISIONAL products that users should be aware of. These issues are currently being reviewed and will be resolved or mitigated in future releases.
 
 ### Ionospheric Effects
 
