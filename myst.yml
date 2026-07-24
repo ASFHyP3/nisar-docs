@@ -72,8 +72,8 @@ project:
     - title: Resources
       children:
         - file: resources/earthdata-forum.md
-        - file: resources/snwg.md
         - file: resources/webinars.md
+        - file: resources/snwg.md
         - file: tutorials/mission-homepage-tutorials.md
         - file: resources/documents.md
         - file: appendices/acronyms.md
@@ -123,6 +123,7 @@ project:
     SAR: Synthetic Aperture Radar
     SET: Solid Earth Tides
     SNR: Signal-to-Noise Ratio
+    SNWG: Satellite Needs Working Group
     TEC: Total Electron Content
     UTM: Universal Transverse Mercator
     UR: Urgent Response
