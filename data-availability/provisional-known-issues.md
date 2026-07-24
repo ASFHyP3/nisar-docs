@@ -10,7 +10,9 @@ _Updated July 23, 2026_
 
 The PROVISIONAL products [released in July 2026](#nisar-provisional-data-july) are calibrated and have undergone validation at a limited set of sites around the world. These data are designated as PROVISIONAL pending more complete calibration and validation over larger areas around the globe.  
 
-These products, processed using the [NISAR Composite Release ID (CRID) P05023](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid), are a significant improvement over the [pre-calibration BETA products](#nisar-sample-data-feb) released in February 2026. There are, however, a few known issues with the PROVISIONAL products that users should be aware of. **These issues are currently being reviewed and will be resolved or mitigated in future releases.**
+These products, processed using the [NISAR Composite Release ID (CRID) P05023](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid), are a significant improvement over the [pre-calibration BETA products](#nisar-sample-data-feb) released in February 2026. There are, however, a few known issues with the PROVISIONAL products that users should be aware of. 
+
+**These issues are currently being reviewed and will be resolved or mitigated in future releases.**
 
 ### Ionospheric Effects
 
@@ -28,7 +30,7 @@ Low-level ripples in the SLC data and derived products may occasionally be seen 
 
 ### Frequency B Calibration
 
-The calibration of the 5 MHz `Frequency B` channel, which is designed for split-spectrum processing, has larger systematic radiometric calibration residuals than the main band `Frequency A`. While there are no radiometric requirements for Frequency B, datasets generated from this channel have been found to be useful in their own right. As such, calibration of the Frequency B channel will be improved.
+The calibration of the 5 MHz Frequency B channel, which is designed for split-spectrum processing, has larger systematic radiometric calibration residuals than the main band Frequency A. While there are no radiometric requirements for Frequency B, datasets generated from this channel have been found to be useful in their own right. As such, calibration of the Frequency B channel will be improved.
 
 ### Polarimetric Calibration
 
