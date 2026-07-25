@@ -4,7 +4,7 @@
 
 _July 2026_
 
-NASA's [Applied Remote Sensing Training (ARSET)](https://www.earthdata.nasa.gov/data/projects/arset) program offered [Harnessing NISAR: Next-Generation Radar Observations for Earth Applications](https://www.earthdata.nasa.gov/learn/trainings/harnessing-nisar-next-generation-radar-observations-earth-applications) in July 2026. The course was offered in both [English](https://www.earthdata.nasa.gov/learn/trainings/harnessing-nisar-next-generation-radar-observations-earth-applications) and [Spanish](https://www.earthdata.nasa.gov/es/learn/trainings/nisar-nuevas-observaciones-de-radar-para-aplicaciones-terrestres). 
+NASA's [Applied Remote Sensing Training (ARSET)](https://www.earthdata.nasa.gov/data/projects/arset) program offered [Harnessing NISAR: Next-Generation Radar Observations for Earth Applications](https://www.earthdata.nasa.gov/learn/trainings/harnessing-nisar-next-generation-radar-observations-earth-applications) in July 2026. The three-session course was offered in both [English](https://www.earthdata.nasa.gov/learn/trainings/harnessing-nisar-next-generation-radar-observations-earth-applications) and [Spanish](https://www.earthdata.nasa.gov/es/learn/trainings/nisar-nuevas-observaciones-de-radar-para-aplicaciones-terrestres). 
 
 This training course introduces users to the characteristics and data of the NISAR mission and demonstrates workflows for accessing, visualizing, and analyzing the data for a range of applications. 
 
