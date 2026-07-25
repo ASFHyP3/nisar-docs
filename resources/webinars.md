@@ -45,7 +45,7 @@ NISAR: Nuevas Observaciones de Radar para Aplicaciones Terrestres. Sesión 2: Ac
 
 :::{iframe} https://www.youtube.com/embed/vKpo01HrMBk?si=N6rfMfIzi38CsDMh
 :width: 100%
-NISAR: Nuevas Observaciones de Radar para Aplicaciones Terrestres. Sesión 3: Monitoreo de Terremotos, Volcanes y Deslizamientos de Tierra con la Capacidad InSAR de NISAR (9 de julio de 2026)
+NISAR: Nuevas Observaciones de Radar para Aplicaciones Terrestres. Sesión 3: Monitoreo de Terremotos, Volcanes y Deslizamientos de Tierra con la Capacidad InSAR de NISAR (16 de julio de 2026)
 :::
 
 ## NISAR Science Team Meeting
