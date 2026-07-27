@@ -66,7 +66,7 @@ ASF utilizes NASA's [Earthdata Cloud](https://www.earthdata.nasa.gov/about/earth
 (nisar-instrumentation)=
 ## NISAR Instrumentation
 
-NISAR was designed to deliver global coverage at full resolution and with polarimetric diversity. The technical innovation that allows this performance is the scan-on-receive SweepSAR design, conceived and refined collaboratively by NASA and the German Space Agency (DLR).
+NISAR was designed to deliver global coverage at full resolution and with polarimetric diversity. The technical innovation that allows this performance is the scan-on-receive [SweepSAR design](https://science.nasa.gov/mission/nisar/sweepsar/), conceived and refined collaboratively by NASA and the German Space Agency (DLR).
 
 ```{figure} ../assets/sweep-sar.png
 :label: sweep-sar
