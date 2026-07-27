@@ -1,3 +1,7 @@
+---
+short_title: SNWG
+---
+
 # Satellite Needs Working Group
 
 ## The Satellite Needs Working Group
