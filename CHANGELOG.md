@@ -5,13 +5,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [0.4.25]
+
+### Changed
+- Updated [Provisional Known Issues](data-availability/provisional-known-issues.md) page 
+
 ## [0.4.24]
 
 ### Added
 - Links to the [ARSET NISAR training course](https://www.earthdata.nasa.gov/learn/trainings/harnessing-nisar-next-generation-radar-observations-earth-applications) on the [Webinars](resources/webinars.md) page
-
-### Changed
-- Updated [Provisional Known Issues](data-availability/provisional-known-issues.md) page 
 
 ## [0.4.23]
 
