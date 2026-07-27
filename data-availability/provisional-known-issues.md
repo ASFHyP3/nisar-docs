@@ -47,8 +47,10 @@ Users will find that the L-SAR products using calibration modes in Track 161/174
 
 In areas of quad-pol acquisitions, there are three to six gaps across the swath due to the nature of NISAR’s SweepSAR acquisition and the number of time steps used in the soil moisture algorithm. In these gap areas, there will be occasions where one or more of the three soil moisture algorithms included in the SME2 products may not deliver an estimate.
 
-## BETA and PROVISIONAL Products
+## Product Maturity
 
-The PROVISIONAL products are available for acquisitions starting June 17, 2026. Until the [reprocessing campaign](#validated-reprocessing) is undertaken to release fully validated data from the start of the science phase of the mission onward, only the BETA products will be available for earlier acquisition dates. 
+[NISAR PROVISIONAL products](#nisar-provisional-data-july) are available for acquisitions starting June 17, 2026, but [BETA products](#nisar-sample-data-feb) are available for earlier acquisition dates (October 2025 - January 2026) in some areas.
 
-All released data going forward from the PROVISIONAL data release will have a CRID of P05023 or higher. The BETA pre-calibration data released in February 2026 have lower CRID numbers, and users should exercise care in attempting to analyze BETA products together with PROVISIONAL products. 
+All released data going forward from the PROVISIONAL data release will have a CRID of P05023 or higher, while BETA pre-calibration products have lower CRID numbers. 
+
+Users should exercise caution if they analyze BETA products together with PROVISIONAL products, as differences in the processing software used for these different [product maturities](#nisar-maturity-levels) may impact results.
