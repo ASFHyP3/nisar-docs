@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.4.25]
 
+### Added
+- [Satellite Needs Working Group (SNWG)](resources/snwg.md) page
+
 ### Changed
 - Updated [Provisional Known Issues](data-availability/provisional-known-issues.md) page 
 
