@@ -5,7 +5,7 @@ The Satellite Needs Working Group (SNWG) is an interagency collaboration chaired
 
 As a core component of the interagency U.S. Group on Earth Observations (USGEO), the SNWG conducts a biennial survey of federal agencies’ satellite data needs to identify and devise new solutions that maximize the value of American Earth observing satellites. Since its inception in 2016, SNWG has received over 500 survey responses.
 
-[NASA’s SNWG Implementation Team (NSITE)](https://www.earthdata.nasa.gov/data/projects/nsite) facilitates the review of these surveys by NASA, NOAA, and USGS subject matter experts to identify feasible, high-potential solutions that meet specific needs identified by civil agencies. NSITE then engages relevant stakeholders to collaboratively develop these ideas into finished solutions customized to those agency users. 
+[NASA’s SNWG Implementation Team (NSITE)](https://www.earthdata.nasa.gov/data/projects/nsite) facilitates the review of these surveys by subject matter experts at NASA, NOAA, and USGS to identify feasible, high-potential solutions that meet specific needs identified by civil agencies. NSITE then engages relevant stakeholders to collaboratively develop these ideas into finished solutions customized to those agency users. 
 
 Solutions have connected NASA Earth data to needs across a wide range of areas, such as agriculture, oceans, forestry, air quality, and disasters. These collaborations also fuel NASA Earth science innovations and build stronger working relationships between NASA, fellow federal agencies, and other public and private sector users.
 
