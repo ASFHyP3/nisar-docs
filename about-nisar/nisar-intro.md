@@ -66,6 +66,8 @@ ASF utilizes NASA's [Earthdata Cloud](https://www.earthdata.nasa.gov/about/earth
 (nisar-instrumentation)=
 ## NISAR Instrumentation
 
+### SweepSAR
+
 NISAR was designed to deliver global coverage at full resolution and with polarimetric diversity. The technical innovation that allows this performance is the scan-on-receive [SweepSAR design](https://science.nasa.gov/mission/nisar/sweepsar/), conceived and refined collaboratively by NASA and the German Space Agency (DLR).
 
 ```{figure} ../assets/sweep-sar.png
@@ -77,6 +79,21 @@ SweepSAR technique, which allows full-resolution, multipolarimetric observations
 ```
 
 A more detailed description of the NISAR instrument design is in section 4.7 of the [NISAR Mission Handbook](https://doi.org/10.48577/jpl.UD4HV3) [@nisarMissionHandbook2025].
+
+#### Pulse Repetition Frequency
+
+SweepSAR is able to generate gapless imagery by varying the Pulse Repetition Frequency (PRF). Because the radar cannot receive echoes while it is transmitting, there are gaps in the imagery when the PRF is fixed. By varying the PRF, or _dithering_, NISAR moves the gaps around over time, allowing the data to be processed by interpolating across the gaps. 
+
+Most of NISAR's acquisition modes make use of variable PRFs, generating gapless imagery. There are, however, some fixed PRF modes. In the current acquisition plan, fixed PRFs are only used for [quad-pol acquisitions](#fixed-prf-quad-pol).
+
+(fixed-prf-quad-pol)=
+##### Quad-pol acquisitions 
+
+All NISAR [quad-pol](#nisar-polarization) observations currently use a fixed PRF because of the operational constraints of quad-pol acquisitions. Using variable PRFs degrades image quality, so the tradeoff for high image quality are bands of data gaps in the imagery.
+
+These gaps are moved from cycle to cycle to allow complete coverage over time, but any individual image will have some data missing. This is a permanent and expected feature of standard quad-pol acquisitions. 
+
+The NISAR mission is experimenting with variable PRF acquisitions, and products generated using this approach may be made available in the future, but this experimental mode is still being evaluated.
 
 ### Look Direction
 
