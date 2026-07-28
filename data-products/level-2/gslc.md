@@ -13,6 +13,27 @@ The GSLC product is a Level 2 product derived from the Level-1 [RSLC](#rslc-prod
 
 The geocoding is performed by inverse mapping of the map coordinates with their topographic heights into the radar coordinate system and interpolating the radar signal at the radar location corresponding to the map coordinate. Phase-preserving complex interpolation projects the data onto a uniformly spaced, north-south/east-west aligned geographic grid.
 
+(gslc-pixel-spacing)=
+## Pixel Spacing
+
+The pixel spacing of the product depends on the acquisition bandwidth used, as indicated in @tbl:gslc-pixel-spacing. 
+
+- Most GSLC [Frequency A](#nisar-frequencies) datasets for acquisitions over land are posted to a pixel spacing of either 5 by 5 meters or 5 by 10 meters.
+- Cryosphere acquisitions (Antarctica, Greenland, etc.) are generally posted to a pixel spacing of 5 by 2.5 meters. 
+- Acquisitions over sea ice and [Frequency B](#nisar-frequencies) datasets are generally posted to a pixel spacing of 5 by 40 meters. 
+
+:::{table} NISAR GSLC Pixel Spacing by L-Band Acquisition Bandwidth 
+:label: tbl:gslc-pixel-spacing
+
+| Range bandwidth (MHz) | RSLC Azimuth sampling (m) | RSLC Range sampling (m) | Ground Range Sampling in mid-Swath (m) | GSLC Posting in Northing (m) | GSLC Posting in Easting (m) |
+|:---------------------:|:-------------------------:|:-----------------------:|:--------------------------------------:|:----------------------------:|:---------------------------:|
+|           5           |            ~5             |           ~25           |                 ~36.3                  |              5               |             40              |
+|          20           |            ~5             |          ~6.25          |                  ~9.1                  |              5               |             10              |
+|          40           |            ~5             |          ~3.12          |                  ~4.5                  |              5               |              5              |
+|          77           |            ~5             |          ~1.56          |                 ~2.27                  |              5               |             2.5             |
+
+:::
+
 ### Interferometry
 
 The phase of the GSLC product is flattened for the orbit used in the RSLC processing. The phase flattening removes the topographic phase contribution in the GSLC. Consequently, cross-multiplying two GSLC products will result in an interferometric phase flattened interferogram.
