@@ -89,7 +89,15 @@ Most of NISAR's acquisition modes make use of variable PRFs, generating gapless 
 (fixed-prf-quad-pol)=
 ##### Quad-pol acquisitions 
 
-All NISAR [quad-pol](#nisar-polarization) observations currently use a fixed PRF because of the operational constraints of quad-pol acquisitions. Using variable PRFs degrades image quality, so the tradeoff for high image quality are bands of data gaps in the imagery.
+All NISAR [quad-pol](#nisar-polarization) observations currently use a fixed PRF because of the operational constraints of quad-pol acquisitions. Using variable PRFs degrades image quality, so the tradeoff for high image quality are bands of data gaps in the imagery, as seen in @quad-pol-gaps-image
+
+```{figure} ../assets/quad-pol-gaps.png
+:label: quad-pol-gaps-image
+:alt: Figure showing the data gaps caused by the fixed PRF used to acquire a quad-pol NISAR image
+:align: center
+
+The data gaps caused by the fixed PRF used for quad-pol acquisitions are visible as black lines in the Frequency A HHHH covariance dataset from NISAR_L2_PR_GCOV_026_055_D_068_2005_QPDH_A_20260724T003402_20260724T003437_P05023_N_F_J_001.h5.
+```
 
 These gaps are moved from cycle to cycle to allow complete coverage over time, but any individual image will have some data missing. This is a permanent and expected feature of standard quad-pol acquisitions. 
 
