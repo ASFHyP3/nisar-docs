@@ -138,13 +138,13 @@ The S-band SAR (S-SAR) instrument, developed in a collaboration between NASA and
 (nisar-frequencies)=
 ### Frequencies
 
-NISAR is equipped to acquire data in two slightly different frequencies. @tbl:areas-html summarizes the Frequency A and the Frequency B settings that define the acquisition modes. 
+NISAR is equipped to acquire data in two slightly different frequencies at each bandwidth. @tbl:areas-html summarizes the Frequency A and the Frequency B settings that define the acquisition modes. 
 
 Frequency A is the primary frequency used for generating scientific products, while Frequency B data is collected primarily for use in atmospheric corrections. Many NISAR products include datasets for both Frequency A and Frequency B data, and some users may find the Frequency B data useful in its own right. 
 
 Frequency B datasets are generally posted at a coarser pixel spacing than Frequency A datasets, so analysis workflows requiring higher resolution are better served by the Frequency A data. The larger pixels of Frequency B datasets result in them being much smaller files, which take less time to download and render, making them useful for regional analysis workflows or a quick look at the data.
 
-:::{table} NISAR acquisition modes
+:::{table} Center frequencies (MHz) for NISAR acquisition bandwidths
 :label: tbl:areas-html
 
 <table style="border: 2px solid #000">
@@ -184,7 +184,6 @@ Frequency B datasets are generally posted at a coarser pixel spacing than Freque
 </table>
 :::
 
-(nisar-polarization)=
 ### Polarization
 
 The polarization refers to the direction that an electromagnetic wave travels. This can be horizontal, vertical, or circular. Circular polarizations, where the wave is rotating in a constant plane to the left or right, are much less commonly used for SAR sensors than linear (horizontal or vertical) polarizations. 
@@ -193,20 +192,26 @@ The polarization refers to the direction that an electromagnetic wave travels. T
 
 The antennas of a SAR system can be configured to transmit and receive electromagnetic waves using various combinations of these polarizations. The polarimetric properties of the observed surface can reveal the structure, orientation and environmental conditions of the surface elements.
 
-Signals that are transmitted and received in the same polarization are called co-polarized (co-pol). Signals that are received in a different polarization from the transmitted polarization are called cross-polarized (cross-pol). 
+Signals that are transmitted and received in the same polarization are called co-polarized (co-pol). Signals that are received in a different polarization from the transmitted polarization are called cross-polarized (cross-pol).
 
-For the NISAR mission, the combination of polarizations varies based on the acquisition mode. The 2-digit polarization code, which indicates the transmit polarization followed by the receive polarization, is indicated as part of the filename for each data product. Refer to [NISAR Naming Conventions](#naming-convention-overview) to see where the polarization is indicated in the filename. 
+(nisar-polarization)=
+#### NISAR Polarimetric Channels
+
+For the NISAR mission, the polarimetric channels available in a product will vary based on the acquisition mode. The 2-digit polarization code, indicating the transmit polarization followed by the receive polarization, is indicated as part of each dataset name.
+
+Each product filename indicates the polarimetric channels available for the datasets contained in that product. Refer to [NISAR Naming Conventions](#naming-convention-overview) to see where the polarization is indicated in the filename for different product types. 
 
 The potential polarization configurations for NISAR products are as follows:
-- Single polarization
+
+- ##### Single polarization (single-pol)
   - SH: HH single-pol data
   - SV: VV single-pol data
-- Dual polarization
+- ##### Dual polarization (dual-pol)
   - DH: HH+HV dual-pol data 
   - DV: VV+VH dual-pol data
-- Quad-pol data
+- ##### Quad polarization (quad-pol)
   - QP: HH+HV+VH+VV quad-pol data
-- Compact polarization (circular)
+- ##### Compact polarization (circular)
   - RH: right-circular HH data 
   - RV: right-circular VV data
 
