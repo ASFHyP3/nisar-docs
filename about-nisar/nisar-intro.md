@@ -96,7 +96,7 @@ All NISAR [quad-pol](#nisar-polarization) observations currently use a fixed PRF
 :alt: Figure showing the data gaps caused by the fixed PRF used to acquire a quad-pol NISAR image
 :align: center
 
-The data gaps caused by the fixed PRF used for quad-pol acquisitions are visible as black lines in the Frequency A HHHH covariance dataset from the quad-pol NISAR<wbr>_L2<wbr>_PR<wbr>_GCOV<wbr>_026<wbr>_055<wbr>_D<wbr>_068<wbr>_2005<wbr>_QPDH<wbr>_A<wbr>_20260724T003402<wbr>_20260724T003437<wbr>_P05023<wbr>_N<wbr>_F<wbr>_J<wbr>_001.h5 product.
+The data gaps caused by the fixed PRF used for quad-pol acquisitions are visible as black lines in this Frequency A HHHH covariance dataset from the quad-pol NISAR<wbr>_L2<wbr>_PR<wbr>_GCOV<wbr>_026<wbr>_055<wbr>_D<wbr>_068<wbr>_2005<wbr>_QPDH<wbr>_A<wbr>_20260724T003402<wbr>_20260724T003437<wbr>_P05023<wbr>_N<wbr>_F<wbr>_J<wbr>_001.h5 product.
 ```
 
 These gaps are moved from cycle to cycle to allow complete coverage over time, but any individual image will have some data missing. This is a permanent and expected feature of standard quad-pol acquisitions. 
