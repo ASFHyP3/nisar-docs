@@ -82,7 +82,7 @@ A more detailed description of the NISAR instrument design is in section 4.7 of 
 
 #### Pulse Repetition Frequency
 
-SweepSAR is able to generate gapless imagery by varying the Pulse Repetition Frequency (PRF). Because the radar cannot receive echoes while it is transmitting, there are gaps in the imagery when the PRF is fixed. By varying the PRF, or _dithering_, NISAR moves the gaps around over time, allowing the data to be processed by interpolating across the gaps. 
+SweepSAR is able to generate gapless imagery by varying the Pulse Repetition Frequency (PRF). Because the radar cannot receive echoes while it is transmitting, there are gaps in the imagery when the PRF is fixed. By varying the PRF, or _dithering_, NISAR moves the gaps around as data is acquired, allowing for interpolation across the gaps. 
 
 Most of NISAR's acquisition modes make use of variable PRFs, generating gapless imagery. There are, however, some fixed PRF modes. In the current acquisition plan, fixed PRFs are only used for [quad-pol acquisitions](#fixed-prf-quad-pol).
 
