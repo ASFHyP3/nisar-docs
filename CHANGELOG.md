@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - [Satellite Needs Working Group (SNWG)](resources/snwg.md) page
 - Pixel spacing table to [GSLC page](data-products/level-2/gslc.md)
+- Pulse Repetition Frequency (PRF) information to SweepSAR section, referencing the data gaps in quad-pol data collected with a fixed PRF
 
 ### Changed
 - Updated [Provisional Known Issues](data-availability/provisional-known-issues.md) page 

@@ -66,6 +66,8 @@ ASF utilizes NASA's [Earthdata Cloud](https://www.earthdata.nasa.gov/about/earth
 (nisar-instrumentation)=
 ## NISAR Instrumentation
 
+### SweepSAR
+
 NISAR was designed to deliver global coverage at full resolution and with polarimetric diversity. The technical innovation that allows this performance is the scan-on-receive [SweepSAR design](https://science.nasa.gov/mission/nisar/sweepsar/), conceived and refined collaboratively by NASA and the German Space Agency (DLR).
 
 ```{figure} ../assets/sweep-sar.png
@@ -77,6 +79,29 @@ SweepSAR technique, which allows full-resolution, multipolarimetric observations
 ```
 
 A more detailed description of the NISAR instrument design is in section 4.7 of the [NISAR Mission Handbook](https://doi.org/10.48577/jpl.UD4HV3) [@nisarMissionHandbook2025].
+
+#### Pulse Repetition Frequency
+
+SweepSAR is able to generate gapless imagery by varying the Pulse Repetition Frequency (PRF). Because the radar cannot receive echoes while it is transmitting, there are gaps in the imagery when the PRF is fixed. By varying the PRF, or _dithering_, NISAR moves the gaps around as data is acquired, allowing for interpolation across the gaps. 
+
+Most of NISAR's acquisition modes make use of variable PRFs, generating gapless imagery. There are, however, some fixed PRF modes. In the current acquisition plan, fixed PRFs are only used for [quad-pol acquisitions](#fixed-prf-quad-pol).
+
+(fixed-prf-quad-pol)=
+##### Quad-pol acquisitions 
+
+All NISAR [quad-pol](#nisar-polarization) observations currently use a fixed PRF because of the operational constraints of quad-pol acquisitions. Using variable PRFs degrades image quality, so the tradeoff for high image quality is the presence of bands of data gaps in the imagery, as seen in @quad-pol-gaps-image.
+
+```{figure} ../assets/quad-pol-gaps.png
+:label: quad-pol-gaps-image
+:alt: Figure showing the data gaps caused by the fixed PRF used to acquire a quad-pol NISAR image
+:align: center
+
+The data gaps caused by the fixed PRF used for quad-pol acquisitions are visible as black lines in this Frequency A HHHH covariance dataset from the quad-pol NISAR<wbr>_L2<wbr>_PR<wbr>_GCOV<wbr>_026<wbr>_055<wbr>_D<wbr>_068<wbr>_2005<wbr>_QPDH<wbr>_A<wbr>_20260724T003402<wbr>_20260724T003437<wbr>_P05023<wbr>_N<wbr>_F<wbr>_J<wbr>_001.h5 product.
+```
+
+These gaps are moved from cycle to cycle to allow complete coverage over time, but any individual image will have some data missing. This is a permanent and expected feature of standard NISAR quad-pol acquisitions. 
+
+The NISAR mission is experimenting with variable PRF acquisitions, and products generated using this approach may be made available in the future, but this experimental mode is still being evaluated.
 
 ### Look Direction
 
@@ -121,13 +146,13 @@ The S-band SAR (S-SAR) instrument, developed in a collaboration between NASA and
 (nisar-frequencies)=
 ### Frequencies
 
-NISAR is equipped to acquire data in two slightly different frequencies. @tbl:areas-html summarizes the Frequency A and the Frequency B settings that define the acquisition modes. 
+NISAR is equipped to acquire data in two slightly different frequencies at each bandwidth. @tbl:areas-html summarizes the Frequency A and the Frequency B settings that define the acquisition modes. 
 
 Frequency A is the primary frequency used for generating scientific products, while Frequency B data is collected primarily for use in atmospheric corrections. Many NISAR products include datasets for both Frequency A and Frequency B data, and some users may find the Frequency B data useful in its own right. 
 
 Frequency B datasets are generally posted at a coarser pixel spacing than Frequency A datasets, so analysis workflows requiring higher resolution are better served by the Frequency A data. The larger pixels of Frequency B datasets result in them being much smaller files, which take less time to download and render, making them useful for regional analysis workflows or a quick look at the data.
 
-:::{table} NISAR acquisition modes
+:::{table} Center frequencies (MHz) for NISAR acquisition bandwidths
 :label: tbl:areas-html
 
 <table style="border: 2px solid #000">
@@ -167,7 +192,6 @@ Frequency B datasets are generally posted at a coarser pixel spacing than Freque
 </table>
 :::
 
-(nisar-polarization)=
 ### Polarization
 
 The polarization refers to the direction that an electromagnetic wave travels. This can be horizontal, vertical, or circular. Circular polarizations, where the wave is rotating in a constant plane to the left or right, are much less commonly used for SAR sensors than linear (horizontal or vertical) polarizations. 
@@ -176,20 +200,26 @@ The polarization refers to the direction that an electromagnetic wave travels. T
 
 The antennas of a SAR system can be configured to transmit and receive electromagnetic waves using various combinations of these polarizations. The polarimetric properties of the observed surface can reveal the structure, orientation and environmental conditions of the surface elements.
 
-Signals that are transmitted and received in the same polarization are called co-polarized (co-pol). Signals that are received in a different polarization from the transmitted polarization are called cross-polarized (cross-pol). 
+Signals that are transmitted and received in the same polarization are called co-polarized (co-pol). Signals that are received in a different polarization from the transmitted polarization are called cross-polarized (cross-pol).
 
-For the NISAR mission, the combination of polarizations varies based on the acquisition mode. The 2-digit polarization code, which indicates the transmit polarization followed by the receive polarization, is indicated as part of the filename for each data product. Refer to [NISAR Naming Conventions](#naming-convention-overview) to see where the polarization is indicated in the filename. 
+(nisar-polarization)=
+#### NISAR Polarimetric Channels
+
+For the NISAR mission, the polarimetric channels available in a product will vary based on the acquisition mode. The 2-digit polarization code, indicating the transmit polarization followed by the receive polarization, is indicated as part of each dataset name.
+
+Each product filename indicates the polarimetric channels available for the datasets contained in that product. Refer to [NISAR Naming Conventions](#naming-convention-overview) to see where the polarization is indicated in the filename for different product types. 
 
 The potential polarization configurations for NISAR products are as follows:
-- Single polarization
+
+- ##### Single polarization (single-pol)
   - SH: HH single-pol data
   - SV: VV single-pol data
-- Dual polarization
+- ##### Dual polarization (dual-pol)
   - DH: HH+HV dual-pol data 
   - DV: VV+VH dual-pol data
-- Quad-pol data
+- ##### Quad polarization (quad-pol)
   - QP: HH+HV+VH+VV quad-pol data
-- Compact polarization (circular)
+- ##### Compact polarization (circular)
   - RH: right-circular HH data 
   - RV: right-circular VV data
 
