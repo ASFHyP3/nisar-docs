@@ -4,7 +4,7 @@
 
 _July 2026_
 
-NASA's [Applied Remote Sensing Training (ARSET)](https://www.earthdata.nasa.gov/data/projects/arset) program offered [Harnessing NISAR: Next-Generation Radar Observations for Earth Applications](https://www.earthdata.nasa.gov/learn/trainings/harnessing-nisar-next-generation-radar-observations-earth-applications) in July 2026. The course is offered in both [English](https://www.earthdata.nasa.gov/learn/trainings/harnessing-nisar-next-generation-radar-observations-earth-applications) and [Spanish](https://www.earthdata.nasa.gov/es/learn/trainings/nisar-nuevas-observaciones-de-radar-para-aplicaciones-terrestres). 
+NASA's [Applied Remote Sensing Training (ARSET)](https://www.earthdata.nasa.gov/data/projects/arset) program offered [Harnessing NISAR: Next-Generation Radar Observations for Earth Applications](https://www.earthdata.nasa.gov/learn/trainings/harnessing-nisar-next-generation-radar-observations-earth-applications) in July 2026. The three-session course was offered in both [English](https://www.earthdata.nasa.gov/learn/trainings/harnessing-nisar-next-generation-radar-observations-earth-applications) and [Spanish](https://www.earthdata.nasa.gov/es/learn/trainings/nisar-nuevas-observaciones-de-radar-para-aplicaciones-terrestres). 
 
 This training course introduces users to the characteristics and data of the NISAR mission and demonstrates workflows for accessing, visualizing, and analyzing the data for a range of applications. 
 
@@ -45,7 +45,7 @@ NISAR: Nuevas Observaciones de Radar para Aplicaciones Terrestres. Sesión 2: Ac
 
 :::{iframe} https://www.youtube.com/embed/vKpo01HrMBk?si=N6rfMfIzi38CsDMh
 :width: 100%
-NISAR: Nuevas Observaciones de Radar para Aplicaciones Terrestres. Sesión 3: Monitoreo de Terremotos, Volcanes y Deslizamientos de Tierra con la Capacidad InSAR de NISAR (9 de julio de 2026)
+NISAR: Nuevas Observaciones de Radar para Aplicaciones Terrestres. Sesión 3: Monitoreo de Terremotos, Volcanes y Deslizamientos de Tierra con la Capacidad InSAR de NISAR (16 de julio de 2026)
 :::
 
 ## NISAR Science Team Meeting

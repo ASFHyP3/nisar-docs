@@ -84,12 +84,12 @@ Most GCOV products for acquisitions over land are posted to either 10-m or 20-m 
 :::{table} NISAR GCOV Pixel Spacing by L-Band Acquisition Bandwidth 
 :label: tbl:gcov-pixel-spacing
 
-| L-Band Acquisition Bandwidth (MHz) | RSLC Azimuth Pixel Spacing (m) | RSLC Range Pixel Spacing (m) | GCOV Pixel Spacing (m) |
-|:----------------------------------:|:------------------------------:|:----------------------------:|:----------------------:|
-|                 5                  |               ~5               |             ~25              |           80           |
-|                 20                 |               ~5               |            ~6.25             |           20           |
-|                 40                 |               ~5               |            ~3.12             |           10           |
-|                 77                 |               ~5               |            ~1.56             |           20           |
+| Range Bandwidth (MHz) | RSLC Azimuth Pixel Spacing (m) | RSLC Range Pixel Spacing (m) | GCOV Pixel Spacing (m) |
+|:---------------------:|:------------------------------:|:----------------------------:|:----------------------:|
+|           5           |               ~5               |             ~25              |           80           |
+|          20           |               ~5               |            ~6.25             |           20           |
+|          40           |               ~5               |            ~3.12             |           10           |
+|          77           |               ~5               |            ~1.56             |           20           |
 ::::
 
 
