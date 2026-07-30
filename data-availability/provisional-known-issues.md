@@ -34,7 +34,12 @@ The calibration of the 5 MHz Frequency B channel, which is designed for split-sp
 
 ### Polarimetric Calibration
 
-The polarimetric phase between polarimetric channels is not fully calibrated due to a change in the phase between the H-polarized and V-polarized waveforms after the polarimetric calibration coefficients were estimated. As a result, users can expect polarimetric decomposition parameters and, in general, coherent polarimetric analyses, to be biased.
+The relative phase between polarimetric channels is not fully calibrated due to a change in the phase imbalance between H and V after the polarimetric calibration coefficients were derived. 
+
+Users performing coherent dual-pol or quad-pol analysis can compensate with a phase shift of θ = 59° according to the following rule: 
+
+- For RSLC and GSLC products: multiply the HV and VV layers by e<sup>+jθ</sup>
+- For GCOV products: multiply the HVVH layer by e<sup>+jθ</sup>, and the HHHV, HHVV, and VHVV layers by e<sup>-jθ</sup>, leaving the HHVH, HVVV, HHHH, HVHV, VHVH, and VVVV layers unaffected
 
 ### Incomplete L0B Products
 
