@@ -3,7 +3,9 @@
 NISAR products are distributed in HDF5 format, and can be subsetted into the GeoTIFF format utilizing NASA's Harmony service in the cloud. However, for those with the local compute to do so, it is also possible to subset these files locally using the GDAL command line utility. We will utilize GDAL's ability to stream data from Earthdata Cloud directly, allowing us to only download the necessary data for our specific subsetting operation.
 
 ## Preparing GDAL to access Earthdata Cloud
-If you do not already have GDAL installed you can follow [GDAL's official guide](https://gdal.org/en/stable/download.html#windows) to install GDAL. We will be streaming the products directly from Earthdata Cloud without downloading them first. To do so, we must authenticate to Earthdata Cloud by placing a `.netrc` file in the home directory of our compute environment containing our Earthdata login.
+If you do not already have GDAL installed you can follow [GDAL's official guide](https://gdal.org/en/stable/download.html). 
+
+In this guide we will be streaming products directly from Earthdata Cloud without downloading them first. To do so, we must allow GDAL to authenticate to Earthdata Cloud by placing a `.netrc` file in the home directory of our compute environment containing our Earthdata login.
 
 ```
 # ~/.netrc
@@ -29,7 +31,6 @@ The use of `NETCDF:` before the url is to instruct GDAL to utilize the NETCDF dr
 
 Utilize the following command to extract a specific data element from an HDF5 product as a GeoTIFF. The download URL can be found via the copy download url button in Vertex.
 ```
-
 gdal_translate -of GTiff \
                 NETCDF:"/vsicurl/https://<DOWNLOAD URL>":<VARIABLE PATH> <OUTPUT FILE>.tif \
                 --config CPL_VSIL_CURL_CHUNK_SIZE 2097152 \
@@ -45,11 +46,11 @@ gdal_translate -of GTiff \
                 --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt
 ```
 
-The `gdalwarp` command is also suitable for this, and can be used as a drop in replacement. However we have experienced an up to 30% performance improvement when utilizing the `gdal_translate` command.
+The `gdalwarp` command is also suitable for this, and can be used as a drop in replacement. However we have found an up to 30% performance improvement when utilizing the `gdal_translate` command for simple variable subsetting operations.
 
 ### Spatial Subsetting
 
-Spatial subsetting is possible in `gdal_translate` however the use of `gdalwarp` for spatial subsetting allows spatial extents to be described with WKT geometry strings, such as the strings used for Vertex's AOI (Area of Interest) feature. This allows using Vertex or other geospatial user interfaces to select a spatial extent for subsetting. To reproject in `gdalwarp` utilize the `-cutline <WKT>` flag alongside the `-cutline srs WGS84`, `-crop_to_cutline` and `-dstalpha` flags such as in the example below. Unfortunately `GDAL
+Spatial subsetting is possible in `gdal_translate` however the use of `gdalwarp` for spatial subsetting allows spatial extents to be described with WKT geometry strings, such as the strings used for Vertex's AOI (Area of Interest) feature. This allows the use of Vertex or other geospatial user interfaces to select a spatial extent for subsetting. To reproject in `gdalwarp` utilize the `-cutline <WKT>` flag alongside the `-cutline srs WGS84`, `-crop_to_cutline` and `-dstalpha` flags such as in the example below.
 
 ```
 gdalwarp -of GTiff \
@@ -71,10 +72,9 @@ gdalwarp -of GTiff \
          --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt
 ```
 
-
 ### Reprojection
 
-Reprojection operations can also be performed utilizing `gdalwarp` utilizing the `-t_srs <SRS>`, where `<SRS>` is a EPGS code (such as `EPSG:3857` for Web Mercator).
+Reprojection operations can also be performed in `gdalwarp` utilizing the `-t_srs <SRS>`, where `<SRS>` is a EPGS code (such as `EPSG:3857` for Web Mercator).
 
 ```
 gdalwarp -of GTiff \
