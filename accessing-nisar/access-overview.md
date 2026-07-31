@@ -111,5 +111,9 @@ Because all NISAR data is hosted in EDC, which leverages AWS infrastructure, use
 
 [**Learn more about Direct AWS S3 Access!**](#aws-s3-access-overview)
 
+## Subsetting locally using GDAL
+
+GDAL's vsicurl virtual file system driver allows subsetting NISAR HDF5 files without the use of cloud services such as Harmony or downloading the entire file. [Learn more about using GDAL to subset HDF5 files locally](/accessing-nisar/gdal.md).
+
 <style>section {page-break-before: avoid}</style>
 
