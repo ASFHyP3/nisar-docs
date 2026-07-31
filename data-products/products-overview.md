@@ -69,7 +69,7 @@ Level 1 products are processed instrument data, focused to full resolution compl
 (level-2-geocoded-products)=
 ### Level 2: Geocoded Products
 
-Level 2 products are derived from Level 1 products, resampled and geocoded to a geographic grid. They can be directly overlaid on a map and combined with other data in geographic coordinates.
+Level 2 products are derived from Level 1 products, resampled and geocoded to a geographic grid. The geographic location of the Level 2 product determines which projection is used, as described in @nisar-l2-projections. Datasets from Level 2 products can be directly overlaid on a map and align with other geospatial data.
 
 - The [Geocoded Single Look Complex (GSLC)](#gslc-product-overview) product represents the single look complex signal return for each polarization in geographic coordinates. The GSLC product enables users to perform backscatter amplitude analysis, and can be combined with other similar GSLC products to derive interferograms and change maps.
 - The [Geocoded Pixel Offsets (GOFF)](#goff-product-overview) product represents a collection of dense pixel offsets layers obtained from applying speckle tracking to a pair of coarsely coregistered RSLCs in geographic coordinates. The GOFF product is primarily meant for cryosphere applications.
@@ -79,7 +79,7 @@ Level 2 products are derived from Level 1 products, resampled and geocoded to a 
 (level-3-geophysical-products)=
 ### Level 3: Geophysical Products
 
-Level 3 products represent geophysical parameters derived from radar-specific parameters and geocoded to a geographic grid.
+Level 3 products represent geophysical parameters derived from radar-specific parameters and projected to the [EASE-Grid 2.0](#nisar-l3-projections).
 
 - The [Soil Moisture (SME2)](#sme2-product-overview) product contains soil moisture estimates derived from NISAR data using three different algorithms at agricultural field-scale (200m) posting for most regions (the Sahara Desert will be at 500m). Soil moisture information can be used for reservoir management, early warning of droughts, irrigation scheduling, and crop yield forecasting.
 
