@@ -15,7 +15,7 @@ machine urs.earthdata.nasa.gov
 ```
 
 ## Utilizing GDAL to subset NISAR HDF5 Products
-:::{warning}For GDAL releases older than `3.13.0` the `NETCDF` driver must be used by prepending `NETCDF:` to `/vsicurl/` in all GDAL commends.
+:::{warning}For GDAL releases older than `3.13.0` the `NETCDF` driver must be used by prepending `NETCDF:` to `/vsicurl/` in all GDAL commands.
 In versions of GDAL older than `3.13.0` the NISAR HDF5 format is not fully supported by the GDAL HDF5 driver. This issue causes GDAL to incorrectly identify the spatial reference system of the dataset, leading to inacuracies. To identify your currently installed version of GDAL run `gdal --version`.
 :::
 
