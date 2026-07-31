@@ -21,18 +21,16 @@ To view the available data elements and variables present in a product utilize t
 
 ```
 
-gdalinfo NETCDF:"/vsicurl/https://<DOWNLOAD URL>" \
+gdalinfo "/vsicurl/https://<DOWNLOAD URL>" \
          --config GDAL_HTTP_NETRC=YES \
          --config GDAL_HTTP_COOKIEFILE=/tmp/gdal_cookies.txt \
          --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt
 ```
 
-The use of `NETCDF:` before the url is to instruct GDAL to utilize the NETCDF driver to load the `.h5` file. This is a workaround for the [current lack of support in GDAL](TODO) for NISAR HDF5 files. The NETCDF driver is able to more properly parse NISAR HDF5 files [due to the fact that NISAR HDF5 files are structured similarly to NETCDF files](TODO).
-
 Utilize the following command to extract a specific data element from an HDF5 product as a GeoTIFF. The download URL can be found via the copy download url button in Vertex.
 ```
 gdal_translate -of GTiff \
-                NETCDF:"/vsicurl/https://<DOWNLOAD URL>":<VARIABLE PATH> <OUTPUT FILE>.tif \
+                "/vsicurl/https://<DOWNLOAD URL>":<VARIABLE PATH> <OUTPUT FILE>.tif \
                 --config CPL_VSIL_CURL_CHUNK_SIZE 2097152 \
                 --config CPL_VSIL_CURL_CACHE_SIZE 67108864 \
                 --config GDAL_CACHEMAX 64000000 \
@@ -54,7 +52,7 @@ Spatial subsetting is possible in `gdal_translate` however the use of `gdalwarp`
 
 ```
 gdalwarp -of GTiff \
-         NETCDF:"/vsicurl/https://<DOWNLOAD URL>":<VARIABLE PATH> <OUTPUT FILE>.tif \
+         "/vsicurl/https://<DOWNLOAD URL>":<VARIABLE PATH> <OUTPUT FILE>.tif \
          -cutline <WKT> \
          -cutline_srs WGS84 \
          -crop_to_cutline \
@@ -78,7 +76,7 @@ Reprojection operations can also be performed in `gdalwarp` utilizing the `-t_sr
 
 ```
 gdalwarp -of GTiff \
-         NETCDF:"/vsicurl/https://<DOWNLOAD URL>":<VARIABLE PATH> <OUTPUT FILE>.tif \
+         "/vsicurl/https://<DOWNLOAD URL>":<VARIABLE PATH> <OUTPUT FILE>.tif \
          -t_srs <SRS>
          -dstalpha \
          --config CPL_VSIL_CURL_CHUNK_SIZE 2097152 \
