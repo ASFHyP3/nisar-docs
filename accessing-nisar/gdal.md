@@ -1,11 +1,28 @@
-# Subsetting NISAR Data with GDAL
+# GDAL
 
-NISAR products are distributed in HDF5 format, and can be subsetted into the GeoTIFF format utilizing NASA's Harmony service in the cloud. However, for those with the local compute to do so, it is also possible to subset these files locally using the GDAL command line utility. We will utilize GDAL's ability to stream data from Earthdata Cloud directly, allowing us to only download the necessary data for our specific subsetting operation.
+The [Geospatial Data Abstraction Library (GDAL)](https://gdal.org/en/stable) is an open-source software library used to work with raster and vector geospatial data. There are a number of GDAL command line utilities that we can leverage to transform NISAR data.
 
-## Preparing GDAL to access Earthdata Cloud
+## Using GDAL to Transform NISAR Data
+
+NISAR products are distributed in HDF5 format, and the files can be very large. Many users may want to transform the data by extracting just the datasets of interest from the HDF5 files and/or subsetting the data to a defined spatial extent. 
+
+We can use a GDAL command line utility to transform these files, leveraging GDAL's ability to stream data from Earthdata Cloud directly, allowing us to download only the data we need in the desired format.
+
+### Preparing GDAL to Access EDC
+
 If you do not already have GDAL installed you can follow [GDAL's official guide](https://gdal.org/en/stable/download.html). 
 
-In this guide we will be streaming products directly from Earthdata Cloud without downloading them first. To do so, we must allow GDAL to authenticate to Earthdata Cloud by placing a `.netrc` file in the home directory of our compute environment containing our Earthdata login.
+:::{warning} NISAR HDF5 format not supported in GDAL HDF5 drivers prior to version 3.13.0
+For GDAL releases older than `3.13.0`, the `NETCDF` driver must be used instead of the default `HDF5` driver when working with NISAR products. 
+
+Because NISAR encodes the spatial reference system using netCDF CF conventions, older HDF5 drivers cannot find the geospatial information required to project the data to a map. 
+
+**Users can direct GDAL to use the netCDF driver by prepending `NETCDF:` to `/vsicurl/` in all GDAL commands.**
+
+To identify your currently installed version of GDAL, run `gdal --version`.
+:::
+
+In this guide we will be streaming products directly from NASA's [Earthdata Cloud (EDC)](https://www.earthdata.nasa.gov/about/earthdata-cloud-evolution) without downloading them first. To do so, we must allow GDAL to authenticate to EDC by placing a `.netrc` file in the home directory of our compute environment containing our [Earthdata Login](#earthdata-login) credentials.
 
 ```
 # ~/.netrc
@@ -14,13 +31,50 @@ machine urs.earthdata.nasa.gov
     password <password>
 ```
 
-## Utilizing GDAL to subset NISAR HDF5 Products
-:::{warning}For GDAL releases older than `3.13.0` the `NETCDF` driver must be used by prepending `NETCDF:` to `/vsicurl/` in all GDAL commands.
-In versions of GDAL older than `3.13.0` the NISAR HDF5 format is not fully supported by the GDAL HDF5 driver. This issue causes GDAL to incorrectly identify the spatial reference system of the dataset, leading to inacuracies. To identify your currently installed version of GDAL run `gdal --version`.
-:::
+### Using a `gdalrc` File
 
-### Variable Subsetting
-To view the available data elements and variables present in a product utilize the following command. These are also listed in detail in the [Data Products](/data-products/products-overview.md) section.
+Users can choose to generate a `gdalrc` file to simplify GDAL commands. This replaces the need to include `--config` flags for each command.
+
+Create a file in `~/.gdal/gdalrc` with the following content:
+
+```
+
+#~/.gdal/gdalrc
+[configoptions]
+CPL_VSIL_CURL_CHUNK_SIZE 2097152
+CPL_VSIL_CURL_CACHE_SIZE 67108864
+GDAL_CACHEMAX 64000000
+GDAL_DISABLE_READDIR_ON_OPEN=TRUE
+GDAL_HTTP_MERGE_CONSECUTIVE_RANGES=YES
+GDAL_HTTP_MULTIPLEX=YES
+GDAL_NUM_THREADS=ALL_CPUS
+CPL_VSIL_CURL_CACHE_SIZE=1GB
+GDAL_HTTP_NETRC=YES
+GDAL_HTTP_COOKIEFILE=/tmp/gdal_cookies.txt
+GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt
+```
+
+If you have a `gdalrc` file staged, you can skip all the `--config` flags included in the sample commands on this page.
+
+## Transform NISAR HDF5 Products
+
+Users can transform NISAR data by using the gdal_translate or gdal_warp utilities to [extract](#gdal-extract) and/or [spatially subset](#gdal-spatial-subset) data, [reproject](#gdal-spatial-reproject) the data, and change the file format. For the examples provided here, we will output the data as a GeoTIFF.
+
+You will need the download link for a NISAR product to run these commands. Use the [Copy URL](#copy-download-url-image) links available in the search results for Vertex, or use one of the other search methods available to find a NISAR product URL.
+
+```{figure} ../assets/copy-download-url.png
+:label: copy-download-url-image
+:alt: Screenshot of the Copy URL link for a NISAR product in Vertex. 
+:align: left
+:width: 50%
+
+Click the Copy URL link to get the download URL for a NISAR product in Vertex.  
+```
+
+(gdal-extract)=
+### Extract Datasets
+
+To view the available datasets present in a NISAR product, run the following command using the download URL for a NISAR product: 
 
 ```
 
@@ -30,7 +84,9 @@ gdalinfo "/vsicurl/https://<DOWNLOAD URL>" \
          --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt
 ```
 
-Utilize the following command to extract a specific data element from an HDF5 product as a GeoTIFF. The download URL can be found via the copy download url button in Vertex.
+Refer to the [Data Products](/data-products/products-overview.md) section for more information about the datasets included in NISAR products.
+
+Utilize the following command to extract a specific dataset from an HDF5 product as a GeoTIFF.
 ```
 gdal_translate -of GTiff \
                 "/vsicurl/https://<DOWNLOAD URL>":<VARIABLE PATH> <OUTPUT FILE>.tif \
@@ -47,11 +103,14 @@ gdal_translate -of GTiff \
                 --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt
 ```
 
-The `gdalwarp` command is also suitable for this, and can be used as a drop in replacement. However we have found an up to 30% performance improvement when utilizing the `gdal_translate` command for simple variable subsetting operations.
+The `gdalwarp` command is also suitable for this, and can be used as a drop-in replacement. However, using `gdal_translate` for simple dataset extraction operations may provide up to 30% improvement in performance.
 
+(gdal-spatial-subset)=
 ### Spatial Subsetting
 
-Spatial subsetting is possible in `gdal_translate` however the use of `gdalwarp` for spatial subsetting allows spatial extents to be described with WKT geometry strings, such as the strings used for Vertex's AOI (Area of Interest) feature. This allows the use of Vertex or other geospatial user interfaces to select a spatial extent for subsetting. To reproject in `gdalwarp` utilize the `-cutline <WKT>` flag alongside the `-cutline srs WGS84`, `-crop_to_cutline` and `-dstalpha` flags such as in the example below.
+Spatial subsetting is possible in `gdal_translate` however the use of `gdalwarp` for spatial subsetting allows spatial extents to be described with WKT geometry strings, such as the strings used for Vertex's AOI (Area of Interest) feature. This allows the use of Vertex or other geospatial user interfaces to select a spatial extent for subsetting. 
+
+To reproject in `gdalwarp` utilize the `-cutline <WKT>` flag alongside the `-cutline srs WGS84`, `-crop_to_cutline` and `-dstalpha` flags such as in the example below.
 
 ```
 gdalwarp -of GTiff \
@@ -73,9 +132,10 @@ gdalwarp -of GTiff \
          --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt
 ```
 
+(gdal-spatial-reproject)=
 ### Reprojection
 
-Reprojection operations can also be performed in `gdalwarp` utilizing the `-t_srs <SRS>`, where `<SRS>` is a EPGS code (such as `EPSG:3857` for Web Mercator).
+Reprojection operations can also be performed in `gdalwarp` utilizing the `-t_srs <SRS>`, where `<SRS>` is a EPSG code (such as `EPSG:3857` for Web Mercator).
 
 ```
 gdalwarp -of GTiff \
@@ -93,26 +153,4 @@ gdalwarp -of GTiff \
          --config GDAL_HTTP_NETRC=YES \
          --config GDAL_HTTP_COOKIEFILE=/tmp/gdal_cookies.txt \
          --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt
-```
-
-
-## Utilizing a gdalrc file to simplify commands
-
-By placing a file in `~/.gdal/gdalrc` with the following content we can avoid needing all of the `--config` flags placed at the end of our commands.
-
-```
-
-#~/.gdal/gdalrc
-[configoptions]
-CPL_VSIL_CURL_CHUNK_SIZE 2097152
-CPL_VSIL_CURL_CACHE_SIZE 67108864
-GDAL_CACHEMAX 64000000
-GDAL_DISABLE_READDIR_ON_OPEN=TRUE
-GDAL_HTTP_MERGE_CONSECUTIVE_RANGES=YES
-GDAL_HTTP_MULTIPLEX=YES
-GDAL_NUM_THREADS=ALL_CPUS
-CPL_VSIL_CURL_CACHE_SIZE=1GB
-GDAL_HTTP_NETRC=YES
-GDAL_HTTP_COOKIEFILE=/tmp/gdal_cookies.txt
-GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt
 ```
