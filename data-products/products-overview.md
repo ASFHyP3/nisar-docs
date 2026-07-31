@@ -170,7 +170,7 @@ The table below summarizes the characteristics of NISAR data products.
       <td style="padding: 8px; border-right: 1px solid #ddd; text-align: center; width: 30px; max-width: 30px;">✔</td>
       <td style="padding: 8px; border-right: 1px solid #ddd; text-align: center; width: 30px; max-width: 30px;">✔</td>
       <td style="padding: 8px; border-right: 1px solid #ddd;">unwrapped interferogram</td>
-      <td style="padding: 8px; border-right: 1px solid #ddd;">coherence magnitude,<br>connected components,<br>ionospheric phase screen,<br>ionospheric phase screen uncertainty</td>
+      <td style="padding: 8px; border-right: 1px solid #ddd;">coherence magnitude<br>connected components,<br>ionospheric phase screen,<br>ionospheric phase screen uncertainty</td>
       <td style="padding: 8px;">interpolation method during geocoding depends on layer data type</td>
     </tr>
     <tr style="border-bottom: 1px solid #eee;">
