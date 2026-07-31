@@ -22,7 +22,7 @@ Fully calibrated PROVISIONAL NISAR data products are now available to the public
 (nisar-maturity-levels)=
 ### NISAR Maturity Levels
 
-NASA uses different [data maturity levels](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-maturity-levels) for data generated over the duration of a mission. There are currently NISAR datasets for two different maturity levels available:
+NASA uses different [data maturity levels](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-maturity-levels) for data generated over the duration of a mission. There are currently NISAR datasets available for two different maturity levels:
 
 - The BETA collections include products from the first two releases of NISAR data in [January 2026](#timeline-january) and [February 2026](#timeline-february). These products are not fully calibrated, and exhibit a number of [known issues](../data-availability/product-known-issues.md), but are still useful for those who would like to access products from earlier in the mission.
 
