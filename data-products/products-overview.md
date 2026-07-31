@@ -86,7 +86,6 @@ Level 3 products represent geophysical parameters derived from radar-specific pa
 ## Summary
 
 The table below summarizes the characteristics of NISAR data products. 
-<!-- TODO: reformat table to be more flexible to resizing for different screens -->
 
 :::{table} NISAR data product overview
 :label: tbl:overview-html
