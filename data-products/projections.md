@@ -40,4 +40,4 @@ Different projectsions used for descending NISAR frames.
 (nisar-l3-projections)=
 ## NISAR Level 3 Projections
 
-NISAR [Level-3](#level-3-geophysical-products) products ([SME2](#sme2-product-overview)) are posted to the global [EASE Grid 2.0 (EPSG 6933)](https://nsidc.org/data/user-resources/help-center/guide-ease-grids) with a pixel spacing of 200 m. 
+NISAR [Level-3](#level-3-geophysical-products) products ([SME2](#sme2-product-overview)) are posted to the global [EASE Grid 2.0](https://nsidc.org/data/user-resources/help-center/guide-ease-grids) ([EPSG 6933](https://epsg.io/6933)) with a pixel spacing of 200 m. 
