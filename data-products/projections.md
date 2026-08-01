@@ -26,7 +26,7 @@ The following figures illustrate the extent of the different projections used fo
 :alt: Figure illustrating the extent of different projections used for ascending NISAR frames
 :align: center
 
-Different projectsions used for ascending NISAR frames.
+Different projections used for ascending NISAR frames.
 ```
 
 ```{figure} ../assets/projections-descending.png
@@ -34,7 +34,7 @@ Different projectsions used for ascending NISAR frames.
 :alt: Figure illustrating the extent of different projections used for descending NISAR frames
 :align: center
 
-Different projectsions used for descending NISAR frames.
+Different projections used for descending NISAR frames.
 ```
 
 (nisar-l3-projections)=
