@@ -13,10 +13,10 @@ NISAR [Level 2](#level-2-geocoded-products) products are georeferenced and provi
 :label: tbl:nisar-projections
 | EPSG Code(s) | Common Name | Geographical Extent |
 | --- | --- | --- |
-| [3413](https://epsg.io/3413) | NSIDC Sea Ice Polar Stereographic North | Acquisitions north of 60°N |
-| [3031](https://epsg.io/3031) | Antarctic Polar Stereographic | Acquisitions south of 60°S |
 | [32601](https://epsg.io/32601)-[32660](https://epsg.io/32660) | UTM Zone North | Acquisitions between 0°N and 60°N |
 | [32701](https://epsg.io/32701)-[32760](https://epsg.io/32760) | UTM Zone South | Acquisitions between 0°S and 60°S |
+| [3413](https://epsg.io/3413) | NSIDC Sea Ice Polar Stereographic North | Acquisitions north of 60°N |
+| [3031](https://epsg.io/3031) | Antarctic Polar Stereographic | Acquisitions south of 60°S |
 :::
 
 The following figures illustrate the extent of the different projections used for ascending frames (@projections-ascending-image) and descending frames (@projections-descending-image).
