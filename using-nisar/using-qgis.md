@@ -20,7 +20,7 @@ Occasionally, data files with an `.nc` extension may crash QGIS, but this can us
 Alternatively, users can prepend `NETCDF:` when adding NISAR datasets to a QGIS project, as demonstrated in [this video](https://youtu.be/7tJJmNg8qyE?si=IHknko8izfb-SXdK&t=4317), starting at timestamp `1:11:57`.
 
 :::{important}NISAR HDF5 Support in QGIS 4.2
-Support for the NISAR HDF5 file format was added to GDAL version [3.13.0](https://github.com/OSGeo/gdal/blob/master/NEWS.md#raster-drivers-3). This functionality is accessible in QGIS starting with version 4.2, which is still in early-adopter phase. 
+Support for the NISAR HDF5 file format was added to GDAL version [3.13.0](https://github.com/OSGeo/gdal/blob/master/NEWS.md#raster-drivers-3). This functionality is accessible in QGIS starting with version 4.2, which is currently in early-adopter status. 
 
 Users leveraging QGIS 4.2 can work with NISAR datasets as they would any other HDF5 file, and do not need to rename NISAR files or prepend datasets with `NETCDF:` when adding them to a QGIS project.
 :::
