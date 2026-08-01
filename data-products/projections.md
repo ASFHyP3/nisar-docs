@@ -5,9 +5,9 @@
 
 NISAR [Level 2](#level-2-geocoded-products) products are georeferenced and provided in map coordinates. The projected coordinate system used for each product will depend on its location, as described in @tbl:nisar-projections. 
 
-- Products between 60°N and 60°S are projected to the [UTM Zone](https://www.usgs.gov/faqs/what-does-term-utm-mean-utm-better-or-more-accurate-latitudelongitude) (WGS 84) appropriate for the product location
-- Products north of 60°N are projected to the [NSIDC Sea Ice Polar Stereographic North](https://nsidc.org/data/user-resources/help-center/guide-nsidcs-polar-stereographic-projection) ([EPSG 3413](https://epsg.io/3413)) projection
-- Products south of 60°S are projected to the Antarctic Polar Stereographic ([EPSG 3031](https://epsg.io/3031)) projection
+- Products between 60°N and 60°S are projected to the [UTM Zone](https://www.usgs.gov/faqs/what-does-term-utm-mean-utm-better-or-more-accurate-latitudelongitude) (WGS 84) appropriate for the product location.
+- Products north of 60°N are projected to the [NSIDC Sea Ice Polar Stereographic North](https://nsidc.org/data/user-resources/help-center/guide-nsidcs-polar-stereographic-projection) ([EPSG 3413](https://epsg.io/3413)) projection.
+- Products south of 60°S are projected to the Antarctic Polar Stereographic ([EPSG 3031](https://epsg.io/3031)) projection.
 
 :::{table} Projections used for Level 2 NISAR products
 :label: tbl:nisar-projections
