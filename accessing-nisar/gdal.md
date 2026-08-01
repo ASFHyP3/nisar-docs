@@ -103,7 +103,7 @@ gdal_translate -of GTiff \
                 --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt
 ```
 
-The `gdalwarp` command is also suitable for this, and can be used as a drop-in replacement. However, using `gdal_translate` for simple dataset extraction operations may provide up to 30% improvement in performance.
+The `gdalwarp` command is also suitable for this, and can be used as a drop-in replacement. However, using `gdal_translate` for simple dataset extraction operations may provide up to a 30% improvement in performance.
 
 (gdal-spatial-subset)=
 ### Spatial Subsetting
