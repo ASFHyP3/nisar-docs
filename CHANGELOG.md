@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Page describing projections used for Level 2 and 3 products
+- Redirect placeholder page for Static Layers
 
 ### Changed
 - Edited formatting of summary table on the products page
