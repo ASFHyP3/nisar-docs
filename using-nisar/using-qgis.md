@@ -11,7 +11,7 @@ A video tutorial demonstrating working with NISAR products in QGIS is available 
 
 ## Preparing NISAR Data for QGIS
 
-QGIS versions prior to 4.2, including the current long-term release (3.44), cannot natively read the geolocation data of NISAR HDF5 files. A NISAR `.h5` file loaded directly into QGIS will not display in the correct place on Earth.
+QGIS versions prior to 4.2, including the current long-term release (3.44), cannot natively read the geolocation data of NISAR HDF5 files. A NISAR `.h5` file loaded into QGIS using default HDF5 drivers will not display in the correct place on Earth in QGIS versions older than 4.2.
 
 Replacing the `.h5` (HDF5) file extension with `.nc` (NETCDF) prior to opening the file in QGIS will allow the data to be correctly geolocated. For example, the file `NISAR_L2_PR_GCOV`<wbr>`_010_164_A_035_4005_`<wbr>`DHDH_A_20260120T134235_`<wbr>`20260120T134312_`<wbr>`X05010_N_F_J_001.h5` renamed as `NISAR_L2_PR_GCOV`<wbr>`_010_164_A_035_4005_`<wbr>`DHDH_A_20260120T134235_`<wbr>`20260120T134312_`<wbr>`X05010_N_F_J_001.nc` can be opened in QGIS.
 
@@ -39,6 +39,9 @@ Now, `amplitude.tif` will be the file that can be loaded in QGIS.
 ## Adding NISAR Data
 
 Add data to QGIS using the **Open Data Source Manger** button and selecting the **Raster** data type. Select your NISAR file using the file explorer and click **Add** as shown in @qgis-add-data.
+
+- If you select a NISAR file that has been renamed with a .nc extension, you can just click the **Add** button to move to the next step.
+- If you select a NISAR file with an .h5 extension, you will need to add `NETCDF:` to the start of the path in the **Raster Dataset(s)** field before clicking the **Add** button.
 
 ```{figure} ../assets/qgis-add-data.png
 :name: qgis-add-data
