@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Edited formatting of summary table on the products page
+- Updated QGIS page to announce support for NISAR starting with version 4.2 and highlight netCDF driver prepend option when adding data
 
 ## [0.4.25]
 
