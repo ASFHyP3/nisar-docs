@@ -178,7 +178,7 @@ gdalwarp -of GTiff \
 :::{hint} Example
 In this example we will perform spatial subsetting on the subdataset which we identified utilizing the `gdalinfo` utility in the previous example.
 
-We will begin by utilizing Vertex to pick an area within our product. Once we have picked an area within our product, we can copy the AOI string from the header bar of Vertex which is convieniently in WKT format. An example WKT spatial extent string obtained in this manner is given below.
+We will begin by utilizing Vertex to pick an area within our product. Once we have picked an area within our product, we can copy the AOI string from the header bar of Vertex which is conveniently in WKT format. An example WKT spatial extent string obtained in this manner is given below.
 
 ```
 POLYGON((-115.7994 43.887,-113.7599 43.887,-113.7599 44.9751,-115.7994 44.9751,-115.7994 43.887))
