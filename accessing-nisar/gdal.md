@@ -24,8 +24,9 @@ To identify your currently installed version of GDAL, run `gdal --version`.
 
 In this guide we will be streaming products directly from NASA's [Earthdata Cloud (EDC)](https://www.earthdata.nasa.gov/about/earthdata-cloud-evolution) without downloading them first. To do so, we must allow GDAL to authenticate to EDC by placing a `.netrc` file in the home directory of our compute environment containing our [Earthdata Login](#earthdata-login) credentials.
 
-```
-# ~/.netrc
+```{code-block}
+:filename: "~/.netrc"
+
 machine urs.earthdata.nasa.gov
     login <username>
     password <password>
@@ -37,9 +38,9 @@ Users can choose to generate a `gdalrc` file to simplify GDAL commands. This rep
 
 Create a file in `~/.gdal/gdalrc` with the following content:
 
-```
+```{code-block}
+:filename "~/.gdal/gdalrc"
 
-#~/.gdal/gdalrc
 [configoptions]
 CPL_VSIL_CURL_CHUNK_SIZE 2097152
 CPL_VSIL_CURL_CACHE_SIZE 67108864
@@ -103,7 +104,43 @@ gdal_translate -of GTiff \
                 --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt
 ```
 
+In the earlier 
+
 The `gdalwarp` command is also suitable for this, and can be used as a drop-in replacement. However, using `gdal_translate` for simple dataset extraction operations may provide up to a 30% improvement in performance.
+
+:::{hint} Example 
+First we start by fetching the info of the NISAR GCOV product we will use for this example.
+
+```
+gdalinfo "/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5" 
+```
+
+Looking in the subdatasets section of the output of this command we are given information on the first dataset:
+```
+
+SUBDATASET_1_NAME=HDF5:"/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5"://science/LSAR/GCOV/grids/frequencyA/HHHH
+SUBDATASET_1_DESC=[35928x36288] //science/LSAR/GCOV/grids/frequencyA/HHHH (32-bit floating-point)
+```
+
+The path of this dataset is `/science/LSAR/GCOV/grids/frequencyA/HHHH`. This means it is the frequency A, HHHH polarization dataset of the GCOV. The second line tells us that the dataset is 35928 by 36288 pixels with the type of 32-bit floating point. The `SUBDATASET_1_NAME` provides the full string which we can utilize in a `gdal_translate` command the dataset as a GeoTIFF named `output.tif` as follows.
+
+```
+gdal_translate -of GTiff \
+                "/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5"://science/LSAR/GCOV/grids/frequencyA/HHHH output.tif \
+                --config CPL_VSIL_CURL_CHUNK_SIZE 2097152 \
+                --config CPL_VSIL_CURL_CACHE_SIZE 67108864 \
+                --config GDAL_CACHEMAX 64000000 \
+                --config GDAL_DISABLE_READDIR_ON_OPEN=TRUE \
+                --config GDAL_HTTP_MERGE_CONSECUTIVE_RANGES=YES \
+                --config GDAL_HTTP_MULTIPLEX=YES \
+                --config GDAL_NUM_THREADS=ALL_CPUS \
+                --config CPL_VSIL_CURL_CACHE_SIZE=1GB \
+                --config GDAL_HTTP_NETRC=YES \
+                --config GDAL_HTTP_COOKIEFILE=/tmp/gdal_cookies.txt \
+                --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt\
+```
+
+:::
 
 (gdal-spatial-subset)=
 ### Spatial Subsetting
@@ -132,15 +169,23 @@ gdalwarp -of GTiff \
          --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt
 ```
 
-(gdal-spatial-reproject)=
-### Reprojection
+:::{hint} Example
+In this example we will perform spatial subsetting on the subdataset which we identified utilizing the `gdalinfo` utility in the previous example.
 
-Reprojection operations can also be performed in `gdalwarp` utilizing the `-t_srs <SRS>`, where `<SRS>` is a EPSG code (such as `EPSG:3857` for Web Mercator).
+We will begin by utilizing Vertex to pick an area within our product. Once we have picked an area within our product, we can copy the AOI string from the header bar of Vertex which is convieniently in WKT format. An example WKT string is given below.
+
+```
+POLYGON((-115.7994 43.887,-113.7599 43.887,-113.7599 44.9751,-115.7994 44.9751,-115.7994 43.887))
+```
+
+We will then input this string, and the full dataset string which we identified in the previous example into the spatial subsetting snippet which is provided above. This gives us the final command which we can utilize to perform our spatial subsetting operation.
 
 ```
 gdalwarp -of GTiff \
-         "/vsicurl/https://<DOWNLOAD URL>":<VARIABLE PATH> <OUTPUT FILE>.tif \
-         -t_srs <SRS>
+         "/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5"://science/LSAR/GCOV/grids/frequencyA/HHHH output.tif \
+         -cutline "POLYGON((-115.7994 43.887,-113.7599 43.887,-113.7599 44.9751,-115.7994 44.9751,-115.7994 43.887))" \
+         -cutline_srs WGS84 \
+         -crop_to_cutline \
          -dstalpha \
          --config CPL_VSIL_CURL_CHUNK_SIZE 2097152 \
          --config CPL_VSIL_CURL_CACHE_SIZE 67108864 \
@@ -154,3 +199,49 @@ gdalwarp -of GTiff \
          --config GDAL_HTTP_COOKIEFILE=/tmp/gdal_cookies.txt \
          --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt
 ```
+:::
+
+(gdal-spatial-reproject)=
+### Reprojection
+
+Reprojection operations can also be performed in `gdalwarp` utilizing the `-t_srs <SRS>`, where `<SRS>` is a EPSG code (such as `EPSG:3857` for Web Mercator).
+
+```
+gdalwarp -of GTiff \
+         "/vsicurl/https://<DOWNLOAD URL>":<VARIABLE PATH> <OUTPUT FILE>.tif \
+         -t_srs <SRS> \
+         -dstalpha \
+         --config CPL_VSIL_CURL_CHUNK_SIZE 2097152 \
+         --config CPL_VSIL_CURL_CACHE_SIZE 67108864 \
+         --config GDAL_CACHEMAX 64000000 \
+         --config GDAL_DISABLE_READDIR_ON_OPEN=TRUE \
+         --config GDAL_HTTP_MERGE_CONSECUTIVE_RANGES=YES \
+         --config GDAL_HTTP_MULTIPLEX=YES \
+         --config GDAL_NUM_THREADS=ALL_CPUS \
+         --config CPL_VSIL_CURL_CACHE_SIZE=1GB \
+         --config GDAL_HTTP_NETRC=YES \
+         --config GDAL_HTTP_COOKIEFILE=/tmp/gdal_cookies.txt \
+         --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt
+```
+
+:::{hint} Example
+We can utilize this snippet to project the product which we have previously dealt with in our examples into Web Mercator as follows.
+
+```
+gdalwarp -of GTiff \
+         "/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5"://science/LSAR/GCOV/grids/frequencyA/HHHH output.tif \
+         -t_srs EPSG:3857 \
+         -dstalpha \
+         --config CPL_VSIL_CURL_CHUNK_SIZE 2097152 \
+         --config CPL_VSIL_CURL_CACHE_SIZE 67108864 \
+         --config GDAL_CACHEMAX 64000000 \
+         --config GDAL_DISABLE_READDIR_ON_OPEN=TRUE \
+         --config GDAL_HTTP_MERGE_CONSECUTIVE_RANGES=YES \
+         --config GDAL_HTTP_MULTIPLEX=YES \
+         --config GDAL_NUM_THREADS=ALL_CPUS \
+         --config CPL_VSIL_CURL_CACHE_SIZE=1GB \
+         --config GDAL_HTTP_NETRC=YES \
+         --config GDAL_HTTP_COOKIEFILE=/tmp/gdal_cookies.txt \
+         --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt
+```
+:::
