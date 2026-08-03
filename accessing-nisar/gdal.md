@@ -140,7 +140,7 @@ gdal_translate -of GTiff \
 
 :::
 
-See the [official GDAL documentation on `gdal_translate`](https://gdal.org/en/stable/programs/gdal_translate.html) for more information on the `gdal_translate` command and its use and capabilities.
+See the [official GDAL documentation on `gdal_translate`](https://gdal.org/en/stable/programs/gdal_translate.html) for more information on the `gdal_translate` command, its use, and capabilities.
 
 (gdal-spatial-subset)=
 ### Spatial Subsetting
@@ -207,7 +207,7 @@ gdalwarp -of GTiff \
 ```
 :::
 
-See the [official GDAL documentation on `gdalwarp`](https://gdal.org/en/stable/programs/gdalwarp.html) for more information on the `gdalwarp` command and its use and capabilities.
+See the [official GDAL documentation on `gdalwarp`](https://gdal.org/en/stable/programs/gdalwarp.html) for more information on the `gdalwarp` command, its use, and capabilities.
 
 (gdal-spatial-reproject)=
 ### Reprojection
