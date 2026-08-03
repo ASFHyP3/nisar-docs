@@ -113,20 +113,14 @@ First we start by fetching the info of the NISAR GCOV product we will use for th
 gdalinfo "/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5" 
 ```
 
-By looking in the subdatasets section of the output of this command we are given the following information regarding the first dataset:
+By looking in the subdatasets section of the output of this command we are given information regarding the first dataset:
 ```
 
 SUBDATASET_1_NAME=HDF5:"/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5"://science/LSAR/GCOV/grids/frequencyA/HHHH
 SUBDATASET_1_DESC=[35928x36288] //science/LSAR/GCOV/grids/frequencyA/HHHH (32-bit floating-point)
 ```
 
-We can garner a number of important details from this information.
- - The path of this dataset is `/science/LSAR/GCOV/grids/frequencyA/HHHH` as specified by the second field of the `SUBDATASET_1_DESC` variable on the second line. 
-   - This means this dataset is the frequency A, HHHH polarization dataset of the GCOV product which we are using for our example. 
- - The first and third field of the `SUBDATASET_1_DESC` variable specifies that the resolution of the dataset is 35928 by 36288 pixels with the type of 32-bit floating point. 
- - The `SUBDATASET_1_NAME` variable provides the full string which we can utilize in a `gdal_translate` command.
-
-The following command utilizes the `SUBDATASET_1_NAME` string to form a command which outputs our chosen dataset as a GeoTIFF named `output.tif`.
+The path of this dataset is `/science/LSAR/GCOV/grids/frequencyA/HHHH` as specified by the second field of the `SUBDATASET_1_DESC` variable on the second line. This means it is the frequency A, HHHH polarization dataset of the GCOV. The first and third field of the `SUBDATASET_1_DESC` variable specifies that the resolution of the dataset is 35928 by 36288 pixels with the type of 32-bit floating point. The `SUBDATASET_1_NAME` provides the full string which we can utilize in a `gdal_translate` command. The following command utilizes this string to form a command which outputs our chosen dataset as a GeoTIFF named `output.tif`.
 
 ```
 gdal_translate -of GTiff \
@@ -144,10 +138,11 @@ gdal_translate -of GTiff \
                 --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt\
 ```
 
-We can utilize later `SUBDATASET` fields to use this process to extract other datasets in a given NISAR product to GeoTIFF. To do so replace the `1` in `SUBDATASET_1_NAME` with the ID of whatever dataset you wish to extract.
+We can utilize later `SUBDATASET` fields allows us to use this process to extract other datasets in a given NISAR product to GeoTIFF.
+
 :::
 
-See the [official GDAL documentation on `gdal_translate`](https://gdal.org/en/stable/programs/gdal_translate.html) for more information on the `gdal_translate` command, its use, and capabilities. Similarly, the official documentation on `gdalinfo` is available [here](https://gdal.org/en/stable/programs/gdalinfo.html).
+See the [official GDAL documentation on `gdal_translate`](https://gdal.org/en/stable/programs/gdal_translate.html) for more information on the `gdal_translate` command, its use, and capabilities.
 
 (gdal-spatial-subset)=
 ### Spatial Subsetting
