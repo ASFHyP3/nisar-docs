@@ -42,6 +42,7 @@ project:
         - file: data-products/urgent-response.md
         - file: data-products/naming-conventions.md
         - file: data-products/data-format.md
+        - file: data-products/projections.md
         - file: data-products/metadata.md
         - title: Documentation
           children:
