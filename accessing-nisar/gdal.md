@@ -217,7 +217,9 @@ See the [official GDAL documentation on `gdalwarp`](https://gdal.org/en/stable/p
 (gdal-spatial-reproject)=
 ### Reprojection
 
-Reprojection operations can also be performed in `gdalwarp` utilizing the `-t_srs <SRS>` flag, where `<SRS>` is a EPSG code (such as `EPSG:3857` for Web Mercator).
+The `gdalwarp` utility can also be used to reproject datasets from the [projection used for the source NISAR HDF5 product](#nisar-l2-projections) to a different spatial reference system.
+
+In your `gdalwarp` command, set the `-t_srs <SRS>` flag, where `<SRS>` is the [EPSG code](https://epsg.io/) for the desired output spatial reference system (such as `EPSG:3857` for Web Mercator):
 
 ```
 gdalwarp -of GTiff \
