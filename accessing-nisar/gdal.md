@@ -76,7 +76,6 @@ Click the Copy URL link to get the download URL for a NISAR product in Vertex.
 Run the following command using the download URL for a NISAR product to view the available datasets present in a NISAR product: 
 
 ```
-
 gdalinfo "/vsicurl/https://<DOWNLOAD URL>" \
          --config GDAL_HTTP_NETRC=YES \
          --config GDAL_HTTP_COOKIEFILE=/tmp/gdal_cookies.txt \
@@ -85,7 +84,8 @@ gdalinfo "/vsicurl/https://<DOWNLOAD URL>" \
 
 Refer to the [Data Products](/data-products/products-overview.md) section for more information about the datasets included in NISAR products.
 
-Utilize the following command to extract a specific dataset from an HDF5 product as a GeoTIFF.
+Utilize the following command to extract a specific dataset from an HDF5 product as a GeoTIFF:
+
 ```
 gdal_translate -of GTiff \
                 "/vsicurl/https://<DOWNLOAD URL>":<VARIABLE PATH> <OUTPUT FILE>.tif \
@@ -112,8 +112,8 @@ gdalinfo "/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV
 ```
 
 By looking in the subdatasets section of the output of this command we are given the following information regarding the first dataset:
-```
 
+```
 SUBDATASET_1_NAME=HDF5:"/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5"://science/LSAR/GCOV/grids/frequencyA/HHHH
 SUBDATASET_1_DESC=[35928x36288] //science/LSAR/GCOV/grids/frequencyA/HHHH (32-bit floating-point)
 ```
@@ -124,7 +124,7 @@ We can garner a number of important details from this information.
  - The first and third field of the `SUBDATASET_1_DESC` variable specifies that the resolution of the dataset is 35928 by 36288 pixels with the type of 32-bit floating point. 
  - The `SUBDATASET_1_NAME` variable provides the full string which we can utilize in a `gdal_translate` command.
 
-The following command utilizes the `SUBDATASET_1_NAME` string to form a command which outputs our chosen dataset as a GeoTIFF named `output.tif`.
+The following command utilizes the `SUBDATASET_1_NAME` string to form a command which outputs our chosen dataset as a GeoTIFF named `output.tif`:
 
 ```
 gdal_translate -of GTiff \
@@ -158,7 +158,7 @@ The `gdalwarp` utility allows describing spatial extents using a type of string 
 In previous sections we have utilized the `gdal_translate` utility. This utility does support spatial subsetting, however in this section we will instead utilize the `gdalwarp` utility to perform such an operation. The `gdalwarp` utility allows for more flexible spatial subsetting by inputting WKT spatial extent strings. The `gdal_translate` utility does not support the use of such strings. The ease of use of WKT spatial extent strings and their flexibility outweighs the potential performance improvements provided by `gdal_translate` for most users. Utilize the `-projwin` and `projwin_srs` flags as described in the [`gdal_translate` docs](https://gdal.org/en/stable/programs/gdal_translate.html#cmdoption-gdal_translate-projwin) if you are interested in the highest performance spatial subsetting possible.
 :::
 
-To perform spatial subsetting with `gdalwarp` utilize the `-cutline <WKT>` flag alongside the `-cutline srs WGS84`, `-crop_to_cutline` and `-dstalpha` flags. The command below demonstrates the use of these flags.
+To perform spatial subsetting with `gdalwarp` utilize the `-cutline <WKT>` flag alongside the `-cutline srs WGS84`, `-crop_to_cutline` and `-dstalpha` flags. The command below demonstrates the use of these flags:
 
 ```
 gdalwarp -of GTiff \
@@ -189,7 +189,7 @@ We will begin by utilizing Vertex to pick an area within our product. Once we ha
 POLYGON((-115.7994 43.887,-113.7599 43.887,-113.7599 44.9751,-115.7994 44.9751,-115.7994 43.887))
 ```
 
-We will then input this string, and the full dataset string which we identified in the previous example into the spatial subsetting snippet which is provided above. This gives us the final command which we can utilize to perform our spatial subsetting operation.
+We will then input this string, and the full dataset string which we identified in the previous example into the spatial subsetting snippet which is provided above. This gives us the final command, which we can utilize to perform our spatial subsetting operation:
 
 ```
 gdalwarp -of GTiff \
@@ -238,7 +238,7 @@ gdalwarp -of GTiff \
 ```
 
 :::{hint} Example
-We can utilize this snippet to project the product which we have dealt with in our previous examples into Web Mercator as follows.
+We can utilize this snippet to project the product which we have dealt with in our previous examples into Web Mercator as follows:
 
 ```
 gdalwarp -of GTiff \
