@@ -13,11 +13,9 @@ We can use command line utilities from the GDAL software library to transform th
 If you do not already have GDAL installed you can follow [GDAL's official guide](https://gdal.org/en/stable/download.html). 
 
 :::{warning} NISAR HDF5 format not supported in GDAL HDF5 drivers prior to version 3.13.0
-For GDAL releases older than `3.13.0`, the `NETCDF` driver must be used instead of the default `HDF5` driver when working with NISAR products. 
+For GDAL releases older than `3.13.0`, the `NETCDF` driver must be used instead of the default `HDF5` driver when working with NISAR products. Because NISAR encodes the spatial reference system using netCDF CF conventions, older HDF5 drivers cannot find the geospatial information required to project the data onto a map. 
 
-Because NISAR encodes the spatial reference system using netCDF CF conventions, older HDF5 drivers cannot find the geospatial information required to project the data onto a map. 
-
-**Users can direct GDAL to use the netCDF driver by prepending `NETCDF:` to `/vsicurl/` in all GDAL commands.**
+**Users can direct older versions of GDAL to use the netCDF driver by prepending `NETCDF:` to `/vsicurl/` in all GDAL commands.**
 
 To identify your currently installed version of GDAL, run `gdal --version`.
 :::
