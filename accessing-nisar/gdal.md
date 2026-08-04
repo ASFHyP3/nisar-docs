@@ -255,7 +255,7 @@ gdalwarp -of GTiff \
 ```
 
 :::{hint} Example
-We can utilize this snippet to project the product which we have dealt with in our previous examples into Web Mercator as follows:
+We can utilize this snippet to project the product used in our previous examples into Web Mercator as follows:
 
 ```
 gdalwarp -of GTiff \
