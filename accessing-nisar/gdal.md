@@ -57,9 +57,9 @@ If you have a `gdalrc` file staged, you can skip all the `--config` flags includ
 
 ## Transform NISAR HDF5 Products
 
-Users can transform NISAR data by using the gdal_translate or gdal_warp utilities to [extract](#gdal-extract) and/or [spatially subset](#gdal-spatial-subset) data, [reproject](#gdal-spatial-reproject) the data, and change the file format. For the examples provided here, we will output the data as a GeoTIFF.
+Users can transform NISAR data by using the `gdal_translate` or `gdal_warp` utilities to [extract](#gdal-extract) and/or [spatially subset](#gdal-spatial-subset) data, [reproject](#gdal-spatial-reproject) the data, and change the file format. For the examples provided here, we will output the data as a GeoTIFF.
 
-You will need the download link for a NISAR product to run these commands. Use the [Copy URL](#copy-download-url-image) links available in the search results for Vertex, or use one of the other search methods available to find a NISAR product URL.
+You will need the download link for a NISAR product to run these commands. Use the [Copy URL](#copy-download-url-image) links available in the search results for Vertex, or use one of the other [available search methods](#nisar-access-overview) to find a NISAR product URL.
 
 ```{figure} ../assets/copy-download-url.png
 :label: copy-download-url-image
