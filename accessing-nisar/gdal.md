@@ -162,7 +162,7 @@ An easy method for defining a WKT spatial extent string is to set an Area of Int
 :alt: A screenshot describing the location of the copy AOI string button in Vertex.
 :align: center
 
-Click the copy AOI string button to copy the WKT spatial extent string representing the AOI selection in Vertex to your system's clipboard.
+Click the **Copy to clipboard** icon in the Area of Interest WKT field in Vertex to copy the WKT spatial extent string to your system's clipboard.
 ```
 
 :::{tip}
@@ -255,7 +255,7 @@ gdalwarp -of GTiff \
 ```
 
 :::{hint} Example
-We can utilize this snippet to project the product which we have dealt with in our previous examples into Web Mercator as follows:
+We can utilize this snippet to project the product used in our previous examples into Web Mercator as follows:
 
 ```{code} bash
 gdalwarp -of GTiff \
