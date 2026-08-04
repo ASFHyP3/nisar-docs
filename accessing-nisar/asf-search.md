@@ -31,6 +31,16 @@ results = asf.search(dataset='NISAR', processingLevel='GCOV')
 ``` 
 A list of accepted `processingLevel` constants for data from all missions hosted by ASF, including NISAR, is available [here](https://github.com/asfadmin/Discovery-asf_search/blob/master/asf_search/constants/PRODUCT_TYPE.py). 
 
+Specifying [Provisional](nisar-provisional-data-july) or [BETA](nisar-sample-data-feb) NISAR data products can be done by using a [wildcard search]([https://docs.asf.alaska.edu/datasets/wildcard_usage/#asf-search-python-module)](https://docs.asf.alaska.edu/datasets/wildcard_usage/#crid-version-number) and searching for a string with the desired [CRID version number](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid).  
+```python
+import asf_search as asf
+
+BETA_results = asf.search(granule_list=['NISAR_L*_*X05*'], maxResults=250)
+
+provisional_results = asf.search(granule_list=['NISAR_L*_*P0502*'], maxResults=250)
+``` 
+
+
 Refer to the [Searching page of the ASF Data Search Manual](https://docs.asf.alaska.edu/asf_search/searching/)
  for more details on available search filters and their possible values.
 
