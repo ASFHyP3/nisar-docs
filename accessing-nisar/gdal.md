@@ -39,7 +39,7 @@ Users can choose to generate a `gdalrc` file to simplify GDAL commands. This rep
 Create a file in `~/.gdal/gdalrc` with the following content:
 
 ```{code-block}
-:filename "~/.gdal/gdalrc"
+:filename: "~/.gdal/gdalrc"
 
 [configoptions]
 CPL_VSIL_CURL_CHUNK_SIZE 2097152
