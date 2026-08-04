@@ -2,6 +2,7 @@
 
 The [Geospatial Data Abstraction Library (GDAL)](https://gdal.org/en/stable) is an open-source software library used to work with raster and vector geospatial data. There are a number of GDAL command line utilities that we can leverage to transform NISAR data.
 
+(gdal-nisar)=
 ## Using GDAL to Transform NISAR Data
 
 NISAR products are distributed in HDF5 format, and the files can be very large. Many users may want to transform the data by extracting just the datasets of interest from the HDF5 files and/or subsetting the data to a defined spatial extent. 

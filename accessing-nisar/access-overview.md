@@ -113,7 +113,9 @@ Because all NISAR data is hosted in EDC, which leverages AWS infrastructure, use
 
 ## GDAL Access
 
-GDAL's vsicurl virtual file system driver allows users to subset NISAR HDF5 files without downloading the entire HDF5 file first or leveraging [Harmony services](#ed-harmony). [Learn more about using GDAL to subset HDF5 files](/accessing-nisar/gdal.md).
+GDAL's vsicurl virtual file system driver allows users to subset NISAR HDF5 files without downloading the entire HDF5 file first or leveraging [Harmony services](#ed-harmony). 
+
+[**Learn more about using GDAL to transform HDF5 files**](#gdal-nisar).
 
 <style>section {page-break-before: avoid}</style>
 
