@@ -152,9 +152,18 @@ To extract other datasets, use the subdataset name displayed in the `gdalinfo` o
 
 GDAL has many utilities which allow for spatial subsetting. In this section we will demonstrate spatial subsetting through the use of the `gdalwarp` utility with WKT spatial extent strings.
 
-The `gdalwarp` utility allows describing spatial extents using a type of string known as a Well Known Text (WKT) Polygon or MultiPolygon string, which we will refer to as WKT spatial extent strings.
+The `gdalwarp` utility allows describing spatial extents using a type of string known as a Well Known Text (WKT) Polygon or MultiPolygon string (we will refer to them as WKT spatial extent strings), which are utilized widely across geospatial applications (see [examples of WKT formulation](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry)).
 
-WKT spatial extent strings are utilized widely across geospatial applications (see [examples of WKT formulation](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry)). An easy method for defining a WKT spatial extent string is to pick an Area of Interest (AOI) in [Vertex](#vertex-geographic-extent), then copy the string associated with that AOI in the filter bar.
+(vertex-wkt)=
+An easy method for defining a WKT spatial extent string is to set an Area of Interest (AOI) in [Vertex](#vertex-geographic-extent). Once you've drawn an AOI in Vertex, the [Area of Interest WKT field](#vertex-wkt-image) displays the WKT spatial extent string, and hovering over the field exposes a copy icon that you can use to capture the WKT. 
+
+```{figure} ../assets/TODO-add-vertex-image.png
+:label: vertex-wkt-image
+:alt: TODO: descriptive text
+:align: center
+
+TODO: caption
+```
 
 :::{tip}
 In previous sections we have utilized the `gdal_translate` utility. This utility does support spatial subsetting, however in this section we will instead utilize the `gdalwarp` utility to perform such an operation. The `gdalwarp` utility allows for more flexible spatial subsetting by inputting WKT spatial extent strings. The `gdal_translate` utility does not support the use of such strings. The ease of use of WKT spatial extent strings and their flexibility outweighs the potential performance improvements provided by `gdal_translate` for most users. Utilize the `-projwin` and `projwin_srs` flags as described in the [`gdal_translate` docs](https://gdal.org/en/stable/programs/gdal_translate.html#cmdoption-gdal_translate-projwin) if you are interested in the highest performance spatial subsetting possible.
@@ -185,7 +194,7 @@ gdalwarp -of GTiff \
 :::{hint} Example
 In this example we will perform spatial subsetting on the subdataset which we identified utilizing the `gdalinfo` utility in the previous example.
 
-We will begin by utilizing Vertex to pick an area within our product. Once we have picked an area within our product, we can copy the AOI string from the header bar of Vertex which is conveniently in WKT format. An example WKT spatial extent string obtained in this manner is given below.
+We used Vertex to pick an area within our product and [copied the AOI string](#vertex-wkt), which is in a suitable WKT spatial extent string format:
 
 ```
 POLYGON((-115.7994 43.887,-113.7599 43.887,-113.7599 44.9751,-115.7994 44.9751,-115.7994 43.887))
