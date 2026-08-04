@@ -25,7 +25,7 @@ To identify your currently installed version of GDAL, run `gdal --version`.
 In this guide we will be streaming products directly from NASA's [Earthdata Cloud (EDC)](https://www.earthdata.nasa.gov/about/earthdata-cloud-evolution) without downloading them first. To do so, we must allow GDAL to authenticate to EDC by placing a `.netrc` file in the home directory of our compute environment containing our [Earthdata Login](#earthdata-login) credentials.
 
 ```{code-block}
-:filename: "~/.netrc"
+:filename: ~/.netrc
 
 machine urs.earthdata.nasa.gov
     login <username>
@@ -39,7 +39,7 @@ Users can choose to generate a `gdalrc` file to simplify GDAL commands. This rep
 Create a file in `~/.gdal/gdalrc` with the following content:
 
 ```{code-block}
-:filename: "~/.gdal/gdalrc"
+:filename: ~/.gdal/gdalrc
 
 [configoptions]
 CPL_VSIL_CURL_CHUNK_SIZE 2097152
