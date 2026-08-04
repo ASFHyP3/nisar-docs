@@ -105,7 +105,7 @@ gdal_translate -of GTiff \
 The `gdalwarp` command is also suitable for this, and can be used as a drop-in replacement. However, using `gdal_translate` for simple dataset extraction operations may provide up to a 30% improvement in performance.
 
 :::{hint} Example 
-First we start by fetching the info of the NISAR GCOV product we will use for this example.
+First we will use [`gdalinfo`](https://gdal.org/en/stable/programs/gdalinfo.html) to fetch information about the NISAR [GCOV](#gcov-product-overview) product we will use for this example:
 
 ```
 gdalinfo "/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5" 
@@ -118,9 +118,9 @@ SUBDATASET_1_NAME=HDF5:"/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR
 SUBDATASET_1_DESC=[35928x36288] //science/LSAR/GCOV/grids/frequencyA/HHHH (32-bit floating-point)
 ```
 
-We can garner a number of important details from this information.
- - The path of this dataset is `/science/LSAR/GCOV/grids/frequencyA/HHHH` as specified by the second field of the `SUBDATASET_1_DESC` variable on the second line. 
-   - This means this dataset is the frequency A, HHHH polarization dataset of the GCOV product which we are using for our example. 
+We can garner a number of important details from this information:
+ - The path of this dataset is `/science/LSAR/GCOV/grids/frequencyA/HHHH`, as specified by the second field of the `SUBDATASET_1_DESC` variable on the second line. 
+   - This dataset is the [Frequency A HHHH covariance dataset](#gcov-covariance-terms) (HH polarization) of the GCOV product which we are using for our example. 
  - The first and third field of the `SUBDATASET_1_DESC` variable specifies that the resolution of the dataset is 35928 by 36288 pixels with the type of 32-bit floating point. 
  - The `SUBDATASET_1_NAME` variable provides the full string which we can utilize in a `gdal_translate` command.
 

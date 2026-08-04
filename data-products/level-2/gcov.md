@@ -23,6 +23,7 @@ A complete description of NISAR GCOV products is available in @l2_gcov_product_s
 
 The primary datasets of interest in the GCOV data products are the covariance terms. Complete descriptions of these dataset layers are available in @l2_gcov_product_specs2025 [Section 4.3]. The frequencies and polarizations available in a particular GCOV data product will vary based on the acquisition mode used to collect the data.
 
+(gcov-covariance-terms)=
 ### Geocoded Polarimetric Covariance Terms
 
 The primary data elements of the GCOV product are the images of the geocoded polarimetric covariance terms. Refer to @nisarPolarimetry to learn more about NISAR polarimetry. Not all products will include all possible terms from the covariance matrix, as the polarimetric channels available will depend on the acquisition mode. 
