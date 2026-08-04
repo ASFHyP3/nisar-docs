@@ -150,7 +150,7 @@ See the [official GDAL documentation on `gdal_translate`](https://gdal.org/en/st
 (gdal-spatial-subset)=
 ### Spatial Subsetting
 
-GDAL has many utilities which allow for spatial subsetting. In this section we will demonstrate spatial subsetting through the use of the `gdalwarp` utility utilizing WKT spatial extent strings.
+GDAL has many utilities which allow for spatial subsetting. In this section we will demonstrate spatial subsetting through the use of the `gdalwarp` utility with WKT spatial extent strings.
 
 The `gdalwarp` utility allows describing spatial extents using a type of string known as a Well Known Text (WKT) Polygon or MultiPolygon string. WKT Polygon or MultiPolygon strings are a subset of strings defined by the [OGC Standard, Section 7](https://www.ogc.org/standards/sfa/). Instructive examples for WKT strings are available on [Wikipedia](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry). For future convenience we will refer to WKT Polygon or MultiPolygon strings as WKT spatial extent strings. WKT spatial extent strings are utilized widely across geospatial applications, such as in Vertex, QGIS, and more. An easy method for sampling WKT spatial extent strings is to pick an Area of Interest (AOI) in Vertex, and then copy the string associated with that AOI in the filter bar.
 
