@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.4.26]
 
 ### Added
+- [GDAL](accessing-nisar/gdal.md) page to Accessing Data section
 - Page describing projections used for Level 2 and 3 products
 - Redirect placeholder page for Static Layers
 
