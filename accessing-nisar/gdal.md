@@ -6,7 +6,7 @@ The [Geospatial Data Abstraction Library (GDAL)](https://gdal.org/en/stable) is 
 
 NISAR products are distributed in HDF5 format, and the files can be very large. Many users may want to transform the data by extracting just the datasets of interest from the HDF5 files and/or subsetting the data to a defined spatial extent. 
 
-We can use command line utilities from the GDAL software library to transform these files. Leveraging GDAL's ability to stream data from Earthdata Cloud directly will allow us to download only the data we need in the desired format.
+We can use command line utilities from the GDAL software library to transform these files. Leveraging GDAL's ability to stream data from Earthdata Cloud directly allows us to download only the data we need in the desired format.
 
 ### Preparing GDAL to Access EDC
 
