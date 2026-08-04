@@ -22,7 +22,7 @@ To identify your currently installed version of GDAL, run `gdal --version`.
 
 In this guide we will be streaming products directly from NASA's [Earthdata Cloud (EDC)](https://www.earthdata.nasa.gov/about/earthdata-cloud-evolution) without downloading them first. To do so, we must allow GDAL to authenticate to EDC by placing a `.netrc` file in the home directory of our compute environment containing our [Earthdata Login](#earthdata-login) credentials.
 
-```{code-block}
+```{code-block} plaintext
 :filename: ~/.netrc
 
 machine urs.earthdata.nasa.gov
@@ -36,13 +36,13 @@ Users can choose to generate a `gdalrc` file to simplify GDAL commands. This rep
 
 Create a file in `~/.gdal/gdalrc` with the following content:
 
-```{code-block}
+```{code-block} ini
 :filename: ~/.gdal/gdalrc
 
 [configoptions]
-CPL_VSIL_CURL_CHUNK_SIZE 2097152
-CPL_VSIL_CURL_CACHE_SIZE 67108864
-GDAL_CACHEMAX 64000000
+CPL_VSIL_CURL_CHUNK_SIZE=2097152
+CPL_VSIL_CURL_CACHE_SIZE=67108864
+GDAL_CACHEMAX=64000000
 GDAL_DISABLE_READDIR_ON_OPEN=TRUE
 GDAL_HTTP_MERGE_CONSECUTIVE_RANGES=YES
 GDAL_HTTP_MULTIPLEX=YES
@@ -75,7 +75,7 @@ Click the Copy URL link to get the download URL for a NISAR product in Vertex.
 
 Run the following [`gdalinfo`](https://gdal.org/en/stable/programs/gdalinfo.html) command, using the download URL for a NISAR product, to view information about the product, including the datasets it contains: 
 
-```
+```{code} bash
 gdalinfo "/vsicurl/https://<DOWNLOAD URL>" \
          --config GDAL_HTTP_NETRC=YES \
          --config GDAL_HTTP_COOKIEFILE=/tmp/gdal_cookies.txt \
@@ -86,7 +86,7 @@ Refer to the [Data Products](#data-products-overview) section for more informati
 
 Utilize the following `gdal_translate` command to extract a specific dataset from an HDF5 product as a GeoTIFF:
 
-```
+```{code} bash
 gdal_translate -of GTiff \
                 "/vsicurl/https://<DOWNLOAD URL>":<VARIABLE PATH> <OUTPUT FILE>.tif \
                 --config CPL_VSIL_CURL_CHUNK_SIZE 2097152 \
@@ -107,7 +107,7 @@ The `gdalwarp` command is also suitable for this, and can be used as a drop-in r
 :::{hint} Example 
 First we will use `gdalinfo` to fetch information about the NISAR [GCOV](#gcov-product-overview) product used in this example:
 
-```
+```{code} bash
 gdalinfo "/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5" 
 ```
 
@@ -115,7 +115,7 @@ This command returns a lot of information about the product, including the name 
 
 Let's look at the information about the first subdataset: 
 
-```
+```{code} plaintext
 SUBDATASET_1_NAME=HDF5:"/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5"://science/LSAR/GCOV/grids/frequencyA/HHHH
 SUBDATASET_1_DESC=[35928x36288] //science/LSAR/GCOV/grids/frequencyA/HHHH (32-bit floating-point)
 ```
@@ -128,7 +128,7 @@ We can garner a number of important details from this information:
 
 The following `gdal_translate` command references the `SUBDATASET_1_NAME` string to form a command which outputs our chosen dataset as a GeoTIFF named `output.tif`:
 
-```
+```{code} bash
 gdal_translate -of GTiff \
                 "/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5"://science/LSAR/GCOV/grids/frequencyA/HHHH output.tif \
                 --config CPL_VSIL_CURL_CHUNK_SIZE 2097152 \
@@ -175,7 +175,7 @@ To perform spatial subsetting with `gdalwarp`, utilize the `-cutline <WKT>` flag
 
 The command below demonstrates the use of these flags:
 
-```
+```{code} bash
 gdalwarp -of GTiff \
          "/vsicurl/https://<DOWNLOAD URL>":<VARIABLE PATH> <OUTPUT FILE>.tif \
          -cutline <WKT> \
@@ -200,7 +200,7 @@ In this example we will use the `gdalwarp` utility to perform spatial subsetting
 
 We used Vertex to pick an area within our product and [copied the AOI string](#vertex-wkt), which is in a suitable WKT spatial extent string format:
 
-```
+```{code} plaintext
 POLYGON((-115.7994 43.887,-113.7599 43.887,-113.7599 44.9751,-115.7994 44.9751,-115.7994 43.887))
 ```
 
@@ -208,7 +208,7 @@ We will then input this string, and the full dataset string identified in the pr
 
 This gives us the final command, which we can utilize to perform our spatial subsetting operation:
 
-```
+```{code} bash
 gdalwarp -of GTiff \
          "/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5"://science/LSAR/GCOV/grids/frequencyA/HHHH output.tif \
          -cutline "POLYGON((-115.7994 43.887,-113.7599 43.887,-113.7599 44.9751,-115.7994 44.9751,-115.7994 43.887))" \
@@ -236,7 +236,7 @@ The `gdalwarp` utility can also be used to reproject datasets from the [projecti
 
 In your `gdalwarp` command, set the `-t_srs <SRS>` flag, where `<SRS>` is the [EPSG code](https://epsg.io/) for the desired output spatial reference system (such as `EPSG:3857` for Web Mercator):
 
-```
+```{code} bash
 gdalwarp -of GTiff \
          "/vsicurl/https://<DOWNLOAD URL>":<VARIABLE PATH> <OUTPUT FILE>.tif \
          -t_srs <SRS> \
@@ -257,7 +257,7 @@ gdalwarp -of GTiff \
 :::{hint} Example
 We can utilize this snippet to project the product which we have dealt with in our previous examples into Web Mercator as follows:
 
-```
+```{code} bash
 gdalwarp -of GTiff \
          "/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5"://science/LSAR/GCOV/grids/frequencyA/HHHH output.tif \
          -t_srs EPSG:3857 \
