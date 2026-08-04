@@ -82,7 +82,7 @@ gdalinfo "/vsicurl/https://<DOWNLOAD URL>" \
          --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt
 ```
 
-Refer to the [Data Products](/data-products/products-overview.md) section for more information about the datasets included in NISAR products.
+Refer to the [Data Products](#data-products-overview) section for more information about the datasets included in NISAR products.
 
 Utilize the following command to extract a specific dataset from an HDF5 product as a GeoTIFF:
 
