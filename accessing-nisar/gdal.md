@@ -157,12 +157,12 @@ The `gdalwarp` utility allows describing spatial extents using a type of string 
 (vertex-wkt)=
 An easy method for defining a WKT spatial extent string is to set an Area of Interest (AOI) in [Vertex](#vertex-geographic-extent). Once you've drawn an AOI in Vertex, the [Area of Interest WKT field](#vertex-wkt-image) displays the WKT spatial extent string, and hovering over the field exposes a copy icon that you can use to capture the WKT. 
 
-```{figure} ../assets/TODO-add-vertex-image.png
+```{figure} ../assets/vertex-copy-aoi-string.png
 :label: vertex-wkt-image
-:alt: TODO: descriptive text
+:alt: A screenshot describing the location of the copy AOI string button in Vertex.
 :align: center
 
-TODO: caption
+Click the copy AOI string button to copy the WKT spatial extent string representing the AOI selection in Vertex to your system's clipboard.
 ```
 
 :::{tip}
@@ -171,7 +171,7 @@ Both `gdal_translate` and `gdalwarp` can be used for spatial subsetting, but the
 If you are interested in maximizing performance by using `gdal_translate`, leverage the `-projwin` and `-projwin_srs` flags as described in the [`gdal_translate` documentation](https://gdal.org/en/stable/programs/gdal_translate.html#cmdoption-gdal_translate-projwin) to set the AOI and output projection.
 :::
 
-To perform spatial subsetting with `gdalwarp`, utilize the `-cutline <WKT>` flag alongside the `-cutline srs WGS84`, `-crop_to_cutline`, and `-dstalpha` flags. 
+To perform spatial subsetting with `gdalwarp`, utilize the `-cutline <WKT>` flag alongside the `-cutline_srs WGS84`, `-crop_to_cutline`, and `-dstalpha` flags. 
 
 The command below demonstrates the use of these flags:
 
