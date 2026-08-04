@@ -166,10 +166,14 @@ TODO: caption
 ```
 
 :::{tip}
-In previous sections we have utilized the `gdal_translate` utility. This utility does support spatial subsetting, however in this section we will instead utilize the `gdalwarp` utility to perform such an operation. The `gdalwarp` utility allows for more flexible spatial subsetting by inputting WKT spatial extent strings. The `gdal_translate` utility does not support the use of such strings. The ease of use of WKT spatial extent strings and their flexibility outweighs the potential performance improvements provided by `gdal_translate` for most users. Utilize the `-projwin` and `projwin_srs` flags as described in the [`gdal_translate` docs](https://gdal.org/en/stable/programs/gdal_translate.html#cmdoption-gdal_translate-projwin) if you are interested in the highest performance spatial subsetting possible.
+Both `gdal_translate` and `gdalwarp` can be used for spatial subsetting, but the `gdalwarp` utility is more flexible, allowing for the use of WKT spatial extent strings to define an AOI. The `gdal_translate` utility is more efficient, but does not support the use of such strings. 
+
+If you are interested in maximizing performance by using `gdal_translate`, leverage the `-projwin` and `-projwin_srs` flags as described in the [`gdal_translate` documentation](https://gdal.org/en/stable/programs/gdal_translate.html#cmdoption-gdal_translate-projwin) to set the AOI and output projection.
 :::
 
-To perform spatial subsetting with `gdalwarp` utilize the `-cutline <WKT>` flag alongside the `-cutline srs WGS84`, `-crop_to_cutline` and `-dstalpha` flags. The command below demonstrates the use of these flags:
+To perform spatial subsetting with `gdalwarp`, utilize the `-cutline <WKT>` flag alongside the `-cutline srs WGS84`, `-crop_to_cutline` and `-dstalpha` flags. 
+
+The command below demonstrates the use of these flags:
 
 ```
 gdalwarp -of GTiff \
