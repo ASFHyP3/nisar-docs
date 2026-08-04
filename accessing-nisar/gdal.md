@@ -111,7 +111,9 @@ First we will use `gdalinfo` to fetch information about the NISAR [GCOV](#gcov-p
 gdalinfo "/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5" 
 ```
 
-By looking in the subdatasets section of the output of this command, we are given the following information about the first dataset:
+This command returns a lot of information about the product, including the name and description for each dataset (or subdataset) contained in the HDF5 file. 
+
+Let's look at the information about the first subdataset: 
 
 ```
 SUBDATASET_1_NAME=HDF5:"/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5"://science/LSAR/GCOV/grids/frequencyA/HHHH
@@ -142,7 +144,7 @@ gdal_translate -of GTiff \
                 --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt\
 ```
 
-To extract other datasets, replace the `1` in `SUBDATASET_1_NAME` with the ID of the dataset you wish to extract.
+To extract other datasets, use the subdataset name displayed in the `gdalinfo` output for the desired dataset.
 :::
 
 (gdal-spatial-subset)=
