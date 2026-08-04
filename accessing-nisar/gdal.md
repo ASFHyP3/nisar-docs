@@ -57,7 +57,7 @@ If you have a `gdalrc` file staged, you can skip all the `--config` flags includ
 
 ## Transform NISAR HDF5 Products
 
-Users can transform NISAR data by using the `gdal_translate` or `gdalwarp` utilities to [extract](#gdal-extract) and/or [spatially subset](#gdal-spatial-subset) data, [reproject](#gdal-spatial-reproject) the data, and change the file format. For the examples provided here, we will output the data as a GeoTIFF.
+Users can transform NISAR data by using the [`gdal_translate`](https://gdal.org/en/stable/programs/gdal_translate.html) or [`gdalwarp`](https://gdal.org/en/stable/programs/gdalwarp.html) utility to [extract](#gdal-extract) and/or [spatially subset](#gdal-spatial-subset) data, [reproject](#gdal-spatial-reproject) the data, and change the file format. For the examples provided here, we will output the data as a GeoTIFF. 
 
 You will need the download link for a NISAR product to run these commands. Use the [Copy URL](#copy-download-url-image) links available in the search results for [Vertex](#vertex-overview), or use one of the other [available search methods](#nisar-access-overview) to find a NISAR product URL.
 
@@ -73,7 +73,7 @@ Click the Copy URL link to get the download URL for a NISAR product in Vertex.
 (gdal-extract)=
 ### Extract Datasets
 
-Run the following command using the download URL for a NISAR product to view the available datasets present in a NISAR product: 
+Run the following [`gdalinfo`](https://gdal.org/en/stable/programs/gdalinfo.html) command, using the download URL for a NISAR product, to view information about the product, including the datasets it contains: 
 
 ```
 gdalinfo "/vsicurl/https://<DOWNLOAD URL>" \
@@ -84,7 +84,7 @@ gdalinfo "/vsicurl/https://<DOWNLOAD URL>" \
 
 Refer to the [Data Products](#data-products-overview) section for more information about the datasets included in NISAR products.
 
-Utilize the following command to extract a specific dataset from an HDF5 product as a GeoTIFF:
+Utilize the following `gdal_translate` command to extract a specific dataset from an HDF5 product as a GeoTIFF:
 
 ```
 gdal_translate -of GTiff \
@@ -105,13 +105,13 @@ gdal_translate -of GTiff \
 The `gdalwarp` command is also suitable for this, and can be used as a drop-in replacement. However, using `gdal_translate` for simple dataset extraction operations may provide up to a 30% improvement in performance.
 
 :::{hint} Example 
-First we will use [`gdalinfo`](https://gdal.org/en/stable/programs/gdalinfo.html) to fetch information about the NISAR [GCOV](#gcov-product-overview) product we will use for this example:
+First we will use `gdalinfo` to fetch information about the NISAR [GCOV](#gcov-product-overview) product used in this example:
 
 ```
 gdalinfo "/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5" 
 ```
 
-By looking in the subdatasets section of the output of this command we are given the following information regarding the first dataset:
+By looking in the subdatasets section of the output of this command, we are given the following information about the first dataset:
 
 ```
 SUBDATASET_1_NAME=HDF5:"/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5"://science/LSAR/GCOV/grids/frequencyA/HHHH
@@ -124,7 +124,7 @@ We can garner a number of important details from this information:
  - The first and third field of the `SUBDATASET_1_DESC` variable specifies that the resolution of the dataset is 35928 by 36288 pixels with the type of 32-bit floating point. 
  - The `SUBDATASET_1_NAME` variable provides the full string which we can utilize in a `gdal_translate` command.
 
-The following command utilizes the `SUBDATASET_1_NAME` string to form a command which outputs our chosen dataset as a GeoTIFF named `output.tif`:
+The following `gdal_translate` command references the `SUBDATASET_1_NAME` string to form a command which outputs our chosen dataset as a GeoTIFF named `output.tif`:
 
 ```
 gdal_translate -of GTiff \
@@ -142,17 +142,17 @@ gdal_translate -of GTiff \
                 --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt\
 ```
 
-We can utilize later `SUBDATASET` fields to use this process to extract other datasets in a given NISAR product to GeoTIFF. To do so replace the `1` in `SUBDATASET_1_NAME` with the ID of whatever dataset you wish to extract.
+To extract other datasets, replace the `1` in `SUBDATASET_1_NAME` with the ID of the dataset you wish to extract.
 :::
-
-See the [official GDAL documentation on `gdal_translate`](https://gdal.org/en/stable/programs/gdal_translate.html) for more information on the `gdal_translate` command, its use, and capabilities. Similarly, the official documentation on `gdalinfo` is available [here](https://gdal.org/en/stable/programs/gdalinfo.html).
 
 (gdal-spatial-subset)=
 ### Spatial Subsetting
 
 GDAL has many utilities which allow for spatial subsetting. In this section we will demonstrate spatial subsetting through the use of the `gdalwarp` utility with WKT spatial extent strings.
 
-The `gdalwarp` utility allows describing spatial extents using a type of string known as a Well Known Text (WKT) Polygon or MultiPolygon string. WKT Polygon or MultiPolygon strings are a subset of strings defined by the [OGC Standard, Section 7](https://www.ogc.org/standards/sfa/). Instructive examples for WKT strings are available on [Wikipedia](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry). For future convenience we will refer to WKT Polygon or MultiPolygon strings as WKT spatial extent strings. WKT spatial extent strings are utilized widely across geospatial applications, such as in Vertex, QGIS, and more. An easy method for sampling WKT spatial extent strings is to pick an Area of Interest (AOI) in Vertex, and then copy the string associated with that AOI in the filter bar.
+The `gdalwarp` utility allows describing spatial extents using a type of string known as a Well Known Text (WKT) Polygon or MultiPolygon string, which we will refer to as WKT spatial extent strings.
+
+WKT spatial extent strings are utilized widely across geospatial applications (see [examples of WKT formulation](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry)). An easy method for defining a WKT spatial extent string is to pick an Area of Interest (AOI) in [Vertex](#vertex-geographic-extent), then copy the string associated with that AOI in the filter bar.
 
 :::{tip}
 In previous sections we have utilized the `gdal_translate` utility. This utility does support spatial subsetting, however in this section we will instead utilize the `gdalwarp` utility to perform such an operation. The `gdalwarp` utility allows for more flexible spatial subsetting by inputting WKT spatial extent strings. The `gdal_translate` utility does not support the use of such strings. The ease of use of WKT spatial extent strings and their flexibility outweighs the potential performance improvements provided by `gdal_translate` for most users. Utilize the `-projwin` and `projwin_srs` flags as described in the [`gdal_translate` docs](https://gdal.org/en/stable/programs/gdal_translate.html#cmdoption-gdal_translate-projwin) if you are interested in the highest performance spatial subsetting possible.
@@ -211,8 +211,6 @@ gdalwarp -of GTiff \
          --config GDAL_HTTP_COOKIEJAR=/tmp/gdal_cookies.txt
 ```
 :::
-
-See the [official GDAL documentation on `gdalwarp`](https://gdal.org/en/stable/programs/gdalwarp.html) for more information on the `gdalwarp` command, its use, and capabilities.
 
 (gdal-spatial-reproject)=
 ### Reprojection
