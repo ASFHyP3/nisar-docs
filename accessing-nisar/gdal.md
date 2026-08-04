@@ -196,7 +196,7 @@ gdalwarp -of GTiff \
 ```
 
 :::{hint} Example
-In this example we will perform spatial subsetting on the subdataset which we identified utilizing the `gdalinfo` utility in the previous example.
+In this example we will use the `gdalwarp` utility to perform spatial subsetting on the subdataset identified in the previous example.
 
 We used Vertex to pick an area within our product and [copied the AOI string](#vertex-wkt), which is in a suitable WKT spatial extent string format:
 
@@ -204,7 +204,9 @@ We used Vertex to pick an area within our product and [copied the AOI string](#v
 POLYGON((-115.7994 43.887,-113.7599 43.887,-113.7599 44.9751,-115.7994 44.9751,-115.7994 43.887))
 ```
 
-We will then input this string, and the full dataset string which we identified in the previous example into the spatial subsetting snippet which is provided above. This gives us the final command, which we can utilize to perform our spatial subsetting operation:
+We will then input this string, and the full dataset string identified in the previous example, into the spatial subsetting snippet provided above. 
+
+This gives us the final command, which we can utilize to perform our spatial subsetting operation:
 
 ```
 gdalwarp -of GTiff \
