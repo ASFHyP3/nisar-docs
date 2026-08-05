@@ -40,6 +40,7 @@ Note that the [**Layers**](https://docs.asf.alaska.edu/vertex/manual/#other-vert
 
 ### 2. Filter for desired products
 
+(vertex-geographic-extent)=
 #### Geographic Extent
 
 To search for a specific geographic region, click on the left-most **Area of Interest** button to choose to draw a point, line, polygon, box, circle, or to upload a geospatial file. 

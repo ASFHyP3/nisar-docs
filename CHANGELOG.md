@@ -5,6 +5,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [0.4.26]
+
+### Added
+- [GDAL](accessing-nisar/gdal.md) page to Accessing Data section
+- Page describing projections used for Level 2 and 3 products
+- Redirect placeholder page for Static Layers
+
+### Changed
+- Edited formatting of summary table on the products page
+- Updated QGIS page to announce support for NISAR starting with version 4.2 and highlight netCDF driver prepend option when adding data
+
 ## [0.4.25]
 
 ### Added
