@@ -76,5 +76,4 @@ Users who want to develop programmatic workflows to access, analyze, and visuali
 ### Polarimetry
 - [PolSAR tools](https://github.com/polsartools/polsartools): Polarimetric SAR processing tools
 
-
 Refer to the [Tutorials](#tutorials-overview) section for more information and available workflows. 
