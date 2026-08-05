@@ -3,7 +3,7 @@
 (open-source-software)=
 ## Programmatic Approaches
 
-Users who want to develop programmatic workflows to access, analyze, and visualize NISAR data can use a range of existing open-source software packages. This page highlights some of the open-source software packages available for working with NISAR data. 
+Users who want to develop programmatic workflows to access, analyze, and visualize NISAR data can use a range of existing open-source software packages, including those listed here. 
 
 ### Data Search and Discovery
 - [asf-search](https://github.com/asfadmin/Discovery-asf_search): SAR-specific data discovery tools
