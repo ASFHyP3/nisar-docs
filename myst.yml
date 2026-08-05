@@ -62,6 +62,7 @@ project:
       children:
         - file: using-nisar/using-arcgis.md
         - file: using-nisar/using-qgis.md
+        - file: using-nisar/using-open-source.md
         - file: using-nisar/data-use-citation-guidance.md
     - file: tools-services/tools-services-overview.md
       children:
