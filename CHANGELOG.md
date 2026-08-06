@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.4.27]
 
 ### Added
-- List of packages to the Programmatic Approaches section of the Using NISAR Data Overview page
-
+- [Open-Source Software for NISAR
+](resources/software.md) page
 
 ## [0.4.26]
 
