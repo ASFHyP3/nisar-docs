@@ -3,7 +3,11 @@
 (open-source-software)=
 ## Open Source Software Packages
 
-Users who want to develop programmatic workflows to access, analyze, and visualize NISAR data can use a range of existing open-source software packages, including those listed here. 
+Users who want to develop programmatic workflows to access, analyze, and visualize NISAR data can use a range of existing open-source software packages, including those listed on this page. 
+
+This is not an exhaustive list, and other software packages may become available for working with NISAR data. To nominate a software package for inclusion on this list, raise a [GitHub Issue](https://github.com/ua-asf/nisar-docs/issues).
+
+Refer to the [Tutorials](#tutorials-overview) section for workflows that leverage some of these packages. 
 
 ### Data Search and Discovery
 - [asf-search](https://github.com/asfadmin/Discovery-asf_search): SAR-specific data discovery tools (see @asf-search-package)
@@ -27,9 +31,3 @@ Users who want to develop programmatic workflows to access, analyze, and visuali
 
 ### Polarimetry
 - [PolSAR tools](https://github.com/polsartools/polsartools): Polarimetric SAR processing tools
-
-<br>
-
-*Raise a [GitHub Issue](https://github.com/ua-asf/nisar-docs/issues) to suggest a package for the list*
-
-Refer to the [Tutorials](#tutorials-overview) section for workflows that leverage some of these packages. 
