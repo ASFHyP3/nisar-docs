@@ -27,6 +27,6 @@ short_title: Software
 ## Polarimetry
 - [PolSAR tools](https://github.com/polsartools/polsartools): Polarimetric SAR processing tools
 
-<br>
+
 
 *Raise a [GitHub Issue](https://github.com/ua-asf/nisar-docs/issues) to suggest a package for the list*

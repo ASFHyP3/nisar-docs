@@ -1,7 +1,7 @@
 # Open Source Software 
 
 (open-source-software)=
-## Programmatic Approaches
+## Open Source Software Packages
 
 Users who want to develop programmatic workflows to access, analyze, and visualize NISAR data can use a range of existing open-source software packages, including those listed here. 
 
@@ -27,5 +27,9 @@ Users who want to develop programmatic workflows to access, analyze, and visuali
 
 ### Polarimetry
 - [PolSAR tools](https://github.com/polsartools/polsartools): Polarimetric SAR processing tools
+
+<br>
+
+*Raise a [GitHub Issue](https://github.com/ua-asf/nisar-docs/issues) to suggest a package for the list*
 
 Refer to the [Tutorials](#tutorials-overview) section for workflows that leverage some of these packages. 

@@ -56,4 +56,4 @@ The [HDF5 data format](#hdf5) of the NISAR products may be unfamiliar to some us
 
 ### Guidance
 
-Refer to @using-arcgis to learn how to work with NISAR data in ArcGIS Pro and @using-qgis for guidance on using NISAR data in QGIS.
+Refer to @nisar-in-qgis to learn how to work with NISAR data in ArcGIS Pro and @nisar-in-arcgis for guidance on using NISAR data in QGIS.
