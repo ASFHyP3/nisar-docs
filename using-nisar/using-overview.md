@@ -23,14 +23,12 @@ Users who want to develop programmatic workflows to access, analyze, and visuali
 
 Refer to the [Open Source Software](#open-source-software) page for a list of open source software packages available for working with NISAR data.
 
-Refer to the [Tutorials](#tutorials-overview) section for more information and available workflows.
-
-
+Refer to @tutorials-overview for more information and available workflows.
 
 (using-gis-software)=
 ## GIS Software
 
-The NISAR mission generates a number of [Level 2 and 3 products](#nisar-product-levels), which are projected to map coordinates and are suitable for use in GIS workflows. Any of the gridded [datasets](#h5-datasets) in the Level 2 and 3 products can be added to ArcGIS Pro or QGIS. The [amplitude](#sar-amplitude) component of SAR data is particularly well-suited to GIS analysis, as it presents an image of the Earth's surface.
+The NISAR mission generates a number of [Level 2 and 3 products](#nisar-product-levels), which are projected to map coordinates and are suitable for use in GIS workflows. Any of the gridded [datasets](#h5-datasets) in the Level 2 and 3 products can be added to [ArcGIS Pro](#nisar-in-arcgis-pro) or [QGIS](#nisar-in-qgis). The [amplitude](#sar-amplitude) component of SAR data is particularly well-suited to GIS analysis, as it presents an image of the Earth's surface.
 
 (gis-amplitude-products)=
 ### Amplitude Products
