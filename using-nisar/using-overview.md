@@ -10,17 +10,25 @@ There are many potential usage patterns for NISAR data, from SAR scientists down
 
 NISAR data can be accessed from cloud storage, either by downloading or using cloud computing approaches to work with the data directly in the cloud. There are map-based user interfaces and programmatic solutions for finding and accessing NISAR data. Refer to [Accessing NISAR Data](#nisar-access-overview) for more information.
 
-(isce3)=
+(isce-processing-software)=
 ## Processing Software
 
 The processing algorithms used for the NISAR Mission are included in [ISCE3](https://github.com/isce-framework/isce3), the third iteration of the InSAR Scientific Computing Environment (ISCE). ISCE3 is an open source library for processing spaceborne and airborne Interferometric Synthetic Aperture Radar (InSAR) data, and development is currently funded through the NISAR project. 
 
 The NISAR Mission is using ISCE3 functionality to generate the products that are archived by ASF. This software package is also publicly available for users who want to script their own processing workflows, but this requires scientific programming expertise and an understanding of the principles of SAR acquisitions.
 
+## Programmatic Approaches
+
+Users who want to develop programmatic workflows to access, analyze, and visualize NISAR data can use a range of existing open-source software packages. Functions from packages specifically designed for working with SAR data can be combined with functions from more general packages for working with raster and array data to accomplish a range of analyses and visualizations.
+
+Refer to the [Open Source Software](#open-source-software) page for a list of open source software packages available for working with NISAR data.
+
+Refer to @tutorials-overview for more information and available workflows.
+
 (using-gis-software)=
 ## GIS Software
 
-The NISAR mission generates a number of [Level 2 and 3 products](#nisar-product-levels), which are projected to map coordinates and are suitable for use in GIS workflows. Any of the gridded [datasets](#h5-datasets) in the Level 2 and 3 products can be added to ArcGIS Pro or QGIS. The [amplitude](#sar-amplitude) component of SAR data is particularly well-suited to GIS analysis, as it presents an image of the Earth's surface.
+The NISAR mission generates a number of [Level 2 and 3 products](#nisar-product-levels), which are projected to map coordinates and are suitable for use in GIS workflows. Any of the gridded [datasets](#h5-datasets) in the Level 2 and 3 products can be added to [ArcGIS Pro](#nisar-in-arcgis-pro) or [QGIS](#nisar-in-qgis). The [amplitude](#sar-amplitude) component of SAR data is particularly well-suited to GIS analysis, as it presents an image of the Earth's surface.
 
 (gis-amplitude-products)=
 ### Amplitude Products
@@ -49,11 +57,3 @@ The [HDF5 data format](#hdf5) of the NISAR products may be unfamiliar to some us
 ### Guidance
 
 Refer to @using-arcgis to learn how to work with NISAR data in ArcGIS Pro and @using-qgis for guidance on using NISAR data in QGIS.
-
-## Programmatic Approaches
-
-Users who want to develop programmatic workflows to access, analyze, and visualize NISAR data can use a range of existing open-source software packages. Functions from packages specifically designed for working with SAR data can be combined with functions from more general packages for working with raster and array data to accomplish a range of analyses and visualizations. 
-
-[Open-Source Software for NISAR](#software)
-
-Refer to the [Tutorials](#tutorials-overview) section for more information and available workflows. 
