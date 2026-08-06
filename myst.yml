@@ -60,6 +60,7 @@ project:
         - file: accessing-nisar/gdal.md
     - file: using-nisar/using-overview.md
       children:
+        - file: using-nisar/using-open-source.md
         - file: using-nisar/using-arcgis.md
         - file: using-nisar/using-qgis.md
         - file: using-nisar/data-use-citation-guidance.md
