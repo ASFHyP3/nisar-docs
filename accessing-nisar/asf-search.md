@@ -34,6 +34,18 @@ A list of accepted `processingLevel` constants for data from all missions hosted
 Refer to the [Searching page of the ASF Data Search Manual](https://docs.asf.alaska.edu/asf_search/searching/)
  for more details on available search filters and their possible values.
 
+### Search for Provisional data
+
+To search for Provisional products utilize the following Python code:
+
+```python
+import asf_search as asf
+
+results = asf.search(dataset='NISAR', dataMaturity='PROVISIONAL')
+``` 
+
+To search for Beta products, replace `PROVISIONAL` with `BETA`.
+
 ## Download data
 
 Downloading NISAR data requires authentication through [Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/). For more information, see @earthdata-login. 
