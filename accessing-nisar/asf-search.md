@@ -34,9 +34,11 @@ A list of accepted `processingLevel` constants for data from all missions hosted
 Refer to the [Searching page of the ASF Data Search Manual](https://docs.asf.alaska.edu/asf_search/searching/)
  for more details on available search filters and their possible values.
 
-### Search for Provisional data
+### Search by data maturity
 
-To search for Provisional products utilize the following Python code:
+Filter NISAR data by validation/calibration status by using the `dataMaturity` parameter in your search. You can specify either 'PROVISIONAL' for [calibrated NISAR PROVISIONAL](#nisar-provisional-data-july) data or `BETA` for [pre-calibrated NISAR BETA](nisar-sample-data-feb) data. 
+
+To search for PROVISIONAL products, utilize the following Python code:
 
 ```python
 import asf_search as asf
@@ -44,7 +46,12 @@ import asf_search as asf
 results = asf.search(dataset='NISAR', dataMaturity='PROVISIONAL')
 ``` 
 
-To search for Beta products, replace `PROVISIONAL` with `BETA`.
+To search for BETA products, replace `PROVISIONAL` with `BETA`, as shown below. 
+```python
+import asf_search as asf
+
+results = asf.search(dataset='NISAR', dataMaturity='BETA')
+``` 
 
 ## Download data
 
