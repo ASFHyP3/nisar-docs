@@ -18,6 +18,7 @@ The mask that describes the fully-focused valid data region in all products is m
 
 ```{figure} ../assets/lim_rslc_mask.png
 :label: validity-mask-offset-image
+:enumerator: 1
 :alt: Illustration of the valid data mask offset
 :align: center
 :width: 75%
@@ -33,6 +34,7 @@ There is radiometric banding across the swath. This is due to incomplete calibra
 
 ```{figure} ../assets/lim_radiometric_banding.jpg
 :label: radiometric-banding-image
+:enumerator: 2
 :alt: Illustration of radiometric banding and misalignment of the data mask for co- and cross-polarized NISAR data
 :align: center
 
@@ -43,6 +45,7 @@ Illustration of radiometric banding and misalignment of the data mask for co- an
 
 ```{figure} ../assets/lim_rslc_streaks_cross.png
 :label: rslc-streaks-cross-image
+:enumerator: 3
 :alt: Parallel streaks in cross-track direction  in very low backscatter areas (here shown in RSLC HV Frequency A)
 :align: center
 :width: 75%
@@ -52,6 +55,7 @@ Parallel streaks in cross-track direction  in very low backscatter areas (here s
 
 ```{figure} ../assets/lim_gcov_streaks_along.png
 :label: gcov-streaks-along-image
+:enumerator: 4
 :alt: Parallel streaks in along-track direction in very low backscatter areas (here shown in GCOV HH Frequency B)
 :align: center
 :width: 75%
@@ -65,6 +69,7 @@ Backscatter data and interferograms can be affected by RFI. RFI signatures typic
 
 ```{figure} ../assets/lim_rfi.jpg
 :label: rfi-image
+:enumerator: 5
 :alt: Examples of RFI over different regions. 
 :align: center
 
@@ -89,6 +94,7 @@ Some interferograms and range/Doppler offset products can exhibit very strong io
 
 ```{figure} ../assets/lim_pix_offset_estimate.png
 :label: pix-offset-estimate-image
+:enumerator: 6
 :alt: Illustration of along-track pixel offset estimates (top), the interferometric correlation (middle) and the interferometric phase (bottom) near Crary Ice Rise in Antarctica
 :align: center
 
@@ -99,6 +105,7 @@ Along-track pixel offset estimates (top), the interferometric correlation (middl
 
 ```{figure} ../assets/lim_misaligned_mask.png
 :label: misaligned-mask-image
+:enumerator: 7
 :alt: Illustration of edge-effect artifacts at the boundary of the ionospheric phase layer
 :align: center
 
@@ -109,6 +116,7 @@ Edge-effect artifacts at the boundary of the ionospheric phase layer.
 
 ```{figure} ../assets/lim_rfi_decorr.png
 :label: rfi-decorrelation-image
+:enumerator: 8
 :alt: Illustration of localized artifacts in the ionospheric phase screen
 :align: center
 
@@ -119,6 +127,7 @@ Illustration of localized artifacts in the ionospheric phase screen, which can b
 
 ```{figure} ../assets/lim_ionosphere_screen.png
 :label: ionosphere-screen-image
+:enumerator: 9
 :alt: Illustration of phase unwrapping errors caused by the transmit gaps
 :align: center
 
@@ -132,6 +141,7 @@ The subswath mask indicating the valid region of the fully focused imagery is no
 
 ```{figure} ../assets/lim_edge_artifact.png
 :label: edge-artifact-image
+:enumerator: 10
 :alt: Illustration of the edge effects caused by misalignment of the subswath valid data mask
 :align: center
 
@@ -146,6 +156,7 @@ The algorithm used here for alignment of radar imagery (coregistration) is based
 
 ```{figure} ../assets/lim_deformation_artifact.png
 :label: deformation-artifact-image
+:enumerator: 11
 :alt: Illustration of artifacts caused by not using the full rubbersheeting algorithm to estimate local image distortions due to large, local, image pixel movements
 :align: center
 
@@ -161,6 +172,7 @@ Individual ionospheric phase screens contain banded phase artifacts oriented alo
 
 ```{figure} ../assets/lim_ionosphere_corr.png
 :label: ionosphere-corr-image
+:enumerator: 12
 :alt: Image of a stack of ionosphere-corrected interferograms displaying banded phase artifacts
 :align: center
 :width: 75%
@@ -187,6 +199,7 @@ While each of the granules are well-geolocated (to within 5 m), the quick-look b
 
 ```{figure} ../assets/lim_geolocation_offset.png
 :label: geolocation-offset-image
+:enumerator: 13
 :alt: A small geolocation offset is apparent in the descending image but not the ascending image due to the ascending image being correctly aligned with the DEM. 
 :align: center
 
