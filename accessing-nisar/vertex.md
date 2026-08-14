@@ -17,7 +17,7 @@ Navigate to [Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=P
 
 ```{figure} ../assets/vertex-dataset-selection.png
 :label: vertex-dataset-selection
-:alt: Image depicting the option to select NISAR from the Datset options. 
+:alt: Image depicting the option to select NISAR from the Dataset options. 
 :align: center
 
 Click on the **Dataset** field and select `NISAR` from the drop-down menu to search for NISAR products. 
@@ -90,6 +90,7 @@ NISAR-specific filters in Vertex.
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | Science Product       | Specific product type, grouped by product level. Multiple selections allowed.                                                              |
 | Product Configuration | Specific processing pipelines, including Production and [Urgent Response](#urgent-response-product-overview). Multiple selections allowed. |
+| Data Maturity         | Specific product validation/calibration status between beta and provisional data. Multiple selections allowed.                              |
 
 :::
 
