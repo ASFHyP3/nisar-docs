@@ -77,18 +77,25 @@ authors:
     affiliation: Alaska Satellite Facility, Geophysical Institute, University of Alaska Fairbanks, Fairbanks, AK USA
     orcid: https://orcid.org/0009-0006-9584-0687
     alias: Alex-Lewandowski
+  - given-names: Lily
+    family-names: Larsen
+    affiliation: Alaska Satellite Facility, Geophysical Institute, University of Alaska Fairbanks, Fairbanks, AK USA
+    alias: lllarsen
   - given-names: William
     family-names: Horn
     affiliation: Alaska Satellite Facility, Geophysical Institute, University of Alaska Fairbanks, Fairbanks, AK USA
     orcid: https://orcid.org/0009-0003-8206-5982
     alias: williamh890
+  - given-names: Paul
+    family-names: Rosen
+    affiliation: Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA, USA
+  - given-names: Marco
+    family-names: Lavalle
+    affiliation: Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA, USA
+    orcid: https://orcid.org/0000-0002-9858-6454
+    alias: marcolavalle
   - given-names: Heresh
     family-names: Fattahi
     affiliation: Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA, USA
     orcid: https://orcid.org/0000-0001-6926-4387
     alias: hfattahi
-  - given-names: Lily
-    family-names: Larsen
-    affiliation: Alaska Satellite Facility, Geophysical Institute, University of Alaska Fairbanks, Fairbanks, AK USA
-    alias: lllarsen
-    
