@@ -7,6 +7,10 @@ Harmony is Earthdata's data transformation service. It is seamlessly integrated 
 
 ASF is working with the Harmony team to develop subsetting functionality, starting with a service that [extracts individual datasets](#harmony-extract-datasets) from NISAR HDF5 products and exports them as GeoTIFFs. 
 
+Refer to the @tools-services-roadmap to see the development plan for additional Harmony services supporting NISAR.
+
+### Dataset Extraction Service
+
 (harmony-supported-products-extract)=
 Users can extract individual datasets as GeoTIFFs from NISAR HDF5 files for the following products: 
 
@@ -15,10 +19,10 @@ Users can extract individual datasets as GeoTIFFs from NISAR HDF5 files for the 
 - Geocoded Pixel Offsets ([GOFF](#goff-product-overview))
 - Soil Moisture ([SME2](#sme2-product-overview))
 
-Refer to the @tools-services-roadmap to see the development plan for additional Harmony services supporting NISAR.
-
 (harmony-extract-datasets)=
-### Extract Datasets in Earthdata Search
+## Extract Datasets in Earthdata Search
+
+Harmony services are available directly in [Earthdata Search](#earthdata-search-overview), which is a map-based web browser interface for data search and access. 
 
 1. Search for one of the [supported product types](#harmony-supported-products-extract) in [Earthdata Search](#earthdata-search-overview) and select the desired collection.
 
