@@ -3,7 +3,7 @@
 (harmony-overview)=
 ## Harmony Services for NISAR
 
-Harmony is Earthdata's data transformation service. It is seamlessly integrated into the [Earthdata Search](#earthdata-search-overview) platform, but users can also leverage the [Harmony APIs](https://harmony.earthdata.nasa.gov/docs) or the [Harmony-py](https://github.com/nasa/harmony-py) Python library to interact with the data programmatically. 
+[Harmony](https://www.earthdata.nasa.gov/data/tools/nasa-harmony) is Earthdata's data transformation service for customizing NASA datasets. It is seamlessly integrated into the [Earthdata Search](#earthdata-search-overview) platform, but users can also leverage the [Harmony APIs](https://harmony.earthdata.nasa.gov/docs) or the [Harmony-py](https://github.com/nasa/harmony-py) Python library to interact with the data programmatically. 
 
 ASF is working with the Harmony team to develop subsetting functionality, starting with a service that [extracts individual datasets](#harmony-extract-datasets) from NISAR HDF5 products and exports them as GeoTIFFs. 
 
@@ -19,12 +19,14 @@ Users can use Harmony to extract individual datasets as GeoTIFFs from NISAR HDF5
 - Geocoded Pixel Offsets ([GOFF](#goff-product-overview))
 - Soil Moisture ([SME2](#sme2-product-overview))
 
+Users can extract two-dimensional datasets under the `/science/LSAR/$product-type/grids/` group as stand-alone GeoTIFFs for these products. This can be particularly useful for those users only interested in one or two layers in a product. However, users interested in multiple layers will be better served by [downloading the full HD5 file](download-nisar-data-earthdata-search). 
+
 (harmony-extract-datasets)=
 ## Extract Datasets in Earthdata Search
 
 Harmony services are available directly in [Earthdata Search](#earthdata-search-overview), which is a map-based web browser interface for data search and access. This makes it easy to find NISAR products for your area and time period of interest and extract just the datasets of interest from the HDF5 file. Each selected dataset is output as a GeoTIFF file.
 
-1. Search for one of the [supported product types](#harmony-supported-products-extract) in [Earthdata Search](#earthdata-search-overview) and select the desired collection.
+1. Search for one of the [supported product types](#harmony-supported-products-extract) in [Earthdata Search](#earthdata-search-overview) and select the desired collection. For more information about searching for NISAR products in Earthdata Search, check out the [Earthdata Search guide](#find-nisar-collections).
 
 ```{figure} ../assets/harmony-search-gcov.png
 :label: harmony-search-gcov-image
@@ -46,7 +48,7 @@ Click the green ＋ icon for a granule of interest to add it to your project.
 
 3. Click the **My Project** button to view the list of granules you've added. 
 
-   - You will need to log in with your [Earthdata Login](#earthdata-login) credentials if you have not already done so. 
+   - You will need to log in with your [Earthdata Login](#earthdata-login) credentials if you have not already done so.
 
 ```{figure} ../assets/harmony-open-project.png
 :label: harmony-open-project-image
@@ -58,6 +60,8 @@ Click the **My Project** button to view the list of granules you've added.
 
 4. Select the **Customize Download** option, then click the **Edit Variables** button.
 
+   - If working with multiple data collections, a list of your added data collections will appear on the left-hand side of this page. You can switch collections by clicking the **Edit Options** text on the tab of the collection.
+   
 ```{figure} ../assets/harmony-customize-download.png
 :label: harmony-customize-download-image
 :alt: Screenshot of selecting the option to customize download and clicking the Edit Variables button
@@ -68,7 +72,8 @@ Select the **Customize Download** option, then click the **Edit Variables** butt
 
 5. Click on the directory icons to see their contents, select the individual datasets to extract, then click the **Download Data** button.
 
-   - Not all products will contain all of the listed variables. This list includes all possible variables that _may_ be present in a product of that type.
+   - Not all products will contain all the listed variables. This list includes all possible variables that _may_ be present in a product of that type. If you select a variable that does is not present in your selected granule, the job will run as normal but not include an output GeoTIFF from the missing layer. 
+   - If multiple collections are listed in the Project page, you can go through the extraction customization in order by clicking the **Next** button. If you've specified customization options for multiple collections, the **Download Data** button will launch Harmony jobs for each collection.  
 
 ```{figure} ../assets/harmony-select-variables.png
 :label: harmony-select-variables-image
