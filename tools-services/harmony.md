@@ -22,7 +22,7 @@ Users can use Harmony to extract individual datasets as GeoTIFFs from NISAR HDF5
 (harmony-extract-datasets)=
 ## Extract Datasets in Earthdata Search
 
-Harmony services are available directly in [Earthdata Search](#earthdata-search-overview), which is a map-based web browser interface for data search and access. 
+Harmony services are available directly in [Earthdata Search](#earthdata-search-overview), which is a map-based web browser interface for data search and access. This makes it easy to find NISAR products for your area and time period of interest and extract just the datasets of interest from the HDF5 file. Each selected dataset is output as a GeoTIFF file.
 
 1. Search for one of the [supported product types](#harmony-supported-products-extract) in [Earthdata Search](#earthdata-search-overview) and select the desired collection.
 
