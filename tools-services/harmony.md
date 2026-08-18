@@ -48,7 +48,7 @@ Click the green ＋ icon for a granule of interest to add it to your project.
 
 3. Click the **My Project** button to view the list of granules you've added. 
 
-   - You will need to log in with your [Earthdata Login](#earthdata-login) credentials if you have not already done so.
+   - You will need to log in with your [Earthdata Login](#earthdata-login) credentials if you have not already done so. 
 
 ```{figure} ../assets/harmony-open-project.png
 :label: harmony-open-project-image
