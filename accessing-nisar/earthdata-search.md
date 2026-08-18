@@ -12,6 +12,7 @@ short_title: Earthdata Search
 
 Earthdata Search organizes data by product type. Each of these data types is called a "collection". There are more than 10,000 collections available, so you will need to apply filters to return the search results you want. 
 
+(find-nisar-collections)=
 ## 1. Find NISAR collections
 
 The NISAR mission generates many data product types of varying processing levels, as described in the @data-products-overview. Each one of these product types has its own collection in Earthdata Search. You can search for multiple NISAR collections at once to explore the available data types, or restrict your search to a specific NISAR collection. 
