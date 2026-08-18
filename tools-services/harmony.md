@@ -12,7 +12,7 @@ Refer to the @tools-services-roadmap to see the development plan for additional 
 ### Dataset Extraction Service
 
 (harmony-supported-products-extract)=
-Users can extract individual datasets as GeoTIFFs from NISAR HDF5 files for the following products: 
+Users can use Harmony to extract individual datasets as GeoTIFFs from NISAR HDF5 files for the following products: 
 
 - Geocoded Polarimetric Covariance ([GCOV](#gcov-product-overview))
 - Geocoded Unwrapped Interferogram ([GUNW](#gunw-product-overview))
