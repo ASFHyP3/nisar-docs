@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Page documenting the Harmony Dataset Extraction service
 - Links to Earthscope ISCE+ course Jupyter Notebooks
 
+### Changed
+- Updated GDAL support information on the Data Format page and the Open Source Software page
+
 ## [0.4.30]
 
 ### Changed
