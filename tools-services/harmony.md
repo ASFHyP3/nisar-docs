@@ -26,7 +26,7 @@ Users can extract two-dimensional datasets under the `/science/LSAR/$product-typ
 
 Harmony services are available directly in [Earthdata Search](#earthdata-search-overview), which is a map-based web browser interface for data search and access. This makes it easy to find NISAR products for your area and time period of interest and extract just the datasets of interest from the HDF5 file. Each selected dataset is output as a GeoTIFF file.
 
-1. Search for one of the [supported product types](#harmony-supported-products-extract) in [Earthdata Search](#earthdata-search-overview) and select the desired collection. For more information about searching for NISAR products in Earthdata Search, check out the [Earthdata Search guide](#find-nisar-collections).
+1. Search for one of the [supported product types](#harmony-supported-products-extract) in [Earthdata Search](#earthdata-search-overview) and [select the desired collection](#find-nisar-collections).
 
 ```{figure} ../assets/harmony-search-gcov.png
 :label: harmony-search-gcov-image
