@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Page documenting the Harmony Dataset Extraction service
+- Links to Earthscope ISCE+ course Jupyter Notebooks
 
 ## [0.4.30]
 
