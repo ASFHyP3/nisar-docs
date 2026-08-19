@@ -19,7 +19,7 @@ The NISAR mission generates many data product types of varying processing levels
 (earthdata-search-bar)=
 ### Earthdata Search Landing Page
 
-Get started searching for NISAR data quickly by using the search bar on the [Earthdata Search landing page](https://search.earthdata.nasa.gov/). To search for all available NISAR data products, enter `NISAR Beta` into the search bar. 
+Get started searching for NISAR data quickly by using the search bar on the [Earthdata Search landing page](https://search.earthdata.nasa.gov/). 
 
 ```{figure} ../assets/earthdata-search-search-bar.png
 :label: earthdata-search-search-bar
@@ -29,7 +29,7 @@ Get started searching for NISAR data quickly by using the search bar on the [Ear
 Search using the search bar on the Earthdata Search landing page. 
 ```
 
-To search for a specific product type, input the corresponding short name from either @tbl:earthdata-search-shortname-list-provisional for PROVISIONAL datasets or @tbl:earthdata-search-shortname-list-beta for BETA datasets into the search bar. For ancillary datasets such as orbit ephemeris files, refer to @tbl:earthdata-search-supporting-shortname-list for the short names.
+ To find calibrated NISAR data, search for any of the [PROVISIONAL datasets](#nisar-provisional-data-july) listed below with the short names in @tbl:earthdata-search-shortname-list-provisional.  
 
 :::{table} NISAR PROVISIONAL Data Product Short Names
 :label: tbl:earthdata-search-shortname-list-provisional
@@ -48,6 +48,8 @@ To search for a specific product type, input the corresponding short name from e
 
 :::
 
+If looking for uncalibrated NISAR data from the [BETA datasets](nisar-sample-data-feb) release, search using the short names in @tbl:earthdata-search-shortname-list-beta in the search bar. 
+
 :::{table} NISAR BETA Data Product Short Names
 :label: tbl:earthdata-search-shortname-list-beta
 
@@ -65,13 +67,16 @@ To search for a specific product type, input the corresponding short name from e
 
 :::
 
+For [urgent response products](#urgent-response-product-overview) or ancillary datasets such as [orbit ephemeris files](#orbit-ephemeris-overview), refer to @tbl:earthdata-search-supporting-shortname-list for the short names.
+
 :::{table} NISAR Supporting Data Product Short Names
 :label: tbl:earthdata-search-supporting-shortname-list
 
-| Product         | Short Name            |
-|-----------------|-----------------------|
-| DEM for NISAR   | NISAR_DEM             |
-| Orbit Ephemeris | NISAR_OE              |
+| Product         | Short Name  |
+|-----------------|-------------|
+| Urgent Response | NISAR_UR_L2 |
+| DEM for NISAR   | NISAR_DEM   |
+| Orbit Ephemeris | NISAR_OE    |
 
 :::
 
@@ -90,8 +95,8 @@ Typing `NISAR` in the **Search Bar** and setting the **Platforms** filter to `NI
 ```
 
 You can also enter more specific keywords into the search bar, but they may not narrow your search completely. For example:
-- Entering `NISAR GCOV` returns just the NISAR_L2_GCOV_BETA_V1 collection.
-- Entering `NISAR RSLC` returns not only the NISAR_L1_RSLC_BETA_V1 collection, but other NISAR collections that use RSLC products as input during processing.
+- Entering `NISAR GCOV` returns just the NISAR_L2_GCOV_PROVISIONAL_V1, NISAR_L2_GCOV_BETA_V1, and NISAR_UR_L2_v1 collections.
+- Entering `NISAR RSLC` returns not only the NISAR_L1_RSLC_PROVISIONAL_V1 and NISAR_L1_RSLC_BETA_V1 collections, but other NISAR collections that use RSLC products as input during processing.
 
 Beneath the search bar are many filter options organized by category. The categories most useful for refining NISAR search results are [Platforms](#eds-platforms) and [Processing Levels](#eds-processing-levels).
 
@@ -208,7 +213,7 @@ This filter also supports wildcard searches, allowing you to search for specific
 - The question mark (?) wildcard matches a single character at the specified position
 - The asterisk (*) wildcard matches any number of characters at the specified position
 
-For example, searching for `*_QP*` in the `NISAR_L2_GCOV_BETA_V1` collection will restrict your search results to only quad-pol acquisitions. 
+For example, searching for `*_QP*` in the `NISAR_L2_GCOV_PROVISIONAL_V1` collection will restrict your search results to only quad-pol acquisitions. 
 
 ```{figure} ../assets/earthdata-search-granule-search.png
 :label: earthdata-search-granule-search
@@ -227,7 +232,7 @@ There are two options for accessing NISAR data from your search results. You can
 
 Log in to Earthdata Search using your [Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/) account. To learn more about EDL, see @earthdata-login.
 
-Individual granules can be downloaded directly from the Earthdata Search results. Select the download icon associated with the desired granule to save the file locally.
+Individual HDF5 files can be downloaded directly from the Earthdata Search results. Select the download icon associated with the desired granule to save the file locally.
 
 ```{figure} ../assets/earthdata-search-download-GCOV.png
 :label: earthdata-search-download-GCOV
@@ -238,6 +243,8 @@ Log in with EDL credentials by clicking the **Log In** button (#1) on the upper 
 ```
 
 For guidance on downloading multiple files in bulk, refer to the [NASA Earthdata Cloud Cookbook](https://nasa-openscapes.github.io/earthdata-cloud-cookbook/how-tos/find-data/earthdata_search.html). 
+
+You can also download individual layers within each file as stand-alone GeoTIFFs using Harmony. For guidance on how to download subset GeoTIFFs, see @harmony-overview. 
 
 (direct-s3-access-in-earthdata)=
 ### Direct AWS S3 Access
