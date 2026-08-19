@@ -19,7 +19,8 @@ Refer to the [Tutorials](#tutorials-overview) section for workflows that leverag
 - [PLAnT-ISCE3](https://github.com/isce-framework/plant-isce3): Provides convenience scripts to simplify running ISCE3
 
 ### Data Transformation
-- [gdal-driver-nisar](https://anaconda.org/channels/nisar-forge/packages/gdal-driver-nisar/overview): GDAL plugin providing streaming capabilities and block-optimized reading for NISAR HDF5 products (see @gdal-nisar)
+- [gdal](https://gdal.org/en/stable/): Translator library for geospatial datasets, support for NISAR HDF5 file format added with version 3.13.0 (see @gdal-nisar) 
+- [gdal-driver-nisar](https://anaconda.org/channels/nisar-forge/packages/gdal-driver-nisar/overview): GDAL plugin providing streaming capabilities and block-optimized reading for NISAR HDF5 products
 - [openSEPPO](https://github.com/EarthBigData/openSEPPO): Tools for processing and managing SAR remote sensing data, focused on NISAR products
 - [nisarHDF](https://github.com/fastice/nisarhdf): Provides NISAR data transformation utilities and support for Greenland Ice Mapping Project (GrIMP) workflows
 - [nisar_pytools](https://github.com/ZachHoppinen/nisar_pytools): Includes tools to search, access, and transform data, as well as an RSLC to GUNW InSAR pipeline
