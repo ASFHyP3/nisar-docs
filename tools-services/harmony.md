@@ -9,9 +9,9 @@ ASF is working with the Harmony team to develop subsetting functionality, starti
 
 Refer to the @tools-services-roadmap to see the development plan for additional Harmony services supporting NISAR.
 
+(harmony-supported-products-extract)=
 ### Dataset Extraction Service
 
-(harmony-supported-products-extract)=
 Users can use Harmony to extract individual datasets as GeoTIFFs from NISAR HDF5 files for the following products: 
 
 - Geocoded Polarimetric Covariance ([GCOV](#gcov-product-overview))
