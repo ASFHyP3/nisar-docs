@@ -19,7 +19,7 @@ Users can use Harmony to extract individual datasets as GeoTIFFs from NISAR HDF5
 - Geocoded Pixel Offsets ([GOFF](#goff-product-overview))
 - Soil Moisture ([SME2](#sme2-product-overview))
 
-Users can extract two-dimensional datasets under the `/science/LSAR/$product-type/grids/` group as stand-alone GeoTIFFs for these products. This can be particularly useful for those users only interested in one or two layers in a product. However, users interested in multiple layers will be better served by [downloading the full HD5 file](download-nisar-data-earthdata-search). 
+Users can extract two-dimensional datasets under the `/science/LSAR/$product-type/grids/` group as stand-alone GeoTIFFs for these products. This can be particularly useful for those users only interested in one or two layers in a product. However, users interested in multiple layers will be better served by [downloading the full HD5 file](#download-nisar-data-earthdata-search). 
 
 (harmony-extract-datasets)=
 ## Extract Datasets in Earthdata Search
@@ -28,77 +28,99 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
 
 1. Search for one of the [supported product types](#harmony-supported-products-extract) in [Earthdata Search](#earthdata-search-overview) and [select the desired collection](#find-nisar-collections).
 
-```{figure} ../assets/harmony-search-gcov.png
-:label: harmony-search-gcov-image
-:alt: Screenshot of searching for a GCOV product in Earthdata Search
-:align: center
-
-Search for [supported product type](#harmony-supported-products-extract) collections in [Earthdata Search](#earthdata-search-overview) and select the desired collection.
-```
+    ```{figure} ../assets/harmony-search-gcov.png
+    :label: harmony-search-gcov-image
+    :alt: Screenshot of searching for a GCOV product in Earthdata Search
+    :align: center
+    
+    Search for [supported product type](#harmony-supported-products-extract) collections in [Earthdata Search](#earthdata-search-overview) and select the desired collection.
+    ```
 
 2. Add one or more granules to a project by clicking the green ＋ icon for each item of interest.
 
-```{figure} ../assets/harmony-add-to-project.png
-:label: harmony-add-to-project-image
-:alt: Screenshot of adding an item to a project in Earthdata Search
-:align: center
-
-Click the green ＋ icon for a granule of interest to add it to your project.
-```
+    ```{figure} ../assets/harmony-add-to-project.png
+    :label: harmony-add-to-project-image
+    :alt: Screenshot of adding an item to a project in Earthdata Search
+    :align: center
+    
+    Click the green ＋ icon for a granule of interest to add it to your project.
+    ```
 
 3. Click the **My Project** button to view the list of granules you've added. 
 
    - You will need to log in with your [Earthdata Login](#earthdata-login) credentials if you have not already done so. 
 
-```{figure} ../assets/harmony-open-project.png
-:label: harmony-open-project-image
-:alt: Screenshot of opening the My Project pane in Earthdata Search
-:align: center
-
-Click the **My Project** button to view the list of granules you've added.
-```
+    ```{figure} ../assets/harmony-open-project.png
+    :label: harmony-open-project-image
+    :alt: Screenshot of opening the My Project pane in Earthdata Search
+    :align: center
+    
+    Click the **My Project** button to view the list of granules you've added.
+    ```
 
 4. Select the **Customize Download** option, then click the **Edit Variables** button.
-
-   - If working with multiple data collections, a list of your added data collections will appear on the left-hand side of this page. You can switch collections by clicking the **Edit Options** text on the tab of the collection.
    
-```{figure} ../assets/harmony-customize-download.png
-:label: harmony-customize-download-image
-:alt: Screenshot of selecting the option to customize download and clicking the Edit Variables button
-:align: center
+    ```{figure} ../assets/harmony-customize-download.png
+    :label: harmony-customize-download-image
+    :alt: Screenshot of selecting the option to customize download and clicking the Edit Variables button
+    :align: center
+    
+    Select the **Customize Download** option, then click the **Edit Variables** button.
+    ```
 
-Select the **Customize Download** option, then click the **Edit Variables** button.
-```
+   - If you add datasets for multiple collections to the same project, each collection will be listed in the left panel. You can switch collections by clicking the **Edit Options** link for the desired collection.
 
-5. Click on the directory icons to see their contents, select the individual datasets to extract, then click the **Download Data** button.
+      ```{figure} ../assets/harmony-multiple-collections.png
+      :label: harmony-multiple-collections-image
+      :alt: Screenshot of accessing the download options for each collection when multiple collections are added to the same project
+      :align: center
+      
+      When multiple collections are included in the project, click the **Edit Options** link for each collection to set the variables to extract.
+      ```
 
-   - Not all products will contain all the listed variables. This list includes all possible variables that _may_ be present in a product of that type. If you select a variable that does is not present in your selected granule, the job will run as normal but not include an output GeoTIFF from the missing layer. 
-   - If multiple collections are listed in the Project page, you can go through the extraction customization in order by clicking the **Next** button. If you've specified customization options for multiple collections, the **Download Data** button will launch Harmony jobs for each collection.  
+5. Click on the directory icons to see their contents. Select the individual datasets to extract, then click the **Download Data** button.
 
-```{figure} ../assets/harmony-select-variables.png
-:label: harmony-select-variables-image
-:alt: Screenshot of selecting the datasets to extract from a NISAR HDF5 file
-:align: center
+    ```{figure} ../assets/harmony-select-variables.png
+    :label: harmony-select-variables-image
+    :alt: Screenshot of selecting the datasets to extract from a NISAR HDF5 file
+    :align: center
+    
+    Expand the directory structure and select the datasets to be extracted to GeoTIFF format, then click the **Download Data** button.
+    ```
 
-Expand the directory structure and select the datasets to be extracted to GeoTIFF format, then click the **Download Data** button.
-```
+   - Not all products will contain all the listed variables. This list includes all possible variables that _may_ be present in a product of that type. If you select any variables that are not present in your selected granule, the job will still run. 
+     - GeoTIFFs will be generated for any selected variables that are present in the granule, and any datasets that are not present will be ignored.
+     - If you do not see a download link for a variable you selected, refer to the [naming convention](#naming-convention-overview) of the file to determine which polarizations and frequencies would be expected for that product. 
+   - If multiple collections are included in the Project, you will need to define the download options for each one. You can either: 
+     - Click the **Edit Options** link for each collection, as illustrated in @harmony-multiple-collections-image.
+     - Click the **Back to Edit Options** link at the top of the panel once you have made your variable selections and click the **Next** button to progress through each collection. 
 
+        ```{figure} ../assets/harmony-multiple-edit.png
+        :label: harmony-multiple-edit-image
+        :alt: Screenshot of using the Next button to access the download options for each collection when multiple collections are added to the same project
+        :align: center
+      
+        To set download options when multiple collections are included in the project, click the **Next** button at the bottom of the Edit Options panel to move to the next collection.
+        ```
+
+   - The **Download Data** button will launch the Harmony jobs for all collections in the project that have extraction options defined. 
+   
 6. Harmony will process your extraction request, and indicate its progress on the status page.
 
-```{figure} ../assets/harmony-status-page.png
-:label: harmony-status-page-image
-:alt: Screenshot of the Harmony Status page in Earthdata Search
-:align: center
-
-Once you click the Download Data button, the Harmony Status page will open and indicate progress.
-```
+    ```{figure} ../assets/harmony-status-page.png
+    :label: harmony-status-page-image
+    :alt: Screenshot of the Harmony Status page in Earthdata Search
+    :align: center
+    
+    Once you click the **Download Data** button, the Harmony Status page will open and indicate progress.
+    ```
 
 7. Once the extraction process is complete, the download links for the individual GeoTIFFs will be displayed. Click each link to download the products through the web browser, or click the **Download Files** button to leverage the Earthdata bulk download app.
 
-```{figure} ../assets/harmony-status-complete.png
-:label: harmony-status-complete-image
-:alt: Screenshot of the Harmony Status page in Earthdata Search showing a completed job
-:align: center
-
-Once the extraction process is complete, the Harmony Status page will display the download links for the extracted GeoTIFFs. 
-```
+    ```{figure} ../assets/harmony-status-complete.png
+    :label: harmony-status-complete-image
+    :alt: Screenshot of the Harmony Status page in Earthdata Search showing a completed job
+    :align: center
+    
+    Once the extraction process is complete, the Harmony Status page will display the download links for the extracted GeoTIFFs. 
+    ```
