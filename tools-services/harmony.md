@@ -32,6 +32,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     :label: harmony-search-gcov-image
     :alt: Screenshot of searching for a GCOV product in Earthdata Search
     :align: center
+    :class: framed
     
     Search for [supported product type](#harmony-supported-products-extract) collections in [Earthdata Search](#earthdata-search-overview) and select the desired collection.
     ```
@@ -42,6 +43,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     :label: harmony-add-to-project-image
     :alt: Screenshot of adding an item to a project in Earthdata Search
     :align: center
+    :class: framed
     
     Click the green ＋ icon for a granule of interest to add it to your project.
     ```
@@ -54,6 +56,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     :label: harmony-open-project-image
     :alt: Screenshot of opening the My Project pane in Earthdata Search
     :align: center
+    :class: framed
     
     Click the **My Project** button to view the list of granules you've added.
     ```
@@ -64,6 +67,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     :label: harmony-customize-download-image
     :alt: Screenshot of selecting the option to customize download and clicking the Edit Variables button
     :align: center
+    :class: framed
     
     Select the **Customize Download** option, then click the **Edit Variables** button.
     ```
@@ -74,6 +78,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
       :label: harmony-multiple-collections-image
       :alt: Screenshot of accessing the download options for each collection when multiple collections are added to the same project
       :align: center
+      :class: framed
       
       When multiple collections are included in the project, click the **Edit Options** link for each collection to set the variables to extract.
       ```
@@ -84,6 +89,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     :label: harmony-select-variables-image
     :alt: Screenshot of selecting the datasets to extract from a NISAR HDF5 file
     :align: center
+    :class: framed
     
     Expand the directory structure and select the datasets to be extracted to GeoTIFF format, then click the **Download Data** button.
     ```
@@ -99,6 +105,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
         :label: harmony-multiple-edit-image
         :alt: Screenshot of using the Next button to access the download options for each collection when multiple collections are added to the same project
         :align: center
+        :class: framed
       
         To set download options when multiple collections are included in the project, click the **Next** button at the bottom of the Edit Options panel to move to the next collection.
         ```
@@ -111,6 +118,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     :label: harmony-status-page-image
     :alt: Screenshot of the Harmony Status page in Earthdata Search
     :align: center
+    :class: framed
     
     Once you click the **Download Data** button, the Harmony Status page will open and indicate progress.
     ```
@@ -121,6 +129,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     :label: harmony-status-complete-image
     :alt: Screenshot of the Harmony Status page in Earthdata Search showing a completed job
     :align: center
+    :class: framed
     
     Once the extraction process is complete, the Harmony Status page will display the download links for the extracted GeoTIFFs. 
     ```
