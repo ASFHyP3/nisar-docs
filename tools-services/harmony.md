@@ -96,7 +96,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     Expand the directory structure and select the datasets to be extracted to GeoTIFF format, then click the **Download Data** button.
     ```
 
-   - Not all products will contain all the listed variables. This list includes all possible variables that _may_ be present in a product of that type. If you select any variables that are not present in your selected granule, the job will still run. 
+   - Not all products will contain all the listed variables. This list includes all possible variables that _may_ be present in a product of that type. As long as at least one of the selected datasets is available in the product, the Harmony job will run. 
      - GeoTIFFs will be generated for any selected variables that are present in the granule, and any datasets that are not present will be ignored.
      - If you do not see a download link for a variable you selected, refer to the file [naming convention](#naming-convention-overview) to determine which polarizations and frequencies would be expected for that product. 
    - If multiple collections are included in the Project, you will need to define the download options for each one. You can either: 
