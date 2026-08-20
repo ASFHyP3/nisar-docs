@@ -5,10 +5,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
-## [0.4.28]
+## [0.4.31]
 
 ### Fixed
 - Figure numbering on the [Pre-Calibration Known Issues](data-availability/product-known-issues.md) page, so inline references show figure numbers instead of full captions
+
+## [0.4.30]
+
+### Changed
+- Added [nisarqa](https://github.com/isce-framework/nisarqa) to the [Open Source Software](using-nisar/using-open-source.md) page
+
+## [0.4.29]
+
+### Changed
+- Corrected changelog to align with release version number
+
+## [0.4.28]
+
+### Added
+- Added information regarding the new data maturity filter
+- Updated author list
 
 ## [0.4.27]
 
