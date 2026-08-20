@@ -119,10 +119,12 @@ ds = xr.open_datatree(
 
 `earthaccess.open` will use sensible defaults to provide good performance across all NASA data. You can override these default to fine-tune steaming performance for your access pattern. The next two examples show how to use a specific protocol and set `fsspec` options.
 
-### Example: Stream via HTTPS
+(example-stream-via-https)=
+### Stream via HTTPS
 
 This end-to-end example searches for a single NISAR PROVISIONAL GCOV product, retrieves its HTTPS access URL, sets a custom `fsspec` configuration, and opens it with `xarray` using the `h5netcdf` engine.
 
+:::{hint} Example
 ```python
 import earthaccess
 import xarray as xr
@@ -149,8 +151,10 @@ ds = xr.open_datatree(
    phony_dims="access"
 )
 ```
+:::
 
-### Example: Stream via S3
+(example-stream-via-s3)=
+### Stream via S3
 
 This end-to-end example searches for a single NISAR PROVISIONAL GCOV product, retrieves its S3 access URI, sets a custom `fsspec` configuration, and opens it with `xarray` using the `h5netcdf` engine. Behind the scenes, `earthaccess` will request temporary AWS credentials for you, which is described in @aws-s3-access-overview.
 
@@ -162,6 +166,7 @@ For the time being, you must specify the `endpoint=` parameter when using functi
 Direct AWS S3 access is only available for resources (e.g., EC2) in the AWS `us-west-2` region. See @s3-access-limitations for more details.
 :::
 
+:::{hint} Example
 ```python
 import earthaccess
 import xarray as xr
@@ -190,3 +195,4 @@ ds = xr.open_datatree(
    phony_dims="access"
 )
 ```
+:::
