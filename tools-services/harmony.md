@@ -5,7 +5,7 @@
 
 [Harmony](https://www.earthdata.nasa.gov/data/tools/nasa-harmony) is Earthdata's data transformation service for customizing NASA datasets. It is seamlessly integrated into the [Earthdata Search](#earthdata-search-overview) platform, but users can also leverage the [Harmony APIs](https://harmony.earthdata.nasa.gov/docs) or the [Harmony-py](https://github.com/nasa/harmony-py) Python library to interact with the data programmatically. 
 
-ASF is working with the Harmony team to develop subsetting functionality, starting with a service that [extracts individual datasets](#harmony-extract-datasets) from NISAR HDF5 products and exports them as GeoTIFFs. 
+ASF is working with the Harmony team to develop subsetting functionality, starting with a service that [extracts individual datasets](#harmony-supported-products-extract) from NISAR HDF5 products and exports them as GeoTIFFs. 
 
 Refer to the @tools-services-roadmap to see the development plan for additional Harmony services supporting NISAR.
 
@@ -19,7 +19,9 @@ Users can use Harmony to extract individual datasets as GeoTIFFs from NISAR HDF5
 - Geocoded Pixel Offsets ([GOFF](#goff-product-overview))
 - Soil Moisture ([SME2](#sme2-product-overview))
 
-Users can extract two-dimensional datasets under the `/science/LSAR/$product-type/grids/` group as stand-alone GeoTIFFs for these products. This can be particularly useful for those users only interested in one or two layers in a product. However, users interested in multiple layers will be better served by [downloading the full HD5 file](#download-nisar-data-earthdata-search). 
+This service extracts two-dimensional datasets from the `/science/LSAR/$product-type/grids/` group as stand-alone GeoTIFFs. This is particularly useful for those users only interested in one or two layers in a product. 
+
+Because the HDF5 files are more compressed, users interested in several layers will be better served by [downloading the full HD5 file](#download-nisar-data-earthdata-search), as they are more efficient to download than extracted GeoTIFF files.
 
 (harmony-extract-datasets)=
 ## Extract Datasets in Earthdata Search
@@ -83,7 +85,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
       When multiple collections are included in the project, click the **Edit Options** link for each collection to set the variables to extract.
       ```
 
-5. Click on the directory icons to see their contents. Select the individual datasets to extract, then click the **Download Data** button.
+5. Expand the HDF5 group structure by clicking on the directory icons to see their contents. Select the individual datasets to extract, then click the **Download Data** button.
 
     ```{figure} ../assets/harmony-select-variables.png
     :label: harmony-select-variables-image
@@ -96,7 +98,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
 
    - Not all products will contain all the listed variables. This list includes all possible variables that _may_ be present in a product of that type. If you select any variables that are not present in your selected granule, the job will still run. 
      - GeoTIFFs will be generated for any selected variables that are present in the granule, and any datasets that are not present will be ignored.
-     - If you do not see a download link for a variable you selected, refer to the [naming convention](#naming-convention-overview) of the file to determine which polarizations and frequencies would be expected for that product. 
+     - If you do not see a download link for a variable you selected, refer to the file [naming convention](#naming-convention-overview) to determine which polarizations and frequencies would be expected for that product. 
    - If multiple collections are included in the Project, you will need to define the download options for each one. You can either: 
      - Click the **Edit Options** link for each collection, as illustrated in @harmony-multiple-collections-image.
      - Click the **Back to Edit Options** link at the top of the panel once you have made your variable selections and click the **Next** button to progress through each collection. 
