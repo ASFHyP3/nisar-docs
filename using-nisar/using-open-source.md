@@ -15,6 +15,7 @@ Refer to the [Tutorials](#tutorials-overview) section for workflows that leverag
 
 ### NISAR Mission Data Processing Code
 - [ISCE3](https://github.com/isce-framework/isce3): Processing code for generating NISAR L1 and L2 products (see @isce-processing-software)
+- [nisarqa](https://github.com/isce-framework/nisarqa): Processing code for generating the browse images and QA products for NISAR L1 and L2 products
 - [PLAnT-ISCE3](https://github.com/isce-framework/plant-isce3): Provides convenience scripts to simplify running ISCE3
 
 ### Data Transformation
@@ -26,7 +27,7 @@ Refer to the [Tutorials](#tutorials-overview) section for workflows that leverag
 ### InSAR
 - [GMTSAR](https://github.com/gmtsar/gmtsar): A GMT-based InSAR processor with NISAR support
 - [dolphin](https://github.com/isce-framework/dolphin): Persistent-scatterer and distributed-scatterer InSAR wrapped phase estimation
-- [sweets](https://github.com/isce-framework/sweets): End-to-end InSAR workflow automation leverging dolphin 
+- [sweets](https://github.com/isce-framework/sweets): End-to-end InSAR workflow automation leveraging dolphin 
 - [MintPy](https://github.com/insarlab/MintPy): Small baseline subset (SBAS) InSAR time series processing
 
 ### Polarimetry
