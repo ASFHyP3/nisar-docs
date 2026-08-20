@@ -38,7 +38,8 @@ Refer to the [Searching page of the ASF Data Search Manual](https://docs.asf.ala
 
 Filter NISAR data by validation/calibration status by using the `dataMaturity` parameter in your search. You can specify either `PROVISIONAL` for calibrated [NISAR PROVISIONAL](#nisar-provisional-data-july) data or `BETA` for pre-calibration [NISAR BETA](#nisar-sample-data-feb) data. 
 
-To search for PROVISIONAL products, utilize the following Python code:
+:::{hint} Example
+To search for PROVISIONAL products, use the following Python code:
 
 ```python
 import asf_search as asf
@@ -52,6 +53,7 @@ import asf_search as asf
 
 results = asf.search(dataset='NISAR', dataMaturity='BETA')
 ``` 
+:::
 
 ## Download data
 
@@ -73,8 +75,9 @@ NISAR data can be streamed into memory using `asf_search` combined with other li
 
 Like all data access, streaming requires an [EDL account](https://urs.earthdata.nasa.gov/).
 
-### Example: Stream via HTTPS
+### Stream via HTTPS
 
+:::{hint} Example
 This example uses streaming to retrieve a specific byte of information from a 30 GB RSLC product.
 
 Run the following command to install the required Python packages:
@@ -115,3 +118,4 @@ ds = xr.open_datatree(
 
 print(ds.science.LSAR.identification.isDithered.values)
 ```
+:::
