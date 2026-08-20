@@ -114,7 +114,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
 
    - The **Download Data** button will launch the Harmony jobs for all collections in the project that have extraction options defined. 
    
-6. Harmony will process your extraction request, and indicate its progress on the status page.
+6. Harmony will process your extraction request and indicate its progress on the status page. You may need to refresh the status page to see updated progress.
 
     ```{figure} ../assets/harmony-status-page.png
     :label: harmony-status-page-image
