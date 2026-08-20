@@ -12,6 +12,7 @@ short_title: Earthdata Search
 
 Earthdata Search organizes data by product type. Each of these data types is called a "collection". There are more than 10,000 collections available, so you will need to apply filters to return the search results you want. 
 
+(find-nisar-collections)=
 ## 1. Find NISAR collections
 
 The NISAR mission generates many data product types of varying processing levels, as described in the @data-products-overview. Each one of these product types has its own collection in Earthdata Search. You can search for multiple NISAR collections at once to explore the available data types, or restrict your search to a specific NISAR collection. 
@@ -19,7 +20,10 @@ The NISAR mission generates many data product types of varying processing levels
 (earthdata-search-bar)=
 ### Earthdata Search Landing Page
 
-Get started searching for NISAR data quickly by using the search bar on the [Earthdata Search landing page](https://search.earthdata.nasa.gov/). To search for all available NISAR data products, enter `NISAR Beta` into the search bar. 
+Get started searching for NISAR data quickly by using the search bar on the [Earthdata Search landing page](https://search.earthdata.nasa.gov/). 
+- Enter `nisar_` to search for all available NISAR collections, including ancillary datasets
+- Enter `nisar provisional` to search for [NISAR PROVISIONAL collections](#nisar-provisional-data-july) 
+- Enter `nisar*beta` to search for pre-calibration [NISAR BETA collections](#nisar-sample-data-feb)
 
 ```{figure} ../assets/earthdata-search-search-bar.png
 :label: earthdata-search-search-bar
@@ -90,8 +94,10 @@ Typing `NISAR` in the **Search Bar** and setting the **Platforms** filter to `NI
 ```
 
 You can also enter more specific keywords into the search bar, but they may not narrow your search completely. For example:
-- Entering `NISAR GCOV` returns just the NISAR_L2_GCOV_BETA_V1 collection.
-- Entering `NISAR RSLC` returns not only the NISAR_L1_RSLC_BETA_V1 collection, but other NISAR collections that use RSLC products as input during processing.
+- Entering `NISAR GCOV` returns just the NISAR_L2_GCOV collections for PROVISIONAL, BETA, and UR products.
+- Entering `NISAR RSLC` returns not only the NISAR_L1_RSLC collections for PROVISIONAL and BETA products, but other NISAR collections that use RSLC products as input during processing. It does not include the UR Level 1 collection in the results, however.
+  - Using an asterisk between the search terms limits the search to just the collections with both terms in the same field (such as the collection name). Entering `NISAR*RSLC` only returns the NISAR_L1_RSLC collections for PROVISIONAL and BETA products. It will still not include the UR Level 1 collection in the results.
+- To search for a specific collection, input the corresponding short name from either @tbl:earthdata-search-shortname-list-provisional for PROVISIONAL datasets or @tbl:earthdata-search-shortname-list-beta for BETA datasets.
 
 Beneath the search bar are many filter options organized by category. The categories most useful for refining NISAR search results are [Platforms](#eds-platforms) and [Processing Levels](#eds-processing-levels).
 

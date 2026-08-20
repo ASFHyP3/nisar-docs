@@ -6,9 +6,11 @@
 All NISAR standard products are in [Hierarchical Data Format version 5 (HDF5)](https://www.hdfgroup.org/solutions/hdf5/). HDF5 is a programming library and file format designed to store, organize, and access large scientific datasets. NISAR uses HDF5 to systematically organize radar data and metadata in a way that is both efficient and easy to read, share, and analyze.
 
 :::{caution}Accessing NISAR HDF5 files
-While the files are stored in HDF5 format, the internal structure of the NISAR products is compliant with the [Climate and Forecast (CF) metadata convention](https://cfconventions.org/) of the Network Common Data Form (netCDF) format. This can cause problems when using some HDF5 drivers to read the data. While ArcGIS Pro introduced support for reading NISAR HDF5 files with version 3.4.0, there is not yet a NISAR-compliant HDF5 reader for GDAL.
+While the files are stored in HDF5 format, the internal structure of the NISAR products is compliant with the [Climate and Forecast (CF) metadata convention](https://cfconventions.org/) of the Network Common Data Form (netCDF) format. This can cause problems when using older HDF5 drivers to read the data. 
 
-Those who use GDAL to read files for use in QGIS or programmatic workflows can replace the `.h5` NISAR product extension with `.nc`. This allows GDAL to recognize the spatial coordinate system and project the file appropriately. Refer to [ASF’s documentation on workarounds](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data) for accessing NISAR HDF5 files.
+GDAL introduced support for the NISAR HDF5 format with version 3.13.0, which is leveraged by QGIS starting with version 4.2 (see @gdal-nisar). ArcGIS Pro introduced support for reading NISAR HDF5 files with version 3.4.0.
+
+Those who use older versions of GDAL to read files for use in QGIS or programmatic workflows can replace the `.h5` NISAR product extension with `.nc`. This allows GDAL to recognize the spatial coordinate system and project the file appropriately. Refer to [ASF’s documentation on workarounds](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data) for accessing NISAR HDF5 files with older versions of GDAL.
 :::
 
 HDF was originally developed by the University of Illinois' National Center for Supercomputing Applications (NCSA) to support data sharing within the scientific community. HDF5 represents a significant redesign compared to earlier versions of HDF, with a more flexible and powerful internal structure. For additional details, users can consult the official HDF documentation at
