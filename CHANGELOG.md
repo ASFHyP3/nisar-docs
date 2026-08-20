@@ -5,6 +5,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [0.4.32]
+
+### Added
+- Page documenting the Harmony Dataset Extraction service
+- Links to Earthscope ISCE+ course Jupyter Notebooks
+
+### Changed
+- Updated GDAL support information on the Data Format page and the Open Source Software page
+
 ## [0.4.31]
 
 ### Fixed

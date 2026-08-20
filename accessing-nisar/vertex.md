@@ -49,7 +49,7 @@ Select a drawing mode to draw a region of interest on the map, then press **Sear
 
 ```{figure} ../assets/vertex-geographic-search.png
 :label: vertex-geographic-search
-:alt: Screenshot of Vertex highlighting the "Geographic Search" option to draw a region of interest to search for products. 
+:alt: Screenshot of Vertex highlighting the Geographic Search option to draw a region of interest to search for products. 
 :align: center
 
 Choose a shape and draw an area of interest for a geographic search. 
@@ -59,14 +59,14 @@ _Take care when drawing an AOI while in the [Antarctic Map View](#vertex-antarct
 
 #### Date Range
 
-To search for products in a specific date range, open the **Filters** panel and specify a start and end date to define the search range. 
+To search for products in a specific date range, click the **Filters** button to open the **Search Filters** panel and specify a start and end date in the **Date Filters** section. On larger screens, the date range filter will be displayed directly in the top search bar.
 
 ```{figure} ../assets/vertex-date-filters.png
 :label: vertex-date-filters
 :alt: Screenshot displaying the date filters option.
 :align: center
 
-The option to filter by date pops up after clicking on "Filters"
+Click the **Filters** button to open the **Search Filters** panel and enter a date range.
 ```
 
 #### NISAR Filters

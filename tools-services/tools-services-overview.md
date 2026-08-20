@@ -42,6 +42,8 @@ NASA's [Harmony](https://www.earthdata.nasa.gov/data/tools/nasa-harmony) service
 
 For NISAR products, Harmony services are being developed to support subsetting a NISAR HDF5 by [dataset](#h5-datasets) or geographic range, with the option for some output products to be generated in a different file format or projection.
 
+[Learn more about the Harmony services that are currently available.](#harmony-overview)
+
 <a href="https://www.earthdata.nasa.gov/data/tools/nasa-harmony">
 <img id="ed-harmony-image" src="../assets/ed-harmony.png" alt="Click to open https://www.earthdata.nasa.gov/data/tools/nasa-harmony">
 </a>
