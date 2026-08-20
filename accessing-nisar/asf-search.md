@@ -1,7 +1,7 @@
 ---
 short_title: ASF Search Python Package
 ---
-# Finding NISAR Data with ASF Search
+# Find NISAR Data with ASF Search
 
 (asf-search-package)=
 ## ASF Search Python Package
