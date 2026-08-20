@@ -36,7 +36,7 @@ Refer to the [Searching page of the ASF Data Search Manual](https://docs.asf.ala
 
 ### Search by data maturity
 
-Filter NISAR data by validation/calibration status by using the `dataMaturity` parameter in your search. You can specify either 'PROVISIONAL' for [calibrated NISAR PROVISIONAL](#nisar-provisional-data-july) data or `BETA` for [pre-calibrated NISAR BETA](#nisar-sample-data-feb) data. 
+Filter NISAR data by validation/calibration status by using the `dataMaturity` parameter in your search. You can specify either `PROVISIONAL` for [calibrated NISAR PROVISIONAL](#nisar-provisional-data-july) data or `BETA` for [pre-calibrated NISAR BETA](#nisar-sample-data-feb) data. 
 
 To search for PROVISIONAL products, utilize the following Python code:
 
