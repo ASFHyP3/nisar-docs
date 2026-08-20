@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Updated GDAL support information on the Data Format page and the Open Source Software page
+- Updated Earthdata Search page to show PROVISIONAL data updates
 
 ## [0.4.31]
 
