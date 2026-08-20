@@ -36,7 +36,7 @@ Search using the search bar on the Earthdata Search landing page.
 (collection-short-names)=
 #### Collection Short Names 
 
-To find calibrated NISAR data, search for any of the [PROVISIONAL datasets](#nisar-provisional-data-july) listed below with the short names in @tbl:earthdata-search-shortname-list-provisional.  
+To search for a specific product type, input the corresponding short name from either @tbl:earthdata-search-shortname-list-provisional for calibrated [PROVISIONAL datasets](#nisar-provisional-data-july) or @tbl:earthdata-search-shortname-list-beta for uncalibrated [BETA datasets](nisar-sample-data-feb) into the search bar. For ancillary datasets such as orbit ephemeris files, refer to @tbl:earthdata-search-supporting-shortname-list for the short names.
 
 :::{table} NISAR PROVISIONAL Data Product Short Names
 :label: tbl:earthdata-search-shortname-list-provisional
@@ -54,8 +54,6 @@ To find calibrated NISAR data, search for any of the [PROVISIONAL datasets](#nis
 | RSLC    | NISAR_L1_RSLC_PROVISIONAL_V1 |
 
 :::
-
-If looking for uncalibrated NISAR data from the [BETA datasets](nisar-sample-data-feb) release, search using the short names in @tbl:earthdata-search-shortname-list-beta. 
 
 :::{table} NISAR BETA Data Product Short Names
 :label: tbl:earthdata-search-shortname-list-beta
@@ -270,3 +268,7 @@ Click the **download icon** for an item in your search results, select the **Dow
 ```
 
 To learn more about using direct AWS S3 Access, refer to @aws-s3-access-overview.
+
+## Urgent Response Products
+
+[Urgent Response](#urgent-response-product-overview) (UR) products can be found by entering `nisar_ur` in the [Earthdata Search search bar](#earthdata-search-bar). Refer to [Urgent Response: Earthdata Search](#ur-earthdata-search) for more guidance.
