@@ -34,7 +34,7 @@ A list of accepted `processingLevel` constants for data from all missions hosted
 Refer to the [Searching page of the ASF Data Search Manual](https://docs.asf.alaska.edu/asf_search/searching/)
  for more details on available search filters and their possible values.
 
-### Search by data maturity
+### Search by Data Maturity
 
 Filter NISAR data by validation/calibration status by using the `dataMaturity` parameter in your search. You can specify either `PROVISIONAL` for calibrated [NISAR PROVISIONAL](#nisar-provisional-data-july) data or `BETA` for pre-calibration [NISAR BETA](#nisar-sample-data-feb) data. 
 
@@ -55,7 +55,7 @@ results = asf.search(dataset='NISAR', dataMaturity='BETA')
 ``` 
 :::
 
-## Download data
+## Download Data
 
 Downloading NISAR data requires authentication through [Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/). For more information, see @earthdata-login. 
 
@@ -69,12 +69,13 @@ Alternatively, users may [configure a local `.netrc` file](https://nsidc.org/dat
 results.download(path='path/to/data/')
 ```
 
-## Stream data
+## Stream Data
 
 NISAR data can be streamed into memory using `asf_search` combined with other libraries such as `fsspec` and `xarray`. This allows specific data from a NISAR product to be accessed without downloading the entire data file.
 
 Like all data access, streaming requires an [EDL account](https://urs.earthdata.nasa.gov/).
 
+(asf-search-stream-via-https)=
 ### Stream via HTTPS
 
 :::{hint} Example

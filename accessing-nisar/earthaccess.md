@@ -30,7 +30,7 @@ or via `conda` with:
 conda update earthaccess
 ```
 
-## Search for NISAR data
+## Search for NISAR Data
 
 To search for a specific product type, provide the corresponding short name from either @tbl:earthaccess-search-shortname-list-provisional for PROVISIONAL datasets or @tbl:earthaccess-search-shortname-list for BETA datasets as the `short_name` parameter. For example, to find a single [GCOV](#gcov-product-overview) product from the PROVISIONAL data release, use the following Python code:
 
@@ -79,7 +79,7 @@ For a description of NISAR's data product types, see @data-products-overview. Yo
 
 :::
 
-## Download NISAR data
+## Download NISAR Data
 
 Downloading (or streaming) NISAR data requires logging in with your [Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/) account. To learn more about EDL, see @earthdata-login.
 
@@ -92,7 +92,7 @@ auth = earthaccess.login()
 files = earthaccess.download(results, local_path='.')
 ```
 
-## Stream NISAR data
+## Stream NISAR Data
 
 `earthaccess` also supports streaming data into memory. NISAR data is hosted in the AWS `us-west-2` region and typically served to users through HTTPS CloudFront URLs. If you are accessing the data from a resource in the same region (AWS `us-west-2`), you may also use AWS S3 URIs if you obtain [temporary S3 access keys](#earthaccess-s3-credentials)
 
@@ -119,7 +119,7 @@ ds = xr.open_datatree(
 
 `earthaccess.open` will use sensible defaults to provide good performance across all NASA data. You can override these default to fine-tune steaming performance for your access pattern. The next two examples show how to use a specific protocol and set `fsspec` options.
 
-(example-stream-via-https)=
+(earthaccess-stream-via-https)=
 ### Stream via HTTPS
 
 This end-to-end example searches for a single NISAR PROVISIONAL GCOV product, retrieves its HTTPS access URL, sets a custom `fsspec` configuration, and opens it with `xarray` using the `h5netcdf` engine.
@@ -153,7 +153,7 @@ ds = xr.open_datatree(
 ```
 :::
 
-(example-stream-via-s3)=
+(earthaccess-stream-via-s3)=
 ### Stream via S3
 
 This end-to-end example searches for a single NISAR PROVISIONAL GCOV product, retrieves its S3 access URI, sets a custom `fsspec` configuration, and opens it with `xarray` using the `h5netcdf` engine. Behind the scenes, `earthaccess` will request temporary AWS credentials for you, which is described in @aws-s3-access-overview.
