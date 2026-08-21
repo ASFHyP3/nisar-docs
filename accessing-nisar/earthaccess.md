@@ -32,7 +32,7 @@ conda update earthaccess
 
 ## Search for NISAR Data
 
-To search for a specific product type, provide the corresponding short name from either @tbl:earthaccess-search-shortname-list-provisional for PROVISIONAL datasets or @tbl:earthaccess-search-shortname-list for BETA datasets as the `short_name` parameter. For example, to find a single [GCOV](#gcov-product-overview) product from the PROVISIONAL data release, use the following Python code:
+To search for a specific product type, provide the corresponding short name from either @tbl:earthaccess-search-shortname-list-provisional for calibrated PROVISIONAL datasets or @tbl:earthaccess-search-shortname-list for pre-calibration BETA datasets as the `short_name` parameter. For example, to find a single [GCOV](#gcov-product-overview) product from the PROVISIONAL data release, use the following Python code:
 
 ```python
 import earthaccess
