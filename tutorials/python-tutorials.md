@@ -20,3 +20,11 @@ Users who wish to work with the NISAR Cookbook alongside the archive in the AWS 
 ## NISAR Science Algorithms
  
 The NISAR Science Team has developed algorithms for a number of higher-level products. These algorithms are available as executable [Python notebooks](https://gitlab.com/nisar-science-algorithms).
+
+(earthscope-isce-plus)=
+## InSAR Processing and Analysis (ISCE+) Technical Course
+
+The [EarthScope Consortium](https://www.earthscope.org/) offers an annual InSAR processing and analysis course using the [isce framework](https://github.com/isce-framework). The Jupyter notebooks for the [course offered in August 2026](https://www.earthscope.org/event/2026-technical-course-insar-processing-and-analysis-isce/), which was focused on using NISAR data, are available through the [2026-isceplus GitHub repository](https://github.com/isceplus/2026-isceplus).
+
+
+
