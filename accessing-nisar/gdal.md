@@ -33,7 +33,7 @@ machine urs.earthdata.nasa.gov
 
 ### Using a `gdalrc` File
 
-Users can choose to generate a `gdalrc` file to simplify GDAL commands. This replaces the need to include `--config` flags for each command.
+Unix/Linux users can choose to generate a `gdalrc` file to simplify GDAL commands. This replaces the need to include `--config` flags for each command.
 
 Create a file in `~/.gdal/gdalrc` with the following content:
 
