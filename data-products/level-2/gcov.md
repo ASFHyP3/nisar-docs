@@ -44,7 +44,7 @@ The covariance datasets available in the GCOV products will be a selection of th
 `/science/LSAR/GCOV/grids/frequency[A|B]/RVRV` \
 `/science/LSAR/GCOV/grids/frequency[A|B]/RHRV`
 
-The diagonal terms shown in @gcov-matrix (HHHH, HVHV, VVVV, VHVH, RHRH, RVRV) are real-valued and describe the intensity of the radar backscatter for the given polarization. They are radiometrically terrain corrected, and can be used as you would any other SAR Normalized Radar Backsactter (NRB) or Radiometrically Terrain Corrected (RTC) product. 
+The diagonal terms shown in @gcov-matrix (HHHH, HVHV, VVVV, VHVH, RHRH, RVRV) are real-valued and describe the intensity of the radar backscatter for the given polarization. They are radiometrically terrain corrected, and can be used as you would any other SAR Normalized Radar Backscatter (NRB) or Radiometrically Terrain Corrected (RTC) product. 
 
 The remaining terms shown in @gcov-matrix (HHHV, HHVH, HHVV, HVVH, HVVV, VHVV, RHRV) are complex-valued and describe the intensity and phase between different polarizations. These off-diagonal terms are only included for quad-pol data acquisitions. Users who require off-diagonal values for dual-pol acquisitions will need to generate these layers manually from [GSLC](#gslc-product-overview) products. <!-- TODO: Link to the OSL notebook once it's available: There are [workflows available](link to OSL notebook or other reference) for generating off-diagonal terms for dual-pol acquisitions from [GSLC](#gslc-product-overview) products if you need these values for your application.-->
 
