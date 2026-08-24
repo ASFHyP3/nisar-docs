@@ -3,7 +3,7 @@
 (nisar-in-qgis)=
 ## Using NISAR Data in QGIS
 
-NISAR [Level 2 and Level 3 products](#nisar-product-levels) are projected to map coordinates and are suitable for use in [QGIS](https://qgis.org/). There is no minimum version required to work with NISAR data in QGIS, but this document was created using a QGIS version of 3.44.7.
+NISAR [Level 2 and Level 3 products](#nisar-product-levels) are projected to map coordinates and are suitable for use in [QGIS](https://qgis.org/). There is no minimum version required to work with NISAR data in QGIS, but this document was created using QGIS version 3.44.7.
 
 To learn more about available Level 2 and Level 3 NISAR data products, see @data-products-overview. To explore workflows for working with each specific NISAR data type in QGIS, see the [Work with NISAR Sample Data](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data) tutorials. 
 
@@ -11,7 +11,7 @@ A video tutorial demonstrating working with NISAR products in QGIS is available 
 
 ## Preparing NISAR Data for QGIS
 
-QGIS versions prior to 4.2, including the current long-term release (3.44), cannot natively read the geolocation data of NISAR HDF5 files. A NISAR `.h5` file loaded into QGIS using default HDF5 drivers will not display in the correct place on Earth in QGIS versions older than 4.2.
+QGIS versions prior to 4.0, including the current long-term release (3.44), cannot natively read the geolocation data of NISAR HDF5 files. A NISAR `.h5` file loaded into QGIS using default HDF5 drivers will not display in the correct place on Earth in QGIS versions older than 4.0.
 
 Replacing the `.h5` (HDF5) file extension with `.nc` (NETCDF) prior to opening the file in QGIS will allow the data to be correctly geolocated. For example, the file `NISAR_L2_PR_GCOV`<wbr>`_010_164_A_035_4005_`<wbr>`DHDH_A_20260120T134235_`<wbr>`20260120T134312_`<wbr>`X05010_N_F_J_001.h5` renamed as `NISAR_L2_PR_GCOV`<wbr>`_010_164_A_035_4005_`<wbr>`DHDH_A_20260120T134235_`<wbr>`20260120T134312_`<wbr>`X05010_N_F_J_001.nc` can be opened in QGIS.
 
@@ -19,10 +19,10 @@ Occasionally, data files with an `.nc` extension may crash QGIS, but this can us
 
 Alternatively, users can prepend `NETCDF:` when adding NISAR datasets to a QGIS project, as demonstrated in [this video](https://youtu.be/7tJJmNg8qyE?si=IHknko8izfb-SXdK&t=4317), starting at timestamp `1:11:57`.
 
-:::{important}NISAR HDF5 Support in QGIS 4.2
-Support for the NISAR HDF5 file format was added to GDAL version [3.13.0](https://github.com/OSGeo/gdal/blob/master/NEWS.md#raster-drivers-3). This functionality is accessible in QGIS starting with version 4.2, which is currently in early-adopter status. 
+:::{important}NISAR HDF5 Support in QGIS 4.0
+Support for the NISAR HDF5 file format was added to GDAL version [3.13.0](https://github.com/OSGeo/gdal/blob/master/NEWS.md#raster-drivers-3). This functionality is accessible in QGIS starting with version 4.0. There is not yet a long-term release for QGIS 4.x. 
 
-Users leveraging QGIS 4.2 can work with NISAR datasets as they would any other HDF5 file, and do not need to rename NISAR files or prepend datasets with `NETCDF:` when adding them to a QGIS project.
+Users leveraging QGIS 4.x can work with NISAR datasets as they would any other HDF5 file, and do not need to rename NISAR files or prepend datasets with `NETCDF:` when adding them to a QGIS project.
 :::
 
 ### Preparing GSLC Products
