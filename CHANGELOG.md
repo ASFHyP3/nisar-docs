@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [0.4.33]
+
+### Fixed
+- Version of QGIS that supports NISAR HDF5 format changed from 4.2 to 4.0
+- Both the GitLab and GitHub pages for NISAR Science Algorithms are linked
+
 ## [0.4.32]
 
 ### Added
