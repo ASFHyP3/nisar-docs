@@ -19,7 +19,7 @@ Users who wish to work with the NISAR Cookbook alongside the archive in the AWS 
 (nisar-science-algorithms)=
 ## NISAR Science Algorithms
  
-The NISAR Science Team has developed algorithms for a number of higher-level products. These algorithms are available as executable [Python notebooks](https://gitlab.com/nisar-science-algorithms).
+The NISAR Science Team has developed algorithms for a number of higher-level products. These algorithms are available as executable Python notebooks, and development efforts are made either in the [NISAR Science Algorithms GitLab](https://gitlab.com/nisar-science-algorithms) group or in [NISAR Science Algorithms GitHub](https://github.com/NISAR-Science-Algorithms) repositories.
 
 (earthscope-isce-plus)=
 ## InSAR Processing and Analysis (ISCE+) Technical Course
