@@ -10,9 +10,7 @@ short_title: Vertex
 ## Vertex
 [Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) is ASF's web-based data search interface. It is optimized for searching NASA's SAR holdings, including NISAR. Because search parameters for SAR differ from other types of Earth observation data, it can be helpful to use a search platform tailored specifically for SAR datasets.
 
-## Using Vertex to Access NISAR Data
-
-### 1. Search for NISAR data
+## 1. Search for NISAR data
 Navigate to [Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) and set the **Search Type** to `Geographic Search` and select `NISAR` from the **Dataset** menu. Press **Search** to explore search results. 
 
 ```{figure} ../assets/vertex-dataset-selection.png
@@ -24,7 +22,7 @@ Click on the **Dataset** field and select `NISAR` from the drop-down menu to sea
 ```
 
 (vertex-antarctica)=
-#### Antarctica
+### Antarctica
 
 NISAR has great coverage over Antarctica. Users interested in this area may find it helpful to use the **Antarctic map projection** in Vertex, which renders acquisition footprints at high latitudes much better than the default global view.
 
@@ -38,10 +36,10 @@ Click the **Antarctic map projection** button in the **Map View** section of the
 
 Note that the [**Layers**](https://docs.asf.alaska.edu/vertex/manual/#other-vertex-options) button in the toolbar is not available when using a polar map view, as only one basemap layer is available for each polar view.
 
-### 2. Filter for desired products
+## 2. Filter for desired products
 
 (vertex-geographic-extent)=
-#### Geographic Extent
+### Geographic Extent
 
 To search for a specific geographic region, click on the left-most **Area of Interest** button to choose to draw a point, line, polygon, box, circle, or to upload a geospatial file. 
 
@@ -57,7 +55,7 @@ Choose a shape and draw an area of interest for a geographic search.
 
 _Take care when drawing an AOI while in the [Antarctic Map View](#vertex-antarctica). Rectangular AOIs drawn over the South Pole can sometimes be translated into an unexpected polygon, resulting in either no results or many more (orders of magnitude) results than expected. If this occurs, try drawing an AOI to one side or the other of the pole._
 
-#### Date Range
+### Date Range
 
 To search for products in a specific date range, click the **Filters** button to open the **Search Filters** panel and specify a start and end date in the **Date Filters** section. On larger screens, the date range filter will be displayed directly in the top search bar.
 
@@ -69,7 +67,7 @@ To search for products in a specific date range, click the **Filters** button to
 Click the **Filters** button to open the **Search Filters** panel and enter a date range.
 ```
 
-#### NISAR Filters
+### NISAR Filters
 
 NISAR-specific filters are available to more precisely search for NISAR data products. Refer to the [Vertex Getting Started User Guide](https://docs.asf.alaska.edu/vertex/manual/#product-filters) for a comprehensive list of filters and search options. 
 
@@ -113,7 +111,7 @@ NISAR-specific filters in Vertex.
 
 Users can also search by **Track and Frame**. Note that "Track" is also known as "Path" or "Relative Orbit" for other satellite missions, such as Sentinel-1. Searching for a specific track and frame will return scenes that align consistently over a specific area. The NISAR track-frame map for available NISAR data is available on the [NISAR Mission website](https://science.nasa.gov/mission/nisar/data/). 
 
-### 3. Download data
+## 3. Download data
 
 Data are free and available to download through Vertex. Once the desired scene is selected, a list of files will appear on the right-hand side of the screen (or below the scene details on a narrow browser window). The HDF5 file, listed first, contains the science data and imagery. To learn more about HDF5 files, see @hdf5. 
 
@@ -127,6 +125,18 @@ Click the download icon next to the HDF5 file name to save to your computer. You
 All product files associated with a GCOV product. The HDF5 file, listed first, contains the science data and imagery, and can be downloaded directly by clicking the download icon, circled in red.  
 ```
 
+<!-- TODO: add section on download queue and bulk download options -->
+
+[//]: # (&#40;vertex-download-queue&#41;=)
+
+[//]: # (### Download Queue)
+
+(vertex-gdal-snippet-exporter)=
+### GDAL Snippet Exporter
+<!-- TODO: add content -->
+
+
+<!-- TODO: integrate this content into the body of this page -->
 ## Urgent Response Products
 
 [Urgent Response](#urgent-response-product-overview) (UR) products can be found by setting the [Product Configuration](#tbl:vertex-product-filters) filter to `Urgent Response`. Refer to [Urgent Response: Vertex](#ur-vertex) for more guidance.
