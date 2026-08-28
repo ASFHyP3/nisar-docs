@@ -22,7 +22,6 @@ Permanent NISAR instrument data gap exists between `2026-07-27T22:03:25Z` and `2
 
 :::
 
-
 (known-issues)=
 Most of the known issues with the BETA products have been resolved in this release, and the PROVISIONAL products generally meet radiometric and geolocation requirements in lower-latitude areas where ionospheric variability is low, but there are still a few [known issues](#provisional-known-issues) users should be aware of when working with the PROVISIONAL products. 
 
