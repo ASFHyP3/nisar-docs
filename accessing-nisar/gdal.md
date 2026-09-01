@@ -109,7 +109,7 @@ To identify your currently installed version of GDAL, run `gdal --version`.
 
 Users can transform NISAR data by using the [`gdal_translate`](https://gdal.org/en/stable/programs/gdal_translate.html) or [`gdalwarp`](https://gdal.org/en/stable/programs/gdalwarp.html) utility to [extract](#gdal-extract) and/or [spatially subset](#gdal-spatial-subset) data, [reproject](#gdal-spatial-reproject) the data, and change the file format. For the examples provided here, we will output the data as a GeoTIFF.
 
-You will need the download link for a NISAR product to run these commands. Use the [Copy URL](#copy-download-url-image) links available in the search results for [Vertex](#vertex-overview), or use one of the other [available search methods](#nisar-access-overview) to find a NISAR product URL.
+You will need the download link for a NISAR product to run these commands. Use the [Copy URL](#copy-download-url-image) links available in the search results for [Vertex](#vertex-overview), or use one of the other [available search methods](#nisar-access-overview) to find a NISAR product URL. Users can also leverage [Vertex's GDAL Snippet Exporter tool](#vertex-gdal-snippet-exporter) to generate GDAL commands. 
 
 ```{figure} ../assets/copy-download-url.png
 :label: copy-download-url-image
