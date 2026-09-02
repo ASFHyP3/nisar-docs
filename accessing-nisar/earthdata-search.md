@@ -36,7 +36,7 @@ Search using the search bar on the Earthdata Search landing page.
 (collection-short-names)=
 #### Collection Short Names 
 
-To search for a specific product type, input the corresponding short name from either @tbl:earthdata-search-shortname-list-provisional for calibrated [PROVISIONAL datasets](#nisar-provisional-data-july) or @tbl:earthdata-search-shortname-list-beta for pre-calibration [BETA datasets](nisar-sample-data-feb) into the search bar. For ancillary datasets such as orbit ephemeris files, refer to @tbl:earthdata-search-supporting-shortname-list for the short names.
+To search for a specific product type, input the corresponding short name from either @tbl:earthdata-search-shortname-list-provisional for calibrated [PROVISIONAL datasets](#nisar-provisional-data-july) or @tbl:earthdata-search-shortname-list-beta for pre-calibration [BETA datasets](#nisar-sample-data-feb) into the search bar. For ancillary datasets such as orbit ephemeris files, refer to @tbl:earthdata-search-supporting-shortname-list for the short names.
 
 :::{table} NISAR PROVISIONAL Data Product Short Names
 :label: tbl:earthdata-search-shortname-list-provisional

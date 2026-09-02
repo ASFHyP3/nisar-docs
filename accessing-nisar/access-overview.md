@@ -18,9 +18,41 @@ NISAR mission data is now available for both L-band and S-band datasets!
 (earthdata-login)=
 ### Earthdata Login
 
-Downloading NISAR data requires logging in with your [Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/) credentials. An EDL account is free to create and provides unified access to Earth science data distributed by [NASA'S Earth Observation System Data and Information System (EOSDIS)](https://www.earthdata.nasa.gov/about/esdis/eosdis), independent of the data provider. 
+Downloading NISAR data requires logging in with your [Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/) credentials. An EDL account is free to create and provides unified access to Earth science data distributed by [NASA'S Earth Observation System Data and Information System (EOSDIS)](https://www.earthdata.nasa.gov/about/esdis/eosdis), independent of the data provider.
 
-{button}`Earthdata Login Documentation <https://www.earthdata.nasa.gov/data/earthdata-login>`
+(netrc-setup)=
+Once you have EDL credentials, you can [configure a local `.netrc` file](https://nsidc.org/data/user-resources/help-center/creating-netrc-file-earthdata-login) to securely store credentials. With this, you will be able to stream or download NISAR data without explicitly passing your EDL credentials.
+
+
+:::::{hint} Example
+A correctly configured `.netrc` file should look like:
+::::{tab-set}
+:::{tab-item} Unix Shell
+:sync: unix
+
+```{code-block} plaintext
+:filename: ~/.netrc
+
+machine urs.earthdata.nasa.gov
+    login <username>
+    password <password>
+```
+
+:::
+:::{tab-item} Windows OSGeo4W
+:sync: windows
+
+```{code-block} plaintext
+:filename: C:/Users/<YOUR WINDOWS USERNAME>/.netrc
+
+machine urs.earthdata.nasa.gov
+    login <username>
+    password <password>
+```
+
+:::
+::::
+:::::
 
 ### S-Band Data
 
