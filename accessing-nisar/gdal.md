@@ -1,6 +1,6 @@
 # GDAL
 
-The [Geospatial Data Abstraction Library (GDAL)](https://gdal.org/en/stable) is an open-source software library used to work with raster and vector geospatial data. There are a number of GDAL command line utilities that we can leverage to transform NISAR data.
+The [Geospatial Data Abstraction Library (GDAL)](https://gdal.org/en/stable) is an open-source software library used to work with raster and vector geospatial data. There are a number of GDAL command-line interface (CLI) utilities that we can leverage to transform NISAR data.
 
 (gdal-nisar)=
 
@@ -8,21 +8,42 @@ The [Geospatial Data Abstraction Library (GDAL)](https://gdal.org/en/stable) is 
 
 NISAR products are distributed in HDF5 format, and the files can be very large. Many users may want to transform the data by extracting just the datasets of interest from the HDF5 files and/or subsetting the data to a defined spatial extent.
 
-We can use command line utilities from the GDAL software library to transform these files. Leveraging GDAL's ability to stream data from Earthdata Cloud directly allows us to download only the data we need in the desired format.
+We can use command-line utilities from the GDAL software library to transform these files. Leveraging GDAL's ability to stream data from Earthdata Cloud directly allows us to download only the data we need in the desired format.
+
+(installing-gdal)=
+### Installing GDAL
+
+To use GDAL CLI commands, you must install GDAL locally. The process for installing GDAL differs based on the operating system installed on your computer, or the compute environment in which you wish to run the exported GDAL snippets.
+
+##### Windows
+
+The recommended method of installing GDAL on Windows is to install [QGIS](https://qgis.org/) and utilize the [OSGeo4W Shell](https://www.osgeo.org/projects/osgeo4w/), which provides GDAL.
+
+##### MacOS
+
+Install GDAL on MacOS with the [Homebrew package manager](https://brew.sh/). If you do not have Homebrew installed, first run the following command to install Homebrew:
+
+```{code} bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Then, install GDAL by running the following command:
+
+```{code} bash
+brew install gdal
+```
+
+##### Linux
+
+Install GDAL using your distribution's package manager. On Debian or Ubuntu systems run the following command:
+
+```{code} bash
+sudo apt install gdal-bin
+```
 
 ### Preparing GDAL to Access EDC
 
-If you do not already have GDAL installed you can follow [GDAL's official guide](https://gdal.org/en/stable/download.html).
-
-:::{warning} NISAR HDF5 format not supported in GDAL HDF5 drivers prior to version 3.13.0
-For GDAL releases older than `3.13.0`, the `NETCDF` driver must be used instead of the default `HDF5` driver when working with NISAR products. Because NISAR encodes the spatial reference system using netCDF CF conventions, older HDF5 drivers cannot find the geospatial information required to project the data onto a map.
-
-**Users can direct older versions of GDAL to use the netCDF driver by prepending `NETCDF:` to `/vsicurl/` in all GDAL commands.**
-
-To identify your currently installed version of GDAL, run `gdal --version`.
-:::
-
-In this guide we will be streaming products directly from NASA's [Earthdata Cloud (EDC)](https://www.earthdata.nasa.gov/about/earthdata-cloud-evolution) without downloading them first. To do so, we must allow GDAL to authenticate to EDC by placing a `.netrc` file in the home directory of our compute environment containing our [Earthdata Login](#earthdata-login) credentials.
+In this guide, we will be streaming products directly from NASA's [Earthdata Cloud (EDC)](https://www.earthdata.nasa.gov/about/earthdata-cloud-evolution) without downloading them first. To do so, we must allow GDAL to authenticate to EDC by placing a `.netrc` file in the home directory of our compute environment containing our [Earthdata Login](#earthdata-login) credentials.
 
 ::::{tab-set}
 :::{tab-item} Unix Shell
@@ -78,9 +99,17 @@ If you have a `gdalrc` file staged, you can skip all the `--config` flags includ
 
 ## Transform NISAR HDF5 Products
 
+:::{warning} NISAR HDF5 format not supported in GDAL HDF5 drivers prior to version 3.13.0
+For GDAL releases older than `3.13.0`, the `NETCDF` driver must be used instead of the default `HDF5` driver when working with NISAR products. Because NISAR encodes the spatial reference system using netCDF CF conventions, older HDF5 drivers cannot find the geospatial information required to project the data onto a map.
+
+**Users can direct older versions of GDAL to use the netCDF driver by prepending `NETCDF:` to `/vsicurl/` in all GDAL commands.**
+
+To identify your currently installed version of GDAL, run `gdal --version`.
+:::
+
 Users can transform NISAR data by using the [`gdal_translate`](https://gdal.org/en/stable/programs/gdal_translate.html) or [`gdalwarp`](https://gdal.org/en/stable/programs/gdalwarp.html) utility to [extract](#gdal-extract) and/or [spatially subset](#gdal-spatial-subset) data, [reproject](#gdal-spatial-reproject) the data, and change the file format. For the examples provided here, we will output the data as a GeoTIFF.
 
-You will need the download link for a NISAR product to run these commands. Use the [Copy URL](#copy-download-url-image) links available in the search results for [Vertex](#vertex-overview), or use one of the other [available search methods](#nisar-access-overview) to find a NISAR product URL.
+You will need the download link for a NISAR product to run these commands. Use the [Copy URL](#copy-download-url-image) links available in the search results for [Vertex](#vertex-overview), or use one of the other [available search methods](#nisar-access-overview) to find a NISAR product URL. Users can also leverage [Vertex's GDAL Snippet Exporter tool](#vertex-gdal-snippet-exporter) to generate GDAL commands. 
 
 ```{figure} ../assets/copy-download-url.png
 :label: copy-download-url-image
@@ -172,7 +201,7 @@ gdal_translate -of GTiff ^
 The `gdalwarp` command is also suitable for this, and can be used as a drop-in replacement. However, using `gdal_translate` for simple dataset extraction operations may provide up to a 30% improvement in performance.
 
 :::::{hint} Example
-First we will use `gdalinfo` to fetch information about the NISAR [GCOV](#gcov-product-overview) product used in this example:
+First, we will use `gdalinfo` to fetch information about the NISAR [GCOV](#gcov-product-overview) product used in this example:
 
 ```{code} bash
 gdalinfo "/vsicurl/https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_BETA_V1/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001/NISAR_L2_PR_GCOV_005_149_A_024_4005_DHDH_A_20251120T123755_20251120T123830_X05009_N_F_J_001.h5"
@@ -323,7 +352,7 @@ gdalwarp -of GTiff ^
 ::::
 
 :::::{hint} Example
-In this example we will use the `gdalwarp` utility to perform spatial subsetting on the subdataset identified in the previous example.
+In this example, we will use the `gdalwarp` utility to perform spatial subsetting on the subdataset identified in the previous example.
 
 We used Vertex to pick an area within our product and [copied the AOI string](#vertex-wkt), which is in a suitable WKT spatial extent string format:
 
@@ -331,7 +360,7 @@ We used Vertex to pick an area within our product and [copied the AOI string](#v
 POLYGON((-115.7994 43.887,-113.7599 43.887,-113.7599 44.9751,-115.7994 44.9751,-115.7994 43.887))
 ```
 
-We will then input this string, and the full dataset string identified in the previous example, into the spatial subsetting snippet provided above.
+We will then input this string and the full dataset string identified in the previous example into the spatial subsetting snippet provided above.
 
 This gives us the final command, which we can utilize to perform our spatial subsetting operation:
 
