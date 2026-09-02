@@ -11,15 +11,16 @@ NISAR products are distributed in HDF5 format, and the files can be very large. 
 We can use command-line utilities from the GDAL software library to transform these files. Leveraging GDAL's ability to stream data from Earthdata Cloud directly allows us to download only the data we need in the desired format.
 
 (installing-gdal)=
+
 ### Installing GDAL
 
 To use GDAL CLI commands, you must install GDAL locally. The process for installing GDAL differs based on the operating system installed on your computer, or the compute environment in which you wish to run the exported GDAL snippets.
 
-##### Windows
+#### Windows
 
 The recommended method of installing GDAL on Windows is to install [QGIS](https://qgis.org/) and utilize the [OSGeo4W Shell](https://www.osgeo.org/projects/osgeo4w/), which provides GDAL.
 
-##### MacOS
+#### MacOS
 
 Install GDAL on MacOS with the [Homebrew package manager](https://brew.sh/). If you do not have Homebrew installed, first run the following command to install Homebrew:
 
@@ -33,7 +34,7 @@ Then, install GDAL by running the following command:
 brew install gdal
 ```
 
-##### Linux
+#### Linux
 
 Install GDAL using your distribution's package manager. On Debian or Ubuntu systems run the following command:
 
@@ -109,7 +110,7 @@ To identify your currently installed version of GDAL, run `gdal --version`.
 
 Users can transform NISAR data by using the [`gdal_translate`](https://gdal.org/en/stable/programs/gdal_translate.html) or [`gdalwarp`](https://gdal.org/en/stable/programs/gdalwarp.html) utility to [extract](#gdal-extract) and/or [spatially subset](#gdal-spatial-subset) data, [reproject](#gdal-spatial-reproject) the data, and change the file format. For the examples provided here, we will output the data as a GeoTIFF.
 
-You will need the download link for a NISAR product to run these commands. Use the [Copy URL](#copy-download-url-image) links available in the search results for [Vertex](#vertex-overview), or use one of the other [available search methods](#nisar-access-overview) to find a NISAR product URL. Users can also leverage [Vertex's GDAL Snippet Exporter tool](#vertex-gdal-snippet-exporter) to generate GDAL commands. 
+You will need the download link for a NISAR product to run these commands. Use the [Copy URL](#copy-download-url-image) links available in the search results for [Vertex](#vertex-overview), or use one of the other [available search methods](#nisar-access-overview) to find a NISAR product URL. Users can also leverage [Vertex's GDAL Snippet Exporter tool](#vertex-gdal-snippet-exporter) to generate GDAL commands.
 
 ```{figure} ../assets/copy-download-url.png
 :label: copy-download-url-image
