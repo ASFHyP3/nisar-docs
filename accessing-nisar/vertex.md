@@ -118,9 +118,10 @@ Users can also search by **Track and Frame**. Note that "Track" is also known as
 
 ## 3. Download data
 
-Data are free and available to download through Vertex. Once the desired scene is selected, a list of files will appear on the right-hand side of the screen (or below the scene details on a narrow browser window). 
+Data are free and available to download through Vertex. Once the desired scene is selected, a list of files will appear on the right-hand side of the screen (or below the scene details on a narrow browser window).
 
 ### Download a HDF5 file
+
 Under the Science Data dropdown menu, click the download icon circled in the [figure below](#vertex-download-files) to save to your computer. You will be prompted to sign in with your [Earthdata Login (EDL)](https://www.earthdata.nasa.gov/data/earthdata-login) account if you have not already. To learn more about HDF5 files, see @hdf5.
 
 ```{figure} ../assets/vertex-download-files.png
@@ -140,13 +141,14 @@ All product files associated with a GCOV product. The HDF5 file, listed first, c
 
 ### Subset Geocoded Products with the GDAL Snippet Exporter
 
-[GDAL](https://gdal.org/en/stable/) is a command-line interface (CLI) utility and library that enables the transformation of geographic data. The GDAL snippet exporter allows generating GDAL CLI snippets to extract datasets as a GeoTIFF, spatially subset, or reproject all geocoded ([Level 1](#level-1-range-doppler-products) and [Level 2](#level-2-geocoded-products)) NISAR HDF5 products without downloading the entire HDF5 file. 
+[GDAL](https://gdal.org/en/stable/) is a command-line interface (CLI) utility and library that enables the transformation of geographic data. The GDAL snippet exporter allows generating GDAL CLI snippets to extract datasets as a GeoTIFF, spatially subset, or reproject all geocoded ([Level 1](#level-1-range-doppler-products) and [Level 2](#level-2-geocoded-products)) NISAR HDF5 products without downloading the entire HDF5 file.
 
-Users can generate a GDAL CLI code snippet using the [simple dataset extraction](#simple-dataset-extraction) option to download a single dataset or the [detailed dataset extraction](#detailed-dataset-extraction) option to reproject and/or spatially subset before downloading.  To learn more about the use of GDAL with NISAR data in general, visit the [NISAR Data User Guide page on GDAL](#gdal-nisar).
+Users can generate a GDAL CLI code snippet using the [simple dataset extraction](#simple-dataset-extraction) option to download a single dataset or the [detailed dataset extraction](#detailed-dataset-extraction) option to reproject and/or spatially subset before downloading. To learn more about the use of GDAL with NISAR data in general, visit the [NISAR Data User Guide page on GDAL](#gdal-nisar).
 
 The Vertex GDAL snippet export generates CLI snippets which stream products directly from NASA's [Earthdata Cloud (EDC)](https://www.earthdata.nasa.gov/about/earthdata-cloud-evolution) without downloading them first. Ensure that [GDAL is installed](#installing-gdal) and you have [a `.netrc` file with your EDL credentials configured](#netrc-setup) before running output GDAL CLI code snippets.
 
 (simple-dataset-extraction)=
+
 #### Simple Dataset Extraction to GeoTiff
 
 Dataset extraction to GeoTiff can be performed using the simplified GDAL snippet dropdown. To open the GDAL snippet dropdown, click the arrow button on any supported HDF5 file (GCOV, GOFF, GSLC, GUNW or SME2) in the scene file list.
@@ -160,18 +162,19 @@ Dataset extraction to GeoTiff can be performed using the simplified GDAL snippet
 Then, click on the terminal icon next to your desired dataset to copy the GDAL CLI snippet corresponding to that dataset.
 
 ```{figure} ../assets/vertex-gdal-dropdown-expanded
-:label: vertex-gdal-dropdown
+:label: vertex-gdal-dropdown-expanded
 :alt: Screenshot displaying the GDAL snippet dropdown.
 :align: center
 ```
 
 (detailed-dataset-extraction)=
+
 #### Detailed GDAL Snippet Generation
 
 Spatial subsetting, reprojection, and more can be achieved through the GDAL snippet exporter dialog. To open the GDAL snippet dialog, click the transformation icon on any supported HDF5 file in the scene file list.
 
 ```{figure} ../assets/vertex-gdal-dialog-button
-:label: vertex-gdal-dropdown
+:label: vertex-gdal-dialog-button
 :alt: Screenshot displaying the icon to click to open the GDAL snippet dialog.
 :align: center
 ```
@@ -179,7 +182,7 @@ Spatial subsetting, reprojection, and more can be achieved through the GDAL snip
 Then, select a dataset in the GDAL snippet dialog.
 
 ```{figure} ../assets/vertex-gdal-dialog-dataset
-:label: vertex-gdal-dropdown
+:label: vertex-gdal-dialog-dataset
 :alt: Screenshot displaying the datasets in the GDAL snippet dialog.
 :align: center
 ```
@@ -187,7 +190,7 @@ Then, select a dataset in the GDAL snippet dialog.
 To perform a spatial subsetting operation, ensure you have an area of interest selected on the map view, then check the "Crop to current AOI" box. To perform reprojection enter a EPSG code (ie: EPSG:3857) or WGS84 into the "Output Projection" box.
 
 ```{figure} ../assets/vertex-gdal-dialog-options
-:label: vertex-gdal-dropdown
+:label: vertex-gdal-dialog-options
 :alt: Screenshot displaying the GDAL snippet dialog options.
 :align: center
 ```
@@ -195,7 +198,7 @@ To perform a spatial subsetting operation, ensure you have an area of interest s
 Once you have configured the output options, copy the final output snippet by clicking the copy icon above the "GDAL shell command" code block.
 
 ```{figure} ../assets/vertex-gdal-dialog-copy
-:label: vertex-gdal-dropdown
+:label: vertex-gdal-dialog-copy
 :alt: Screenshot displaying the icon to click to copy the GDAL command output in the GDAL snipet dialog.
 :align: center
 ```
