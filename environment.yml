@@ -4,4 +4,5 @@ channels:
   - nodefaults
 dependencies:
   - python=3.14
-  - mystmd=1.7.0
+  - mystmd=1.10.1
+  - nodejs=26.5.0

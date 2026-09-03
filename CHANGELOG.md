@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Information on the Vertex page regarding GDAL snippet extracted
 - Windows snippets in GDAL page
 
+### Changed
+- Updated Myst to version 1.10.1
+- Pinned NodeJS to 26.5.0
+
 ## [0.4.34]
 
 ### Added
