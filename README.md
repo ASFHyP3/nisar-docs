@@ -37,8 +37,10 @@ Source for the public documentation of the NASA-ISRO Synthetic Aperture Radar (N
    1. Preview the rendered site at `https://{github_user_id}.github.io/nisar-docs/`
 1. Make and commit your changes
 1. Push changes to your fork in GitHub
-1. Make sure your branch is synced and up to date with `ua-asf/nisar-docs:main`
-1. Open a pull request to `ua-asf/nisar-docs:main`
+1. Make sure your branch is synced and up to date with `ua-asf/nisar-docs:develop`
+1. Open a pull request to `ua-asf/nisar-docs:develop`
+1. Once your pull request has been approved and merged to `ua-asf/nisar-docs:develop`, verify the changes at `https://nisar-docs-test.asf.alaska.edu/`
+1. Open a pull request from `ua-asf/nisar-docs:develop` to `ua-asf/nisar-docs:main`
 
 ### Page redirects
 
