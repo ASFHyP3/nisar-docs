@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Information on the Vertex page about scene name pattern searches
+- More information about incomplete L08 products to the Provisional Data Known Issues page
 
 ### Changed
 - README to update workflow to reflect the new branch `ua-asf/nisar-docs:develop`
