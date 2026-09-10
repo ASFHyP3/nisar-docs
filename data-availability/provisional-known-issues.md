@@ -45,6 +45,8 @@ Users performing coherent dual-pol or quad-pol analysis can compensate with a ph
 
 Users will find some products were generated from incomplete L0B datasets, due to missing data in the downlink caused by weather and other capture issues.  The quality flags in the L0B data quality products identify where these data issues occur. The higher-level products generated from these incomplete L0B are included in the archive, since some users may still find them useful.
 
+In a small percentage of the products (around 1-2% of the products), the raw data processor encounters missing data, which introduces undesired shifts to the valid part of the raw data. This in turn may lead to artifacts in downstream products such as defocused RSLC, misplaced products, and decorrelation in InSAR products.
+
 ### Diagnostic Mode Frames
 
 Users will find that the L-SAR products using calibration modes in Track 161/174, 161/175, 169/090, 169/091 are not usable. This will be rectified for acquisitions from August 2026 onward.
